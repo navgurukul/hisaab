@@ -3,9 +3,9 @@ from django.contrib.auth.models import User
 from django.utils import timezone
 
 # def imageuploadlink(instance , filename):
-#     return 'billpayment/{0}/{1}'.format(instance.type_of_bill, filename)
+#     return 'billpayment/{0}/{1}'.format(instance.type_of_bill, filename)#WTF
 class Facility(models.Model):
-    name = models.CharField(max_length=30)
+    name = models.CharField(max_length=50)
     student_expenses_limit = models.CharField(max_length=6)
 
 class NgUser(models.Model):
@@ -44,15 +44,15 @@ class AddExpense(models.Model):
     description = models.TextField()
     amount = models.CharField(max_length=5)
     created_date = models.DateField(auto_now_add=True)
-    expense_by = models.ForeignKey(NgUser, limit_choices_to={'is_admin':False})
+    expense_by = models.ForeignKey(NgUser, related_name='expenses')
     category = models.CharField(max_length=30,choices = CATEGORY)
     expense_photo = models.ImageField(upload_to='expenses/%Y/%m/%d')
 
 class RecordPayment(models.Model):
     amount = models.CharField(max_length=5)
-    paid_to = models.ForeignKey(NgUser,limit_choices_to={'is_admin':False},null=True,related_name='total_payment_recieved')
+    paid_to = models.ForeignKey(NgUser,limit_choices_to={'is_admin':False},null=True,related_name='payment_recieved')
     facility = models.ForeignKey(Facility)
-    paid_by = models.ForeignKey(NgUser,limit_choices_to={'is_admin':True},related_name='total_payments_forward')
+    paid_by = models.ForeignKey(NgUser,limit_choices_to={'is_admin':True},related_name='payments_forward')
     created_date = models.DateField(auto_now_add=True)
     bank_screenshot = models.ImageField(upload_to='bank_screenshot/%Y/%m/%d')
     transfer_request = models.ForeignKey(MoneyTransferRequest,null=True)
