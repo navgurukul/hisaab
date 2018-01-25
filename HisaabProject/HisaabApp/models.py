@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 from django.utils import timezone
 
 def fellowscreenshot(instance , filename):
-    return 'billpayment/{0}/{1}'.format(instance.user.email, filename)#WTF
+    return 'billpayment/{0}/{1}'.format(instance.user.id, filename)
 
 class Facility(models.Model):
     name = models.CharField(max_length=50)
@@ -66,7 +66,7 @@ class CashEntry(models.Model):
     created_date = models.DateField(auto_now_add=True)
     fellow = models.ForeignKey(NgUser, related_name='cash_entry', related_query_name = 'cash_entry')
     entry_type= models.CharField(max_length=25, choices= ENTRY_TYPE)
-    transaction_amount = models.IntegerField(max_length=5)
+    transaction_amount = models.IntegerField()
     is_expense_personal = models.BooleanField()
     category = models.CharField(max_length=25, choices= CATEGORY, null = True)
     is_pay_forward = models.BooleanField()
