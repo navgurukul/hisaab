@@ -62,17 +62,16 @@ class UtilityBillRequest(models.Model):
 
 class CashEntry(models.Model):
     CATEGORY =((1,'Travel Expense'),(2,'Groceries'))
-    ENTRY_TYPE =((1,'Payment'),(2,'Expenses'))
     created_date = models.DateField(auto_now_add=True)
     fellow = models.ForeignKey(NgUser, related_name='cash_entry', related_query_name = 'cash_entry')
-    entry_type= models.CharField(max_length=25, choices= ENTRY_TYPE)
-    transaction_amount = models.IntegerField()
+    expense_amount = models.IntegerField(null=True)
+    payment_amount = models.IntegerField(null=True)
     category = models.CharField(max_length=25, choices= CATEGORY, null = True)
     is_expense_personal = models.BooleanField(default=False)
     is_facility_expense = models.BooleanField(default=False)
     is_pay_forward = models.BooleanField(default=False)
     is_payment_to_ng = models.BooleanField(default=False)
-    bank_screenshot = models.ImageField(upload_to="bank_screenshot/%Y/%m/%d")
-    fellow_payment_screenshot = models.ImageField(upload_to=fellowscreenshot)
-    bill_image = models.ImageField(upload_to="billimage/%Y/%m/%d")
-    description = models.TextField
+    bank_screenshot = models.ImageField(upload_to="bank_screenshot/%Y/%m/%d", null=True)
+    fellow_payment_screenshot = models.ImageField(upload_to=fellowscreenshot, null=True)
+    bill_image = models.ImageField(upload_to="billimage/%Y/%m/%d",null = True)
+    description = models.TextField(null= True)
