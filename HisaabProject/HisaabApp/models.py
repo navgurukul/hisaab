@@ -64,6 +64,7 @@ class CashEntry(models.Model):
     CATEGORY =((1,'Travel Expense'),(2,'Groceries'))
     created_date = models.DateField(auto_now_add=True)
     fellow = models.ForeignKey(NgUser, related_name='cash_entry', related_query_name = 'cash_entry')
+    facility=models.ForeignKey(Facility, null = True)
     expense_amount = models.IntegerField(null=True)
     payment_amount = models.IntegerField(null=True)
     category = models.CharField(max_length=25, choices= CATEGORY, null = True)
