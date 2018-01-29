@@ -68,7 +68,7 @@ class CashEntry(models.Model):
     expense_amount = models.IntegerField(null=True)
     payment_amount = models.IntegerField(null=True)
     category = models.CharField(max_length=25, choices= CATEGORY, null = True)
-    is_expense_personal = models.BooleanField(default=False)
+    is_personal_expense = models.BooleanField(default=False)
     is_facility_expense = models.BooleanField(default=False)
     is_pay_forward = models.BooleanField(default=False)
     is_payment_to_ng = models.BooleanField(default=False)
