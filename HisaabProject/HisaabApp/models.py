@@ -37,28 +37,6 @@ class UtilityBillRequest(models.Model):
     type_of_bill = models.CharField(max_length=50, choices=BILL)
     bill_image = models.ImageField(upload_to='billpayment/%Y/%m/%d')
     request_details = models.OneToOneField(RequestDetail,related_name='request_detail')
-#
-# class AddExpense(models.Model):
-#     CATEGORY =((1,'Travel Expense'),(2,'Groceries'))
-#     is_facility_level = models.BooleanField()
-#     facility = models.ForeignKey(Facility)
-#     description = models.TextField()
-#     amount = models.CharField(max_length=5)
-#     created_date = models.DateField(auto_now_add=True)
-#     expense_by = models.ForeignKey(NgUser,related_name="expenses")
-#     category = models.CharField(max_length=30,choices = CATEGORY)
-#     expense_photo = models.ImageField(upload_to='expenses/%Y/%m/%d')
-#
-# class RecordPayment(models.Model):
-#     amount = models.CharField(max_length=5)
-#     paid_to = models.ForeignKey(NgUser,limit_choices_to={'is_admin':False},null=True,related_name='payment_recieved')
-#     facility = models.ForeignKey(Facility)
-#     paid_by = models.ForeignKey(NgUser,limit_choices_to={'is_admin':True},related_name='payment_sent')
-#     created_date = models.DateField(auto_now_add=True)
-#     bank_screenshot = models.ImageField(upload_to='bank_screenshot/%Y/%m/%d')
-#     transfer_request = models.ForeignKey(MoneyTransferRequest,null=True)
-#     bill_request = models.ForeignKey(UtilityBillRequest, null=True)
-
 
 class CashEntry(models.Model):
     CATEGORY =((1,'Travel Expense'),(2,'Groceries'))
