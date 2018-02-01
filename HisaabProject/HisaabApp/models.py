@@ -13,6 +13,7 @@ class NgUser(models.Model):
     user = models.OneToOneField(User)
     created_date = models.DateField(auto_now_add=True)
     is_admin = models.BooleanField(default=False)
+    is_fellow = models.BooleanField(default=False)
     facility= models.ForeignKey(Facility,null=True)
 
 class RequestDetail(models.Model):
@@ -20,6 +21,7 @@ class RequestDetail(models.Model):
     description = models.TextField()
     created_date = models.DateField(auto_now_add=True)
     is_approve = models.BooleanField()
+    is_queued = models.BooleanField(default=True)
     approve_or_rejected_by = models.ForeignKey(NgUser, limit_choices_to={'is_admin':True})
     reject_text = models.TextField(null=True)
 
@@ -28,7 +30,7 @@ class MoneyTransferRequest(models.Model):
     confirm_account_number = models.CharField(max_length=20)
     ifsc_code = models.CharField(max_length=20)
     account_holder_name = models.CharField(max_length=20)
-    transfer_to = models.ForeignKey(NgUser,limit_choices_to={'is_admin':False})
+    transfer_to = models.ForeignKey(NgUser,limit_choices_to={'is_fellow':True})
     request_details = models.OneToOneField(RequestDetail,related_name='request_details')
 
 
@@ -36,6 +38,7 @@ class UtilityBillRequest(models.Model):
     BILL = ((1,'Internet'),(2,'Electricity'),(3,'WaterBill'),(4, 'Houserent'))
     type_of_bill = models.CharField(max_length=50, choices=BILL)
     bill_image = models.ImageField(upload_to='billpayment/%Y/%m/%d')
+    requested_by = models.ForeignKey(NgUser, limit_choices_to={'is_fellow':True})
     request_details = models.OneToOneField(RequestDetail,related_name='request_detail')
 
 class CashEntry(models.Model):
