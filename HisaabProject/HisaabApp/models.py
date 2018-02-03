@@ -11,14 +11,23 @@ class Facility(models.Model):
     student_expenses_limit = models.IntegerField()
 
 class NgUser(models.Model):
-    user = models.OneToOneField(User,unique=True, null=False)
+    user = models.OneToOneField(User,unique=True)
     created_date = models.DateField(auto_now_add=True)
     is_admin = models.BooleanField(default=False)
     is_fellow = models.BooleanField(default=False)
     facility= models.ForeignKey(Facility,null=True)
 
 
-class RequestDetail(models.Model):
+class MoneyTransferRequest(models.Model):
+    BILL = ((1,'Internet'),(2,'Electricity'),(3,'WaterBill'),(4, 'Houserent'))
+    account_number = models.CharField(max_length=20, null = True)
+    ifsc_code = models.CharField(max_length=20, null= True)
+    is_money_request= models.BooleanField(default=False)
+    is_utility_request= models.BooleanField(default=False)
+    account_holder_name = models.CharField(max_length=20, null= True)
+    type_of_bill = models.CharField(max_length=50, choices=BILL, null =True)
+    bill_image = models.ImageField(upload_to='billpayment/%Y/%m/%d', null = True)
+    facility = models.ForeignKey(Facility)
     amount = models.IntegerField()
     description = models.TextField()
     created_date = models.DateField(auto_now_add=True)
@@ -26,22 +35,6 @@ class RequestDetail(models.Model):
     is_queued = models.BooleanField(default=True)
     approve_or_rejected_by = models.ForeignKey(NgUser, limit_choices_to={'is_admin':True})
     reject_text = models.TextField(null=True)
-
-class MoneyTransferRequest(models.Model):
-    account_number = models.CharField(max_length=20)
-    confirm_account_number = models.CharField(max_length=20)
-    ifsc_code = models.CharField(max_length=20)
-    account_holder_name = models.CharField(max_length=20)
-    transfer_to = models.ForeignKey(Facility)
-    request_details = models.OneToOneField(RequestDetail,related_name='request_details')
-
-
-class UtilityBillRequest(models.Model):
-    BILL = ((1,'Internet'),(2,'Electricity'),(3,'WaterBill'),(4, 'Houserent'))
-    type_of_bill = models.CharField(max_length=50, choices=BILL)
-    bill_image = models.ImageField(upload_to='billpayment/%Y/%m/%d')
-    requested_by = models.ForeignKey(Facility)
-    request_details = models.OneToOneField(RequestDetail,related_name='request_detail')
 
 class CashEntry(models.Model):
     CATEGORY =((1,'Travel Expense'),(2,'Groceries'))
