@@ -17,14 +17,6 @@ class NgUser(models.Model):
     is_fellow = models.BooleanField(default=False)
     facility= models.ForeignKey(Facility,null=True)
 
-@receiver(post_save, sender=User)
-def create_user_profile(sender, instance, created, **kwargs):
-    if created:
-        NgUser.objects.create(user=instance)
-
-@receiver(post_save, sender=User)
-def save_user_profile(sender, instance, **kwargs):
-    instance.profile.save()
 
 class RequestDetail(models.Model):
     amount = models.IntegerField()
@@ -67,3 +59,11 @@ class CashEntry(models.Model):
     fellow_payment_screenshot = models.ImageField(upload_to=fellowscreenshot, null=True)
     bill_image = models.ImageField(upload_to="billimage/%Y/%m/%d",null = True)
     description = models.TextField(null= True)
+# @receiver(post_save, sender=User)
+# def create_user_profile(sender, instance, created, **kwargs):
+#     if created:
+#         NgUser.objects.create(user=instance)
+#
+# @receiver(post_save, sender=User)
+# def save_user_profile(sender, instance, **kwargs):
+#     instance.profile.save()
