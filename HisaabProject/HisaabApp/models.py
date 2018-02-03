@@ -1,20 +1,30 @@
 from django.db import models
 from django.contrib.auth.models import User
-from django.utils import timezone
+from django.db.models.signals import post_save
+from django.dispatch import receiver
 
 def fellowscreenshot(instance , filename):
     return 'billpayment/{0}/{1}'.format(instance.user.id, filename)
 
 class Facility(models.Model):
     name = models.CharField(max_length=50)
-    student_expenses_limit = models.CharField(max_length=6)
+    student_expenses_limit = models.IntegerField()
 
 class NgUser(models.Model):
-    user = models.OneToOneField(User)
+    user = models.OneToOneField(User,unique=True, null=False)
     created_date = models.DateField(auto_now_add=True)
     is_admin = models.BooleanField(default=False)
     is_fellow = models.BooleanField(default=False)
     facility= models.ForeignKey(Facility,null=True)
+
+@receiver(post_save, sender=User)
+def create_user_profile(sender, instance, created, **kwargs):
+    if created:
+        NgUser.objects.create(user=instance)
+
+@receiver(post_save, sender=User)
+def save_user_profile(sender, instance, **kwargs):
+    instance.profile.save()
 
 class RequestDetail(models.Model):
     amount = models.IntegerField()
@@ -30,7 +40,7 @@ class MoneyTransferRequest(models.Model):
     confirm_account_number = models.CharField(max_length=20)
     ifsc_code = models.CharField(max_length=20)
     account_holder_name = models.CharField(max_length=20)
-    transfer_to = models.ForeignKey(NgUser,limit_choices_to={'is_fellow':True})
+    transfer_to = models.ForeignKey(Facility)
     request_details = models.OneToOneField(RequestDetail,related_name='request_details')
 
 
@@ -38,7 +48,7 @@ class UtilityBillRequest(models.Model):
     BILL = ((1,'Internet'),(2,'Electricity'),(3,'WaterBill'),(4, 'Houserent'))
     type_of_bill = models.CharField(max_length=50, choices=BILL)
     bill_image = models.ImageField(upload_to='billpayment/%Y/%m/%d')
-    requested_by = models.ForeignKey(NgUser, limit_choices_to={'is_fellow':True})
+    requested_by = models.ForeignKey(Facility)
     request_details = models.OneToOneField(RequestDetail,related_name='request_detail')
 
 class CashEntry(models.Model):
