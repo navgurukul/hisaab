@@ -16,19 +16,19 @@ class NgUser(models.Model):
     is_admin = models.BooleanField(default=False)
     is_fellow = models.BooleanField(default=False)
     facility= models.ForeignKey(Facility,null=True)
-<<<<<<< HEAD
-# 
-# @receiver(post_save, sender=User)
-# def create_user_profile(sender, instance, created, **kwargs):
-#     if created:
-#         NgUser.objects.create(user=instance)
-#
-# @receiver(post_save, sender=User)
-# def save_user_profile(sender, instance, **kwargs):
-#     instance.nguser.save()
-=======
+# <<<<<<< HEAD
+# #
+# # @receiver(post_save, sender=User)
+# # def create_user_profile(sender, instance, created, **kwargs):
+# #     if created:
+# #         NgUser.objects.create(user=instance)
+# #
+# # @receiver(post_save, sender=User)
+# # def save_user_profile(sender, instance, **kwargs):
+# #     instance.nguser.save()
+# =======
 
->>>>>>> d0366bba7764b08a61174ddaa25b049fb08b1bdb
+# >>>>>>> d0366bba7764b08a61174ddaa25b049fb08b1bdb
 
 class RequestDetail(models.Model):
     amount = models.IntegerField()
