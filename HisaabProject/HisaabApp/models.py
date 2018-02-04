@@ -10,23 +10,28 @@ class Facility(models.Model):
     name = models.CharField(max_length=50)
     student_expenses_limit = models.IntegerField()
 
+    def __str__(self):
+        return self.name
+
 class NgUser(models.Model):
     user = models.OneToOneField(User,unique=True)
     created_date = models.DateField(auto_now_add=True)
     is_admin = models.BooleanField(default=False)
     is_fellow = models.BooleanField(default=False)
-    facility= models.ForeignKey(Facility,null=True)
+    facility= models.ForeignKey(Facility,blank=True, null=True)
 
+    def __str__(self):
+        return self.user.username
 
 class MoneyTransferRequest(models.Model):
     BILL = ((1,'Internet'),(2,'Electricity'),(3,'WaterBill'),(4, 'Houserent'))
-    account_number = models.CharField(max_length=20, null = True)
-    ifsc_code = models.CharField(max_length=20, null= True)
+    account_number = models.CharField(max_length=20, blank=True, null = True)
+    ifsc_code = models.CharField(max_length=20, blank=True, null= True)
     is_money_request= models.BooleanField(default=False)
     is_utility_request= models.BooleanField(default=False)
-    account_holder_name = models.CharField(max_length=20, null= True)
-    type_of_bill = models.CharField(max_length=50, choices=BILL, null =True)
-    bill_image = models.ImageField(upload_to='billpayment/%Y/%m/%d', null = True)
+    account_holder_name = models.CharField(max_length=20, blank=True, null=True)
+    type_of_bill = models.CharField(max_length=50, choices=BILL, blank=True, null =True)
+    bill_image = models.ImageField(upload_to='billpayment/%Y/%m/%d', blank=True, null = True)
     facility = models.ForeignKey(Facility)
     amount = models.IntegerField()
     description = models.TextField()
@@ -34,24 +39,24 @@ class MoneyTransferRequest(models.Model):
     is_approve = models.BooleanField()
     is_queued = models.BooleanField(default=True)
     approve_or_rejected_by = models.ForeignKey(NgUser, limit_choices_to={'is_admin':True})
-    reject_text = models.TextField(null=True)
+    reject_text = models.TextField(blank=True, null=True)
 
 class CashEntry(models.Model):
     CATEGORY =((1,'Travel Expense'),(2,'Groceries'))
     created_date = models.DateField(auto_now_add=True)
     fellow = models.ForeignKey(NgUser, related_name='cash_entry', related_query_name = 'cash_entry')
-    facility=models.ForeignKey(Facility, null = True)
-    expense_amount = models.IntegerField(null=True)
-    payment_amount = models.IntegerField(null=True)
-    category = models.CharField(max_length=25, choices= CATEGORY, null = True)
+    facility=models.ForeignKey(Facility, blank=True, null = True)
+    expense_amount = models.IntegerField(blank=True, null=True)
+    payment_amount = models.IntegerField(blank=True, null=True)
+    category = models.CharField(max_length=25, choices= CATEGORY, blank=True, null = True)
     is_personal_expense = models.BooleanField(default=False)
     is_facility_expense = models.BooleanField(default=False)
     is_pay_forward = models.BooleanField(default=False)
     is_payment_to_ng = models.BooleanField(default=False)
-    bank_screenshot = models.ImageField(upload_to="bank_screenshot/%Y/%m/%d", null=True)
-    fellow_payment_screenshot = models.ImageField(upload_to=fellowscreenshot, null=True)
-    bill_image = models.ImageField(upload_to="billimage/%Y/%m/%d",null = True)
-    description = models.TextField(null= True)
+    bank_screenshot = models.ImageField(upload_to="bank_screenshot/%Y/%m/%d", blank=True, null=True)
+    fellow_payment_screenshot = models.ImageField(upload_to=fellowscreenshot, blank=True, null=True)
+    bill_image = models.ImageField(upload_to="billimage/%Y/%m/%d",blank=True, null = True)
+    description = models.TextField(blank=True, null= True)
 # @receiver(post_save, sender=User)
 # def create_user_profile(sender, instance, created, **kwargs):
 #     if created:
