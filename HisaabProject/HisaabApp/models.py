@@ -11,20 +11,20 @@ class Facility(models.Model):
     student_expenses_limit = models.IntegerField()
 
 class NgUser(models.Model):
+    ROLES = ((1,'admin'),(2,'fellow'))
     user = models.OneToOneField(User,unique=True, null=False)
     created_date = models.DateField(auto_now_add=True)
-    is_admin = models.BooleanField(default=False)
-    is_fellow = models.BooleanField(default=False)
+    user_type= models.CharField(choices=ROLES,max_length=20,blank=False)
     facility= models.ForeignKey(Facility,null=True)
 
-@receiver(post_save, sender=User)
-def create_user_profile(sender, instance, created, **kwargs):
-    if created:
-        NgUser.objects.create(user=instance)
-
-@receiver(post_save, sender=User)
-def save_user_profile(sender, instance, **kwargs):
-    instance.profile.save()
+# @receiver(post_save, sender=User)
+# def create_user_profile(sender, instance, created, **kwargs):
+#     if created:
+#         NgUser.objects.create(user=instance)
+#
+# @receiver(post_save, sender=User)
+# def save_user_profile(sender, instance, **kwargs):
+#     instance.profile.save()
 
 class RequestDetail(models.Model):
     amount = models.IntegerField()
@@ -32,7 +32,7 @@ class RequestDetail(models.Model):
     created_date = models.DateField(auto_now_add=True)
     is_approve = models.BooleanField()
     is_queued = models.BooleanField(default=True)
-    approve_or_rejected_by = models.ForeignKey(NgUser, limit_choices_to={'is_admin':True})
+    approve_or_rejected_by = models.ForeignKey(NgUser, limit_choices_to={'user_type':2})
     reject_text = models.TextField(null=True)
 
 class MoneyTransferRequest(models.Model):
