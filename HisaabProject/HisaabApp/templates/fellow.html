@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="row">
+ <div class="col s12 m6 offset-m3">
+  <H3>Hi {{ user.email }}!</H3>
+  is fellow
+  <a href="{% url 'moneyrequest' %}">MoneyTransfer Request</a>
+  <a href="{% url 'utilityrequest' %}">BillPayment Request</a>
+ </div>
+</div>
+{% endblock %}
