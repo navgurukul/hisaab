@@ -14,27 +14,7 @@ class Facility(models.Model):
         return self.name
 
 class NgUser(models.Model):
-<<<<<<< HEAD
     user = models.OneToOneField(User,unique=True, null=False)
-=======
-<<<<<<< HEAD
-    ROLES = ((1,'admin'),(2,'fellow'))
-    user = models.OneToOneField(User,unique=True, null=False)
-    created_date = models.DateField(auto_now_add=True)
-    user_type= models.CharField(choices=ROLES,max_length=20,blank=False)
-    facility= models.ForeignKey(Facility,null=True)
-
-# @receiver(post_save, sender=User)
-# def create_user_profile(sender, instance, created, **kwargs):
-#     if created:
-#         NgUser.objects.create(user=instance)
-#
-# @receiver(post_save, sender=User)
-# def save_user_profile(sender, instance, **kwargs):
-#     instance.profile.save()
-=======
-    user = models.OneToOneField(User,unique=True)
->>>>>>> refs/remotes/origin/master
     created_date = models.DateField(auto_now_add=True)
     is_admin = models.BooleanField(default=False)
     is_fellow = models.BooleanField(default=False)
@@ -42,7 +22,6 @@ class NgUser(models.Model):
 
     def __str__(self):
         return self.user.username
->>>>>>> 1c295bea59ddae672e31cf4b14ee2b4446fe03fd
 
 class MoneyTransferRequest(models.Model):
     BILL = ((1,'Internet'),(2,'Electricity'),(3,'WaterBill'),(4, 'Houserent'))
@@ -59,29 +38,8 @@ class MoneyTransferRequest(models.Model):
     created_date = models.DateField(auto_now_add=True)
     is_approve = models.BooleanField()
     is_queued = models.BooleanField(default=True)
-<<<<<<< HEAD
-    approve_or_rejected_by = models.ForeignKey(NgUser, limit_choices_to={'user_type':2})
-    reject_text = models.TextField(null=True)
-
-class MoneyTransferRequest(models.Model):
-    account_number = models.CharField(max_length=20)
-    confirm_account_number = models.CharField(max_length=20)
-    ifsc_code = models.CharField(max_length=20)
-    account_holder_name = models.CharField(max_length=20)
-    transfer_to = models.ForeignKey(Facility)
-    request_details = models.OneToOneField(RequestDetail,related_name='request_details')
-
-
-class UtilityBillRequest(models.Model):
-    BILL = ((1,'Internet'),(2,'Electricity'),(3,'WaterBill'),(4, 'Houserent'))
-    type_of_bill = models.CharField(max_length=50, choices=BILL)
-    bill_image = models.ImageField(upload_to='billpayment/%Y/%m/%d')
-    requested_by = models.ForeignKey(Facility)
-    request_details = models.OneToOneField(RequestDetail,related_name='request_detail')
-=======
     approve_or_rejected_by = models.ForeignKey(NgUser, limit_choices_to={'is_admin':True})
     reject_text = models.TextField(blank=True, null=True)
->>>>>>> 1c295bea59ddae672e31cf4b14ee2b4446fe03fd
 
 class CashEntry(models.Model):
     CATEGORY =((1,'Travel Expense'),(2,'Groceries'))
