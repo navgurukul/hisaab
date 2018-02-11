@@ -14,10 +14,17 @@ class Facility(models.Model):
         return self.name
 
 class NgUser(models.Model):
+<<<<<<< HEAD
     ROLE =(('ADMIN',"admin"),('FELLOW',"fellow"))
     user = models.OneToOneField(User,unique=True)
     created_date = models.DateField(auto_now_add=True)
     user_type = models.CharField(max_length=20,choices= ROLE, default=2)
+=======
+    ROLES = (('ADMIN','admin'),("FELLOW",'fellow'))
+    user_type= models.CharField(choices=ROLES,max_length=20,default='FELLOW',blank=False)
+    user = models.OneToOneField(User,unique=True, on_delete=models.CASCADE)
+    created_date = models.DateField(auto_now_add=True)
+>>>>>>> 63d0d607d66ca47a000375b79e92e156a4e07795
     facility= models.ForeignKey(Facility,blank=True, null=True)
 
     def __str__(self):
@@ -42,8 +49,8 @@ class MoneyRequest(models.Model):
     reject_text = models.TextField(blank=True, null=True)
 
 class CashEntry(models.Model):
-    CATEGORY =((1,'Travel Expense'),(2,'Groceries'))
-    created_date = models.DateField(auto_now_add=True)
+    CATEGORY =(('TRAVEL','Travel Expense'),('GROCERIES','Groceries'),('VEGETABLES','Vegetables'), ('HOUSEHOLD','HouseholdItems'),('EGG','Egg'),('MILK','Milk & Bread'),('TECH EXPENCE','Tech Expenses'),('OTHER','Other'))
+    created_date = models.DateField()
     fellow = models.ForeignKey(NgUser, related_name='cash_entry', related_query_name = 'cash_entry')
     facility=models.ForeignKey(Facility, blank=True, null = True)
     expense_amount = models.IntegerField(blank=True, null=True)
@@ -57,6 +64,7 @@ class CashEntry(models.Model):
     fellow_payment_screenshot = models.ImageField(upload_to=fellowscreenshot, blank=True, null=True)
     bill_image = models.ImageField(upload_to="billimage/%Y/%m/%d",blank=True, null = True)
     description = models.TextField(blank=True, null= True)
+<<<<<<< HEAD
 
 @receiver(post_save, sender=User)
 def create_user_profile(sender, instance, created, **kwargs):
@@ -66,3 +74,10 @@ def create_user_profile(sender, instance, created, **kwargs):
 @receiver(post_save, sender=User)
 def save_user_profile(sender, instance, **kwargs):
     instance.nguser.save()
+=======
+# @receiver(post_save, sender=User)
+# def create_user_nguser(sender, instance, created, **kwargs):
+#     if created:
+#         NgUser.objects.create(user=instance)
+#
+>>>>>>> 63d0d607d66ca47a000375b79e92e156a4e07795
