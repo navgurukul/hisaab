@@ -14,16 +14,16 @@ class Facility(models.Model):
         return self.name
 
 class NgUser(models.Model):
+    ROLE =(('ADMIN',"admin"),('FELLOW',"fellow"))
     user = models.OneToOneField(User,unique=True)
     created_date = models.DateField(auto_now_add=True)
-    is_admin = models.BooleanField(default=False)
-    is_fellow = models.BooleanField(default=False)
+    user_type = models.CharField(max_length=20,choices= ROLE, default=2)
     facility= models.ForeignKey(Facility,blank=True, null=True)
 
     def __str__(self):
         return self.user.username
 
-class MoneyTransferRequest(models.Model):
+class MoneyRequest(models.Model):
     BILL = ((1,'Internet'),(2,'Electricity'),(3,'WaterBill'),(4, 'Houserent'))
     account_number = models.CharField(max_length=20, blank=True, null = True)
     ifsc_code = models.CharField(max_length=20, blank=True, null= True)
@@ -57,11 +57,12 @@ class CashEntry(models.Model):
     fellow_payment_screenshot = models.ImageField(upload_to=fellowscreenshot, blank=True, null=True)
     bill_image = models.ImageField(upload_to="billimage/%Y/%m/%d",blank=True, null = True)
     description = models.TextField(blank=True, null= True)
-# @receiver(post_save, sender=User)
-# def create_user_profile(sender, instance, created, **kwargs):
-#     if created:
-#         NgUser.objects.create(user=instance)
-#
-# @receiver(post_save, sender=User)
-# def save_user_profile(sender, instance, **kwargs):
-#     instance.profile.save()
+
+@receiver(post_save, sender=User)
+def create_user_profile(sender, instance, created, **kwargs):
+    if created:
+        NgUser.objects.create(user=instance)
+
+@receiver(post_save, sender=User)
+def save_user_profile(sender, instance, **kwargs):
+    instance.nguser.save()
