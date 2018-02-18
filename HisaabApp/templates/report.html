@@ -1,0 +1,31 @@
+{%extends 'base.html'%}
+
+{% block content %}
+
+ <h2 class="page-header">Facility Report Page</h2>
+
+
+          <div class="table-responsive">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Amount</th>
+                  <th>Category</th>
+                  <th>Created date</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+              {% for entry in entries %}
+                  <td>{{ entry.fellow }}</td>
+                  <td>{{ entry.expense_amount }}</td>
+                  <td>{{ entry.category }}</td>
+                  <td>{{ entry.created_date }}</td>
+                  <td>{{ entry.description}}</td>
+              {% endfor %}
+                </tr>
+              </tbody>
+            </table>
+          </div>
+{% endblock %}

@@ -14,7 +14,7 @@ class Facility(models.Model):
         return self.name
 
 class NgUser(models.Model):
-    ROLES = (('ADMIN','admin'),("FELLOW",'fellow'))
+    ROLES = (('ADMIN','admin'),('FELLOW','fellow'))
     user_type= models.CharField(choices=ROLES,max_length=20,default='FELLOW',blank=False)
     user = models.OneToOneField(User,unique=True, on_delete=models.CASCADE)
     created_date = models.DateField(auto_now_add=True)
@@ -57,8 +57,6 @@ class CashEntry(models.Model):
     fellow_payment_screenshot = models.ImageField(upload_to=fellowscreenshot, blank=True, null=True)
     bill_image = models.ImageField(upload_to="billimage/%Y/%m/%d",blank=True, null = True)
     description = models.TextField(blank=True, null= True)
-# @receiver(post_save, sender=User)
-# def create_user_nguser(sender, instance, created, **kwargs):
-#     if created:
-#         NgUser.objects.create(user=instance)
-#
+
+    def __str__(self):
+        return self.fellow.user.email

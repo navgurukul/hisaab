@@ -1,7 +1,7 @@
 from django.shortcuts import redirect, HttpResponseRedirect
 from django.contrib.auth import logout
 from django.contrib.auth.models import User
-from HisaabApp.models import CashEntry,Facility,MoneyRequest
+from HisaabApp.models import CashEntry,NgUser,Facility,MoneyRequest
 from django import forms
 
 
@@ -12,7 +12,7 @@ class FacilityForm(forms.ModelForm):
 
 
 class MoneyTransferForm(forms.ModelForm):
-    facility = forms.ChoiceField(choices=[(facility.pk, facility) for facility in Facility.objects.all()])
+    facility = forms.ModelChoiceField(queryset=Facility.objects.all())
 
     class Meta:
         model = MoneyRequest
@@ -21,7 +21,7 @@ class MoneyTransferForm(forms.ModelForm):
 
 class BillPaymentForm(forms.ModelForm):
     BILL = ((1,'Internet'),(2,'Electricity'),(3,'WaterBill'),(4, 'Houserent'))
-    facility = forms.ChoiceField(choices=[(facility.pk, facility) for facility in Facility.objects.all()])
+    facility = forms.ModelChoiceField(queryset=Facility.objects.all())
     type_of_bill = forms.ChoiceField(choices=BILL)
     class Meta:
         model = MoneyRequest
@@ -31,10 +31,16 @@ class BillPaymentForm(forms.ModelForm):
 class AddExpenseForm(forms.ModelForm):
     EXPENSETYPE = ((1,'Navgurukul'),(2,'Personal'))
     CATEGORY =(('TRAVEL','Travel Expense'),('GROCERIES','Groceries'),('VEGETABLES','Vegetables'), ('HOUSEHOLD','HouseholdItems'),('EGG','Egg'),('MILK','Milk & Bread'),('TECH EXPENCE','Tech Expenses'),('OTHER','Other'))
-    facility = forms.ChoiceField(choices=[(facility.name, facility) for facility in Facility.objects.all()])
-    fellow = forms.ChoiceField(choices=[(user.pk, user) for user in User.objects.all()])
-    expense_type = forms.ChoiceField(choices=EXPENSETYPE)
-    category = forms.ChoiceField(choices=CATEGORY)
+    facility = forms.ModelChoiceField(queryset = Facility.objects.all())
+    fellow = forms.ModelChoiceField(queryset = NgUser.objects.all())
+    expense_type = forms.ChoiceField(choices = EXPENSETYPE)
+    category = forms.ChoiceField(choices =CATEGORY)
     class Meta:
         model = CashEntry
-        fields = ('expense_type', 'expense_amount', 'created_date', 'category','bill_image','description')
+        fields = ('fellow','expense_type', 'expense_amount', 'created_date', 'category','bill_image','description')
+
+
+class FacilityReportForm(forms.ModelForm):
+    class Meta:
+        model = CashEntry
+        fields = ('fellow','expense_amount','category','created_date','description')
