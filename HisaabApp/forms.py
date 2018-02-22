@@ -29,7 +29,7 @@ class BillPaymentForm(forms.ModelForm):
 
 
 class AddExpenseForm(forms.ModelForm):
-    EXPENSETYPE = ((1,'Navgurukul'),(2,'Personal'))
+    EXPENSETYPE = (("FELLOW",'Navgurukul'),('PERSONAL','Personal'))
     CATEGORY =(('TRAVEL','Travel Expense'),('GROCERIES','Groceries'),('VEGETABLES','Vegetables'), ('HOUSEHOLD','HouseholdItems'),('EGG','Egg'),('MILK','Milk & Bread'),('TECH EXPENCE','Tech Expenses'),('OTHER','Other'))
     facility = forms.ModelChoiceField(queryset = Facility.objects.all())
     fellow = forms.ModelChoiceField(queryset = NgUser.objects.all())
@@ -37,7 +37,7 @@ class AddExpenseForm(forms.ModelForm):
     category = forms.ChoiceField(choices =CATEGORY)
     class Meta:
         model = CashEntry
-        fields = ('fellow','expense_type', 'expense_amount', 'created_date', 'category','bill_image','description')
+        fields = ('fellow','expense_type','facility', 'expense_amount', 'created_date', 'category','bill_image','description')
 
 
 class FacilityReportForm(forms.ModelForm):
