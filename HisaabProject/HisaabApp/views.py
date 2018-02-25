@@ -1,8 +1,9 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required, user_passes_test
-from .models import NgUser,Facility
-from .forms import MoneyTransferForm, BillPaymentForm,AddExpenseForm
-
+from .models import NgUser,Facility,CashEntry
+from .forms import MoneyTransferForm, BillPaymentForm,AddExpenseForm,FacilityReportForm
+from django.shortcuts import get_list_or_404, get_object_or_404
+import pdb
 def is_fellow(user):
     return user.nguser.user_type == "FELLOW"
 
@@ -25,7 +26,6 @@ def moneytransferrequest(request):
         if form.is_valid():
             form.save(commit=False)
             form.is_money_request=True
-            form.facility= form.cleaned_data.get('facility')
             form.save()
             redirect('home')
     else:
@@ -50,16 +50,28 @@ def utilitybillrequest(request):
 
 def addexpense(request):
     if request.method =='POST':
-        form = BillPaymentForm(request.POST,request.FILES)
+        form = AddExpenseForm(request.POST,request.FILES)
         if form.is_valid():
             form.save(commit=False)
-            if form.cleaned_data.get('expense_type')=="2":
+            # pdb.set_trace()
+            print form.cleaned_data.get('expense_type').encode('utf8')
+            if form.cleaned_data.get('expense_type').encode('utf8') == 'PERSONAL':
                 form.is_personal_expense = True
             else:
                 form.is_facility_expense = True
+            print form.cleaned_data.get('facility')
+            form.facility = form.cleaned_data.get('facility')
             form.save()
-            redirect('home')
+            return redirect('home')
     else:
         form = AddExpenseForm()
-        print form
     return render(request, 'addexpense.html',{'form':form})
+
+@login_required
+def facilityreport(request):
+    data = CashEntry.objects.all()
+    template = 'report.html'
+    return render(request, template, {'entries' : data})
+
+
+def

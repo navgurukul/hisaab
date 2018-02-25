@@ -139,7 +139,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'Asia/Kolkata'
+TIME_ZONE = 'UTC'
 
 USE_I18N = True
 
@@ -155,6 +155,8 @@ SOCIAL_AUTH_GOOGLE_OAUTH2_KEY ='649957323382-j7g021vk6v8eg9orf8nggdkp82r8mt8g.ap
 SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'BZK1RVtbDUIlRh8p7vooN3J4' #Paste Secret Key
 
 STATIC_URL = '/static/'
+STATIC_ROOT= os.path.join(BASE_DIR,'static')
+
 
 
 SOCIAL_AUTH_GOOGLE_OAUTH2_IGNORE_DEFAULT_SCOPE = True
@@ -171,3 +173,8 @@ SOCIAL_AUTH_GOOGLE_PLUS_SCOPE = [
 ]
 LOGIN_URL = '/account/login/'
 LOGIN_REDIRECT_URL='/'
+DATE_INPUT_FORMATS = ('%d-%m-%Y','%Y-%m-%d')
+
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
