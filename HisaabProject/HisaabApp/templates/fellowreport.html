@@ -1,33 +1,36 @@
 {%extends 'base.html'%}
 {% block content %}
 
+<div class="container">
 
-<div class="table-responsive">
-<table class="table table-bordered ">
-    <thead class="thead-dark">
-        <tr>
-            <th scope="col">Name</th>
-            <th scope="col">Expense Amount</th>
-            <th scope="col">Category</th>
-            <th scope="col">Date of Expence</th>
-            <th scope="col">Description</th>
-        </tr>
-    </thead>
-    <tbody>
-
-        {% for test in entries  %}
+    <div class="table-responsive">
+    <table class="table table-bordered ">
+        <thead class="thead-dark">
             <tr>
-
-                <td>{{ test.fellow }}</td>
-                <td>{{ test.expense_amount }}</td>
-                <td>{{ test.category }}</td>
-                <td>{{ test.created_date }}</td>
-                <td>{{ test.description }}</td>
+                <th scope="col">Name</th>
+                <th scope="col">Expense Amount</th>
+                <th scope="col">Category</th>
+                <th scope="col">Date of Expence</th>
+                <th scope="col">Description</th>
             </tr>
-        {% endfor %}
+        </thead>
+        <tbody>
 
-    </tbody>
-</table>
+            {% for test in entries  %}
+                <tr>
+
+                    <td>{{ test.fellow }}</td>
+                    <td>{{ test.expense_amount }}</td>
+                    <td>{{ test.category }}</td>
+                    <td>{{ test.created_date }}</td>
+                    <td>{{ test.description }}</td>
+                </tr>
+            {% endfor %}
+
+        </tbody>
+    </table>
+    </div>
+
 </div>
-
+    
 {% endblock %}

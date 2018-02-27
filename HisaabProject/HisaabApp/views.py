@@ -4,16 +4,18 @@ from .models import NgUser,Facility,CashEntry
 from .forms import MoneyTransferForm, BillPaymentForm,AddExpenseForm,FacilityReportForm
 from django.shortcuts import get_list_or_404, get_object_or_404
 import pdb
+
 def is_fellow(user):
     return user.nguser.user_type == "FELLOW"
 
 @login_required
 def home(request):
-    # if request.user.nguser.user_type=="ADMIN":
-    #     #getting the request from database
-    #
-    #     return render(request,'admin.html')
     return render(request, 'fellow.html')
+
+@login_required
+def add_facility(request):
+    print('adding facility')
+
 
 def access_denied(request):
     return render(request,'access_denied.html', )
@@ -73,5 +75,6 @@ def facilityreport(request):
     template = 'report.html'
     return render(request, template, {'entries' : data})
 
-
-def
+@login_required
+def fellowreport(request):
+    pass

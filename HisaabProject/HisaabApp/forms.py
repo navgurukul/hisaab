@@ -1,5 +1,5 @@
 
- django.shortcuts import redirect, HttpResponseRedirect
+from django.shortcuts import redirect, HttpResponseRedirect
 from django.contrib.auth import logout
 from django.contrib.auth.models import User
 from HisaabApp.models import CashEntry,NgUser,Facility,MoneyRequest
@@ -17,7 +17,7 @@ class MoneyTransferForm(forms.ModelForm):
 
     class Meta:
         model = MoneyRequest
-        fields = ('amount', 'description', 'account_number', 'ifsc_code','account_holder_name','facility')
+        fields = ('amount', 'description','facility')
 
 
 class BillPaymentForm(forms.ModelForm):
@@ -52,6 +52,6 @@ class FellowReportForm(forms.Form):
     CATEGORY =(('TRAVEL','Travel Expense'),('GROCERIES','Groceries'),('VEGETABLES','Vegetables'), ('HOUSEHOLD','HouseholdItems'),('EGG','Egg'),('MILK','Milk & Bread'),('TECH EXPENCE','Tech Expenses'),('OTHER','Other'))
     start_date = forms.DateField(widget=forms.DateInput(attrs={'type':'date'}))
     end_date = forms.DateField(widget=forms.DateInput(attrs={'type':'date'}))
-    expense_type =forms.MultipleChoiceField(widget= forms.CheckboxSelectMultiple(),choices=category)
-
+    expense_type =forms.MultipleChoiceField(widget= forms.CheckboxSelectMultiple(),choices=CATEGORY)
+    
     

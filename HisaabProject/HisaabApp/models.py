@@ -32,6 +32,7 @@ class Account(models.Model):
     account_number = models.CharField(max_length=20, blank=True, null = True)
     ifsc_code = models.CharField(max_length=20, blank=True, null= True)
     account_holder_name = models.CharField(max_length=20, blank=True, null=True)
+    facility = models.ForeignKey(Facility)
 
     def __str__(self):
         return self.account_holder_name
@@ -43,7 +44,6 @@ class MoneyRequest(models.Model):
     is_utility_request= models.BooleanField(default=False)
     type_of_bill = models.CharField(max_length=50, choices=BILL, blank=True, null =True)
     bill_image = models.ImageField(upload_to='billpayment/%Y/%m/%d', blank=True, null = True)
-    facility = models.ForeignKey(Facility)
     amount = models.IntegerField()
     description = models.TextField()
     created_date = models.DateField(auto_now_add=True)
@@ -68,7 +68,7 @@ class CashEntry(models.Model):
     is_pay_forward = models.BooleanField(default=False)
     is_payment_to_ng = models.BooleanField(default=False)
     bank_screenshot = models.ImageField(upload_to=bankScreenshot, blank=True, null=True)
-    fellow_payment_screenshot = models.ImageField(upload_to=fellowscreenshot, blank=True, null=True)
+    fellow_payment_screenshot = models.ImageField(upload_to=fellowScreenshot, blank=True, null=True)
     bill_image = models.ImageField(upload_to=billImage,blank=True, null = True)
     description = models.TextField(blank=True, null= True)
 

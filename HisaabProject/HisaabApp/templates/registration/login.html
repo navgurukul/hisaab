@@ -1,18 +1,16 @@
 {% extends 'base.html' %}
 {% block content %}
-{% load static %}
+{% load staticfiles %}
 <div class="container">
  <div class="row">
   <br><br>
-  <div class="col m6 card-panel white offset-m3" style="text-align:center">
-    <h1>Hisaab</h1>
-    <h4>NavGurukul Accounting App</h4>
+  <div class="card white"  style="position: absolute; margin: auto; top: 0; right: 0; bottom: 0; left: 0; width: 30%; padding: 40px; height: 35%; text-align: center;">
+    <h4>Hisaab</h4>
+    <p style="margin-bottom: 0rem !important; ">NavGurukul Accounting App</p>
     <br>
-    <button type="submit" class="btn btn-info active" style="">
-    <a class="btn waves-effect waves-light" href="{% url 'social:begin' 'google-oauth2' %}?next=/">
+    <a class="btn btn-danger" href="{% url 'social:begin' 'google-oauth2' %}?next=/" style="outline: none; margin: 0px 20px 0px 20px;">
         Sign In With Google
-    </a>
-  </button>
+    </a>  
   </div>
  </div>
 </div>

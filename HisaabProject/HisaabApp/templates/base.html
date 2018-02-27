@@ -1,10 +1,9 @@
-{% load static %}
+{% load staticfiles %}
 <html>
 <head>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+
  <!-- Materialize CSS -->
  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
@@ -13,28 +12,28 @@
 </head>
 <title>Django</title>
 {% if user.is_authenticated %}
-<!-- <div class="navbar-fixed">
+<div class="navbar-fixed">
     <nav class="blue">
         <div class="nav-wrapper container">
             <a href="/" class="brand-logo center">Google App</a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="/account/logout">Log out</a></li>
+                <li><a href="{% url 'logout' %}">Log out</a></li>
             </ul>
         </div>
     </nav>
 </div>
- -->
 
-<ul class="nav justify-content-center">
+
+<!-- <ul class="nav justify-content-center">
 
   <li class="nav-item">
-    <a class="nav-link active" href="" class="brand-logo center">Home</a
+    <a class="nav-link active" href="/" class="brand-logo center">Home</a
   </li>
 
   <li class="nav-item">
-    <a class="nav-link" href="/account/logout">Log Out</a>
+    <a class="nav-link" href="{% url 'logout' %}">Log Out</a>
   </li>
-</ul>
+</ul> -->
 
 
 {% endif %}
@@ -43,3 +42,6 @@
     {% endblock %}
 </div>
 </html>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" ></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
