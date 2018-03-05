@@ -1,3 +1,10 @@
+div{
+	margin-bottom: 80px;
+}
+.text-center{
+	color: red;
+}
 body{
-	background-color: red;
+background-color:red;
+color: red;
 }

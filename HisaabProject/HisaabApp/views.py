@@ -1,41 +1,47 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required, user_passes_test
 from .models import NgUser,Facility,CashEntry
-from .forms import MoneyTransferForm, BillPaymentForm,AddExpenseForm,FacilityReportForm
+from .forms import *
 from django.shortcuts import get_list_or_404, get_object_or_404
 import pdb
 
 def is_fellow(user):
     return user.nguser.user_type == "FELLOW"
+def is_admin(user):
+    return user.nguser.user_type == "ADMIN"
+
 
 @login_required
 def home(request):
+    if not is_fellow(request.user):
+        return render(request, 'admin.html')
     return render(request, 'fellow.html')
 
+
+@user_passes_test(is_admin, login_url='/access_denied/')
 @login_required
 def add_facility(request):
+
     print('adding facility')
 
 
 def access_denied(request):
-    return render(request,'access_denied.html', )
+    return render(request,'access_denied.html')
+        
 
-# @user_passes_test(is_fellow, login_url='/access_denied/')
+@user_passes_test(is_fellow, login_url='/access_denied/')
 @login_required
 def moneytransferrequest(request):
     if request.method =='POST':
-        form = MoneyTransferForm(request.POST)
+        form = MoneyTransferForm(request.POST, request=request)
         if form.is_valid():
-            form.save(commit=False)
-            form.is_money_request=True
             form.save()
             redirect('home')
     else:
-        form = MoneyTransferForm()
-        print form
+        form = MoneyTransferForm(request=request)
     return render(request,'moneytransfer.html',{'form':form})
 
-# @user_passes_test(is_fellow, login_url='/access_denied/')
+@user_passes_test(is_fellow, login_url='/access_denied/')
 @login_required
 def utilitybillrequest(request):
     if request.method =='POST':

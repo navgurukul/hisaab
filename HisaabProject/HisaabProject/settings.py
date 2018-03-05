@@ -97,11 +97,13 @@ SOCIAL_AUTH_PIPELINE = (
     'social.pipeline.social_auth.load_extra_data',
     'social.pipeline.user.user_details',
     'social.pipeline.debug.debug',
+
 )
 
 WSGI_APPLICATION = 'HisaabProject.wsgi.application'
 
-# AUTH_PROFILE_MODULE = 'HisaabApp.NgUser'
+# SOCIAL_AUTH_PROFILE_MODULE = 'HisaabApp.models.NgUser'
+AUTH_PROFILE_MODULE = 'HisaabApp.models.NgUser'
 
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
@@ -155,7 +157,6 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
-
 SOCIAL_AUTH_GOOGLE_OAUTH2_KEY ='649957323382-j7g021vk6v8eg9orf8nggdkp82r8mt8g.apps.googleusercontent.com'  #Paste CLient Key
 SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'BZK1RVtbDUIlRh8p7vooN3J4' #Paste Secret Key
 

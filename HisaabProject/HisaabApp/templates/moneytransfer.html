@@ -1,13 +1,88 @@
 {% extends 'base.html' %}
 {% block content %}
-<div class=”row”>
- <div class="col s12 m6 offset-m3">
- <H3>Hi {{ user.first_name }}!</H3>
- </div>
+
+<!-- Form for Requesting the money from the Admin -->
+<div class="container" style="max-width: 60%;">
+	<div class="">
+		<h3 class="text-center">
+		Add Transfer Request			
+		</h3>
+		<br>
+
+		<form action="" mehtod="post">
+		  {% csrf_token %}
+		  <h4>Transfer Details</h4>
+		  <!-- Details about transfer request -->
+		  <div class="form-group">
+		  	<!-- Amount Field -->
+			<div class="input-group">
+			    <div class="input-group addon">
+			      <span class="input-group-addon" id="basic-addon1"><i class="fa fa-inr"></i></span>
+			     	{{ form.amount }}
+			    </div>
+			</div>		      
+			<br>
+			<!-- Facility Dropdown Menu which will be auto selected -->
+			<div class="input-group">
+			    <div class="input-group addon">
+			      <span class="input-group-addon" id="basic-addon1"><i class="fa fa-home"></i></span>
+			     	{{ form.facility }}
+			    </div>
+			</div>
+			<br>
+
+			<!-- Purpose for the money request -->
+			<div class="input-group">
+			    <div class="input-group addon">
+			      <span class="input-group-addon" id="basic-addon1"><i class="fa fa-pencil-square-o"></i></span>
+			     	{{ form.description }}
+			    </div>
+			</div>
+			<br>
+
+		  </div>
+
+
+		<h6>Account Details</h6>
+		<br>
+		
+		<div class="form-group">
+			<!-- User that have UPI id stored in database -->
+			<div class="input-group">
+			    <div class="input-group addon">
+			      <span class="input-group-addon" id="basic-addon1"><i class="fa fa-user"></i></span>
+			     	{{ form.nguser_with_upi }}
+				</div>
+		  	</div>
+			<br>
+
+		  <h4 class="text-center">OR</h4>
+
+		  	<!-- Add Upi ID for the user-->
+		  	<h6>Add UPI id for the User below :</h6>
+
+		  	<!-- User without the Upi id field -->
+			<div class="input-group">
+			    <div class="input-group addon">
+			      <span class="input-group-addon" id="basic-addon1"><i class="fa fa-user"></i></span>
+			     	{{ form.nguser_without_upi }}
+			    </div>
+		  	</div>
+			
+		  	<!-- UPI id field for the User -->
+		  	<div class="input-group" style="margin-top: 10px;">
+			    <div class="input-group addon">
+			      <span class="input-group-addon" id="basic-addon1"><i class="fa fa-code"></i></span>
+			     	{{ form.upi_id }}
+			    </div>
+		  	</div>
+			<br><br>
+
+		</div>
+
+
+		<input class="btn btn-success float-right" type="submit" value="Submit Transfer Request" />
+		</form>
+	</div>
 </div>
-<form method=”post”>
- {% csrf_token %}
- {{ form.as_p }}
- <button type=”submit”>Request</button>
-</form>
 {% endblock %}

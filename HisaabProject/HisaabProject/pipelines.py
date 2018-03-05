@@ -6,6 +6,6 @@ def save_profile(backend, user, response, *args, **kwargs):
 		new_user = kwargs['is_new']
 		if new_user:
 			nguser = NgUser(user_id=user.id)
-			# nguser.facility = Facility
+			nguser.facility = Facility.objects.get(name = 'Dharamshala')
 			nguser.save()
 		
