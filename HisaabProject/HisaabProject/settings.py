@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
 import os
+# from .pipelines import *
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -87,16 +88,22 @@ SOCIAL_AUTH_PIPELINE = (
     'social.pipeline.social_auth.auth_allowed',
     'social.pipeline.social_auth.social_user',
     'social.pipeline.user.get_username',
+    'social_core.pipeline.mail.mail_validation',
+    'social_core.pipeline.social_auth.associate_by_email',
     'social.pipeline.user.create_user',
+    'HisaabProject.pipeline.save_profile',
     'social.pipeline.social_auth.associate_user',
     'social.pipeline.debug.debug',
     'social.pipeline.social_auth.load_extra_data',
     'social.pipeline.user.user_details',
     'social.pipeline.debug.debug',
+
 )
 
 WSGI_APPLICATION = 'HisaabProject.wsgi.application'
 
+# SOCIAL_AUTH_PROFILE_MODULE = 'HisaabApp.models.NgUser'
+AUTH_PROFILE_MODULE = 'HisaabApp.models.NgUser'
 
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
@@ -150,11 +157,16 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
-
 SOCIAL_AUTH_GOOGLE_OAUTH2_KEY ='649957323382-j7g021vk6v8eg9orf8nggdkp82r8mt8g.apps.googleusercontent.com'  #Paste CLient Key
 SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'BZK1RVtbDUIlRh8p7vooN3J4' #Paste Secret Key
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
+
+STATIC_ROOT= os.path.join(BASE_DIR,'staticfiles')
+
 
 
 SOCIAL_AUTH_GOOGLE_OAUTH2_IGNORE_DEFAULT_SCOPE = True
@@ -171,3 +183,8 @@ SOCIAL_AUTH_GOOGLE_PLUS_SCOPE = [
 ]
 LOGIN_URL = '/account/login/'
 LOGIN_REDIRECT_URL='/'
+DATE_INPUT_FORMATS = ('%d-%m-%Y','%Y-%m-%d')
+
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'

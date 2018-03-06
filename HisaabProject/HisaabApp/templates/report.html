@@ -1,0 +1,28 @@
+{%extends 'base.html'%}
+
+{% block content %}
+
+<table class="table table-condensed table-striped">
+    <thead>
+        <tr>
+            <th class="col-sm-2">Name</th>
+            <th class="col-sm-2">Expense Amount</th>
+            <th class="col-sm-2">Category</th>
+            <th class="col-sm-2">DoE</th>
+            <th class="col-sm-3">Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for test in CashEntry %}
+            <tr>
+                <td>{{ test.fellow }}</td>
+                <td>{{ test.expense_amount }}</td>
+                <td>{{ test.category }}</td>
+                <td>{{ test.created_date }}</td>
+                <td>{{ test.description }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}
