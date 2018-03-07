@@ -13,6 +13,7 @@ urlpatterns = [
     url(r'^addexpense/$', views.addexpense,  name='addexpense'),
     url(r'^facilityreport/$', views.fellowreport,  name='fellowreport'),
     url(r'^fellowreport/(?P<username>\w+)$', views.fellowreport,  name='fellowreport'),
+    url(r'^register/$', views.register,  name='register'),
 
 ]
 if settings.DEBUG:

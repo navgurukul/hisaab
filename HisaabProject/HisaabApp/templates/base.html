@@ -2,13 +2,6 @@
 <html>
 <head>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
-
- <!-- Materialize CSS -->
- <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
- Material icons
- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">  -->
 </head>
 <title>Django</title>
 {% if user.is_authenticated %}
@@ -23,17 +16,6 @@
     </nav>
 </div>
 
-
-<!-- <ul class="nav justify-content-center">
-
-  <li class="nav-item">
-    <a class="nav-link active" href="/" class="brand-logo center">Home</a
-  </li>
-
-  <li class="nav-item">
-    <a class="nav-link" href="{% url 'logout' %}">Log Out</a>
-  </li>
-</ul> -->
 
 
 {% endif %}

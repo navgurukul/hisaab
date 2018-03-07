@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+	<div class="container" style="margin-top:20%; max-width: 50%; min-width: 30%; ">
+		<div class="text-center">
+			<form method="POST" class="text-center " >
+					{% csrf_token %}
+
+					<h5 class="text-success">Please Select your facility in Navgurukul!</h5> 
+					{{ form.facility }}
+					<br><br>
+					<button type="submit" class="btn float-right btn-success">
+						Save Details >
+					</button>
+			</form>
+		</div>
+	</div>
+{% endblock %}

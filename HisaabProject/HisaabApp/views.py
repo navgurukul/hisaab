@@ -1,15 +1,35 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required, user_passes_test
-from .models import NgUser,Facility,CashEntry
+from .models import *
 from .forms import *
-from django.shortcuts import get_list_or_404, get_object_or_404
-import pdb
+from django.urls import reverse
+
+
+from social_core.pipeline.utils import partial_load
+from social_django.utils import load_strategy
+
+
 
 def is_fellow(user):
     return user.nguser.user_type == "FELLOW"
+
 def is_admin(user):
     return user.nguser.user_type == "ADMIN"
 
+
+def register(request):
+    if request.session.get('is_new', None):
+        if request.method == 'POST':
+            form = RegisterForm(request.POST)
+            if form.is_valid():
+                request.session['facility'] =  form.cleaned_data.get('facility',None).id
+                print "redirecting"
+                return redirect(reverse('social:complete', args=("google-oauth2",)))
+        else:
+            form = RegisterForm()
+        return render(request, 'register_form.html',{'form':form})
+    else:
+        return redirect('access_denied')
 
 @login_required
 def home(request):
@@ -32,14 +52,19 @@ def access_denied(request):
 @user_passes_test(is_fellow, login_url='/access_denied/')
 @login_required
 def moneytransferrequest(request):
-    if request.method =='POST':
+    if request.method == 'POST':
+        print "yahan ayaa ta"
         form = MoneyTransferForm(request.POST, request=request)
         if form.is_valid():
+            print "yahn bhi"
             form.save()
             redirect('home')
     else:
         form = MoneyTransferForm(request=request)
     return render(request,'moneytransfer.html',{'form':form})
+
+
+
 
 @user_passes_test(is_fellow, login_url='/access_denied/')
 @login_required
