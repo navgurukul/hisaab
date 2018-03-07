@@ -2,13 +2,14 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.db.models.signals import post_save
 from django.dispatch import receiver
+from django.utils import timezone
 
 def fellowScreenshot(instance , filename):
-    return 'fellowpayment/{0}/{1}'.format(instance.user.id, filename)
+    return 'fellowpayment/{0}/{1}'.format(instance.fellow.user.id, filename)
 def bankScreenshot(instance , filename):
-    return 'bankScreenshot/{0}/{1}'.format(instance.user.id, filename)
+    return 'bankScreenshot/{0}/{1}'.format(instance.fellow.user.id, filename)
 def billImage(instance , filename):
-    return 'billimage/{0}/{1}'.format(instance.fellow.id, filename)
+    return 'billimage/{0}/{1}'.format(instance.fellow.user.id, filename)
 
 class Facility(models.Model):
     name = models.CharField(max_length=50)
@@ -28,6 +29,17 @@ class NgUser(models.Model):
     def __str__(self):
         return self.user.first_name + " " + self.user.last_name
 
+    def total_time_in_ng(self):
+        return (timezone.now() - self.created_date).days
+
+    def total_weekly_expenses(self):
+        return (self.total_time_in_ng()/7) * self.facility.student_expenses_limit
+
+    def is_fellow(self):
+        return self.user_type == 'FELLOW'
+
+    def is_admin(self):
+        return self.user_type == 'ADMIN'
 
 
 
@@ -51,7 +63,7 @@ class MoneyRequest(models.Model):
 
 class CashEntry(models.Model):
     CATEGORY =(('TRAVEL','Travel Expense'),('GROCERIES','Groceries'),('VEGETABLES','Vegetables'), ('HOUSEHOLD','HouseholdItems'),('EGG','Egg'),('MILK','Milk & Bread'),('TECH EXPENCE','Tech Expenses'),('OTHER','Other'))
-    created_date = models.DateField()
+    created_date = models.DateField(default = timezone.now)
     fellow = models.ForeignKey(NgUser, related_name='cash_entry', related_query_name = 'cash_entry')
     facility=models.ForeignKey(Facility, blank=True, null = True)
     expense_amount = models.IntegerField(blank=True, null=True)
