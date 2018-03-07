@@ -9,7 +9,7 @@ Under the repository name, click Clone or download.
 In the Clone with HTTPs section, copy the URL for the repository
 Type git clone, and then paste the URL you copied in Step 2.
 Press Enter. Your local clone will be created, so the cloning part is done.
-'''
+```
 This project is made on the Python framework django so some installation you have to made for smooth running of the project :
 open console run the commands,
 1. (sudo apt-get install python3)
@@ -24,4 +24,4 @@ so, installation part is done now for running he app on web browser we have to d
 1. open colsole go to the hisaab/Hisaabproject directory
 2. type (python manage.py runserver)
 and then open safari or chrome web browser and type localhost:8000.
-'''
+```
