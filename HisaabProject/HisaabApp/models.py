@@ -19,7 +19,7 @@ class Facility(models.Model):
 
 class NgUser(models.Model):
     ROLES = (('ADMIN','admin'),('FELLOW','fellow'))
-    user_type= models.CharField(choices=ROLES,max_length=20,default='FELLOW',blank=False)
+    user_type= models.CharField(choices=ROLES,max_length=6,default='FELLOW',blank=False)
     user = models.OneToOneField(User,unique=True, related_query_name = 'nguser', on_delete=models.CASCADE)
     created_date = models.DateField(auto_now_add=True)
     upi_id = models.CharField(max_length=40, blank= True, null=True)

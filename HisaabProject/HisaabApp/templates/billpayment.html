@@ -4,49 +4,49 @@
 <h3 class="text-center">Add Bill Payments Request</h3> <br>
 <!-- Request for Utility Bill Payment  -->
 
-<form method='POST'>
- {% csrf_token %}
+    <form method='POST'>
+     {% csrf_token %}
 
- <div class="form-group">
-<label for="amount">Amount :</label>
-<!-- <input type="text" name="amount" placeholder="Bill Amount"><br> -->
-<div class="input-group">
-    <div class="input-group addon">
-      <span class="input-group-addon" id="amount"><i class="fa fa-inr"></i></span>
-      {{ form.amount }}
-    </div>
-</div>
-<br>
-<label for="type_of_bill">Type Of Bill   :</label>
-<div class="input-group">
-    <div class="input-group addon">
-      <span class="input-group-addon" id="type_of_bill"><i class="fa fa-home"></i></span>
-      {{ form.type_of_bill }}
-    </div>
-</div>
-<br>
-<!-- Purpose for the money request for type of bill -->
-<label for="description">Description :</label>
-<div class="input-group">
-    <div class="input-group addon">
-      <span class="input-group-addon" id="description"><i class="fa fa-pencil-square-o"></i></span>
-      {{ form.description }}
-    </div>
-</div>
-<br>
-<!-- Image of the bill that have the Request -->
-<label for="bill_image">Bill Image :</label>
-<div class="input-group">
-    <div class="input-group addon">
-      <span class="input-group-addon" id="bill_image"><i class="fa fa-pencil-square-o"></i></span>
-      {{ form.bill_image }}
-    </div>
-</div>
+     <div class="form-group">
+    <label for="amount">Amount :</label>
+          <!-- <input type="text" name="amount" placeholder="Bill Amount"><br> -->
+          <div class="input-group">
+              <div class="input-group addon">
+                <span class="input-group-addon" id="amount"><i class="fa fa-inr"></i></span>
+                {{ form.amount }}
+              </div>
+          </div>
+          <br>
+          <label for="type_of_bill">Type Of Bill   :</label>
+          <div class="input-group">
+              <div class="input-group addon">
+                <span class="input-group-addon" id="type_of_bill"><i class="fa fa-home"></i></span>
+                {{ form.type_of_bill }}
+              </div>
+          </div>
+          <br>
+          <!-- Purpose for the money request for type of bill -->
+          <label for="description">Description :</label>
+          <div class="input-group">
+              <div class="input-group addon">
+                <span class="input-group-addon" id="description"><i class="fa fa-pencil-square-o"></i></span>
+                {{ form.description }}
+              </div>
+          </div>
+          <br>
+          <!-- Image of the bill that have the Request -->
+          <label for="bill_image">Bill Image :</label>
+          <div class="input-group">
+              <div class="input-group addon">
+                <span class="input-group-addon" id="bill_image"><i class="fa fa-pencil-square-o"></i></span>
+                {{ form.bill_image }}
+              </div>
+          </div>
 
-</div>
+          </div>
 
- <input class="btn btn-success float-right" type="submit" value="Submit Transfer Request" />
+           <input class="btn btn-success float-right" type="submit" value="Submit Transfer Request" />
 
-</form>
+    </form>
 </div>
 {% endblock %}

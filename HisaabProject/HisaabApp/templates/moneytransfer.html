@@ -9,7 +9,7 @@
 		</h3>
 		<br>
 
-		<form action="." mehtod='POST'>
+		<form mehtod="post">
 		  {% csrf_token %}
 		  <h4>Transfer Details</h4>
 		  <!-- Details about transfer request -->
@@ -87,7 +87,7 @@
 		</div>
 
 
-		<input class="btn btn-success float-right" type="submit" value="Submit Transfer Request" />
+		<button class="btn btn-success float-right" type="submit">Submit Transfer Request</button>
 		</form>
 	</div>
 </div>

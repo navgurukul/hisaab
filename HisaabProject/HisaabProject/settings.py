@@ -83,20 +83,22 @@ TEMPLATES = [
 ]
 
 SOCIAL_AUTH_PIPELINE = (
-    'social.pipeline.social_auth.social_details',
-    'social.pipeline.social_auth.social_uid',
-    'social.pipeline.social_auth.auth_allowed',
-    'social.pipeline.social_auth.social_user',
-    'social.pipeline.user.get_username',
-    'social_core.pipeline.mail.mail_validation',
-    'social_core.pipeline.social_auth.associate_by_email',
-    'social.pipeline.user.create_user',
-    'HisaabProject.pipeline.save_profile',
-    'social.pipeline.social_auth.associate_user',
-    'social.pipeline.debug.debug',
-    'social.pipeline.social_auth.load_extra_data',
-    'social.pipeline.user.user_details',
-    'social.pipeline.debug.debug',
+        'social.pipeline.social_auth.social_details',
+        'social.pipeline.social_auth.social_uid',
+        'social.pipeline.social_auth.auth_allowed',
+        'social.pipeline.social_auth.social_user',
+        'social.pipeline.user.get_username',
+        # 'social.pipeline.misc.save_status_to_session',
+        'social_core.pipeline.mail.mail_validation',
+        'social_core.pipeline.social_auth.associate_by_email',
+        'social.pipeline.user.create_user',
+        'HisaabProject.pipelines.add_facility',
+        'HisaabProject.pipelines.save_profile',
+        'social.pipeline.social_auth.associate_user',
+        'social.pipeline.debug.debug',
+        'social.pipeline.social_auth.load_extra_data',
+        'social.pipeline.user.user_details',
+        'social.pipeline.debug.debug',
 
 )
 
@@ -108,6 +110,7 @@ AUTH_PROFILE_MODULE = 'HisaabApp.models.NgUser'
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
+SOCIAL_AUTH_FIELDS_STORED_IN_SESSION = ['facility'  ]
 
 DATABASES = {
     'default': {
