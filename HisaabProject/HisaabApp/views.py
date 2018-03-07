@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required, user_passes_test
-from .models import NgUser,Facility,CashEntry
+from .models import NgUser,Facility,CashEntry,MoneyRequest
 from .forms import *
 from django.shortcuts import get_list_or_404, get_object_or_404
 import pdb
@@ -27,14 +27,16 @@ def add_facility(request):
 
 def access_denied(request):
     return render(request,'access_denied.html')
-        
+
 
 @user_passes_test(is_fellow, login_url='/access_denied/')
 @login_required
 def moneytransferrequest(request):
     if request.method =='POST':
+        print "yes"
         form = MoneyTransferForm(request.POST, request=request)
         if form.is_valid():
+            print form
             form.save()
             redirect('home')
     else:
@@ -45,14 +47,14 @@ def moneytransferrequest(request):
 @login_required
 def utilitybillrequest(request):
     if request.method =='POST':
-        form = BillPaymentForm(request.POST,request.FILES)
+        form = UtilityBillRequestForm(request.POST,request.FILES)
         if form.is_valid():
             form.save(commit=False)
             form.is_utility_request=True
             form.save()
-            redirect('home')
+            return redirect('home')
     else:
-        form = BillPaymentForm()
+        form = UtilityBillRequestForm()
         print form
     return render(request,'billpayment.html',{'form':form})
 
@@ -62,12 +64,10 @@ def addexpense(request):
         if form.is_valid():
             form.save(commit=False)
             # pdb.set_trace()
-            print form.cleaned_data.get('expense_type').encode('utf8')
             if form.cleaned_data.get('expense_type').encode('utf8') == 'PERSONAL':
                 form.is_personal_expense = True
             else:
                 form.is_facility_expense = True
-            print form.cleaned_data.get('facility')
             form.facility = form.cleaned_data.get('facility')
             form.save()
             return redirect('home')

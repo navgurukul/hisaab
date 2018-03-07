@@ -19,15 +19,15 @@ class MoneyTransferForm(forms.ModelForm):
     upi_id = forms.CharField(max_length=40,widget=forms.TextInput(attrs={'class':'form-control', 'placeholder': 'UPI id of the Fellow'}),required=False)
 
     facility = forms.ModelChoiceField(queryset= Facility.objects.all() ,widget=forms.Select(attrs={'class': 'form-control'}))
-    
+
     amount = forms.IntegerField(widget=forms.NumberInput(attrs={'class':'form-control','placeholder': 'How much money do you need?'}))
-    
+
     description = forms.CharField(widget=forms.Textarea(attrs={'class':'form-control','placeholder': 'Why is the money needed?'}))
-    
-    nguser_with_upi = forms.ModelChoiceField(queryset = NgUser.objects.all(),widget=forms.Select(attrs={'class': 'form-control','placeholder':'In which account do you need the money?'}))
-    
+
+    nguser_with_upi = forms.ModelChoiceField(queryset = NgUser.objects.all(),widget=forms.Select(attrs={'class': 'form-control','placeholder':'In which account do you need the money?'}),required=False)
+
     nguser_without_upi = forms.ModelChoiceField(queryset = NgUser.objects.all(),widget=forms.Select(attrs={'class': 'form-control', 'placeholder': "Account that doesn't have UPI id"}),required=False)
-    
+
     class Meta:
 
         model = MoneyRequest
@@ -59,21 +59,26 @@ class MoneyTransferForm(forms.ModelForm):
 
         return instance
 
+class UtilityBillRequestForm(forms.ModelForm):
+    BILL = (('INTERNET','Internet'),('ELECTRICITY','Electricity'),('WATER','WaterBill'),('HOUSERENT', 'Houserent'))
+    type_of_bill = forms.ChoiceField(choices = BILL)
+    class Meta:
+        model = MoneyRequest
+        fields = ('amount','type_of_bill','description','bill_image')
 
 
 
 
-
-# class AddExpenseForm(forms.ModelForm):
-#     EXPENSETYPE = (("FELLOW",'Navgurukul'),('PERSONAL','Personal'))
-#     CATEGORY =(('TRAVEL','Travel Expense'),('GROCERIES','Groceries'),('VEGETABLES','Vegetables'), ('HOUSEHOLD','HouseholdItems'),('EGG','Egg'),('MILK','Milk & Bread'),('TECH EXPENCE','Tech Expenses'),('OTHER','Other'))
-#     facility = forms.ModelChoiceField(queryset = Facility.objects.all())
-#     fellow = forms.ModelChoiceField(queryset = NgUser.objects.all())
-#     expense_type = forms.ChoiceField(choices = EXPENSETYPE)
-#     category = forms.ChoiceField(choices =CATEGORY)
-#     class Meta:
-#         model = CashEntry
-#         fields = ('fellow','expense_type','facility', 'expense_amount', 'created_date', 'category','bill_image','description')
+class AddExpenseForm(forms.ModelForm):
+    EXPENSETYPE = (("FELLOW",'Navgurukul'),('PERSONAL','Personal'))
+    CATEGORY =(('TRAVEL','Travel Expense'),('GROCERIES','Groceries'),('VEGETABLES','Vegetables'), ('HOUSEHOLD','HouseholdItems'),('EGG','Egg'),('MILK','Milk & Bread'),('TECH EXPENCE','Tech Expenses'),('OTHER','Other'))
+    facility = forms.ModelChoiceField(queryset = Facility.objects.all())
+    fellow = forms.ModelChoiceField(queryset = NgUser.objects.all())
+    expense_type = forms.ChoiceField(choices = EXPENSETYPE)
+    category = forms.ChoiceField(choices =CATEGORY)
+    class Meta:
+        model = CashEntry
+        fields = ('fellow','expense_type','facility', 'expense_amount', 'created_date', 'category','bill_image','description')
 
 
 # class FacilityReportForm(forms.ModelForm):
@@ -88,5 +93,5 @@ class MoneyTransferForm(forms.ModelForm):
 #     start_date = forms.DateField(widget=forms.DateInput(attrs={'type':'date'}))
 #     end_date = forms.DateField(widget=forms.DateInput(attrs={'type':'date'}))
 #     expense_type =forms.MultipleChoiceField(widget= forms.CheckboxSelectMultiple(),choices=CATEGORY)
-    
-#     
+
+#
