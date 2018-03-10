@@ -7,20 +7,32 @@
     <form method='POST'>
      {% csrf_token %}
 
+
      <div class="form-group">
-    <label for="amount">Amount :</label>
+         <label for="amount">Amount :</label>
           <!-- <input type="text" name="amount" placeholder="Bill Amount"><br> -->
           <div class="input-group">
+<<<<<<< HEAD
               <div class="input-group addon" >
                 <span class="input-group-addon" id="amount"><i class="fa fa-inr"></i></span>
+=======
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="amount"><i class="fa fa-inr"></i></span>
+>>>>>>> refs/remotes/origin/master
                 {{ form.amount }}
               </div>
           </div>
           <br>
           <label for="type_of_bill">Type Of Bill   :</label>
+<<<<<<< HEAD
           <div class="input-group" >
               <div class="input-group addon">
                 <span class="input-group-addon" id="type_of_bill"><i class="fa fa-home"></i></span>
+=======
+          <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="type_of_bill"><i class="fa fa-home"></i></span>
+>>>>>>> refs/remotes/origin/master
                 {{ form.type_of_bill }}
               </div>
           </div>
@@ -28,8 +40,8 @@
           <!-- Purpose for the money request for type of bill -->
           <label for="description">Description :</label>
           <div class="input-group">
-              <div class="input-group addon">
-                <span class="input-group-addon" id="description"><i class="fa fa-pencil-square-o"></i></span>
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="description"><i class="fa fa-pencil-square-o"></i></span>
                 {{ form.description }}
               </div>
           </div>
@@ -37,8 +49,8 @@
           <!-- Image of the bill that have the Request -->
           <label for="bill_image">Bill Image :</label>
           <div class="input-group">
-              <div class="input-group addon">
-                <span class="input-group-addon" id="bill_image"><i class="fa fa-pencil-square-o"></i></span>
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="bill_image"><i class="fa fa-pencil-square-o"></i></span>
                 {{ form.bill_image }}
               </div>
           </div>

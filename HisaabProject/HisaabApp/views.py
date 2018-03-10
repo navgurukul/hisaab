@@ -3,7 +3,7 @@ from django.contrib.auth.decorators import login_required, user_passes_test
 from .models import *
 from .forms import *
 from django.urls import reverse
-
+from django.utils import timezone 
 
 from social_core.pipeline.utils import partial_load
 from social_django.utils import load_strategy
@@ -12,10 +12,6 @@ from social_django.utils import load_strategy
 
 def is_fellow(user):
     return user.nguser.user_type == "FELLOW"
-def is_admin(user):
-    return user.nguser.user_type == "ADMIN"
-
-
 def is_admin(user):
     return user.nguser.user_type == "ADMIN"
 
@@ -80,6 +76,23 @@ def utilitybillrequest(request):
         form = UtilityBillRequestForm()
         print form
     return render(request,'billpayment.html',{'form':form})
+
+
+@user_passes_test(is_admin, login_url='/access_denied/')
+@login_required
+def recordpayment(request):
+    if request.method ==  'POST':
+        form = RecordPaymentForm(request.POST, request.FILES)
+        if form.is_valid():
+            instance = form.save(commit = False)
+            instance.fellow = request.user.nguser
+            instance.is_payment_to_ng = True
+            instance.save()
+            return redirect('home')
+    else:
+        form = RecordPaymentForm()
+    return render(request, 'recordpayment.html', {'form': form})
+
 
 def addexpense(request):
     if request.method =='POST':

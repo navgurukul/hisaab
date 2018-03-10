@@ -70,15 +70,28 @@ class MoneyTransferForm(forms.ModelForm):
             raise ValidationError('UPI id is required!')
 
 
+
+class RecordPaymentForm(forms.ModelForm):
+    facility = forms.ModelChoiceField(queryset= Facility.objects.all() ,widget=forms.Select(attrs={'class': 'form-control'}))
+    description = forms.CharField(widget=forms.Textarea(attrs={'class':'form-control','placeholder': 'Why is the money needed?'}))
+    payment_amount = forms.IntegerField(widget=forms.NumberInput(attrs={'class':'form-control','placeholder': 'How much money do you need?'}))
+    # bank_screenshot = forms.ImageField(widget=forms.ClearableFileInput(attrs = {'class':'btn btn-default','placeholder': 'Upload the bank transaction screenshot!'}))
+    class Meta:
+        model = CashEntry
+        fields = ['facility', 'bank_screenshot', 'payment_amount', 'description']
+        
+        
+
 class UtilityBillRequestForm(forms.ModelForm):
+<<<<<<< HEAD
     BILL = (('INTERNET','Internet'),('ELECTRICITY','Electricity'),('WATER','WaterBill'), ('HOUSERENT', 'Houserent'))
+=======
+    BILL = (('INTERNET','Internet'),('ELECTRICITY','Electricity'),('WATER','WaterBill'),('HOUSERENT', 'Houserent'))
+>>>>>>> refs/remotes/origin/master
     type_of_bill = forms.ChoiceField(choices = BILL)
     class Meta:
         model = MoneyRequest
         fields = ('amount','type_of_bill','description','bill_image')
-
-
-
 
 class AddExpenseForm(forms.ModelForm):
     EXPENSETYPE = (("FELLOW",'Navgurukul'),('PERSONAL','Personal'))

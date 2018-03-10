@@ -6,10 +6,17 @@
 					{% csrf_token %}
 
 					<h5 class="text-success">Please Select your facility in Navgurukul!</h5> 
-					{{ form.facility }}
-					<br><br>
+					<label for="facility">Facility :</label>
+					<div class="input-group">
+					    <div class="input-group-prepend">
+					      <span class="input-group-text" id="facility"><i class="fa fa-home"></i></span>
+					     	{{ form.facility }}
+					    </div>
+					</div>
+					<br>
+					<br>
 					<button type="submit" class="btn float-right btn-success">
-						Save Details >
+						Save My Details >
 					</button>
 			</form>
 		</div>
