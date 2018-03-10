@@ -1,33 +1,30 @@
 {% extends 'base.html' %}
 {% block content %}
 <div class="container" style="max-width:60%">
-<h3 class="text-center">Add Bill Payments Request</h3> <br>
-<!-- Request for Utility Bill Payment  -->
+<h3 class="text-center">Record Payment :</h3> <br>
+<!-- Record Payment made to the facility  -->
 
     <form method='POST'>
      {% csrf_token %}
-
-
      <div class="form-group">
-         <label for="amount">Amount :</label>
-          <!-- <input type="text" name="amount" placeholder="Bill Amount"><br> -->
+    <label for="payment-amount">Amount :</label>
           <div class="input-group">
               <div class="input-group-prepend">
-                <span class="input-group-text" id="amount"><i class="fa fa-inr"></i></span>
-                {{ form.amount }}
+                <span class="input-group-text" id="payment-amount"><i class="fa fa-inr"></i></span>
+                {{ form.payment_amount }}
               </div>
           </div>
           <br>
-          <label for="type_of_bill">Type Of Bill   :</label>
+          <label for="facility">Facility :</label>
           <div class="input-group">
               <div class="input-group-prepend">
-                <span class="input-group-text" id="type_of_bill"><i class="fa fa-home"></i></span>
-                {{ form.type_of_bill }}
+                <span class="input-group-text" id="facility"><i class="fa fa-home"></i></span>
+                {{ form.facility }}
               </div>
           </div>
           <br>
           <!-- Purpose for the money request for type of bill -->
-          <label for="description">Description :</label>
+          <label for="description">Extra Notes :</label>
           <div class="input-group">
               <div class="input-group-prepend">
                 <span class="input-group-text" id="description"><i class="fa fa-pencil-square-o"></i></span>
@@ -36,17 +33,19 @@
           </div>
           <br>
           <!-- Image of the bill that have the Request -->
-          <label for="bill_image">Bill Image :</label>
+          <label for="bank_screenshot">Bank Screenshot :</label>
           <div class="input-group">
               <div class="input-group-prepend">
-                <span class="input-group-text" id="bill_image"><i class="fa fa-pencil-square-o"></i></span>
-                {{ form.bill_image }}
+                <span class="input-group-text" id="bank_screenshot"><i class="fa fa-pencil-square-o"></i></span>
+                <span class="btn btn-default btn-file">
+                {{ form.bank_screenshot }}
+                </span>
               </div>
           </div>
 
           </div>
 
-           <input class="btn btn-success float-right" type="submit" value="Submit Transfer Request" />
+           <input class="btn btn-success float-right" type="submit" value="Record Payment >" />
 
     </form>
 </div>

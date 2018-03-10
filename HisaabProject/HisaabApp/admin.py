@@ -6,4 +6,4 @@ from .models import*
 admin.site.register(NgUser)
 admin.site.register(Facility)
 admin.site.register(CashEntry)
-# admin.site.register(User)
+admin.site.register(MoneyRequest)

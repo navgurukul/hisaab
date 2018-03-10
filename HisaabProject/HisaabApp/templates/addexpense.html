@@ -1,13 +1,70 @@
 {% extends 'base.html' %}
 {% block content %}
-<div class=”row”>
- <div class="col s12 m6 offset-m3">
+<div class='container row'>
+ <div class="col-md-6">
  <H3>Add Expense!</H3>
- </div>
-</div>
 <form method="post" enctype="multipart/form-data">
  {% csrf_token %}
- {{ form.as_p }}
- <button type=”submit”>Save</button>
+	<label for="facility">Facility :</label>
+	      <div class="input-group">
+	          <div class="input-group-prepend">
+	            <span class="input-group-text" id="facility"><i class="fa fa-home"></i></span>
+	            {{ form.facility }}
+	          </div>
+	      </div>
+	      <br>
+
+	 <label for="amount">Amount   :</label>
+	          <div class="input-group">
+	              <div class="input-group-prepend">
+	                <span class="input-group-text" id="amount"><i class="fa fa-inr"></i></span>
+	                {{ form.expense_amount }}
+	              </div>
+	          </div>
+	          <br>	
+	<label for="date">Date   :</label>
+	      <div class="input-group">
+	          <div class="input-group-prepend">
+	            <span class="input-group-text" id="date"><i class="fa fa-calendar"></i></span>
+	           	<input type="date" name="created_date" class="form-control">
+	          </div>
+	      </div>
+	      <br>
+
+	<label for="fellow">Who made the expense? :</label>
+				<div class="input-group">
+				    <div class="input-group-prepend">
+				      <span class="input-group-text" id="fellow"><i class="fa fa-user"></i></span>
+				     	{{ form.fellow }}
+					</div>
+			  	</div>
+				<br>
+	<label for="category">Category :</label>
+				<div class="input-group">
+				    <div class="input-group-prepend">
+				      <span class="input-group-text" id="category"><i class="fa fa-database"></i></span>
+				     	{{ form.category }}
+					</div>
+			  	</div>
+				<br>
+	<label for="bill_image">Bill Image :</label>
+				<div class="input-group">
+				    <div class="input-group-prepend">
+				      <span class="input-group-text" id="bill_image"><i class="fa fa-image"></i></span>
+				     	{{ form.bill_image }}
+					</div>
+			  	</div>
+				<br>
+	<label for="description">Description :</label>
+				<div class="input-group">
+				    <div class="input-group-prepend">
+				      <span class="input-group-text" id="description"><i class="fa fa-pencil-square-o"></i></span>
+				     	{{ form.description }}
+					</div>
+			  	</div>
+				<br>
+ <button type='submit'>Save</button>
 </form>
+ </div>
+</div>
 {% endblock %}

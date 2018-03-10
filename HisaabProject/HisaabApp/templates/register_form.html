@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+	<div class="container" style="margin-top:20%; max-width: 50%; min-width: 30%; ">
+		<div class="text-center">
+			<form method="POST" class="text-center " >
+					{% csrf_token %}
+
+					<h5 class="text-success">Please Select your facility in Navgurukul!</h5> 
+					<label for="facility">Facility :</label>
+					<div class="input-group">
+					    <div class="input-group-prepend">
+					      <span class="input-group-text" id="facility"><i class="fa fa-home"></i></span>
+					     	{{ form.facility }}
+					    </div>
+					</div>
+					<br>
+					<br>
+					<button type="submit" class="btn float-right btn-success">
+						Save My Details >
+					</button>
+			</form>
+		</div>
+	</div>
+{% endblock %}

@@ -2,39 +2,43 @@
 {% block content %}
 
 <!-- Form for Requesting the money from the Admin -->
-<div class="container" style="max-width: 60%;">
+<div class="container" style="max-width: 60%">
 	<div class="">
 		<h3 class="text-center">
-		Add Transfer Request			
+		Add Transfer Request
 		</h3>
 		<br>
 
-		<form action="" mehtod="post">
+
+		<form mehtod="post">
 		  {% csrf_token %}
 		  <h4>Transfer Details</h4>
 		  <!-- Details about transfer request -->
 		  <div class="form-group">
 		  	<!-- Amount Field -->
+			<label for="amount">Amount :</label>
 			<div class="input-group">
-			    <div class="input-group addon">
-			      <span class="input-group-addon" id="basic-addon1"><i class="fa fa-inr"></i></span>
+			    <div class="input-group-prepend">
+			      <span class="input-group-text" id="amount"><i class="fa fa-inr"></i></span>
 			     	{{ form.amount }}
 			    </div>
-			</div>		      
+			</div>
 			<br>
 			<!-- Facility Dropdown Menu which will be auto selected -->
+			<label for="facility">Facility :</label>
 			<div class="input-group">
-			    <div class="input-group addon">
-			      <span class="input-group-addon" id="basic-addon1"><i class="fa fa-home"></i></span>
+			    <div class="input-group-prepend">
+			      <span class="input-group-text" id="facility"><i class="fa fa-home"></i></span>
 			     	{{ form.facility }}
 			    </div>
 			</div>
 			<br>
 
 			<!-- Purpose for the money request -->
+			<label for="description">Description :</label>
 			<div class="input-group">
-			    <div class="input-group addon">
-			      <span class="input-group-addon" id="basic-addon1"><i class="fa fa-pencil-square-o"></i></span>
+			    <div class="input-group-prepend">
+			      <span class="input-group-text" id="description"><i class="fa fa-pencil-square-o"></i></span>
 			     	{{ form.description }}
 			    </div>
 			</div>
@@ -45,12 +49,13 @@
 
 		<h6>Account Details</h6>
 		<br>
-		
+
 		<div class="form-group">
 			<!-- User that have UPI id stored in database -->
+			<label for="nguser_with_upi">Fellow those have the UPI id :</label>
 			<div class="input-group">
-			    <div class="input-group addon">
-			      <span class="input-group-addon" id="basic-addon1"><i class="fa fa-user"></i></span>
+			    <div class="input-group-prepend">
+			      <span class="input-group-text" id="nguser_with_upi"><i class="fa fa-user"></i></span>
 			     	{{ form.nguser_with_upi }}
 				</div>
 		  	</div>
@@ -62,17 +67,19 @@
 		  	<h6>Add UPI id for the User below :</h6>
 
 		  	<!-- User without the Upi id field -->
-			<div class="input-group">
-			    <div class="input-group addon">
-			      <span class="input-group-addon" id="basic-addon1"><i class="fa fa-user"></i></span>
-			     	{{ form.nguser_without_upi }}
-			    </div>
-		  	</div>
-			
+
+				<!-- <label for="nguser_without_upi">Fellow those have the UPI id :</label> -->
+				<div class="input-group">
+				    <div class="input-group-prepend">
+				      <span class="input-group-text" id="nguser_without_upi"><i class="fa fa-user"></i></span>
+				     	{{ form.nguser_without_upi }}
+					</div>
+			  	</div>
+				<br>
 		  	<!-- UPI id field for the User -->
-		  	<div class="input-group" style="margin-top: 10px;">
-			    <div class="input-group addon">
-			      <span class="input-group-addon" id="basic-addon1"><i class="fa fa-code"></i></span>
+		  	<div class="input-group">
+			    <div class="input-group-prepend">
+			      <span class="input-group-text" id="basic-addon1"><i class="fa fa-code"></i></span>
 			     	{{ form.upi_id }}
 			    </div>
 		  	</div>
@@ -81,7 +88,7 @@
 		</div>
 
 
-		<input class="btn btn-success float-right" type="submit" value="Submit Transfer Request" />
+		<button class="btn btn-success float-right" type="submit">Submit Transfer Request</button>
 		</form>
 	</div>
 </div>

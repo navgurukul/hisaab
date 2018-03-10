@@ -2,13 +2,14 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.db.models.signals import post_save
 from django.dispatch import receiver
+from django.utils import timezone
 
 def fellowScreenshot(instance , filename):
-    return 'fellowpayment/{0}/{1}'.format(instance.user.id, filename)
+    return 'fellowpayment/{0}/{1}'.format(instance.fellow.user.id, filename)
 def bankScreenshot(instance , filename):
-    return 'bankScreenshot/{0}/{1}'.format(instance.user.id, filename)
+    return 'bankScreenshot/{0}/{1}'.format(instance.fellow.user.id, filename)
 def billImage(instance , filename):
-    return 'billimage/{0}/{1}'.format(instance.user.id, filename)
+    return 'billimage/{0}/{1}'.format(instance.fellow.user.id, filename)
 
 class Facility(models.Model):
     name = models.CharField(max_length=50)
@@ -19,7 +20,7 @@ class Facility(models.Model):
 
 class NgUser(models.Model):
     ROLES = (('ADMIN','admin'),('FELLOW','fellow'))
-    user_type= models.CharField(choices=ROLES,max_length=20,default='FELLOW',blank=False)
+    user_type= models.CharField(choices=ROLES,max_length=6,default='FELLOW',blank=False)
     user = models.OneToOneField(User,unique=True, related_query_name = 'nguser', on_delete=models.CASCADE)
     created_date = models.DateField(auto_now_add=True)
     upi_id = models.CharField(max_length=40, blank= True, null=True)
@@ -28,15 +29,26 @@ class NgUser(models.Model):
     def __str__(self):
         return self.user.first_name + " " + self.user.last_name
 
+    def total_time_in_ng(self):
+        return (timezone.now() - self.created_date).days
+
+    def total_weekly_expenses(self):
+        return (self.total_time_in_ng()/7) * self.facility.student_expenses_limit
+
+    def is_fellow(self):
+        return self.user_type == 'FELLOW'
+
+    def is_admin(self):
+        return self.user_type == 'ADMIN'
 
 
 
 class MoneyRequest(models.Model):
-    BILL = ((1,'Internet'),(2,'Electricity'),(3,'WaterBill'),(4, 'Houserent'))
+    BILL = (('INTERNET','Internet'),('ELECTRICITY','Electricity'),('WATER','WaterBill'),('HOUSERENT', 'Houserent'))
     is_money_request= models.BooleanField(default=False)
     is_utility_request= models.BooleanField(default=False)
-    nguser = models.ForeignKey(NgUser)
-    facility = models.ForeignKey(Facility)
+    nguser = models.ForeignKey(NgUser,null=True,blank=True)
+    facility = models.ForeignKey(Facility,null=True,blank=True)
     type_of_bill = models.CharField(max_length=50, choices=BILL, blank=True, null =True)
     bill_image = models.ImageField(upload_to='billpayment/%Y/%m/%d', blank=True, null = True)
     amount = models.IntegerField()
@@ -44,14 +56,14 @@ class MoneyRequest(models.Model):
     created_date = models.DateField(auto_now_add=True)
     is_approve = models.BooleanField(default=False)
     is_queued = models.BooleanField(default=True)
-    approve_or_rejected_by = models.ForeignKey(NgUser, related_name='approve_or_rejected_by')
+    approve_or_rejected_by = models.ForeignKey(NgUser, related_name='approve_or_rejected_by',null=True)
 
     def __str__(self):
-        return  self.type_of_bill
+        return '{0}'.format(self.created_date)
 
 class CashEntry(models.Model):
     CATEGORY =(('TRAVEL','Travel Expense'),('GROCERIES','Groceries'),('VEGETABLES','Vegetables'), ('HOUSEHOLD','HouseholdItems'),('EGG','Egg'),('MILK','Milk & Bread'),('TECH EXPENCE','Tech Expenses'),('OTHER','Other'))
-    created_date = models.DateField()
+    created_date = models.DateField(default = timezone.now)
     fellow = models.ForeignKey(NgUser, related_name='cash_entry', related_query_name = 'cash_entry')
     facility=models.ForeignKey(Facility, blank=True, null = True)
     expense_amount = models.IntegerField(blank=True, null=True)
@@ -67,4 +79,4 @@ class CashEntry(models.Model):
     description = models.TextField(blank=True, null= True)
 
     def __str__(self):
-        return self.fellow.user.email
+        return '{0}'.format(self.fellow.user)
