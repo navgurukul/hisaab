@@ -18,12 +18,11 @@
 
             {% for test in entries  %}
                 <tr>
-
-                    <td>{{ test.fellow }}</td>
-                    <td>{{ test.expense_amount }}</td>
-                    <td>{{ test.category }}</td>
-                    <td>{{ test.created_date }}</td>
-                    <td>{{ test.description }}</td>
+                  <td>{{ test.fellow }}</td>
+                  <td>{{ test.expense_amount }}</td>
+                  <td>{{ test.category }}</td>
+                  <td>{{ test.created_date }}</td>
+                  <td>{{ test.description }}</td>
                 </tr>
             {% endfor %}
 
@@ -32,5 +31,5 @@
     </div>
 
 </div>
-    
+
 {% endblock %}

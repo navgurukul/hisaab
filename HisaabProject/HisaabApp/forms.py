@@ -1,4 +1,3 @@
-
 from django.shortcuts import redirect, HttpResponseRedirect
 from django.contrib.auth import logout
 from django.contrib.auth.models import User
@@ -16,6 +15,7 @@ class FacilityForm(forms.ModelForm):
 class RegisterForm(forms.Form):
     ''' Form to get the Facility of the students and UPI id on Signup'''
     facility = forms.ModelChoiceField(queryset = Facility.objects.all(),widget=forms.Select(attrs={'class': 'form-control form-control-sm'}))
+
 
 
 
@@ -63,12 +63,10 @@ class MoneyTransferForm(forms.ModelForm):
         nguser_with_upi = cleaned_data.get('nguser_with_upi')
         nguser_without_upi = cleaned_data.get('nguser_without_upi')
         upi_id = cleaned_data.get('upi_id')
-
         if (nguser_without_upi or upi_id) and nguser_with_upi:
             raise ValidationError('Select either one of the options in Account Detail!')
         elif nguser_without_upi and not upi_id:
             raise ValidationError('UPI id is required!')
-
 
 
 class RecordPaymentForm(forms.ModelForm):
@@ -79,8 +77,8 @@ class RecordPaymentForm(forms.ModelForm):
     class Meta:
         model = CashEntry
         fields = ['facility', 'bank_screenshot', 'payment_amount', 'description']
-        
-        
+
+
 
 class UtilityBillRequestForm(forms.ModelForm):
     BILL = (('INTERNET','Internet'),('ELECTRICITY','Electricity'),('WATER','WaterBill'),('HOUSERENT', 'Houserent'))
@@ -105,9 +103,8 @@ class AddExpenseForm(forms.ModelForm):
         widget = {
             # 'created_date': forms.DateInput(attrs={'class':'form-control form-control-sm'}),
              'bill_image': forms.ClearableFileInput(attrs = {'class':'form-control form-control-sm-file'}),
-            
-        }
 
+        }
 # class FacilityReportForm(forms.ModelForm):
 #     class Meta:
 #         model = CashEntry
