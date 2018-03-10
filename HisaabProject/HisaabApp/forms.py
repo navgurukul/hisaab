@@ -15,17 +15,17 @@ class FacilityForm(forms.ModelForm):
 
 class RegisterForm(forms.Form):
     ''' Form to get the Facility of the students and UPI id on Signup'''
-    facility = forms.ModelChoiceField(queryset = Facility.objects.all(),widget=forms.Select(attrs={'class': 'form-control'}))
+    facility = forms.ModelChoiceField(queryset = Facility.objects.all(),widget=forms.Select(attrs={'class': 'form-control form-control-sm'}))
 
 
 
 class MoneyTransferForm(forms.ModelForm):
-    upi_id = forms.CharField(max_length=40,widget=forms.TextInput(attrs={'class':'form-control', 'placeholder': 'UPI id of the Fellow'}),required=False)
-    facility = forms.ModelChoiceField(queryset= Facility.objects.all() ,widget=forms.Select(attrs={'class': 'form-control'}))
-    amount = forms.IntegerField(widget=forms.NumberInput(attrs={'class':'form-control','placeholder': 'How much money do you need?'}))
-    description = forms.CharField(widget=forms.Textarea(attrs={'class':'form-control','placeholder': 'Why is the money needed?'}))
-    nguser_with_upi = forms.ModelChoiceField(queryset = NgUser.objects.all(),widget=forms.Select(attrs={'class': 'form-control','placeholder':'In which account do you need the money?'}), required=False)
-    nguser_without_upi = forms.ModelChoiceField(queryset = NgUser.objects.all(),widget=forms.Select(attrs={'class': 'form-control', 'placeholder': "Account that doesn't have UPI id"}),required=False)
+    upi_id = forms.CharField(max_length=40,widget=forms.TextInput(attrs={'class':'form-control form-control-sm', 'placeholder': 'UPI id of the Fellow'}),required=False)
+    facility = forms.ModelChoiceField(queryset= Facility.objects.all() ,widget=forms.Select(attrs={'class': 'form-control form-control-sm'}))
+    amount = forms.IntegerField(widget=forms.NumberInput(attrs={'class':'form-control form-control-sm','placeholder': 'How much money do you need?'}))
+    description = forms.CharField(widget=forms.Textarea(attrs={'class':'form-control form-control-sm','placeholder': 'Why is the money needed?'}))
+    nguser_with_upi = forms.ModelChoiceField(queryset = NgUser.objects.all(),widget=forms.Select(attrs={'class': 'form-control form-control-sm','placeholder':'In which account do you need the money?'}), required=False)
+    nguser_without_upi = forms.ModelChoiceField(queryset = NgUser.objects.all(),widget=forms.Select(attrs={'class': 'form-control form-control-sm', 'placeholder': "Account that doesn't have UPI id"}),required=False)
 
     class Meta:
 
@@ -72,9 +72,9 @@ class MoneyTransferForm(forms.ModelForm):
 
 
 class RecordPaymentForm(forms.ModelForm):
-    facility = forms.ModelChoiceField(queryset= Facility.objects.all() ,widget=forms.Select(attrs={'class': 'form-control'}))
-    description = forms.CharField(widget=forms.Textarea(attrs={'class':'form-control','placeholder': 'Why is the money needed?'}))
-    payment_amount = forms.IntegerField(widget=forms.NumberInput(attrs={'class':'form-control','placeholder': 'How much money do you need?'}))
+    facility = forms.ModelChoiceField(queryset= Facility.objects.all() ,widget=forms.Select(attrs={'class': 'form-control form-control-sm'}))
+    description = forms.CharField(widget=forms.Textarea(attrs={'class':'form-control form-control-sm','placeholder': 'Why is the money needed?'}))
+    payment_amount = forms.IntegerField(widget=forms.NumberInput(attrs={'class':'form-control form-control-sm','placeholder': 'How much money do you need?'}))
     # bank_screenshot = forms.ImageField(widget=forms.ClearableFileInput(attrs = {'class':'btn btn-default','placeholder': 'Upload the bank transaction screenshot!'}))
     class Meta:
         model = CashEntry
@@ -92,14 +92,21 @@ class UtilityBillRequestForm(forms.ModelForm):
 class AddExpenseForm(forms.ModelForm):
     EXPENSETYPE = (("FELLOW",'Navgurukul'),('PERSONAL','Personal'))
     CATEGORY =(('TRAVEL','Travel Expense'),('GROCERIES','Groceries'),('VEGETABLES','Vegetables'), ('HOUSEHOLD','HouseholdItems'),('EGG','Egg'),('MILK','Milk & Bread'),('TECH EXPENCE','Tech Expenses'),('OTHER','Other'))
-    facility = forms.ModelChoiceField(queryset = Facility.objects.all())
-    fellow = forms.ModelChoiceField(queryset = NgUser.objects.all())
-    expense_type = forms.ChoiceField(choices = EXPENSETYPE)
-    category = forms.ChoiceField(choices =CATEGORY)
+    facility = forms.ModelChoiceField(queryset = Facility.objects.all(), widget=forms.Select(attrs={'class': 'form-control form-control-sm'}))
+    fellow = forms.ModelChoiceField(queryset = NgUser.objects.all(),widget=forms.Select(attrs={'class': 'form-control form-control-sm'}))
+    expense_type = forms.ChoiceField(choices = EXPENSETYPE, widget=forms.Select(attrs={'class': 'form-control form-control-sm'}))
+    category = forms.ChoiceField(choices =CATEGORY, widget=forms.Select(attrs={'class': 'form-control form-control-sm'}))
+    expense_amount = forms.IntegerField(widget=forms.NumberInput(attrs={'class':'form-control form-control-sm','placeholder': 'How much money do you need?'}))
+    description = forms.CharField(widget=forms.Textarea(attrs={'class':'form-control form-control-sm','placeholder': 'Why is the money needed?'}))
+    bill_image = forms.ImageField()
     class Meta:
         model = CashEntry
         fields = ('fellow','expense_type','facility', 'expense_amount', 'created_date', 'category','bill_image','description')
-
+        widget = {
+            # 'created_date': forms.DateInput(attrs={'class':'form-control form-control-sm'}),
+             'bill_image': forms.ClearableFileInput(attrs = {'class':'form-control form-control-sm-file'}),
+            
+        }
 
 # class FacilityReportForm(forms.ModelForm):
 #     class Meta:
