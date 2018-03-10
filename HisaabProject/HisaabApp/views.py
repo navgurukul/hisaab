@@ -4,7 +4,7 @@ from .models import *
 from .forms import *
 from django.urls import reverse
 from django.utils import timezone 
-
+import pdb
 from social_core.pipeline.utils import partial_load
 from social_django.utils import load_strategy
 
@@ -95,17 +95,18 @@ def recordpayment(request):
 
 
 def addexpense(request):
+    # pdb.set_trace()
+
     if request.method =='POST':
         form = AddExpenseForm(request.POST,request.FILES)
         if form.is_valid():
             form.save(commit=False)
-            # pdb.set_trace()
             print form.cleaned_data.get('expense_type').encode('utf8')
             if form.cleaned_data.get('expense_type').encode('utf8') == 'PERSONAL':
                 form.is_personal_expense = True
             else:
                 form.is_facility_expense = True
-            form.facility = form.cleaned_data.get('facility')
+            # form.facility = form.cleaned_data.get('facility')
             form.save()
             return redirect('home')
     else:
