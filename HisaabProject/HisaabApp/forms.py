@@ -71,7 +71,7 @@ class MoneyTransferForm(forms.ModelForm):
 
 
 class UtilityBillRequestForm(forms.ModelForm):
-    BILL = (("INTERNET,'Internet'),('ELECTRICITY','Electricity'),('WATER','WaterBill'),('HOUSERENT', 'Houserent'))
+    BILL = (('INTERNET','Internet'),('ELECTRICITY','Electricity'),('WATER','WaterBill'), ('HOUSERENT', 'Houserent'))
     type_of_bill = forms.ChoiceField(choices = BILL)
     class Meta:
         model = MoneyRequest
