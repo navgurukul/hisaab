@@ -11,8 +11,9 @@ urlpatterns = [
     url(r'^utilityrequest/$', views.utilitybillrequest, name='utilityrequest'),
     url(r'^access_denied/$', views.access_denied, name='access_denied'),
     url(r'^addexpense/$', views.addexpense,  name='addexpense'),
-    url(r'^facilityreport/$', views.fellowreport,  name='fellowreport'),
+    # url(r'^facilityreport/$', views.fellowreport,  name='fellowreport'),
     url(r'^fellowreport/(?P<username>\w+)$', views.fellowreport,  name='fellowreport'),
+    url(r'^facilityreport/$', views.facilityreport, name= 'facilityreport'),
 
 ]
 if settings.DEBUG:

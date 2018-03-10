@@ -1,9 +1,11 @@
 from django.shortcuts import render, redirect
+from django.http import HttpResponse, HttpResponseRedirect
 from django.contrib.auth.decorators import login_required, user_passes_test
 from .models import NgUser,Facility,CashEntry
 from .forms import *
 from django.shortcuts import get_list_or_404, get_object_or_404
 import pdb
+import datetime
 
 def is_fellow(user):
     return user.nguser.user_type == "FELLOW"
@@ -27,7 +29,7 @@ def add_facility(request):
 
 def access_denied(request):
     return render(request,'access_denied.html')
-        
+
 
 @user_passes_test(is_fellow, login_url='/access_denied/')
 @login_required
@@ -78,9 +80,22 @@ def addexpense(request):
 @login_required
 def facilityreport(request):
     data = CashEntry.objects.all()
-    template = 'report.html'
-    return render(request, template, {'entries' : data})
+    if request.method == 'POST':
+        start_date = request.POST.get('start_date')
+        end_date = request.POST.get('end_date')
+        print(start_date, end_date)
+        category = request.POST.getlist('categories')
+        changes = CashEntry.objects.all().filter(created_date__gte=start_date, created_date__lte=end_date, category__in=category)
+        print changes
+        return render(request, 'facilityreport.html', {'entries' : changes})
+    return render(request, 'facilityreport.html', {'entries' : data})
 
 @login_required
 def fellowreport(request):
     pass
+
+# def report(request):
+#     if request.method == 'POST':
+#         form = FacilityReportForm(request.POST,request.FILES)
+#         if form.is_valid():
+#             category = form.cleaned_data.get('category')

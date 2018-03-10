@@ -23,7 +23,7 @@ class NgUser(models.Model):
     user = models.OneToOneField(User,unique=True, related_query_name = 'nguser', on_delete=models.CASCADE)
     created_date = models.DateField(auto_now_add=True)
     upi_id = models.CharField(max_length=40, blank= True, null=True)
-    facility= models.ForeignKey(Facility,blank=True, null=True)
+    facility= models.ForeignKey(Facility,blank=True, null=True, )
 
     def __str__(self):
         return self.user.first_name + " " + self.user.last_name
@@ -39,7 +39,7 @@ class MoneyRequest(models.Model):
     facility = models.ForeignKey(Facility)
     type_of_bill = models.CharField(max_length=50, choices=BILL, blank=True, null =True)
     bill_image = models.ImageField(upload_to='billpayment/%Y/%m/%d', blank=True, null = True)
-    amount = models.IntegerField()  
+    amount = models.IntegerField()
     description = models.TextField()
     created_date = models.DateField(auto_now_add=True)
     is_approve = models.BooleanField(default=False)
