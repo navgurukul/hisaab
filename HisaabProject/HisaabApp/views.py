@@ -106,7 +106,6 @@ def addexpense(request):
                 form.is_personal_expense = True
             else:
                 form.is_facility_expense = True
-            form.facility = form.cleaned_data.get('facility')
             form.save()
             return redirect('home')
     else:
