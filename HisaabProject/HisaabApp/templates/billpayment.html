@@ -1,38 +1,27 @@
 {% extends 'base.html' %}
 {% block content %}
 <div class="container" style="max-width:60%">
+<div class="">
 <h3 class="text-center">Add Bill Payments Request</h3> <br>
 <!-- Request for Utility Bill Payment  -->
 
-    <form method='POST'>
+    <form method='post'>
      {% csrf_token %}
-
-
      <div class="form-group">
-         <label for="amount">Amount :</label>
           <!-- <input type="text" name="amount" placeholder="Bill Amount"><br> -->
+          <label for="amount">Amount :</label>
           <div class="input-group">
-<<<<<<< HEAD
-              <div class="input-group addon" >
-                <span class="input-group-addon" id="amount"><i class="fa fa-inr"></i></span>
-=======
-              <div class="input-group-prepend">
+            <div class="input-group-prepend">
                 <span class="input-group-text" id="amount"><i class="fa fa-inr"></i></span>
->>>>>>> refs/remotes/origin/master
+
                 {{ form.amount }}
               </div>
           </div>
           <br>
           <label for="type_of_bill">Type Of Bill   :</label>
-<<<<<<< HEAD
-          <div class="input-group" >
-              <div class="input-group addon">
-                <span class="input-group-addon" id="type_of_bill"><i class="fa fa-home"></i></span>
-=======
           <div class="input-group">
               <div class="input-group-prepend">
-                <span class="input-group-text" id="type_of_bill"><i class="fa fa-home"></i></span>
->>>>>>> refs/remotes/origin/master
+                <span class="input-group-text" id="type_of_bill"><i class="fa fa-align-justify"></i></span>
                 {{ form.type_of_bill }}
               </div>
           </div>
@@ -41,7 +30,7 @@
           <label for="description">Description :</label>
           <div class="input-group">
               <div class="input-group-prepend">
-                <span class="input-group-text" id="description"><i class="fa fa-pencil-square-o"></i></span>
+                <span class="input-group-text" id="description"><i class=""></i></span>
                 {{ form.description }}
               </div>
           </div>
@@ -50,15 +39,17 @@
           <label for="bill_image">Bill Image :</label>
           <div class="input-group">
               <div class="input-group-prepend">
-                <span class="input-group-text" id="bill_image"><i class="fa fa-pencil-square-o"></i></span>
+                <span class="input-group-text" id="bill_image"><i class="fa fa-camera"></i></span>
                 {{ form.bill_image }}
               </div>
           </div>
 
           </div>
 
+
            <input class="btn btn-success float-right" type="submit" value="Submit Transfer Request" />
 
     </form>
+</div>
 </div>
 {% endblock %}

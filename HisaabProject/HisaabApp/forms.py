@@ -79,15 +79,12 @@ class RecordPaymentForm(forms.ModelForm):
     class Meta:
         model = CashEntry
         fields = ['facility', 'bank_screenshot', 'payment_amount', 'description']
-        
-        
+
+
 
 class UtilityBillRequestForm(forms.ModelForm):
-<<<<<<< HEAD
-    BILL = (('INTERNET','Internet'),('ELECTRICITY','Electricity'),('WATER','WaterBill'), ('HOUSERENT', 'Houserent'))
-=======
+
     BILL = (('INTERNET','Internet'),('ELECTRICITY','Electricity'),('WATER','WaterBill'),('HOUSERENT', 'Houserent'))
->>>>>>> refs/remotes/origin/master
     type_of_bill = forms.ChoiceField(choices = BILL)
     class Meta:
         model = MoneyRequest

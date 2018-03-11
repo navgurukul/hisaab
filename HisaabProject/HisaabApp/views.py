@@ -3,7 +3,7 @@ from django.contrib.auth.decorators import login_required, user_passes_test
 from .models import *
 from .forms import *
 from django.urls import reverse
-from django.utils import timezone 
+from django.utils import timezone
 
 from social_core.pipeline.utils import partial_load
 from social_django.utils import load_strategy
@@ -100,12 +100,11 @@ def addexpense(request):
         if form.is_valid():
             form.save(commit=False)
             # pdb.set_trace()
-            print form.cleaned_data.get('expense_type').encode('utf8')
             if form.cleaned_data.get('expense_type').encode('utf8') == 'PERSONAL':
                 form.is_personal_expense = True
             else:
                 form.is_facility_expense = True
-            form.facility = form.cleaned_data.get('facility')
+            # form.facility = form.cleaned_data.get('facility')
             form.save()
             return redirect('home')
     else:

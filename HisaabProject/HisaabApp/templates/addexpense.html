@@ -1,20 +1,20 @@
 {% extends 'base.html' %}
 {% block content %}
 <!-- Form for add the expense of Personal level and Facility level  -->
-<div class="d-flex justify-content-center">
-<div class="container" style="">
- <div class="col">
+
+<div class="container" style="max-width: 60%">
+ <div class="">
  <h3 class="text-center">Add Expense!</h3>
  <br>
- <form method='POST' >
+ <form method="post" enctype="multipart/form-data">
   {% csrf_token %}
   <div class="form-group">
 
     <!-- Fellow name who made the expense -->
     <label for="fellow">Who made the Expense </label>
     <div class="input-group">
-        <div class="input-group addon">
-          <span class="input-group-addon" id="fellow"><i class="fa fa-inr"></i></span>
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="fellow"><i class="fa fa-user-plus"></i></span>
           {{ form.fellow }}
         </div>
     </div>
@@ -22,8 +22,8 @@
     <!-- which type of expense is made -->
     <label for="expense_type">What kind of expense is this?</label>
     <div class="input-group">
-        <div class="input-group addon">
-          <span class="input-group-addon" id="expense_type"><i class="fa fa-inr"></i></span>
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="expense_type"><i class="fa fa-list-alt"></i></span>
           {{ form.expense_type }}
         </div>
     </div>
@@ -31,8 +31,8 @@
     <!-- which facility students belongs -->
     <label for="facility">Facility of student</label>
     <div class="input-group">
-        <div class="input-group addon">
-          <span class="input-group-addon" id="facility"><i class="fa fa-inr"></i></span>
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="facility"><i class="fa fa-home"></i></span>
           {{ form.facility }}
         </div>
     </div>
@@ -40,8 +40,8 @@
     <!-- How much amount is expensed -->
     <label for="expense_amount">Amount</label>
     <div class="input-group">
-        <div class="input-group addon">
-          <span class="input-group-addon" id="amount"><i class="fa fa-inr"></i></span>
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="amount"><i class="fa fa-inr"></i></span>
           {{ form.expense_amount }}
         </div>
     </div>
@@ -49,9 +49,10 @@
     <!-- date on which expense is made -->
     <label for="created_date">Created Date</label>
     <div class="input-group">
-        <div class="input-group addon">
-          <span class="input-group-addon" id="created_date"><i class="fa fa-inr"></i></span>
-          {{ form.created_date }}
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="created_date"><i class="fa fa-calendar"></i></span>
+          <input type="date" name="created_date">
+          <!-- {{ form.created_date }} -->
         </div>
     </div>
     <br>
@@ -87,5 +88,5 @@
 
 </div>
 </div>
-</div>
+
 {% endblock %}
