@@ -1,63 +1,56 @@
 {%extends 'base.html'%}
 
 {% block content %}
-<!-- <form method="post"> -->
 
-<form method="POST">
-  {% csrf_token %}
-  Start Date  <input type="date" name="start_date">
-  End Date  <input type="date" name="end_date">
-<div class="row">
-  <div class="col-md-4">
-    <div class="control-group">
-      <div class="controls span2">
-        <label class="checkbox col">
-          <input type="checkbox" name="categories" value="VEGETABLES"> Vegetables
-        </label>
-        <label class="checkbox col">
-          <input type="checkbox" name="categories" value="GROCERIES"> Groceries
-        </label>
-        <label class="checkbox col">
-          <input type="checkbox" name="categories" value="HOUSEHOLD"> HouseholdItems
-        </label>
-        <label class="checkbox col">
-          <input type="checkbox" name="categories" value="TRAVEL"> Travel
-        </label>
-      </div>
-    </div>
-  </div>
-  <div class="col-md-4">
-    <div class="control-group">
-    <div class="controls span2">
-        <label class="checkbox col">
-            <input type="checkbox" name="categories" value="EGGS"> Eggs
-        </label>
-        <label class="checkbox col">
-            <input type="checkbox" name="categories" value="MILK"> Milk
-        </label>
-        <label class="checkbox col">
-            <input type="checkbox" name="categories" value="TECH EXPENCE"> Tech Expence
-        </label>
-        <label class="checkbox col">
-            <input type="checkbox" name="categories" value="OTHER"> Other
-        </label>
-      </div>
-    </div>
-  </div>
-</div>
-  <!-- <ul class="checkbox-grid">
-  <li><input type="checkbox" name="categories[]" value="VAGETABLES">Vagetables</input></li>
-  <li><input type="checkbox" name="categories[]" value="GROCERIES" >Groceries</input></li>
-  <li><input type="checkbox" name="categories[]" value="HOUSEHOLD">HouseholdItems</input></li>
-  <li><input type="checkbox" name="categories[]" value="TRAVEL">Travel-expence</input></li>
-  <li><input type="checkbox" name="categories[]" value="EGG">Eggs</input></li>
-  <li><input type="checkbox" name="categories[]" value="MILK">Milk</input></li>
-  <li><input type="checkbox" name="categories[]" value="TECH EXPENCE">Tech-expence</input></li>
-  <li><input type="checkbox" name="categories[]" value="OTHER">Others</input></li>
-</ul> -->
-<button type="submit" name="button">Payment</button>
-</form>
-<!-- <button type="submit" value="Submit">Submit</button> -->
+    {{ facility.name }}
+<!-- <form method="post"> -->
+      <form method="POST" action="{% url 'facilityreport' pk=facility.pk %}">
+        {% csrf_token %}
+          Start Date  <input type="date" name="start_date">
+          End Date  <input type="date" name="end_date">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="control-group">
+                <div class="controls span2">
+                  <label class="checkbox col">
+                    <input type="checkbox" name="categories" value="VEGETABLES"> Vegetables
+                  </label>
+                  <label class="checkbox col">
+                    <input type="checkbox" name="categories" value="GROCERIES"> Groceries
+                  </label>
+                  <label class="checkbox col">
+                    <input type="checkbox" name="categories" value="HOUSEHOLD"> HouseholdItems
+                  </label>
+                  <label class="checkbox col">
+                    <input type="checkbox" name="categories" value="TRAVEL"> Travel
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="control-group">
+              <div class="controls span2">
+                  <label class="checkbox col">
+                      <input type="checkbox" name="categories" value="EGGS"> Eggs
+                  </label>
+                  <label class="checkbox col">
+                      <input type="checkbox" name="categories" value="MILK"> Milk
+                  </label>
+                  <label class="checkbox col">
+                      <input type="checkbox" name="categories" value="TECH EXPENCE"> Tech Expence
+                  </label>
+                  <label class="checkbox col">
+                      <input type="checkbox" name="categories" value="OTHER"> Other
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          </ul>
+          <button type="submit" class="btn btn-default" name="payment">Payment</button>
+          <button type="submit" class="btn btn-default"name="expense">Expence</button>
+      </form>
+
 
 <table class="table table-condensed table-striped">
     <thead>

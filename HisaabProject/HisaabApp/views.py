@@ -7,6 +7,7 @@ from .forms import *
 from django.urls import reverse
 from django.utils import timezone
 
+from django.utils import timezone
 from social_core.pipeline.utils import partial_load
 from social_django.utils import load_strategy
 
@@ -15,6 +16,9 @@ def is_fellow(user):
     return user.nguser.user_type == "FELLOW"
 def is_admin(user):
     return user.nguser.user_type == "ADMIN"
+
+def access_denied(request):
+    return render(request,'access_denied.html')
 
 
 def register(request):
@@ -41,12 +45,9 @@ def home(request):
 @user_passes_test(is_admin, login_url='/access_denied/')
 @login_required
 def add_facility(request):
-
     print('adding facility')
 
 
-def access_denied(request):
-    return render(request,'access_denied.html')
 
 
 @user_passes_test(is_fellow, login_url='/access_denied/')
@@ -62,6 +63,7 @@ def moneytransferrequest(request):
     else:
         form = MoneyTransferForm(request=request)
     return render(request,'moneytransfer.html',{'form':form})
+
 
 @user_passes_test(is_fellow, login_url='/access_denied/')
 @login_required
@@ -94,36 +96,41 @@ def recordpayment(request):
         form = RecordPaymentForm()
     return render(request, 'recordpayment.html', {'form': form})
 
-
+@login_required
 def addexpense(request):
     if request.method =='POST':
-        form = AddExpenseForm(request.POST,request.FILES)
+        form = AddExpenseForm(request.POST,request.FILES, request=request)
         if form.is_valid():
-            form.save(commit=False)
-            # pdb.set_trace()
-            print form.cleaned_data.get('expense_type').encode('utf8')
+            instance = form.save(commit=False)
+
             if form.cleaned_data.get('expense_type').encode('utf8') == 'PERSONAL':
-                form.is_personal_expense = True
+                instance.is_personal_expense = True
             else:
-                form.is_facility_expense = True
-            form.save()
+                instance.is_facility_expense = True
+            
+            instance.save()
             return redirect('home')
     else:
-        form = AddExpenseForm()
+        form = AddExpenseForm(request=request)
     return render(request, 'addexpense.html',{'form':form})
 
 @login_required
-def facilityreport(request):
-    data = CashEntry.objects.all()
+def facilityreport(request, pk):
+    facility = get_object_or_404(Facility,pk=pk)
     if request.method == 'POST':
         start_date = request.POST.get('start_date')
         end_date = request.POST.get('end_date')
-        print(start_date, end_date)
-        category = request.POST.getlist('categories')
-        changes = CashEntry.objects.all().filter(created_date__gte=start_date, created_date__lte=end_date, category__in=category)
-        print changes
-        return render(request, 'facilityreport.html', {'entries' : changes})
-    return render(request, 'facilityreport.html', {'entries' : data})
+        categories = request.POST.getlist('categories')
+        if 'payment' in request.POST:
+            data=CashEntry.objects.all().filter(created_date__range=(start_date,end_date),\
+            category__in=categories,is_payment_to_ng=True,facility__id=pk)
+        elif 'expense' in request.POST:
+            data=CashEntry.objects.all().filter(created_date__range=(start_date, end_date),\
+            category__in=categories,is_facility_expense=True,facility__id=pk)
+            print data
+        return render(request, 'facilityreport.html', {'entries': data, 'facility':facility})
+
+    return render(request, 'facilityreport.html',{'facility':facility})
 
 @login_required
 def fellowreport(request):

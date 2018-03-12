@@ -88,7 +88,7 @@ class UtilityBillRequestForm(forms.ModelForm):
         fields = ('amount','type_of_bill','description','bill_image')
 
 class AddExpenseForm(forms.ModelForm):
-    EXPENSETYPE = (("FELLOW",'Navgurukul'),('PERSONAL','Personal'))
+    EXPENSETYPE = (("FACILITY",'Navgurukul'),('PERSONAL','Personal'))
     CATEGORY =(('TRAVEL','Travel Expense'),('GROCERIES','Groceries'),('VEGETABLES','Vegetables'), ('HOUSEHOLD','HouseholdItems'),('EGG','Egg'),('MILK','Milk & Bread'),('TECH EXPENCE','Tech Expenses'),('OTHER','Other'))
     facility = forms.ModelChoiceField(queryset = Facility.objects.all(), widget=forms.Select(attrs={'class': 'form-control form-control-sm'}))
     fellow = forms.ModelChoiceField(queryset = NgUser.objects.all(),widget=forms.Select(attrs={'class': 'form-control form-control-sm'}))
@@ -100,17 +100,9 @@ class AddExpenseForm(forms.ModelForm):
         model = CashEntry
         fields = ('fellow','expense_type','facility', 'expense_amount', 'created_date', 'category','bill_image','description')
 
-# class FacilityReportForm(forms.ModelForm):
-#     class Meta:
-#         model = CashEntry
-#         fields = ('fellow','expense_amount','category','created_date','description')
-
-
-
-# class FellowReportForm(forms.Form):
-#     CATEGORY =(('TRAVEL','Travel Expense'),('GROCERIES','Groceries'),('VEGETABLES','Vegetables'), ('HOUSEHOLD','HouseholdItems'),('EGG','Egg'),('MILK','Milk & Bread'),('TECH EXPENCE','Tech Expenses'),('OTHER','Other'))
-#     start_date = forms.DateField(widget=forms.DateInput(attrs={'type':'date'}))
-#     end_date = forms.DateField(widget=forms.DateInput(attrs={'type':'date'}))
-#     expense_type =forms.MultipleChoiceField(widget= forms.CheckboxSelectMultiple(),choices=CATEGORY)
-
-#
+    def __init__(self, *args, **kwargs):
+        self.request = kwargs.pop('request', None)
+        facility__id = NgUser.objects.get(user = self.request.user).facility.id
+        super(MoneyTransferForm, self).__init__(*args, **kwargs)
+        self.fields['fellow'].queryset = NgUser.objects.all().filter(facility__id= facility__id )
+       

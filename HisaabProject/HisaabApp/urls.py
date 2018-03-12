@@ -13,7 +13,7 @@ urlpatterns = [
     url(r'^addexpense/$', views.addexpense,  name='addexpense'),
     # url(r'^facilityreport/$', views.fellowreport,  name='fellowreport'),
     url(r'^fellowreport/(?P<username>\w+)$', views.fellowreport,  name='fellowreport'),
-    url(r'^facilityreport/$', views.facilityreport, name= 'facilityreport'),
+    url(r'^facilityreport/(?P<pk>\d+)$', views.facilityreport, name= 'facilityreport'),
     url(r'^register/$', views.register,  name='register'),
     url(r'^recordpayment/$', views.recordpayment,  name='recordpayment'),
 
