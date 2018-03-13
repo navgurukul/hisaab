@@ -1,13 +1,15 @@
+
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required, user_passes_test
 from .models import *
 from .forms import *
+
 from django.urls import reverse
 from django.utils import timezone
 
+from django.utils import timezone
 from social_core.pipeline.utils import partial_load
 from social_django.utils import load_strategy
-
 
 
 def is_fellow(user):
@@ -95,6 +97,8 @@ def recordpayment(request):
 
 
 def addexpense(request):
+    # pdb.set_trace()
+
     if request.method =='POST':
         form = AddExpenseForm(request.POST,request.FILES)
         if form.is_valid():
@@ -114,8 +118,15 @@ def addexpense(request):
 @login_required
 def facilityreport(request):
     data = CashEntry.objects.all()
-    template = 'report.html'
-    return render(request, template, {'entries' : data})
+    if request.method == 'POST':
+        start_date = request.POST.get('start_date')
+        end_date = request.POST.get('end_date')
+        print(start_date, end_date)
+        category = request.POST.getlist('categories')
+        changes = CashEntry.objects.all().filter(created_date__gte=start_date, created_date__lte=end_date, category__in=category)
+        print changes
+        return render(request, 'facilityreport.html', {'entries' : changes})
+    return render(request, 'facilityreport.html', {'entries' : data})
 
 @login_required
 def fellowreport(request):

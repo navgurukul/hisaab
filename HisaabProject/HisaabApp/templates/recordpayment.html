@@ -4,15 +4,10 @@
 <h3 class="text-center">Record Payment :</h3> <br>
 <!-- Record Payment made to the facility  -->
 
-    <form method='POST'>
+    <form method='post' enctype = 'multipart/form-data'>
      {% csrf_token %}
-
-
-
-
-
      <div class="form-group">
-    <label for="payment-amount">Amount :</label>
+          <label for="payment-amount">Amount :</label>
           <div class="input-group">
               <div class="input-group-prepend">
                 <span class="input-group-text" id="payment-amount"><i class="fa fa-inr"></i></span>

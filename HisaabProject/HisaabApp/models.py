@@ -24,7 +24,7 @@ class NgUser(models.Model):
     user = models.OneToOneField(User,unique=True, related_query_name = 'nguser', on_delete=models.CASCADE)
     created_date = models.DateField(auto_now_add=True)
     upi_id = models.CharField(max_length=40, blank= True, null=True)
-    facility= models.ForeignKey(Facility,blank=True, null=True)
+    facility= models.ForeignKey(Facility,blank=True, null=True, )
 
     def __str__(self):
         return self.user.first_name + " " + self.user.last_name
