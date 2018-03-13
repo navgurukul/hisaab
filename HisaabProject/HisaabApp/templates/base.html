@@ -1,48 +1,120 @@
 {% load staticfiles %}
 <html>
-<head>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-<title>Hisaab</title>
+<head>  
+  <meta charset="utf-8">  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <!-- <link rel="shortcut icon" href="img/favicon.png" /> -->
+  <title>Hisaab</title>
 </head>
 
 <body>
     {% if user.is_authenticated %}
-        <nav class="navbar navbar-expand-lg  justify-content-between navbar-dark bg-dark">
-          <a class="navbar-brand h5" href="#">Hisaab</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
+        <script>
+            function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+                document.getElementById("main").style.marginLeft = "250px";
+                // document.getElementById("contain").style.marginLeft = "250px";
+                document.body.style.backgroundColor = "#ddd";
+            }
 
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item">
-                <a class="nav-link h5" href="{% url 'home' %}">Home</a>
-              </li>
-            </ul>
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+                document.getElementById("main").style.marginLeft= "0";
+                // document.getElementById("contain").style.marginLeft = "3%";
+                document.body.style.backgroundColor = "#eee";
+            }
+         </script>
+            <div class='body'>
+                <div id="mySidenav" class="sidenav">
+                  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                  <a href="{% url 'home' %}">Home</a>
+                  <a href="{% url 'addexpense' %}">Add Expense</a>
 
-            <ul class="navbar-nav">
-                <li class="nav-item float-right">
-                    <a class="nav-link h5" href="{% url 'logout' %}">Logout</a>
-                </li>
-            </ul>
-          </div>
-        </nav>
+                  {% if user.nguser.is_fellow %}
+                  <a href="{% url 'moneyrequest' %}">Money Request</a>
+                  <a href="{% url 'utilityrequest' %}">Utility Bill Request</a>
+                  <a href="{% url 'facilityreport' pk=user.nguser.facility.pk %}">Facility Report</a>
+                  {% endif %}
 
-
-        {% if user.nguser.is_admin %}
-
-        {% endif %}
+                  <a href="#">About</a>
+                  <a href="http://navgurukul.org/#contact">Contact</a>
+                  <a href="#">Help</a>
+                  <a href="{% url 'logout' %}">Logout</a>
+              </div>
+            <div id="main">
+              <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+            </div>
+        </div>    
 
     {% endif %}
-    <div class="container" style="margin-top: 100px;">
+    <div class="main">
         {% block content %}
         {% endblock %}
     </div>
-
+   
 </body>
+    <style type="text/css">
+      .body {
+          font-family: "Lato", sans-serif;
+          transition: background-color .5s;
+      }
+      .main{
+          margin-top: -5%;
+        }
 
-</html>
+      .sidenav {
+          height: 100%;
+          width: 0;
+          position: fixed;
+          z-index: 1;
+          top: 0;
+          left: 0;
+          background-color:  rgba(0, 0 ,0, 0.5);
+          overflow-x: hidden;
+          transition: 0.5s;
+          padding-top: 60px;
+      }
+
+      .sidenav a {
+          padding: 8px 8px 8px 32px;
+          text-decoration: none;
+          font-size: 25px;
+          color: white;
+          display: block;
+          transition: 0.3s;
+      }
+
+      .sidenav a:hover {
+          color: #666;
+      }
+
+      .sidenav .closebtn {
+          position: absolute;
+          top: 0;
+          right: 25px;
+          font-size: 36px;
+          margin-left: 50px;
+      }
+      #main {
+          transition: margin-left .5s;
+          padding: 16px;
+      }
+
+      @media screen and (max-height: 450px) {
+        .sidenav {padding-top: 15px;}
+        .sidenav a {font-size: 18px;}
+      }
+
+    </style>
+
+</html><!-- 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" ></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+ -->

@@ -21,7 +21,7 @@ class RegisterForm(forms.Form):
 
 class MoneyTransferForm(forms.ModelForm):
     upi_id = forms.CharField(max_length=40,widget=forms.TextInput(attrs={'class':'form-control form-control-sm', 'placeholder': 'UPI id of the Fellow'}),required=False)
-    facility = forms.ModelChoiceField(queryset= Facility.objects.all() ,widget=forms.Select(attrs={'class': 'form-control form-control-sm'}))
+    money_requested_by = forms.ModelChoiceField(queryset= NgUser.objects.all() ,widget=forms.Select(attrs={'class': 'form-control form-control-sm'}))
     amount = forms.IntegerField(widget=forms.NumberInput(attrs={'class':'form-control form-control-sm','placeholder': 'How much money do you need?'}))
     description = forms.CharField(widget=forms.Textarea(attrs={'class':'form-control form-control-sm','placeholder': 'Why is the money needed?'}))
     nguser_with_upi = forms.ModelChoiceField(queryset = NgUser.objects.all(),widget=forms.Select(attrs={'class': 'form-control form-control-sm','placeholder':'In which account do you need the money?'}), required=False)
@@ -30,13 +30,13 @@ class MoneyTransferForm(forms.ModelForm):
     class Meta:
 
         model = MoneyRequest
-        fields = ('amount', 'description','facility','upi_id','nguser_with_upi', 'nguser_without_upi')
+        fields = ('amount', 'description','money_requested_by','upi_id','nguser_with_upi', 'nguser_without_upi')
 
     def __init__(self, *args, **kwargs):
         self.request = kwargs.pop('request', None)
         facility__id = NgUser.objects.get(user = self.request.user).facility.id
         super(MoneyTransferForm, self).__init__(*args, **kwargs)
-        self.fields['facility'].queryset = Facility.objects.all()
+        self.fields['money_requested_by'].queryset = NgUser.objects.all().filter(facility__id = facility__id)
         self.fields['nguser_with_upi'].queryset = NgUser.objects.all().filter(facility__id= facility__id ,upi_id__isnull = False)
         self.fields['nguser_without_upi'].queryset = NgUser.objects.all().filter(facility__id= facility__id,upi_id__isnull = True)
 
@@ -46,13 +46,14 @@ class MoneyTransferForm(forms.ModelForm):
         nguser_without_upi = self.cleaned_data.get('nguser_without_upi',None)
         nguser_with_upi = self.cleaned_data.get('nguser_with_upi',None)
         if nguser_without_upi and upi_id:
-            nguser.upi_id = upi_id
-            nguser.save()
-            instance.nguser = nguser_without_upi
+            nguser_without_upi.upi_id = upi_id
+            nguser_without_upi.save()
+            instance.money_received_by = nguser_without_upi
         else:
-            instance.nguser = nguser_with_upi
+            instance.money_received_by = nguser_with_upi
 
         instance.is_money_request = True
+        instance.facility = instance.money_received_by.facility
         if commit:
             instance.save()
 
@@ -73,7 +74,6 @@ class RecordPaymentForm(forms.ModelForm):
     facility = forms.ModelChoiceField(queryset= Facility.objects.all() ,widget=forms.Select(attrs={'class': 'form-control form-control-sm'}))
     description = forms.CharField(widget=forms.Textarea(attrs={'class':'form-control form-control-sm','placeholder': 'Why is the money needed?'}))
     payment_amount = forms.IntegerField(widget=forms.NumberInput(attrs={'class':'form-control form-control-sm','placeholder': 'How much money do you need?'}))
-    # bank_screenshot = forms.ImageField(widget=forms.ClearableFileInput(attrs = {'class':'btn btn-default','placeholder': 'Upload the bank transaction screenshot!'}))
     class Meta:
         model = CashEntry
         fields = ['facility', 'bank_screenshot', 'payment_amount', 'description']
@@ -103,6 +103,6 @@ class AddExpenseForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         self.request = kwargs.pop('request', None)
         facility__id = NgUser.objects.get(user = self.request.user).facility.id
-        super(MoneyTransferForm, self).__init__(*args, **kwargs)
-        self.fields['fellow'].queryset = NgUser.objects.all().filter(facility__id= facility__id )
+        super(AddExpenseForm, self).__init__(*args, **kwargs)
+        self.fields['fellow'].queryset = NgUser.objects.all().filter(facility__id= facility__id)
        
