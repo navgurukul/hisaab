@@ -1,85 +1,167 @@
-{%extends 'base.html'%}
-
+{% extends 'base.html' %}
 {% block content %}
-<!-- <form method="post"> -->
 
-<form method="POST">
-  {% csrf_token %}
-  Start Date  <input type="date" name="start_date">
-  End Date  <input type="date" name="end_date">
-<div class="row">
-  <div class="col-md-4">
-    <div class="control-group">
-      <div class="controls span2">
-        <label class="checkbox col">
-          <input type="checkbox" name="categories" value="VEGETABLES"> Vegetables
-        </label>
-        <label class="checkbox col">
-          <input type="checkbox" name="categories" value="GROCERIES"> Groceries
-        </label>
-        <label class="checkbox col">
-          <input type="checkbox" name="categories" value="HOUSEHOLD"> HouseholdItems
-        </label>
-        <label class="checkbox col">
-          <input type="checkbox" name="categories" value="TRAVEL"> Travel
-        </label>
-      </div>
+<div class="main-container">
+    <div class="col-md-12 col-sm-12">
+  			<center><h1>Facility Expenses Report <br>of {{ facility.name }} Facility</h1></center>
     </div>
-  </div>
-  <div class="col-md-4">
-    <div class="control-group">
-    <div class="controls span2">
-        <label class="checkbox col">
-            <input type="checkbox" name="categories" value="EGGS"> Eggs
-        </label>
-        <label class="checkbox col">
-            <input type="checkbox" name="categories" value="MILK"> Milk
-        </label>
-        <label class="checkbox col">
-            <input type="checkbox" name="categories" value="TECH EXPENCE"> Tech Expence
-        </label>
-        <label class="checkbox col">
-            <input type="checkbox" name="categories" value="OTHER"> Other
-        </label>
+<div class="div-container">
+  	<div class="col-md-4">
+      <h3>Cash in Hand ₹{{ facility.cash_in_hand }}</h3>
+    </div>
+ 		<form method="POST" action="{% url 'facilityreport' pk=facility.pk %}">
+  		{% csrf_token %}
+	    <div class="col-md-2 start-date">
+	      <p>Starting Date</p>
+	    </div>
+	    <div class="col-md-2">
+	        <div class="form-group">
+	          <input class="form-control" id="date" name="start_date" placeholder="MM/DD/YYY" type="date"/>
+	        </div>
+	    </div>
+	    <div class="col-md-2 end-date">
+	      <p>End Date</p>
+	    </div>
+	    <div class="col-md-2">
+	        <div class="form-group"> <!-- Date input -->
+	          <input class="form-control" id="date" name="end_date" placeholder="MM/DD/YYY" type="date"/>
+	        </div>
+	    </div>
+	  </div>
+	</div>
+	<div class="col-md-12">
+	  <div class="col-md-4 col-sm-4 "></div>
+	  <div class="col-md-3 col-sm-4 margin-top border">
+	      <button id="btnbottom" type="submit" name="payment" class="btn">Payment</button>
+	      <button id="btnbottom" type="submit" name="expense" class="btn">Expenses</button>
+	  </div>
+			<div class="col-md-2 col-sm-2 Checkbox1">
+				<div class="Checkbox">
+	          <input type="checkbox" name="categories" value="EGGS"> Eggs
+	      </div>
+	      <div class="Checkbox">
+	          <input type="checkbox" name="categories" value="MILK"> Milk
+	      </div>
+	      <div class="Checkbox">
+	          <input type="checkbox" name="categories" value="TECH EXPENCE"> Tech Expence
+	      </div>
+	      <div class="Checkbox">
+	          <input type="checkbox" name="categories" value="OTHER"> Other
+	      </div>
+			</div>
+	    <div class="col-md-2 col-sm-2 Checkbox1">
+				<div class="Checkbox">
+					<input type="checkbox" name="categories" value="VEGETABLES"> Vegetables
+				</div>
+				<div class="Checkbox">
+					<input type="checkbox" name="categories" value="GROCERIES"> Groceries
+				</div>
+				<div class="Checkbox">
+					<input type="checkbox" name="categories" value="HOUSEHOLD"> HouseholdItems
+				</div>
+				<div class="Checkbox">
+					<input type="checkbox" name="categories" value="TRAVEL"> Travel
+				</div>
+	    </div>
+	</form>
+</div>
+
+<!-- Data to be shown -->
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-md-12">
+      <div class="table-responsive">
+        <table class="table table-condensed table-striped" id="complainttable" >
+					{% if not payment %}
+					 <thead>
+							 <tr>
+									 <th class="col-sm-2 col-md-2">Name</th>
+									 <th class="col-sm-2 col-md-2">Expense Amount</th>
+									 <th class="col-sm-2 col-md-2">Category</th>
+									 <th class="col-sm-2 col-md-2">Date</th>
+									 <th class="col-sm-4 col-md-4">Description</th>
+							 </tr>
+					 </thead>
+					 <tbody>
+							 {% for entry in entries %}
+									 <tr>
+											 <td>{{ entry.fellow }}</td>
+											 <td>{{ entry.expense_amount }}</td>
+											 <td>{{ entry.category }}</td>
+											 <td>{{ entry.created_date }}</td>
+											 <td>{{ entry.description }}</td>
+									 </tr>
+							 {% endfor %}
+					 </tbody>
+		 {% else %}
+					 <thead>
+					 <tr>
+							 <th class="col-sm-2 col-md-2">Name</th>
+							 <th class="col-sm-3 col-md-3">Payment Amount</th>
+							 <th class="col-sm-3 col-md-3">Date</th>
+							 <th class="col-sm-3 col-md-3">Description</th>
+					 </tr>
+					 </thead>
+					 <tbody>
+					 {% for entry in entries %}
+							 <tr>
+									 <td>{{ entry.fellow }}</td>
+									 <td>{{ entry.payment_amount }}</td>
+									 <td>{{ entry.created_date }}</td>
+									 <td>{{ entry.description }}</td>
+							 </tr>
+					 {% endfor %}
+					 </tbody>
+		 {% endif %}
+        </table>
       </div>
     </div>
   </div>
 </div>
-  <!-- <ul class="checkbox-grid">
-  <li><input type="checkbox" name="categories[]" value="VAGETABLES">Vagetables</input></li>
-  <li><input type="checkbox" name="categories[]" value="GROCERIES" >Groceries</input></li>
-  <li><input type="checkbox" name="categories[]" value="HOUSEHOLD">HouseholdItems</input></li>
-  <li><input type="checkbox" name="categories[]" value="TRAVEL">Travel-expence</input></li>
-  <li><input type="checkbox" name="categories[]" value="EGG">Eggs</input></li>
-  <li><input type="checkbox" name="categories[]" value="MILK">Milk</input></li>
-  <li><input type="checkbox" name="categories[]" value="TECH EXPENCE">Tech-expence</input></li>
-  <li><input type="checkbox" name="categories[]" value="OTHER">Others</input></li>
-</ul> -->
-<button type="submit" name="button">Payment</button>
-</form>
-<!-- <button type="submit" value="Submit">Submit</button> -->
 
-<table class="table table-condensed table-striped">
-    <thead>
-        <tr>
-            <th class="col-sm-2">Name</th>
-            <th class="col-sm-2">Expense Amount</th>
-            <th class="col-sm-2">Category</th>
-            <th class="col-sm-2">DoE</th>
-            <th class="col-sm-3">Description</th>
-        </tr>
-    </thead>
-    <tbody>
-        {% for test in entries %}
-            <tr>
-                <td>{{ test.fellow }}</td>
-                <td>{{ test.expense_amount }}</td>
-                <td>{{ test.category }}</td>
-                <td>{{ test.created_date }}</td>
-                <td>{{ test.description }}</td>
-            </tr>
-        {% endfor %}
-    </tbody>
-</table>
+<style type="text/css">
+body {
+    font-family: "Lato", sans-serif;
+    transition: background-color .5s;
+    /*margin-top: 0px;*/
+    margin-bottom: 20px;
+    padding: 0;
+    margin: 20px;
+    background-color: #eee;
+    font-family: sans-serif;
+
+}
+.end-date{
+  margin-right: -10% !important;
+  margin-left: 5%;
+
+}
+.start-date{
+  margin-left: 4%;
+  margin-right: -8% !important;
+}
+.Checkbox{
+  margin-top: 5px;
+  margin-bottom: 5%;
+  margin-left: 5%;
+}
+.Checkbox1{
+  margin-top: 20px;
+}
+.container{
+  margin-top: 50px;
+}
+
+.margin-top{
+  margin-top: 9%;
+}
+
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+</style>
 
 {% endblock %}

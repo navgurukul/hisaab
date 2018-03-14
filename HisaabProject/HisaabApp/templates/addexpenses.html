@@ -1,0 +1,148 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+	<!-- <img class="img-responsive" src="img/logo.png"> -->
+	<div class="main_container">
+		<div class="baby_container0">
+			<center><h1>Add <b>Expense</b></h1></center>
+		    <!-- Form code begins -->
+		    <form method="post" enctype="multipart/form-data">
+		    	{% csrf_token %}
+				<div id="main">
+					<div id="clonebaby" class="baby_container">
+						<div class="baby_cont1">
+							<select name='expense_type' class="selectpicker">
+							  <option>What kind of an expense is this?</option>
+							  {% for value, type_name in form.fields.expense_type.choices %}
+							  	<option value='{{ value }}' >{{ type_name }}</option>
+							  {% endfor %}
+							</select>
+						</div>
+
+						<div class="baby_cont1">
+							<select name="facility" class="selectpicker">
+							  <!-- The facility of the student will be auto selected -->
+							  {% for value, facility_name in form.fields.facility.choices %}
+							  		<option value='{{ value }}' {% if value == user.nguser.facility.id %} selected {% endif %}> {{ facility_name }} </option>
+							  {% endfor %}
+							</select>
+
+						</div>
+						<div class="baby_cont1">
+							<input type="number" placeholder="Amount" name="expense_amount" class="form-control" id="usr">
+						</div>
+						<div class="bootstrap-iso">
+							<div style="margin-top: 10px; margin-bottom: -20px !important;" class="container-fluid">
+								<div class="row">
+									    <div class="form-group"> <!-- Date input -->
+									        <input class="form-control" id="date" name="created_date"  placeholder="MM/DD/YYY" type="text"/>
+									   	</div>
+								</div>
+							</div>
+						</div>
+						<div class="baby_cont1">
+							<select name="fellow" class="selectpicker">
+							  <option>Who made the expense?</option>
+  									{% for value, name in form.fields.fellow.choices %}
+							  			<option value='{{ value }}' >{{ name }}</option>
+							  		{% endfor %}
+							</select>
+
+						</div>
+						<div class="baby_cont1">
+							<select name="category" class="selectpicker">
+								<option>Category</option>
+ 								{% for value, name in form.fields.category.choices %}
+								<option value='{{ value }}' >{{ name }}</option>
+							  {% endfor %}
+							</select>
+
+						</div>
+						<div class="baby_cont1">
+							    <span  id="fileselector">
+							        <label style="width: 100%;" class="btn btn-default" for="upload-file-selector">
+							            <input class="invisible" name="bill_image" id="upload-file-selector" type="file">
+							           <h4>Upload Bill Photo</h4>
+							        </label>
+							    </span>
+						</div>
+						<div class="baby_cont1">
+							<textarea type="text" placeholder="Description" name="description" class="form-control" id="usr"></textarea>
+						</div>
+					</div>
+				</div>
+
+				<button id="btnbottom" type="submit" class="btn btn-success pull-right">Submit Bill Payment Request ></button>
+			<!-- Form code ends -->
+			</form>
+		</div>
+	</div>
+{% block javascript %}
+<script type="text/javascript">
+    $(document).ready(function(){
+      var date_input=$('input[name="created_date"]'); //our date input has the name "date"
+      var container=$('.bootstrap-iso row').length>0 ? $('.bootstrap-iso row').parent() : "body";
+      var options={
+        format: 'yyyy-mm-dd',
+        container: container,
+        todayHighlight: true,
+        autoclose: true,
+      };
+      date_input.datepicker(options);
+    })
+</script>
+{% endblock javascript %}
+
+{% block style %}
+<style type="text/css">
+	body{
+	margin-top: 30px;
+	margin-bottom: 20px;
+	padding: 0;
+	margin: 20px;
+	background-color: #eee;
+	font-family: sans-serif;
+}
+
+#tag-p{
+	font-size: 20px;
+	color: black;
+	margin-top: 20px;
+}
+.form-control{
+	font-size: 16px;
+	padding: 5px;
+
+}
+.selectpicker{
+	display: block;
+	width: 100%;
+	height: 34px;
+	padding: 6px 12px;
+	font-size: 16px;
+	line-height: 1.42857143;
+	color: #999;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+.main_container{
+	display: flex;
+	justify-content: center;
+
+}
+.baby_cont1{
+	margin-top: 15px;
+
+}
+
+#btnbottom{
+	font-size: 120%;
+	margin-top: 20px;
+}
+</style>
+{% endblock style %}
+{% endblock %}

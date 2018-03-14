@@ -2,93 +2,124 @@
 {% block content %}
 
 <!-- Form for Requesting the money from the Admin -->
-<div class="container" style="max-width: 60%">
-	<div class="">
-		<h3 class="text-center">
-		Add Transfer Request
-		</h3>
-		<br>
-
-		<form mehtod="post">
-		  {% csrf_token %}
-		  <h4>Transfer Details</h4>
-		  <!-- Details about transfer request -->
-		  <div class="form-group">
-		  	<!-- Amount Field -->
-			<label for="amount">Amount :</label>
-			<div class="input-group">
-			    <div class="input-group-prepend">
-			      <span class="input-group-text" id="amount"><i class="fa fa-inr"></i></span>
-			     	{{ form.amount }}
-			    </div>
-			</div>
-			<br>
-			<!-- Facility Dropdown Menu which will be auto selected -->
-			<label for="facility">Facility :</label>
-			<div class="input-group">
-			    <div class="input-group addon">
-			      <span class="input-group-addon" id="facility"><i class="fa fa-home"></i></span>
-			     	{{ form.facility }}
-			    </div>
-			</div>
-			<br>
-
-			<!-- Purpose for the money request -->
-			<label for="description">Description :</label>
-			<div class="input-group">
-			    <div class="input-group addon">
-			      <span class="input-group-addon" id="description"><i class="fa fa-pencil-square-o"></i></span>
-			     	{{ form.description }}
-			    </div>
-			</div>
-			<br>
-
-		  </div>
 
 
-		<h6>Account Details</h6>
-		<br>
-
-		<div class="form-group">
-			<!-- User that have UPI id stored in database -->
-			<label for="nguser_with_upi">Fellow those have the UPI id :</label>
-			<div class="input-group">
-			    <div class="input-group addon">
-			      <span class="input-group-addon" id="nguser_with_upi"><i class="fa fa-user"></i></span>
-			     	{{ form.nguser_with_upi }}
-				</div>
-		  	</div>
-			<br>
-
-		  <h4 class="text-center">OR</h4>
-
-		  	<!-- Add Upi ID for the user-->
-		  	<h6>Add UPI id for the User below :</h6>
-
-		  	<!-- User without the Upi id field -->
-
-				<!-- <label for="nguser_without_upi">Fellow those have the UPI id :</label> -->
-				<div class="input-group">
-				    <div class="input-group addon">
-				      <span class="input-group-addon" id="nguser_without_upi"><i class="fa fa-user"></i></span>
-				     	{{ form.nguser_without_upi }}
+<div class="main_container">
+		<div class="baby_container0">
+			<center><h1 style="margin-right: 80px;">Add <b>Transfer Request</b></h1></center>
+			<form method="POST">
+			<div id="main">
+				<p id="tag-p">Transfer Details</p>
+				<div id="clonebaby" class="baby_container">
+					<div class="baby_cont1">
+							{% csrf_token %}
+						<input type="number" placeholder="How much money do you need?" name = "amount" class="form-control" id="usr">
 					</div>
-			  	</div>
-				<br>
-		  	<!-- UPI id field for the User -->
-		  	<div class="input-group">
-			    <div class="input-group addon">
-			      <span class="input-group-addon" id="basic-addon1"><i class="fa fa-code"></i></span>
-			     	{{ form.upi_id }}
-			    </div>
-		  	</div>
-			<br>
+					<div class="baby_cont1">
+						<select class="selectpicker" name = "money_requested_by" >
+							<option>For whom do you need the money?</option>
+							{% for value, name in form.fields.money_requested_by.choices %}
+							  	<option value='{{ value }}' {% if value == user.nguser.id %} selected {% endif %}>{{ name }}</option>
+						  {% endfor %}
+						</select>
 
+					</div>
+					<div class="baby_cont1">
+						<textarea type="text" name="description" placeholder="Why is the money needed?" class="form-control" id="usr"></textarea>
+					</div>
+				</div>
+
+			<p id="tag-p">UPI Users :</p>
+			<div class="baby_container">
+			<!-- 	<div class="baby_cont1">
+					<input type="text"  placeholder="Account Number" class="form-control" id="usr">
+				</div>
+				<div class="baby_cont1">
+					<input type="text" placeholder="Confirm Account Number" class="form-control" id="usr">
+				</div>
+				<div class="baby_cont1">
+					<input type="text" placeholder="IFSC Code" class="form-control" id="usr">
+				</div>
+				<div class="baby_cont1">
+					<input type="text" placeholder="Name of Account Holder" class="form-control" id="usr">
+				</div> -->
+				<div class="baby_cont1">
+					<select class="selectpicker" class="form-control" name = "nguser_with_upi" >
+						{% for values, name in form.fields.nguser_with_upi.choices %}
+							<option value='{{ values }}' >{{ name }}</option>
+						{% endfor %}
+					</select>
+				</div>
+
+				<p id="tag-p">OR</p>
+				<p id="tag-p">Request it to a new UPI Id :</p>
+				<div class="baby_cont1">
+					<select class="selectpicker" class="form-control" name = "nguser_without_upi" >
+						{% for values, name in form.fields.nguser_without_upi.choices %}
+							<option value='{{ values }}' >{{ name }}</option>
+						{% endfor %}
+					</select>
+				</div>
+				<div class="baby_cont1">
+					<input type="text" placeholder="UPI Id" class="form-control" name="upi_id" id="usr">
+				</div>
+			</div>
+			<button id="btnbottom" type="submit" class="btn btn-success pull-right">Submit Transfer Request ></button>
+			</div>
+			</form>
 		</div>
-
-
-		<button class="btn btn-success float-right" type="submit">Submit Transfer Request</button>
-		</form>
 	</div>
-</div>
+
+{% block style %}
+<style type="text/css">
+	body{
+	margin-top: 30px;
+	margin-bottom: 20px;
+	padding: 0;
+	margin: 20px;
+	background-color: #eee;
+	font-family: sans-serif;
+}
+#tag-p{
+	font-size: 20px;
+	color: black;
+	margin-top: 20px;
+}
+.form-control{
+	font-size: 16px;
+	padding: 20px;
+
+}
+.selectpicker{
+	display: block;
+	width: 100%;
+	height: 34px;
+	padding: 6px 12px;
+	font-size: 16px;
+	line-height: 1.42857143;
+	color: #999;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+}
+
+.main_container{
+	display: flex;
+	justify-content: center;
+
+}
+.baby_cont1{
+	margin-top: 15px;
+
+}
+
+#btnbottom{
+	font-size: 120%;
+
+	margin-top: 20px;
+}
+</style>
+{% endblock style %}
+
+
 {% endblock %}
