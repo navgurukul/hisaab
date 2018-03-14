@@ -9,10 +9,15 @@
     <div class="col-md-2">
     </div>
     <div class="col-md-2">
-      <button id="top-button" type="button" class="btn btn-danger btn-block">Add an Expense</button>
+    	<a href="{% url 'addexpense' %}">
+	      <button id="top-button" type="button" class="btn btn-danger btn-block">Add an Expense</button>
+    	</a>
     </div>
     <div class="col-md-2">
-      <button id="top-button" type="button" class="btn btn-success btn-block">Record a Payment</button>
+    	<a href="{% url 'recordpayment' %}">
+	      <button id="top-button" type="button" class="btn btn-success btn-block">Record a Payment</button>
+    	</a>
+
       </div>
       <div class="col-md-2">
         <button id="top-button" type="button" class="btn btn-primary btn-block">Student Level Expenses</button>
@@ -29,13 +34,13 @@
         <div class="col-md-12 green">
            <h3>₹{{ request.amount }} for NG Day to Day Expenses</h3>
            <p>for {{ request.facility.name }} Facility by {{ request.money_requested_by.user.first_name }} {{ request.money_requested_by.user.last_name }}</p>
-           <a class="pull-right underline" href="{% url 'viewpendingrequest' pk=request.id %}">View Request</a>
+           <a class="pull-right underline" style='margin-top:-15px' href="{% url 'viewpendingrequest' pk=request.id %}">View Request</a>
         </div>
         {% else %}
         <div class="col-md-12 green">
            <h3>₹{{ request.amount }} for {{request.type_of_bill }} Bill Payment</h3>
            <p>for {{ request.facility.name }} Facility by {{ request.money_requested_by.user.first_name }} {{ request.money_requested_by.user.last_name }}</p>
-           <a class="pull-right underline" href="#">View Request</a>
+           <a class="pull-right underline" style='margin-top:-15px' href="#">View Request</a>
         </div>
         {% endif %}
       {% endfor %}
@@ -75,7 +80,7 @@ function closeNav() {
     background-color: #5cb85c;
     margin-top: 5%;
     color: white;
-    padding: 10px;
+    padding: 2%;
 
   }
   span{
@@ -92,7 +97,7 @@ function closeNav() {
     margin-bottom: 20px;
   }
   .border{
-    height: 600px;
+    height: 550px;
     border-right: 1px solid black;
     width: 1px !important;
     margin-right: 10px;
@@ -116,6 +121,7 @@ function closeNav() {
 body {
     font-family: "Lato", sans-serif;
     transition: background-color .5s;
+    margin-bottom: 10%;
 }
 
 .sidenav {
@@ -160,6 +166,7 @@ body {
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
+
 }
 </style>
 {% endblock %}
