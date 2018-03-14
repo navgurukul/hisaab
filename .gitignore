@@ -1,5 +1,5 @@
 *.pyc
-*.sqlite3
+db.sqlite3
 *.sql
 __pycache__
 migrations

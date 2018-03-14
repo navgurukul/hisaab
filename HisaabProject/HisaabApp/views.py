@@ -103,7 +103,7 @@ def addexpense(request):
         form = AddExpenseForm(request.POST,request.FILES)
         if form.is_valid():
             form.save(commit=False)
-            print form.cleaned_data.get('expense_type').encode('utf8')
+            # print form.cleaned_data.get('expense_type').encode('utf8')
             if form.cleaned_data.get('expense_type').encode('utf8') == 'PERSONAL':
                 form.is_personal_expense = True
             else:
