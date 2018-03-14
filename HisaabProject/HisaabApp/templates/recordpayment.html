@@ -1,45 +1,42 @@
 {% extends 'base.html' %}
 {% block content %}
-<!-- Record Payment made to the facility  -->
 
-    <form method='post' enctype = 'multipart/form-data'>
-     {% csrf_token %}
-          <div class="main_container">
-              <div class="baby_container0">
-                <center><h1 style="margin-right: 100px; margin-left: 100px;">Record<b>Payment</b></h1></center>
-                <div id="main">
-                  <div id="clonebaby" class="baby_container">
-                    <div class="baby_cont1">
-                      <input type="number" placeholder="Money paid" name='payment_amount' class="form-control" id="usr">
-                    </div>
-                    <div class="baby_cont1">
-                      <select name='facility' class="selectpicker">
-                        {% for value, name in form.fields.facility.choices %}
-                              <option value='{{ value }}' >{{ name }}</option>
-                        {% endfor %}
-                      </select>
-                    </div>
-                    <div class="baby_cont1">
-                      <textarea type="text" placeholder="Extra notes" name='description' class="form-control" id="usr"></textarea>
-                      
-                        <span  id="fileselector">
-                          <label style="width: 100%;  margin-top: 10px;" class="btn btn-default" for="upload-file-selector">
-                            <input class="invisible" id="upload-file-selector" name='bank_screenshot' type="file">
-                            <h4>Upload Bank Screenshort</h4>
-                          </label>
-                        </span>
-                      
-                    </div>
-                  </div>
+ <form method='post' enctype = 'multipart/form-data'>
+     {% csrf_token %}<!-- Record Payment made to the facility  -->
+        <div class="main_container">
+          <div class="baby_container0">
+            <center><h1 style="margin-right: 100px; margin-left: 100px;">Record<b>Payment</b></h1></center>
+            <div id="main">
+              <div id="clonebaby" class="baby_container">
+                <div class="baby_cont1">
+                  <input type="text" name='payment_amount' placeholder="Money paid" class="form-control" id="usr">
                 </div>
-
+                <div class="baby_cont1">
+                  <select name='facility' class="selectpicker">
+                    <option>Who are you paying this amount to?</option>
+                  {% for values, name in form.fields.facility.choices %}
+                    <option value='{{ values }}' >{{ name }}</option>
+                  {% endfor %}
+                  </select>
+                </div>
+                <div class="baby_cont1">
+                  <textarea type="text" name='description' placeholder="Extra notes" class="form-control" id="usr"></textarea>
+                    <span  id="fileselector">
+                      <label style="width: 100%; margin-top: 10px; " class="btn btnbottom btn-default" for="upload-file-selector">
+                        <br>
+                        Upload Bank Screenshot
+                        <input class="invisible" name='bank_screenshot' id="upload-file-selector" type="file">
+                      </label>
+                    </span>
+                </div>
               </div>
-            </div> 
-                 <input class="btn btn-success" float="right" type="submit" value="Record Payment >" />
-
+              <button type='submit' class="btn btnbottom btn-success" style="float: right; margin-top: 2%" >Record Payment ></button>
+            </div>
+          </div>
+        </div>
 
     </form>
-</div>
+
 <style type="text/css">
   body{
   margin-top: 30px;
@@ -47,7 +44,8 @@
   padding: 0;
   margin: 20px;
   background-color: #eee;
-  font-family: sans-serif;
+  font-family: "Lato", sans-serif;
+  transition: background-color .5s;
 }
 
 #tag-p{
@@ -83,57 +81,15 @@
 
 }
 
-#btnbottom{
+.btnbottom{
   font-size: 120%;
   margin-top: 20px;
 }
-body {
-    font-family: "Lato", sans-serif;
-    transition: background-color .5s;
-}
-
-.sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: rgba(170, 138, 125, 0.53);
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-}
-
-.sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: white;
-    display: block;
-    transition: 0.3s;
-}
-
-.sidenav a:hover {
-    color: black;
-}
-
-.sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-}
-
 #main {
     transition: margin-left .5s;
     padding: 16px;
 }
 
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
 </style>
+
 {% endblock %}
