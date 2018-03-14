@@ -3,20 +3,50 @@
 
 {% if not user.is_authenticated %}
 
-<div class="container">
- <div class="row">
-  <br><br>
-  <div class="card white"  style="position: absolute; margin: auto; top: 0; right: 0; bottom: 0; left: 0; width: 30%; padding: 40px; height: 35%; text-align: center;">
-    <h4>Hisaab</h4>
-    <p style="margin-bottom: 0rem !important; ">NavGurukul Accounting App</p>
-    <br>
-    <a class="btn btn-danger" href="{% url 'social:begin' 'google-oauth2' %}?next=/" style="outline: none; margin: 0px 20px 0px 20px;">
-        Sign In With Google
-    </a>  
-  </div>
- </div>
-</div>
+	<div class="hedding4">
+		<div class="bottomhadder">
+			<div class="row">
+				<div class="hisab_containt">
+					<div class="centeritem">
+					<center><h4>Hisaab</h4></center>
+					<p >NG Accounting App</p>
+					</div>
+					<a id="sbmt1" href="{% url 'social:begin' 'google-oauth2' %}?next=/"><button id="btnbottom2" type="button" class="btn btn-danger">Sign in With Google</button></a>
+				</div>	
+			</div>
+		</div>
+	</div>
+	<style type="text/css">
+		a{
+			display: flex;
+			justify-content: center;
 
+		}
+		a:link {
+		    text-decoration: none;
+		}
+		p{
+			display: flex;
+			justify-content: center;
+			margin-bottom: 20px;
+		}
+
+		.hisab_containt{
+			border: 1px solid #555;
+			width: 300px;
+			padding-top: 15%;
+			padding-bottom: 15%;
+			background-color: white;
+		}
+		.hedding4{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+			padding: 20px;
+			background-color: #eee;
+		}
+	</style>
 {% endif %}
 
 {% endblock %}

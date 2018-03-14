@@ -1,85 +1,99 @@
 {%extends 'base.html'%}
 
 {% block content %}
-<!-- <form method="post"> -->
 
-<form method="POST">
-  {% csrf_token %}
-  Start Date  <input type="date" name="start_date">
-  End Date  <input type="date" name="end_date">
-<div class="row">
-  <div class="col-md-4">
-    <div class="control-group">
-      <div class="controls span2">
-        <label class="checkbox col">
-          <input type="checkbox" name="categories" value="VEGETABLES"> Vegetables
-        </label>
-        <label class="checkbox col">
-          <input type="checkbox" name="categories" value="GROCERIES"> Groceries
-        </label>
-        <label class="checkbox col">
-          <input type="checkbox" name="categories" value="HOUSEHOLD"> HouseholdItems
-        </label>
-        <label class="checkbox col">
-          <input type="checkbox" name="categories" value="TRAVEL"> Travel
-        </label>
-      </div>
-    </div>
-  </div>
-  <div class="col-md-4">
-    <div class="control-group">
-    <div class="controls span2">
-        <label class="checkbox col">
-            <input type="checkbox" name="categories" value="EGGS"> Eggs
-        </label>
-        <label class="checkbox col">
-            <input type="checkbox" name="categories" value="MILK"> Milk
-        </label>
-        <label class="checkbox col">
-            <input type="checkbox" name="categories" value="TECH EXPENCE"> Tech Expence
-        </label>
-        <label class="checkbox col">
-            <input type="checkbox" name="categories" value="OTHER"> Other
-        </label>
-      </div>
-    </div>
-  </div>
-</div>
-  <!-- <ul class="checkbox-grid">
-  <li><input type="checkbox" name="categories[]" value="VAGETABLES">Vagetables</input></li>
-  <li><input type="checkbox" name="categories[]" value="GROCERIES" >Groceries</input></li>
-  <li><input type="checkbox" name="categories[]" value="HOUSEHOLD">HouseholdItems</input></li>
-  <li><input type="checkbox" name="categories[]" value="TRAVEL">Travel-expence</input></li>
-  <li><input type="checkbox" name="categories[]" value="EGG">Eggs</input></li>
-  <li><input type="checkbox" name="categories[]" value="MILK">Milk</input></li>
-  <li><input type="checkbox" name="categories[]" value="TECH EXPENCE">Tech-expence</input></li>
-  <li><input type="checkbox" name="categories[]" value="OTHER">Others</input></li>
-</ul> -->
-<button type="submit" name="button">Payment</button>
-</form>
-<!-- <button type="submit" value="Submit">Submit</button> -->
+    {{ facility.name }}
+                  <form method="POST" action="{% url 'facilityreport' pk=facility.pk %}">
+                    {% csrf_token %}
+                      Start Date  <input type="date" name="start_date">
+                      End Date  <input type="date" name="end_date">
+                      <div class="row">
+                        <div class="col-md-4">
+                          <div class="control-group">
+                            <div class="controls span2">
+                              <label class="checkbox col">
+                                <input type="checkbox" name="categories" value="VEGETABLES"> Vegetables
+                              </label>
+                              <label class="checkbox col">
+                                <input type="checkbox" name="categories" value="GROCERIES"> Groceries
+                              </label>
+                              <label class="checkbox col">
+                                <input type="checkbox" name="categories" value="HOUSEHOLD"> HouseholdItems
+                              </label>
+                              <label class="checkbox col">
+                                <input type="checkbox" name="categories" value="TRAVEL"> Travel
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="control-group">
+                          <div class="controls span2">
+                              <label class="checkbox col">
+                                  <input type="checkbox" name="categories" value="EGGS"> Eggs
+                              </label>
+                              <label class="checkbox col">
+                                  <input type="checkbox" name="categories" value="MILK"> Milk
+                              </label>
+                              <label class="checkbox col">
+                                  <input type="checkbox" name="categories" value="TECH EXPENCE"> Tech Expence
+                              </label>
+                              <label class="checkbox col">
+                                  <input type="checkbox" name="categories" value="OTHER"> Other
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      </ul>
+                      <button type="submit" class="btn btn-default" name="payment">Payment</button>
+                      <button type="submit" class="btn btn-default"name="expense">Expence</button>
+                  </form>
 
-<table class="table table-condensed table-striped">
-    <thead>
-        <tr>
-            <th class="col-sm-2">Name</th>
-            <th class="col-sm-2">Expense Amount</th>
-            <th class="col-sm-2">Category</th>
-            <th class="col-sm-2">Date</th>
-            <th class="col-sm-3">Description</th>
-        </tr>
-    </thead>
-    <tbody>
-        {% for test in entries %}
-            <tr>
-                <td>{{ test.fellow }}</td>
-                <td>{{ test.expense_amount }}</td>
-                <td>{{ test.category }}</td>
-                <td>{{ test.created_date }}</td>
-                <td>{{ test.description }}</td>
-            </tr>
-        {% endfor %}
-    </tbody>
-</table>
+            <table class="table table-condensed table-striped">
+              {% if not payment %}
+              <h3>All Expense made by the Facility:</h3>
+                      <thead>
+                          <tr>
+                              <th class="col-sm-3 col-md-3">Name</th>
+                              <th class="col-sm-2 col-md-2">Expense Amount</th>
+                              <th class="col-sm-2 col-md-2">Category</th>
+                              <th class="col-sm-2 col-md-2">Date</th>
+                              <th class="col-sm-3 col-md-3">Description</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          {% for entry in entries %}
+                              <tr>
+                                  <td>{{ entry.fellow }}</td>
+                                  <td>{{ entry.expense_amount }}</td>
+                                  <td>{{ entry.category }}</td>
+                                  <td>{{ entry.created_date }}</td>
+                                  <td>{{ entry.description }}</td>
+                              </tr>
+                          {% endfor %}
+                      </tbody>
+                {% else %}
+                <h3>All Payments to Facility:</h3>
+                      <thead>
+                      <tr>
+                          <th class="col-sm-3 col-md-3">Name</th>
+                          <th class="col-sm-3 col-md-3">Payment Amount</th>
+                          <th class="col-sm-3 col-md-3">Date</th>
+                          <th class="col-sm-3 col-md-3">Description</th>
+                      </tr>
+                      </thead>
+                      <tbody>
+                      {% for entry in entries %}
+                          <tr>
+                              <td>{{ entry.fellow }}</td>
+                              <td>{{ entry.payment_amount }}</td>
+                              <td>{{ entry.created_date }}</td>
+                              <td>{{ entry.description }}</td>
+                          </tr>
+                      {% endfor %}
+                      </tbody>
+                {% endif %}
+            </table>
 
 {% endblock %}
