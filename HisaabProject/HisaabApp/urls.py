@@ -15,6 +15,8 @@ urlpatterns = [
     url(r'^facilityreport/(?P<pk>\d+)$', views.facilityreport, name= 'facilityreport'),
     url(r'^register/$', views.register,  name='register'),
     url(r'^recordpayment/$', views.recordpayment,  name='recordpayment'),
+    url(r'^viewpendingrequests/$', views.viewpendingrequests,  name='viewpendingrequests'),
+    url(r'^viewpendingrequest/(?P<pk>\d+)$', views.viewpendingrequest,  name='viewpendingrequest'),
 
 
 ]

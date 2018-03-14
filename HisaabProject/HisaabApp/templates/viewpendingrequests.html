@@ -1,0 +1,147 @@
+{% extends 'base.html' %}
+
+{% block content %}
+		<div class="main-container">
+		    <div class="col-md-2">
+		    </div>
+		    <div class="col-md-2">
+		    </div>
+		    <div class="col-md-2">
+		    </div>
+		    <div class="col-md-2">
+		    	<a class='text' href="{% url 'addexpense' %}">
+		    		<button id="top-button" type="button" class="btn btn-danger btn-block">Add an Expense</button>
+		    	</a>
+		      	
+		    </div>
+		    <div class="col-md-2">
+		    	<a class='text' href="{% url 'recordpayment' %}">
+		    		<button id="top-button" type="button" class="btn btn-success btn-block">Record a Payment</button>
+		    	</a>
+		      	
+		    </div>
+		    <div class="col-md-2">
+		    	<a class='text' href="#">
+		    		<button id="top-button" type="button" class="btn btn-primary btn-block">Student Level Expenses</button>
+		    	</a>
+		    </div>
+		</div>
+
+		<div class="row-fluid main">
+		    <div class="col-md-2">
+		      
+		    </div>
+			<div class="col-md-8">
+			    <h2>Pending Request</h2>
+			    {% for request in money_requests %}
+				    	{% if request.is_money_request %}
+					    <div class="col-md-12 green">
+					       <h3>₹{{ request.amount }} for NG Day to Day Expenses</h3>
+					       <p>for {{ request.facility.name }} Facility by {{ request.money_requested_by.user.first_name }} {{ request.money_requested_by.user.last_name }}</p>
+					       <a class="pull-right underline" href="{% url 'viewpendingrequest' pk=request.id %}">View Request</a>
+					    </div>
+					    {% else %}
+					    <div class="col-md-12 green">
+					       <h3>₹{{ request.amount }} for {{request.type_of_bill }} Bill Payment</h3>
+					       <p>for {{ request.facility.name }} Facility by {{ request.money_requested_by.user.first_name }} {{ request.money_requested_by.user.last_name }}</p>
+					       <a class="pull-right underline" href="{% url 'viewpendingrequest' pk=request.id %}">View Request</a>
+					    </div>
+					    {% endif %}
+			   {% endfor %}
+			    <div style="margin-top: 20px; margin-bottom: 20px;" class="col-md-12">
+			        <div class="col-md-2">
+			        </div>
+					<div class="col-md-2">
+					</div>
+					<div class="col-md-2">
+					</div>
+					{% if money_requests.has_previous %}
+						<div class="col-md-2">
+							<a class='text' href="?page={{ money_requests.number|add:'-1' }}">
+								<button type="button" class="btn btn-button btn-block">< Previous Page </button>
+							</a>
+						</div>
+					{% else %}
+						<div class="col-md-2">
+							<a class='text' href="#">
+								<button type="button" class="btn disabled btn-button btn-block">< Previous Page </button>
+							</a>
+						</div>
+					{% endif %}
+
+					<div style="margin-top: 5px;" class="col-md-2">
+						<center><h4>Page {{ money_requests.number }} of {{ money_requests.paginator.num_pages }}</h4></center>
+					</div>
+
+					{% if money_requests.has_next %}
+						<div class="col-md-2">
+							<a class='text' href="?page={{ money_requests.number|add:'-1' }}">
+								<button type="button" class="btn btn-button btn-block">Next Page ></button> 
+							</a>
+						</div>
+					{% else %}
+						<div class="col-md-2">
+							<a class='text' href="#">
+								<button type="button" class="btn disabled btn-button btn-block">Next Page ></button>
+							</a>
+						</div>
+					{% endif %}
+			    </div>
+			</div>
+		</div>
+		  
+		<style type="text/css">
+		.green{
+		background-color: #5cb85c;
+		margin-top: 1%;
+		color: white;
+		padding: 20px;
+
+		}
+		a.underline {
+		text-decoration: underline;
+		}
+		a.text {
+		text-decoration: none !important;
+		color: black;
+		}
+		span{
+		margin-left: 20px;
+		}
+		#top-button{
+		margin-bottom: 5%;
+		}
+		.btn1{
+		margin-top: 20px;
+		margin-bottom: 20px;
+		}
+		.border{
+		height: 600px;
+		border-right: 1px solid black;
+		width: 1px !important;
+		margin-right: 10px;
+		}
+		h3{
+		font-weight: 900;
+		}
+
+		.btn-block{
+		padding: 6%;
+		margin-top: 5%;
+		font-weight: 900;
+		}
+		p{
+		color: white;
+		}
+		.footer{
+		margin-bottom: 25px;
+		}
+
+		body {
+		    font-family: "Lato", sans-serif;
+		    transition: background-color .5s;
+		    background-color: #eee;
+		}
+
+</style>
+{% endblock %}

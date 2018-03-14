@@ -3,6 +3,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required, user_passes_test
 from .models import *
 from .forms import *
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 from django.urls import reverse
 from django.utils import timezone
@@ -74,6 +75,7 @@ def utilitybillrequest(request):
             instance = form.save(commit=False)
             instance.is_utility_request=True
             instance.facility = request.user.nguser.facility
+            instance.money_requested_by = request.user.nguser
             instance.save()
             return redirect('home')
     else:
@@ -134,24 +136,6 @@ def facilityreport(request, pk):
     data = CashEntry.objects.all().filter(facility__id=pk)
     return render(request, 'facilityreport.html',{'facility':facility,'entries': data,'payment':payment})
 
-def moneytransferdetail(request, pk):
-    moneyrequest = get_object_or_404(MoneyRequest, pk=pk)
-    
-    if request.method == 'POST':
-        if 'accept' in request.POST:
-            moneyrequest.is_queued = False
-            moneyrequest.is_approve = True
-            moneyrequest.approve_or_rejected_by = request.user.nguser
-            moneyrequest.save()
-        elif 'reject' in request.POST:
-            moneyrequest.is_queued = False
-            moneyrequest.approve_or_rejected_by = request.user.nguser
-            moneyrequest.reason_for_reject = request.POST.get('reason_for_reject', None)
-            moneyrequest.save()
-        return redirect('home')
-
-    return render(request,'moneytransferdetail.html',{'moneyrequest':moneyrequest})
-
 @login_required
 def fellowreport(request, pk):
     fellow = get_object_or_404(NgUser,pk=pk)
@@ -170,3 +154,40 @@ def fellowreport(request, pk):
         return render(request, 'facilityreport.html', {'entries': data, 'fellow':fellow, 'payment': payment })
     payment = False
     return render(request, 'facilityreport.html',{'fellow':fellow,'payment':payment})
+
+
+
+@login_required
+def viewpendingrequest(request, pk):    
+    money_request = get_object_or_404(MoneyRequest, pk=pk)
+    if request.method == 'POST':
+        if 'accept' in request.POST:
+            money_request.is_queued = False
+            money_request.is_approve = True
+            money_request.approve_or_rejected_by = request.user.nguser
+            money_request.save()
+        elif 'reject' in request.POST:
+            money_request.is_queued = False
+            money_request.approve_or_rejected_by = request.user.nguser
+            money_request.reason_for_reject = request.POST.get('reason_for_reject', None)
+            money_request.save()
+        return redirect('home')
+
+    return render(request,'moneytransferdetail.html',{'moneyrequest':money_request})
+
+
+
+@user_passes_test(is_admin, login_url='/access_denied/')
+@login_required
+def viewpendingrequests(request):
+    transfer_requests = MoneyRequest.objects.all().filter(is_queued=True)
+    paginator = Paginator(transfer_requests, 3)
+    page = request.GET.get('page', 1)
+    try:
+        money_requests = paginator.page(page)
+    except PageNotAnInteger:
+        money_requests = paginator.page(1)
+    except EmptyPage:
+        money_requests = paginator.page(paginator.num_pages)
+    
+    return render(request,'viewpendingrequests.html',{'money_requests':money_requests})
