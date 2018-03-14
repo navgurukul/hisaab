@@ -37,11 +37,13 @@ def register(request):
 
 @login_required
 def home(request):
-    if not is_fellow(request.user):
-        return render(request, 'admin.html')
+    if is_admin(request.user):
+        money_requests = MoneyRequest.objects.all().filter(is_queued=True)[:2]
 
-    data = CashEntry.objects.all().filter(is_personal_expense=True,fellow__id=request.user.nguser.pk)
-    return render(request, 'fellow.html', {'data':data})
+        facilities = Facility.objects.all()
+        return render(request, 'admin.html', {'facilities': facilities,'money_requests':money_requests  })
+
+    return render(request, 'fellow.html')
 
 
 @user_passes_test(is_admin, login_url='/access_denied/')

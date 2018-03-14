@@ -1,52 +1,139 @@
 {% extends 'base.html' %}
 {% block content %}
-<div class="container" style="max-width:60%">
-<h3 class="text-center">Record Payment :</h3> <br>
 <!-- Record Payment made to the facility  -->
 
     <form method='post' enctype = 'multipart/form-data'>
      {% csrf_token %}
-     <div class="form-group">
-          <label for="payment-amount">Amount :</label>
-          <div class="input-group">
-              <div class="input-group-prepend">
-                <span class="input-group-text" id="payment-amount"><i class="fa fa-inr"></i></span>
-                {{ form.payment_amount }}
-              </div>
-          </div>
-          <br>
-          <label for="facility">Facility :</label>
-          <div class="input-group">
-              <div class="input-group-prepend">
-                <span class="input-group-text" id="facility"><i class="fa fa-home"></i></span>
-                {{ form.facility }}
-              </div>
-          </div>
-          <br>
-          <!-- Purpose for the money request for type of bill -->
-          <label for="description">Extra Notes :</label>
-          <div class="input-group">
-              <div class="input-group-prepend">
-                <span class="input-group-text" id="description"><i class="fa fa-pencil-square-o"></i></span>
-                {{ form.description }}
-              </div>
-          </div>
-          <br>
-          <!-- Image of the bill that have the Request -->
-          <label for="bank_screenshot">Bank Screenshot :</label>
-          <div class="input-group">
-              <div class="input-group-prepend">
-                <span class="input-group-text" id="bank_screenshot"><i class="fa fa-pencil-square-o"></i></span>
-                <span class="btn btn-default btn-file">
-                {{ form.bank_screenshot }}
-                </span>
-              </div>
-          </div>
+          <div class="main_container">
+              <div class="baby_container0">
+                <center><h1 style="margin-right: 100px; margin-left: 100px;">Record<b>Payment</b></h1></center>
+                <div id="main">
+                  <div id="clonebaby" class="baby_container">
+                    <div class="baby_cont1">
+                      <input type="number" placeholder="Money paid" name='payment_amount' class="form-control" id="usr">
+                    </div>
+                    <div class="baby_cont1">
+                      <select name='facility' class="selectpicker">
+                        {% for value, name in form.fields.facility.choices %}
+                              <option value='{{ value }}' >{{ name }}</option>
+                        {% endfor %}
+                      </select>
+                    </div>
+                    <div class="baby_cont1">
+                      <textarea type="text" placeholder="Extra notes" name='description' class="form-control" id="usr"></textarea>
+                      
+                        <span  id="fileselector">
+                          <label style="width: 100%;  margin-top: 10px;" class="btn btn-default" for="upload-file-selector">
+                            <input class="invisible" id="upload-file-selector" name='bank_screenshot' type="file">
+                            <h4>Upload Bank Screenshort</h4>
+                          </label>
+                        </span>
+                      
+                    </div>
+                  </div>
+                </div>
 
-          </div>
+              </div>
+            </div> 
+                 <input class="btn btn-success" float="right" type="submit" value="Record Payment >" />
 
-           <input class="btn btn-success float-right" type="submit" value="Record Payment >" />
 
     </form>
 </div>
+<style type="text/css">
+  body{
+  margin-top: 30px;
+  margin-bottom: 20px;
+  padding: 0;
+  margin: 20px;
+  background-color: #eee;
+  font-family: sans-serif;
+}
+
+#tag-p{
+  font-size: 20px;
+  color: black;
+  margin-top: 20px;
+}
+.form-control{
+  font-size: 16px;
+  padding: 20px;
+  
+}
+.selectpicker{
+  display: block;
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 16px;
+  line-height: 1.42857143;
+  color: #999;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+}
+
+.main_container{
+  display: flex;
+  justify-content: center;
+
+}
+.baby_cont1{
+  margin-top: 15px;
+
+}
+
+#btnbottom{
+  font-size: 120%;
+  margin-top: 20px;
+}
+body {
+    font-family: "Lato", sans-serif;
+    transition: background-color .5s;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgba(170, 138, 125, 0.53);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: black;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
 {% endblock %}
