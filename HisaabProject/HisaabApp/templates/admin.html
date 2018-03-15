@@ -40,12 +40,14 @@
         <div class="col-md-12 green">
            <h3>₹{{ request.amount }} for {{request.type_of_bill }} Bill Payment</h3>
            <p>for {{ request.facility.name }} Facility by {{ request.money_requested_by.user.first_name }} {{ request.money_requested_by.user.last_name }}</p>
-           <a class="pull-right underline" style='margin-top:-15px' href="#">View Request</a>
+           <a class="pull-right underline" style='margin-top:-15px' href="{% url 'viewpendingrequest' pk=request.id %}">View Request</a>
         </div>
         {% endif %}
       {% endfor %}
       <div class="pull-right">
-        <button type="button" class="btn btn-button btn1">View all Request ></button>
+      	<a href="{% url 'viewpendingrequests' %}">
+	        <button type="button" class="btn btn-button btn1">View all Request ></button>
+      	</a>
       </div>
     </div>
     <div class="col-md-1 hidden-xs hidden-sm border"></div>
@@ -82,6 +84,9 @@ function closeNav() {
     color: white;
     padding: 2%;
 
+  }
+   a:hover    {
+    text-decoration: none;
   }
   span{
     margin-left: 20px;

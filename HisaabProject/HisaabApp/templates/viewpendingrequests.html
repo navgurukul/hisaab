@@ -58,13 +58,13 @@
 					{% if money_requests.has_previous %}
 						<div class="col-md-2">
 							<a class='text' href="?page={{ money_requests.number|add:'-1' }}">
-								<button type="button" class="btn btn-button btn-block">< Previous Page </button>
+								<button type="button" class="btn btn-button btn-block"> &lt; Previous Page </button>
 							</a>
 						</div>
 					{% else %}
 						<div class="col-md-2">
 							<a class='text' href="#">
-								<button type="button" class="btn disabled btn-button btn-block">< Previous Page </button>
+								<button type="button" class="btn disabled btn-button btn-block">&lt; Previous Page </button>
 							</a>
 						</div>
 					{% endif %}
@@ -75,14 +75,14 @@
 
 					{% if money_requests.has_next %}
 						<div class="col-md-2">
-							<a class='text' href="?page={{ money_requests.number|add:'-1' }}">
-								<button type="button" class="btn btn-button btn-block">Next Page ></button> 
+							<a class='text' href="?page={{ money_requests.number|add:'1' }}">
+								<button type="button" class="btn btn-button btn-block"> Next Page &gt;</button> 
 							</a>
 						</div>
 					{% else %}
 						<div class="col-md-2">
 							<a class='text' href="#">
-								<button type="button" class="btn disabled btn-button btn-block">Next Page ></button>
+								<button type="button" class="btn disabled btn-button btn-block"> Next Page &gt;</button>
 							</a>
 						</div>
 					{% endif %}
