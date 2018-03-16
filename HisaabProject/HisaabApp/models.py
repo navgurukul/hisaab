@@ -71,6 +71,35 @@ class NgUser(models.Model):
         return self.user_type == 'ADMIN'
 
 
+    def in_weekly_limit(self):
+        total_fellow = len(NgUser.objects.filter(facility = self.facility))
+        total_limit = total_fellow * self.facility.student_expenses_limit
+        if total_limit - self.last_week_facility_expenses > 0:
+            return True
+        return False 
+
+    def week_limit_exceed_by(self):
+        total_fellow = len(NgUser.objects.filter(facility = self.facility))
+        total_limit = total_fellow * self.facility.student_expenses_limit
+        return total_limit - self.last_week_facility_expenses
+
+    def in_monthly_limit(self):
+        total_fellow = len(NgUser.objects.filter(facility = self.facility))
+        today = datetime.date.today()   
+        last_month_enddate = today.replace(day=1)-datetime.timedelta(1)
+        last_month_startdate = last_month_enddate.replace(day=1)  
+
+        total_limit = (total_fellow * self.facility.student_expenses_limit)/7 *(last_month_startdate - last_month_enddate).days
+        if int(total_limit) - self.last_month_facility_expenses > 0:
+            return True
+        return False 
+    def month_limit_exceed_by(self):
+        total_fellow = len(NgUser.objects.filter(facility = self.facility))
+        today = datetime.date.today()   
+        last_month_enddate = today.replace(day=1)-datetime.timedelta(1)
+        last_month_startdate = last_month_enddate.replace(day=1)  
+        total_limit = (total_fellow * self.facility.student_expenses_limit)/7 *(last_month_startdate - last_month_enddate).days
+        return int(total_limit) - self.last_month_facility_expenses
 
 class MoneyRequest(models.Model):
     BILL = (('INTERNET','Internet'),('ELECTRICITY','Electricity'),('WATER','WaterBill'),('HOUSERENT', 'Houserent'))
