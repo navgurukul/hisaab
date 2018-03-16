@@ -53,10 +53,10 @@ def home(request):
     return render(request, 'fellow.html')
 
 
-# @user_passes_test(is_admin, login_url='/access_denied/')
-# @login_required
-# def add_facility(request):
-#     print('adding facility')
+@user_passes_test(is_admin, login_url='/access_denied/')
+@login_required
+def add_facility(request):
+    print('adding facility')
 
 
 #For making money request by the students
@@ -102,6 +102,9 @@ def recordpayment(request):
             instance = form.save(commit = False)
             instance.fellow = request.user.nguser
             instance.is_payment_to_ng = True
+            facility= Facility.objects.get(id = form.cleaned_data.get('facility'))
+            facility.cash_in_hand += int(form.cleaned_data.get('payment_amount')) 
+            facility.save()()
             instance.save()
             return redirect('home')
     else:
@@ -119,9 +122,12 @@ def addexpense(request):
                 instance.is_personal_expense = True
             else:
                 instance.is_facility_expense = True
-            
+
+            facility= form.cleaned_data.get('facility')
+            facility.cash_in_hand -= int(form.cleaned_data.get('expense_amount')) 
+            facility.save()
             instance.save()
-        return redirect('home')
+            return redirect('home')
     else:
         form = AddExpenseForm(request=request)
     return render(request, 'addexpenses.html',{'form':form})
@@ -220,3 +226,4 @@ def viewpendingrequest(request, pk):
 @login_required
 def searchfellow(request):
     if request.method == 'POST' and request.is_ajax():
+        pass
