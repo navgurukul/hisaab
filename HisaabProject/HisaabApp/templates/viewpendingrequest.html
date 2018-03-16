@@ -1,0 +1,142 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div class="main-container">
+        <div class="col-md-2">
+        </div>
+        <div class="col-md-2">
+        </div>
+        <div class="col-md-2">
+        </div>
+        <div class="col-md-2">
+          <a class='text' href="{% url 'addexpense' %}">
+            <button id="top-button" type="button" class="btn btn-danger btn-block">Add an Expense</button>
+          </a>
+            
+        </div>
+        <div class="col-md-2">
+          <a class='text' href="{% url 'recordpayment' %}">
+            <button id="top-button" type="button" class="btn btn-success btn-block">Record a Payment</button>
+          </a>
+            
+        </div>
+        <div class="col-md-2">
+          <a class='text' href="#">
+            <button id="top-button" type="button" class="btn btn-primary btn-block">Student Level Expenses</button>
+          </a>
+        </div>
+    </div>
+
+  <div class="bottom-container">
+      <div class="col-md-3">
+      </div>
+      {% if money_request.is_money_request %}
+      <div class="col-md-6 center">
+        <center><h2>Request Details</h2></center>
+        <h4><b>Details</b></h4>
+        <p><b>Amount</b> <span>₹{{ money_request.amount }}</span></p>
+        <p><b>Who made the request?</b><span>{{ money_request.money_requested_by }}</span></p>
+        <p><b>For Whom?:</b> <span>{{ money_request.facility }} Batch</span></p>
+        <p><b>Date:</b><span>{{ money_request.created_date }}</span></p>
+        <p><b>Description:</b> <span>{{ money_request.description }}</span></p>
+
+        <h4><b>Account Details</b></h4>
+       <!--  <p><b>Account Number:</b> <span>0021412414352352</span></p> -->
+        <p><b>Account Holder Name</b><span>{{ money_request.money_received_by }}</span></p>
+        <p><b>UPI Id:</b> <span>{{ money_request.money_received_by.upi_id }}</span></p>
+      </div>
+      {% else %}
+      <div class="col-md-6 center">
+       <center><h2>Request Details</h2></center>
+        <h4><b>Details</b></h4>
+        <p><b>Amount</b> <span>₹{{ money_request.amount }}</span> for {{ money_request.type_of_bill }} Bill</p>
+        <p><b>Who made the request?</b><span>{{ money_request.money_requested_by }}</span></p>
+        <p><b>For Whom?:</b> <span>{{ money_request.facility }} Batch</span></p>
+
+        <p><b>Date:</b><span>{{ money_request.created_date }}</span></p>
+        <p><b>Description:</b> <span>{{ money_request.description }}</span></p>
+        <p><b>Bill Image:</b> <img src="{{ money_request.bill_image.url }}" height='100px' ></p>
+        
+      </div>
+      {% endif %}
+      <div class="col-md-3">  
+      </div>
+      <div class="col-md-4">
+      </div>
+      <form method='POST' action="{% url 'viewpendingrequest' pk=money_request.id %}">
+      	{% csrf_token %}
+		<div class="col-md-6">
+          <div class="col-md-3 pull-right">
+            <button style="padding-right: 20px;" id="top-button" name='accept' type="submit" class="btn btn-success btn-block">Approve Request</button>
+          </div>
+          <div class="col-md-3 pull-right">
+            <button style="padding-right: 30px;" id="top-button" name='reject' type="submit" class="btn btn-danger btn-block">Reject Request</button>
+          </div>
+        </div>
+      </form>
+        
+    </div>
+
+<style type="text/css">
+  h4{
+    margin-top: 8%;
+    font-size: 23px;
+  }
+  p{
+    font-size: 17px;
+  }
+  .green{
+    background-color: #5cb85c;
+    margin-top: 5%;
+    color: white;
+    padding: 10px;
+
+  }
+  a{
+  	text-decoration: none;
+  }
+  .center{
+    /*margin-left: 20%;*/
+  }
+  span{
+    margin-left: 20px;
+  }
+  body{
+    background-color: #eee;
+    margin-top: 2%; 
+  }
+  #top-button{
+    margin-bottom: 5%;
+  }
+  .btn1{
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .border{
+    height: 600px;
+    border-right: 1px solid black;
+    width: 1px !important;
+    margin-right: 10px;
+  }
+  h3{
+    font-weight: 900;
+  }
+ 
+  .btn-block{
+    padding: 6%;
+    margin-top: 5%;
+    font-weight: 900;
+  }
+  .footer{
+    margin-bottom: 25px;
+  }
+
+body {
+    font-family: "Lato", sans-serif;
+    transition: background-color .5s;
+}
+
+</style>
+
+{% endblock %}

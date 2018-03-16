@@ -3,6 +3,8 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required, user_passes_test
 from .models import *
 from .forms import *
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from django import forms
 
 from django.urls import reverse
 from django.utils import timezone
@@ -37,19 +39,19 @@ def register(request):
 
 @login_required
 def home(request):
-    if not is_fellow(request.user):
-        return render(request, 'admin.html')
+    if is_admin(request.user):
+        money_requests = MoneyRequest.objects.all().filter(is_queued=True)[:2]
 
-    data = CashEntry.objects.all().filter(is_personal_expense=True,fellow__id=request.user.nguser.pk)
-    return render(request, 'fellow.html', {'data':data})
+        facilities = Facility.objects.all()
+        return render(request, 'admin.html', {'facilities': facilities,'money_requests':money_requests  })
+
+    return render(request, 'fellow.html')
 
 
 @user_passes_test(is_admin, login_url='/access_denied/')
 @login_required
 def add_facility(request):
     print('adding facility')
-
-
 
 
 @user_passes_test(is_fellow, login_url='/access_denied/')
@@ -74,6 +76,7 @@ def utilitybillrequest(request):
             instance = form.save(commit=False)
             instance.is_utility_request=True
             instance.facility = request.user.nguser.facility
+            instance.money_requested_by = request.user.nguser
             instance.save()
             return redirect('home')
     else:
@@ -103,7 +106,6 @@ def addexpense(request):
         form = AddExpenseForm(request.POST,request.FILES, request=request)
         if form.is_valid():
             instance = form.save(commit=False)
-
             if form.cleaned_data.get('expense_type').encode('utf8') == 'PERSONAL':
                 instance.is_personal_expense = True
             else:
@@ -172,3 +174,42 @@ def fellowreport(request, pk):
         return render(request, 'facilityreport.html', {'entries': data, 'fellow':fellow, 'payment': payment })
     payment = False
     return render(request, 'facilityreport.html',{'fellow':fellow,'payment':payment})
+
+
+@user_passes_test(is_admin, login_url='/access_denied/')
+@login_required
+def viewpendingrequests(request):
+    transfer_requests = MoneyRequest.objects.all().filter(is_queued=True)
+    paginator = Paginator(transfer_requests, 3)
+    page = request.GET.get('page', 1)
+    try:
+        money_requests = paginator.page(page)
+    except PageNotAnInteger:
+        money_requests = paginator.page(1)
+    except EmptyPage:
+        money_requests = paginator.page(paginator.num_pages)
+
+    return render(request,'viewpendingrequests.html',{'money_requests':money_requests})
+
+
+@user_passes_test(is_admin, login_url='/access_denied/')
+@login_required
+def viewpendingrequest(request, pk):
+    money_request = get_object_or_404(MoneyRequest, pk=pk)
+    if request.method == 'POST':
+        if 'accept' in request.POST:
+            money_request.is_queued = False
+            money_request.is_approve = True
+            money_request.approve_or_rejected_by = request.user.nguser
+            money_request.save()
+        elif 'reject' in request.POST:
+            money_request.is_queued = False
+            money_request.approve_or_rejected_by = request.user.nguser
+            reason_for_reject = request.POST.get('reason_for_reject', None)
+            if not reason_for_reject:
+                raise forms.ValidationError('Please Provide a reason')
+            money_request.reason_for_reject = reason_for_reject
+            money_request.save()
+        return redirect('home')
+
+    return render(request,'viewpendingrequest.html',{'money_request':money_request})
