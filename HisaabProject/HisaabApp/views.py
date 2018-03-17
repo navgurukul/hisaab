@@ -216,7 +216,9 @@ def viewpendingrequest(request, pk):
     return render(request,'viewpendingrequest.html',{'money_request':money_request})
 
 
-@user_passes_test(is_admin, login_url='/access_denied/')
-@login_required
-def searchfellow(request):
-    if request.method == 'POST' and request.is_ajax():
+# @user_passes_test(is_admin, login_url='/access_denied/')
+# @login_required
+# def searchfellow(request):
+#     if request.method == 'POST' and request.is_ajax():
+#         pass
+        
