@@ -13,7 +13,7 @@
 				<div id="clonebaby" class="baby_container">
 					<div class="baby_cont1">
 							{% csrf_token %}
-						<input id="how-much" onclick="ImageHosting_Click()" type="number" placeholder="How much money do you need?" name = "amount" class="form-control" id="usr">
+						<input id="how-much" min="0" type="number" placeholder="How much money do you need?" name = "amount" class="form-control" id="usr">
 
 					</div>
 					<div class="baby_cont1">
@@ -75,7 +75,7 @@
 		function ImageHosting_Click() {
 	               var a = $('#how-much').val();
 	               if (a < 0){
-	               	alert("amount can't be negitive");
+	               	alert("Amount can't be negitive");
 	               }
 	       }
 

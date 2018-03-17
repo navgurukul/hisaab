@@ -4,7 +4,14 @@
 <div class="container ">
 <div class="main-container">
     <div class="col-md-12 col-sm-12">
-        <center><h1>Facility Expenses Report <br>of {{ facility.name }} Facility</h1></center>
+         <center>
+          <h2>
+            <b>Facility Expenses Report </b>
+          </h2> 
+          <h4 style="margin-left: 12%; margin-top:0px;">of 
+            <b>{{ facility.name }} Facility</b>
+          </h4>
+        </center>
     </div>
 <div class="div-container">
     <div class="col-md-4">
@@ -13,18 +20,18 @@
     <form method="POST" action="{% url 'facilityreport' pk=facility.pk %}">
       {% csrf_token %}
       <div class="col-md-2 start-date">
-        <p>Starting Date</p>
+        <h5><strong>Start Date :</strong></h5>
       </div>
       <div class="col-md-2">
-          <div class="form-group">
+          <div id="start-date" class="form-group">
             <input class="form-control" id="date" name="start_date" placeholder="MM/DD/YYYY" type="date"/>
           </div>
       </div>
       <div class="col-md-2 end-date">
-        <p>End Date</p>
+        <h5><strong>End Date :</strong></h5>
       </div>
       <div class="col-md-2">
-          <div class="form-group"> <!-- Date input -->
+          <div id="end-date" class="form-group"> <!-- Date input -->
             <input class="form-control" id="date" name="end_date" placeholder="MM/DD/YYYY" type="date"/>
           </div>
       </div>
@@ -147,11 +154,14 @@ body {
 .end-date{
   margin-right: -10% !important;
   margin-left: 5%;
+  margin-top: 0.5%;
 
 }
 .start-date{
   margin-left: 4%;
   margin-right: -8% !important;
+  margin-top: 0.5%;
+
 }
 .Checkbox{
   margin-top: 5px;
