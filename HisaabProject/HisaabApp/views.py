@@ -14,15 +14,18 @@ from social_core.pipeline.utils import partial_load
 from social_django.utils import load_strategy
 
 
+#For checking the usertype
 def is_fellow(user):
     return user.nguser.user_type == "FELLOW"
 def is_admin(user):
     return user.nguser.user_type == "ADMIN"
 
+
 def access_denied(request):
     return render(request,'access_denied.html')
 
 
+# Views for registering the facility of the user
 def register(request):
     if request.session.get('is_new', None):
         if request.method == 'POST':
@@ -37,6 +40,8 @@ def register(request):
     else:
         return redirect('access_denied')
 
+
+#Rendering the home page to user.
 @login_required
 def home(request):
     if is_admin(request.user):
@@ -54,6 +59,7 @@ def add_facility(request):
     print('adding facility')
 
 
+#For making money request by the students
 @user_passes_test(is_fellow, login_url='/access_denied/')
 @login_required
 def moneytransferrequest(request):
@@ -67,6 +73,7 @@ def moneytransferrequest(request):
     return render(request,'moneytransfer.html',{'form':form})
 
 
+#For making the Bill request by the students
 @user_passes_test(is_fellow, login_url='/access_denied/')
 @login_required
 def utilitybillrequest(request):
@@ -85,6 +92,7 @@ def utilitybillrequest(request):
     return render(request,'billpayments.html',{'form':form})
 
 
+#Creating Records of the payment made to a Facility
 @user_passes_test(is_admin, login_url='/access_denied/')
 @login_required
 def recordpayment(request):
@@ -94,12 +102,16 @@ def recordpayment(request):
             instance = form.save(commit = False)
             instance.fellow = request.user.nguser
             instance.is_payment_to_ng = True
+            facility= Facility.objects.get(id = form.cleaned_data.get('facility'))
+            facility.cash_in_hand += int(form.cleaned_data.get('payment_amount'))
+            facility.save()()
             instance.save()
             return redirect('home')
     else:
         form = RecordPaymentForm()
     return render(request, 'recordpayment.html', {'form': form})
 
+#For adding all the expenses made by a person.
 @login_required
 def addexpense(request):
     if request.method =='POST':
@@ -110,13 +122,16 @@ def addexpense(request):
                 instance.is_personal_expense = True
             else:
                 instance.is_facility_expense = True
-
-            instance.save()
-            return redirect('home')
+                facility= form.cleaned_data.get('facility')
+                facility.cash_in_hand -= int(form.cleaned_data.get('expense_amount'))
+                facility.save()
+                instance.save()
+                return redirect('home')
     else:
         form = AddExpenseForm(request=request)
     return render(request, 'addexpenses.html',{'form':form})
 
+#Getting the Detail Report about the expense and payment made to the Facility.
 @login_required
 def facilityreport(request, pk):
     facility = get_object_or_404(Facility,pk=pk)
@@ -130,32 +145,18 @@ def facilityreport(request, pk):
             print data
             payment = True
         elif 'expense' in request.POST:
-            data = CashEntry.objects.all().filter(created_date__range=(start_date, end_date),category__in=categories,is_facility_expense=True,facility__id=pk)
-            print data
+            if categories:
+                data = CashEntry.objects.all().filter(created_date__range=(start_date, end_date),category__in=categories,is_facility_expense=True,facility__id=pk)
+            else:
+                data = CashEntry.objects.all().filter(created_date__range=(start_date, end_date),is_facility_expense=True,facility__id=pk)
+
             payment = False
         return render(request, 'facilityreport.html', {'entries': data, 'facility':facility, 'payment': payment })
     payment = False
     data = CashEntry.objects.all().filter(facility__id=pk)
     return render(request, 'facilityreport.html',{'facility':facility,'entries': data,'payment':payment})
 
-def moneytransferdetail(request, pk):
-    moneyrequest = get_object_or_404(MoneyRequest, pk=pk)
-
-    if request.method == 'POST':
-        if 'accept' in request.POST:
-            moneyrequest.is_queued = False
-            moneyrequest.is_approve = True
-            moneyrequest.approve_or_rejected_by = request.user.nguser
-            moneyrequest.save()
-        elif 'reject' in request.POST:
-            moneyrequest.is_queued = False
-            moneyrequest.approve_or_rejected_by = request.user.nguser
-            moneyrequest.reason_for_reject = request.POST.get('reason_for_reject', None)
-            moneyrequest.save()
-        return redirect('home')
-
-    return render(request,'moneytransferdetail.html',{'moneyrequest':moneyrequest})
-
+#Getting the Detail report the student expense and payments.
 @login_required
 def fellowreport(request, pk):
     fellow = get_object_or_404(NgUser,pk=pk)
@@ -163,19 +164,23 @@ def fellowreport(request, pk):
         start_date = request.POST.get('start_date')
         end_date = request.POST.get('end_date')
         categories = request.POST.getlist('categories')
+
         if 'payment' in request.POST:
             data = CashEntry.objects.all().filter(created_date__range=(start_date,end_date),\
             is_pay_forward=True,fellow__id=pk)
             payment = True
         elif 'expense' in request.POST:
-            data = CashEntry.objects.all().filter(created_date__range=(start_date, end_date),\
-            category__in=categories,is_personal_expense=True,fellow__id=pk)
+            if categories:
+                data = CashEntry.objects.all().filter(created_date__range=(start_date, end_date),category__in=categories,is_personal_expense=True,fellow__id=pk)
+            else:
+                data = CashEntry.objects.all().filter(created_date__range=(start_date, end_date),is_personal_expense=True,fellow__id=pk)
             payment = False
-        return render(request, 'facilityreport.html', {'entries': data, 'fellow':fellow, 'payment': payment })
+        return render(request, 'fellowreport.html', {'entries': data, 'fellow':fellow, 'payment': payment })
     payment = False
-    return render(request, 'facilityreport.html',{'fellow':fellow,'payment':payment})
+    data = CashEntry.objects.all().filter(fellow__id=pk,is_personal_expense=True)
+    return render(request, 'fellowreport.html',{'fellow':fellow, 'payment':payment, 'entries': data,})
 
-
+#Rending all the request that are pending
 @user_passes_test(is_admin, login_url='/access_denied/')
 @login_required
 def viewpendingrequests(request):
@@ -192,6 +197,8 @@ def viewpendingrequests(request):
     return render(request,'viewpendingrequests.html',{'money_requests':money_requests})
 
 
+
+#Detail Page for each requests for money or bill payment.
 @user_passes_test(is_admin, login_url='/access_denied/')
 @login_required
 def viewpendingrequest(request, pk):
@@ -213,3 +220,10 @@ def viewpendingrequest(request, pk):
         return redirect('home')
 
     return render(request,'viewpendingrequest.html',{'money_request':money_request})
+
+
+@user_passes_test(is_admin, login_url='/access_denied/')
+@login_required
+def searchfellow(request):
+    if request.method == 'POST' and request.is_ajax():
+        pass

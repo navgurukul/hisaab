@@ -103,7 +103,10 @@ class AddExpenseForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         self.request = kwargs.pop('request', None)
-        facility__id = NgUser.objects.get(user = self.request.user).facility.id
         super(AddExpenseForm, self).__init__(*args, **kwargs)
-        self.fields['fellow'].queryset = NgUser.objects.all().filter(facility__id= facility__id)
+        if self.request.user.nguser.is_admin:
+          self.fields['fellow'].queryset = NgUser.objects.all()
+        else:
+            facility__id = NgUser.objects.get(user = self.request.user).facility.id
+            self.fields['fellow'].queryset = NgUser.objects.all().filter(facility__id= facility__id)
        

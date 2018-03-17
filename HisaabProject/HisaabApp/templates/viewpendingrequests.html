@@ -2,37 +2,37 @@
 
 {% block content %}
 		<div class="main-container">
-		    <div class="col-md-2">
+		    <div class="col-md-1">
 		    </div>
-		    <div class="col-md-2">
+		    <div class="col-md-1">
 		    </div>
-		    <div class="col-md-2">
+		    <div class="col-md-1">
 		    </div>
-		    <div class="col-md-2">
+		    <div class="col-md-3">
 		    	<a class='text' href="{% url 'addexpense' %}">
-		    		<button id="top-button" type="button" class="btn btn-danger btn-block">Add an Expense</button>
+		    		<button id="top-button" type="button" class="btn btn-danger btn-block"><i class="fas fa-money-bill-alt fa-lg"></i>Add an Expense</button>
 		    	</a>
-		      	
+
 		    </div>
-		    <div class="col-md-2">
+		    <div class="col-md-3">
 		    	<a class='text' href="{% url 'recordpayment' %}">
-		    		<button id="top-button" type="button" class="btn btn-success btn-block">Record a Payment</button>
+		    		<button id="top-button" type="button" class="btn btn-success btn-block"><i class="fas fa-angle-double-up"></i>Record a Payment</button>
 		    	</a>
-		      	
+
 		    </div>
-		    <div class="col-md-2">
+		    <div class="col-md-3">
 		    	<a class='text' href="#">
-		    		<button id="top-button" type="button" class="btn btn-primary btn-block">Student Level Expenses</button>
+		    		<button id="top-button" type="button" class="btn btn-primary btn-block"><i class="fas fa-user-plus "></i> Student Level Expenses</button>
 		    	</a>
 		    </div>
 		</div>
 
 		<div class="row-fluid main">
 		    <div class="col-md-2">
-		      
+
 		    </div>
-			<div class="col-md-8">
-			    <h2>Pending Request</h2>
+			<div class="col-md-12">
+			    <h2 class="text-center">Pending Request</h2>
 			    {% for request in money_requests %}
 				    	{% if request.is_money_request %}
 					    <div class="col-md-12 green">
@@ -49,22 +49,24 @@
 					    {% endif %}
 			   {% endfor %}
 			    <div style="margin-top: 20px; margin-bottom: 20px;" class="col-md-12">
-			        <div class="col-md-2">
+			        <div class="col-md-1">
 			        </div>
-					<div class="col-md-2">
+					<div class="col-md-1">
 					</div>
-					<div class="col-md-2">
+					<div class="col-md-1">
+					</div>
+					<div class="col-md-1">
 					</div>
 					{% if money_requests.has_previous %}
 						<div class="col-md-2">
 							<a class='text' href="?page={{ money_requests.number|add:'-1' }}">
-								<button type="button" class="btn btn-button btn-block"> &lt; Previous Page </button>
+								<button type="button" class="btn btn-button btn-block"> < Previous Page </button>
 							</a>
 						</div>
 					{% else %}
 						<div class="col-md-2">
 							<a class='text' href="#">
-								<button type="button" class="btn disabled btn-button btn-block">&lt; Previous Page </button>
+								<button type="button" class="btn disabled btn-button btn-block">< Previous Page </button>
 							</a>
 						</div>
 					{% endif %}
@@ -76,7 +78,7 @@
 					{% if money_requests.has_next %}
 						<div class="col-md-2">
 							<a class='text' href="?page={{ money_requests.number|add:'1' }}">
-								<button type="button" class="btn btn-button btn-block"> Next Page &gt;</button> 
+								<button type="button" class="btn btn-button btn-block"> Next Page &gt;</button>
 							</a>
 						</div>
 					{% else %}
@@ -89,7 +91,7 @@
 			    </div>
 			</div>
 		</div>
-		  
+
 		<style type="text/css">
 		.green{
 		background-color: #5cb85c;
@@ -126,9 +128,9 @@
 		}
 
 		.btn-block{
-		padding: 6%;
+		padding: 5%;
 		margin-top: 5%;
-		font-weight: 900;
+		font-weight: 700;
 		}
 		p{
 		color: white;
