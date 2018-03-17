@@ -13,7 +13,12 @@
 				<div id="clonebaby" class="baby_container">
 					<div class="baby_cont1">
 							{% csrf_token %}
-						<input id="how-much" min="0" type="number" placeholder="How much money do you need?" name = "amount" class="form-control" id="usr">
+							<div class="form-component input--medium">
+								<div class="input--with-icon">
+						<input type="number" placeholder="How much money do you need?" name = "amount" class="form-control" id="usr">
+
+					</div>
+				</div>
 
 					</div>
 					<div class="baby_cont1">
@@ -29,7 +34,7 @@
 						<textarea type="text" name="description" placeholder="Why is the money needed?" class="form-control" id="usr"></textarea>
 					</div>
 				</div>
-			
+
 			<p id="tag-p">UPI Users :</p>
 			<div class="baby_container">
 			<!-- 	<div class="baby_cont1">
@@ -66,7 +71,7 @@
 				</div>
 			</div>
 			<button id="btnbottom" type="submit" class="btn btn-success pull-right">Submit Transfer Request ></button>
-			</div>	
+			</div>
 			</form>
 		</div>
 	</div>
@@ -126,7 +131,7 @@
 
 #btnbottom{
 	font-size: 120%;
-	
+
 	margin-top: 20px;
 }
 </style>

@@ -5,11 +5,11 @@
 	<!-- <img class="img-responsive" src="img/logo.png"> -->
 	<div class="main_container">
 		<div class="baby_container0">
-			<center><h1>Add <b>Expense</b></h1></center>	
+			<center><h1>Add <b>Expense</b></h1></center>
 		    <!-- Form code begins -->
 		    <form method="post" enctype="multipart/form-data">
 		    	{% csrf_token %}
-				<div id="main">			
+				<div id="main">
 					<div id="clonebaby" class="baby_container">
 						<div class="baby_cont1">
 							<select name='expense_type' class="selectpicker">
@@ -18,11 +18,10 @@
 							  	<option value='{{ value }}' >{{ type_name }}</option>
 							  {% endfor %}
 							</select>
-
 						</div>
-					
+
 						<div class="baby_cont1">
-							<select name ='facility' class="selectpicker">
+							<select name="facility" class="selectpicker">
 							  <!-- The facility of the student will be auto selected -->
 							  {% for value, facility_name in form.fields.facility.choices %}
 							  		<option value='{{ value }}' {% if value == user.nguser.facility.id %} selected {% endif %}> {{ facility_name }} </option>
@@ -37,13 +36,13 @@
 							<div style="margin-top: 10px; margin-bottom: -20px !important;" class="container-fluid">
 								<div class="row">
 									    <div class="form-group"> <!-- Date input -->
-									        <input class="form-control" id="date" name="created_date"  placeholder="MM/DD/YYY" type="text"/>
+									        <input class="form-control" id="date" name="created_date"  placeholder="MM/DD/YYYY" type="text"/>
 									   	</div>
-								</div>    
+								</div>
 							</div>
 						</div>
 						<div class="baby_cont1">
-							<select name="fellow"  class="selectpicker">
+							<select name="fellow" class="selectpicker">
 							  <option>Who made the expense?</option>
   									{% for value, name in form.fields.fellow.choices %}
 							  			<option value='{{ value }}' >{{ name }}</option>
@@ -52,7 +51,7 @@
 
 						</div>
 						<div class="baby_cont1">
-							<select  name="category" class="selectpicker">
+							<select name="category" class="selectpicker">
 								<option>Category</option>
  								{% for value, name in form.fields.category.choices %}
 								<option value='{{ value }}' >{{ name }}</option>
@@ -73,19 +72,19 @@
 						</div>
 					</div>
 				</div>
-				
-				<button id="btnbottom" type="submit" class="btn btn-success pull-right">Add Expense ></button>
-			<!-- Form code ends --> 
+
+				<button id="btnbottom" type="submit" class="btn btn-success pull-right">Submit Bill Payment Request ></button>
+			<!-- Form code ends -->
 			</form>
 		</div>
 	</div>
-{% block javascript %}	
+{% block javascript %}
 <script type="text/javascript">
     $(document).ready(function(){
       var date_input=$('input[name="created_date"]'); //our date input has the name "date"
       var container=$('.bootstrap-iso row').length>0 ? $('.bootstrap-iso row').parent() : "body";
       var options={
-        format: 'mm/dd/yyyy',
+        format: 'yyyy-mm-dd',
         container: container,
         todayHighlight: true,
         autoclose: true,
@@ -114,7 +113,7 @@
 .form-control{
 	font-size: 16px;
 	padding: 5px;
-	
+
 }
 .selectpicker{
 	display: block;

@@ -11,19 +11,19 @@
         </div>
         <div class="col-md-2">
           <a class='text' href="{% url 'addexpense' %}">
-            <button id="top-button" type="button" class="btn btn-danger btn-block">Add an Expense</button>
+            <button id="top-button" type="button" class="btn btn-danger btn-block"><i class="fa fa-money-bill-alt fa-lg" ></i>Add an Expense</button>
           </a>
-            
+
         </div>
         <div class="col-md-2">
           <a class='text' href="{% url 'recordpayment' %}">
-            <button id="top-button" type="button" class="btn btn-success btn-block">Record a Payment</button>
+            <button id="top-button" type="button" class="btn btn-success btn-block"><i class="fa fa-angle-double-up"></i>Record a Payment</button>
           </a>
-            
+
         </div>
         <div class="col-md-2">
           <a class='text' href="#">
-            <button id="top-button" type="button" class="btn btn-primary btn-block">Student Level Expenses</button>
+            <button id="top-button" type="button" class="btn btn-primary btn-block"><i class="fas fa-user-plus"></i>Student Level Expenses</button>
           </a>
         </div>
     </div>
@@ -57,10 +57,10 @@
         <p><b>Date:</b><span>{{ money_request.created_date }}</span></p>
         <p><b>Description:</b> <span>{{ money_request.description }}</span></p>
         <p><b>Bill Image:</b> <img src="{{ money_request.bill_image.url }}" height='100px' ></p>
-        
+
       </div>
       {% endif %}
-      <div class="col-md-3">  
+      <div class="col-md-3">
       </div>
       <div class="col-md-4">
       </div>
@@ -80,7 +80,7 @@
     <!-- Modal -->
     <div class="modal fade" id="myModal" role="dialog">
       <div class="modal-dialog">
-      
+
         <!-- Modal content-->
         <div class="modal-content">
           <div class="modal-header">
@@ -95,13 +95,13 @@
             <button type="submit" class="btn btn-default" name='reject'>Submit</button>
           </div>
         </div>
-        
+
       </div>
     </div>
-    
+
 </div>
       </form>
-        
+
     </div>
 
 
@@ -139,7 +139,7 @@
   }
   body{
     background-color: #eee;
-    margin-top: 2%; 
+    margin-top: 2%;
   }
   #top-button{
     margin-bottom: 5%;
@@ -157,7 +157,7 @@
   h3{
     font-weight: 900;
   }
- 
+
   .btn-block{
     padding: 6%;
     margin-top: 5%;

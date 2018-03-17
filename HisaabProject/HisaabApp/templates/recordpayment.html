@@ -13,7 +13,7 @@
                 </div>
                 <div class="baby_cont1">
                   <select name='facility' class="selectpicker">
-                    <option>Who are you paying this amount to?</option>
+                    <option> Which facility you are paying this amount to?</option>
                   {% for values, name in form.fields.facility.choices %}
                     <option value='{{ values }}' >{{ name }}</option>
                   {% endfor %}
@@ -56,7 +56,7 @@
 .form-control{
   font-size: 16px;
   padding: 20px;
-  
+
 }
 .selectpicker{
   display: block;

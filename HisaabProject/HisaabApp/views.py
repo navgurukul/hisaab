@@ -103,7 +103,7 @@ def recordpayment(request):
             instance.fellow = request.user.nguser
             instance.is_payment_to_ng = True
             facility= Facility.objects.get(id = form.cleaned_data.get('facility'))
-            facility.cash_in_hand += int(form.cleaned_data.get('payment_amount')) 
+            facility.cash_in_hand += int(form.cleaned_data.get('payment_amount'))
             facility.save()()
             instance.save()
             return redirect('home')
@@ -122,12 +122,11 @@ def addexpense(request):
                 instance.is_personal_expense = True
             else:
                 instance.is_facility_expense = True
-
-            facility= form.cleaned_data.get('facility')
-            facility.cash_in_hand -= int(form.cleaned_data.get('expense_amount')) 
-            facility.save()
-            instance.save()
-            return redirect('home')
+                facility= form.cleaned_data.get('facility')
+                facility.cash_in_hand -= int(form.cleaned_data.get('expense_amount'))
+                facility.save()
+                instance.save()
+                return redirect('home')
     else:
         form = AddExpenseForm(request=request)
     return render(request, 'addexpenses.html',{'form':form})
@@ -140,9 +139,10 @@ def facilityreport(request, pk):
         start_date = request.POST.get('start_date')
         end_date = request.POST.get('end_date')
         categories = request.POST.getlist('categories')
+        print start_date,end_date,categories
         if 'payment' in request.POST:
-            data = CashEntry.objects.all().filter(created_date__range=(start_date,end_date),\
-            is_payment_to_ng=True,facility__id=pk)
+            data = CashEntry.objects.all().filter(created_date__range=(start_date,end_date),is_payment_to_ng=True,facility__id=pk)
+            print data
             payment = True
         elif 'expense' in request.POST:
             if categories:
@@ -163,7 +163,7 @@ def fellowreport(request, pk):
     if request.method == 'POST':
         start_date = request.POST.get('start_date')
         end_date = request.POST.get('end_date')
-        categories = request.POST.getlist('categories') 
+        categories = request.POST.getlist('categories')
 
         if 'payment' in request.POST:
             data = CashEntry.objects.all().filter(created_date__range=(start_date,end_date),\
@@ -179,7 +179,7 @@ def fellowreport(request, pk):
     payment = False
     data = CashEntry.objects.all().filter(fellow__id=pk,is_personal_expense=True)
     return render(request, 'fellowreport.html',{'fellow':fellow, 'payment':payment, 'entries': data,})
- 
+
 #Rending all the request that are pending
 @user_passes_test(is_admin, login_url='/access_denied/')
 @login_required
@@ -193,7 +193,7 @@ def viewpendingrequests(request):
         money_requests = paginator.page(1)
     except EmptyPage:
         money_requests = paginator.page(paginator.num_pages)
-    
+
     return render(request,'viewpendingrequests.html',{'money_requests':money_requests})
 
 
@@ -201,7 +201,7 @@ def viewpendingrequests(request):
 #Detail Page for each requests for money or bill payment.
 @user_passes_test(is_admin, login_url='/access_denied/')
 @login_required
-def viewpendingrequest(request, pk):    
+def viewpendingrequest(request, pk):
     money_request = get_object_or_404(MoneyRequest, pk=pk)
     if request.method == 'POST':
         if 'accept' in request.POST:
@@ -223,9 +223,11 @@ def viewpendingrequest(request, pk):
 
 
 
+
 # @user_passes_test(is_admin, login_url='/access_denied/')
 # @login_required
 # def searchfellow(request):
 #     if request.method == 'POST' and request.is_ajax():
 #         pass
         
+
