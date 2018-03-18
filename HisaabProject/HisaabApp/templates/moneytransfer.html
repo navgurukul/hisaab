@@ -13,11 +13,11 @@
 				<div id="clonebaby" class="baby_container">
 					<div class="baby_cont1">
 							{% csrf_token %}
-						<input id="how-much" min="0" type="number" placeholder="How much money do you need?" name = "amount" class="form-control" id="usr">
+						<input id="how-much" min="0" type="number" placeholder="How much money do you need?" name = "amount" class="form-control" id="usr" required>
 
 					</div>
 					<div class="baby_cont1">
-						<select class="selectpicker" name = "money_requested_by" >
+						<select class="selectpicker" required name = "money_requested_by" >
 							<option>For whom do you need the money?</option>
 							{% for value, name in form.fields.money_requested_by.choices %}
 							  	<option value='{{ value }}' {% if value == user.nguser.id %} selected {% endif %}>{{ name }}</option>
@@ -26,7 +26,7 @@
 
 					</div>
 					<div class="baby_cont1">
-						<textarea type="text" name="description" placeholder="Why is the money needed?" class="form-control" id="usr"></textarea>
+						<textarea type="text" name="description" placeholder="Why is the money needed?" class="form-control" id="usr" required></textarea>
 					</div>
 				</div>
 			

@@ -12,7 +12,7 @@
 				<div id="main">			
 					<div id="clonebaby" class="baby_container">
 						<div class="baby_cont1">
-							<select name='expense_type' class="selectpicker">
+							<select name='expense_type' class="selectpicker" required>
 							  <option>What kind of an expense is this?</option>
 							  {% for value, type_name in form.fields.expense_type.choices %}
 							  	<option value='{{ value }}' >{{ type_name }}</option>
@@ -22,7 +22,7 @@
 						</div>
 					
 						<div class="baby_cont1">
-							<select name ='facility' class="selectpicker">
+							<select name ='facility' class="selectpicker" required>
 							  <!-- The facility of the student will be auto selected -->
 							  {% for value, facility_name in form.fields.facility.choices %}
 							  		<option value='{{ value }}' {% if value == user.nguser.facility.id %} selected {% endif %}> {{ facility_name }} </option>
@@ -31,19 +31,19 @@
 
 						</div>
 						<div class="baby_cont1">
-							<input type="number" min="0" placeholder="Amount" name="expense_amount" class="form-control" id="usr">
+							<input type="number" min="0" placeholder="Amount" name="expense_amount" class="form-control" id="usr" required>
 						</div>
 						<div class="bootstrap-iso">
 							<div style="margin-top: 10px; margin-bottom: -20px !important;" class="container-fluid">
 								<div class="row">
 									    <div class="form-group"> <!-- Date input -->
-									        <input class="form-control" id="date" name="created_date"  placeholder="MM/DD/YYY" type="text"/>
+									        <input class="form-control" id="date" name="created_date"  placeholder="MM/DD/YYY" type="text" required/>
 									   	</div>
 								</div>    
 							</div>
 						</div>
 						<div class="baby_cont1">
-							<select name="fellow"  class="selectpicker">
+							<select name="fellow" required class="selectpicker">
 							  <option>Who made the expense?</option>
   									{% for value, name in form.fields.fellow.choices %}
 							  			<option value='{{ value }}' >{{ name }}</option>
@@ -52,7 +52,7 @@
 
 						</div>
 						<div class="baby_cont1">
-							<select  name="category" class="selectpicker">
+							<select  name="category" required class="selectpicker">
 								<option>Category</option>
  								{% for value, name in form.fields.category.choices %}
 								<option value='{{ value }}' >{{ name }}</option>
@@ -63,13 +63,13 @@
 						<div class="baby_cont1">
 							    <span  id="fileselector">
 							        <label style="width: 100%;" class="btn btn-default" for="upload-file-selector">
-							            <input class="invisible" name="bill_image" id="upload-file-selector" type="file">
+							            <input class="invisible" name="bill_image" id="upload-file-selector" type="file" required>
 							           <h4>Upload Bill Photo</h4>
 							        </label>
 							    </span>
 						</div>
 						<div class="baby_cont1">
-							<textarea type="text" placeholder="Description" name="description" class="form-control" id="usr"></textarea>
+							<textarea type="text" placeholder="Description" name="description" class="form-control" id="usr" required></textarea>
 						</div>
 					</div>
 				</div>
