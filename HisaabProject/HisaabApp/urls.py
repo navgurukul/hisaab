@@ -18,6 +18,7 @@ urlpatterns = [
     url(r'^viewpendingrequests/$', views.viewpendingrequests,  name='viewpendingrequests'),
     url(r'^searchfellow/$', views.searchfellow,  name='searchfellow'),
     url(r'^viewpendingrequest/(?P<pk>\d+)$', views.viewpendingrequest,  name='viewpendingrequest'),
+    url(r'^detailrequest/(?P<pk>\d+)$', views.detailrequest,  name='detailrequest'),
 
 
 ]
