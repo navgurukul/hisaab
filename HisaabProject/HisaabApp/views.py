@@ -19,6 +19,8 @@ def is_fellow(user):
     return user.nguser.user_type == "FELLOW"
 def is_admin(user):
     return user.nguser.user_type == "ADMIN"
+def is_super_admin(user):
+    return user.nguser.user_type == "SUPER_ADMIN"
 
 
 def access_denied(request):
