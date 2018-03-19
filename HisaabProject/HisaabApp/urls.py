@@ -16,6 +16,7 @@ urlpatterns = [
     url(r'^register/$', views.register,  name='register'),
     url(r'^recordpayment/$', views.recordpayment,  name='recordpayment'),
     url(r'^viewpendingrequests/$', views.viewpendingrequests,  name='viewpendingrequests'),
+    url(r'^searchfellow/$', views.searchfellow,  name='searchfellow'),
     url(r'^viewpendingrequest/(?P<pk>\d+)$', views.viewpendingrequest,  name='viewpendingrequest'),
 
 

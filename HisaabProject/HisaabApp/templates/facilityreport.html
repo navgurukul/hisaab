@@ -1,5 +1,4 @@
-{%extends 'base.html'%}
-
+{% extends 'base.html' %}
 {% block content %}
 <div class="container ">
 <div class="main-container">
@@ -7,8 +6,8 @@
          <center>
           <h2>
             <b>Facility Expenses Report </b>
-          </h2> 
-          <h4 style="margin-left: 12%; margin-top:0px;">of 
+          </h2>
+          <h4 style="margin-left: 12%; margin-top:0px;">of
             <b>{{ facility.name }} Facility</b>
           </h4>
         </center>
@@ -43,34 +42,36 @@
         <button id="btnbottom" type="submit" name="payment" class="btn">Payment</button>
         <button id="btnbottom" type="submit" name="expense" class="btn">Expenses</button>
     </div>
-      <div class="col-md-2 col-sm-2 Checkbox1">
-        <div class="Checkbox">
-            <input type="checkbox" name="categories" value="EGGS"> Eggs
+      <div style="display: flex;" class="col-md-4" id="p">
+        <div class="col-md-6 Checkbox1">
+          <div class="Checkbox">
+              <input type="checkbox" name="categories" value="EGGS"> Eggs
+          </div>
+          <div class="Checkbox">
+              <input type="checkbox" name="categories" value="MILK"> Milk
+          </div>
+          <div class="Checkbox">
+              <input type="checkbox" name="categories" value="TECH EXPENCE"> Tech Expence
+          </div>
+          <div class="Checkbox">
+              <input type="checkbox" name="categories" value="OTHER"> Other
+          </div>
         </div>
-        <div class="Checkbox">
-            <input type="checkbox" name="categories" value="MILK"> Milk
+        <div class="col-md-6 Checkbox1">
+          <div class="Checkbox">
+            <input type="checkbox" name="categories" value="VEGETABLES"> Vegetables
+          </div>
+          <div class="Checkbox">
+            <input type="checkbox" name="categories" value="GROCERIES"> Groceries
+          </div>
+          <div class="Checkbox">
+            <input type="checkbox" name="categories" value="HOUSEHOLD"> Household Items
+          </div>
+          <div class="Checkbox">
+            <input type="checkbox" name="categories" value="TRAVEL"> Travel
+          </div>
         </div>
-        <div class="Checkbox">
-            <input type="checkbox" name="categories" value="TECH EXPENCE"> Tech Expence
-        </div>
-        <div class="Checkbox">
-            <input type="checkbox" name="categories" value="OTHER"> Other
-        </div>
-      </div>
-      <div class="col-md-2 col-sm-2 Checkbox1">
-        <div class="Checkbox">
-          <input type="checkbox" name="categories" value="VEGETABLES"> Vegetables
-        </div>
-        <div class="Checkbox">
-          <input type="checkbox" name="categories" value="GROCERIES"> Groceries
-        </div>
-        <div class="Checkbox">
-          <input type="checkbox" name="categories" value="HOUSEHOLD"> HouseholdItems
-        </div>
-        <div class="Checkbox">
-          <input type="checkbox" name="categories" value="TRAVEL"> Travel
-        </div>
-      </div>
+    </div>
   </form>
 </div>
 
@@ -79,6 +80,7 @@
   <div class="row">
     <div class="col-xs-12 col-md-12">
       <div class="table-responsive">
+        {% if entries %}  
         <table class="table table-condensed table-striped" id="complainttable" >
           {% if not payment %}
            <thead>
@@ -91,7 +93,6 @@
                </tr>
            </thead>
            <tbody>
-            {% if entries %}
                {% for entry in entries %}
                    <tr>
                        <td>{{ entry.fellow }}</td>
@@ -101,11 +102,7 @@
                        <td>{{ entry.description }}</td>
                    </tr>
                {% endfor %}
-             {% else %}
-                <p>No Result found buddy!</p>
-
-             {% endif %}
-
+  
            </tbody>
          {% else %}
            <thead>
@@ -117,8 +114,6 @@
            </tr>
            </thead>
            <tbody>
-            {% if entries %}
-
              {% for entry in entries %}
                  <tr>
                      <td>{{ entry.fellow }}</td>
@@ -127,12 +122,12 @@
                      <td>{{ entry.description }}</td>
                  </tr>
              {% endfor %}
-            {% else %}
-              <p>No Result found buddy!</p>
-            {% endif %}
-
-           </tbody>
-       {% endif %}
+             </tbody>
+           {% endif %}
+         {% else %}
+         
+              <tr><h1 class="text text-danger">No result found buddy!</h1></tr>
+        {% endif %}
         </table>
       </div>
     </div>
@@ -146,7 +141,7 @@ body {
     /*margin-top: 0px;*/
     margin-bottom: 20px;
     padding: 0;
-    margin: 20px;
+    margin: 0 20px;
     background: #eee;
     font-family: sans-serif;
 

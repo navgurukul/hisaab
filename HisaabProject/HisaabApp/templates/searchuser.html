@@ -1,0 +1,154 @@
+{% extends 'base.html' %}
+{% block content %}
+	<div class="row">
+	    <div class="col-md-1">
+	    </div>
+	    <div class="col-md-1">
+	    </div>
+	    <div class="col-md-1">
+	    </div>
+	    <div class="col-md-3">
+	    	<a href="{% url 'addexpense' %}">
+		      <button id="top-button"  type="button" class="btn btn-danger btn-block"><i class="fas fa-money-bill-alt fa-lg"></i>  Add an Expense</button>
+	    	</a>
+	    </div>
+	    <div class="col-md-3">
+	    	<a href="{% url 'recordpayment' %}">
+		      <button id="top-button"  type="button" class="btn btn-success btn-block"><i class="fas fa-angle-double-up"></i>  Record a Payment</button>
+	    	</a>
+
+	    </div>
+	    <div class="col-md-3">
+	        <a href="{% url 'searchfellow' %}">  
+	        <button id="top-button" type="button" class="btn btn-primary btn-block"><i class="fas fa-user-plus "></i>  Student Level Expenses</button>
+	        </a>
+	    </div>
+	   </div>
+<!--
+      <div class="col-md-1">
+      </div> -->
+	<!-- <img class="img-responsive" src="img/logo.png"> -->
+	<div class="main_container">
+		<div class="baby_container0">
+			<div class="row-fluid">
+				<div class="col-md-2"></div>
+				<div id="main col-md-8">			
+					<div id="clonebaby" class="baby_container">
+						<div class="baby_cont1">
+							
+							<input  type="text" placeholder="Which student expense do you want to see?" id="search" class="form-control" autofocus>
+						</div>
+					</div>
+						<div class="bet-fluid" id="results" style="overflow: scroll; height: 50%;">
+
+						</div>
+				
+				</div>
+				<div class="col-md-2"></div>
+			</div>
+			
+	</div>
+	
+<script>
+    $(function (){
+
+    $('#search').keyup(function(event){
+        $('#results').html('')
+     
+        if($('#search').val()==''){
+        	$('#results').html('');
+        	return false;
+        }
+        $.ajax({
+            type: 'GET',
+            url: "{% url 'searchfellow' %}",
+            data: {query:$('#search').val()},
+            success: function(data) {
+            	console.log(data)
+
+            	if (data){
+            		for (var i = data.user.length - 1; i >= 0; i--) {
+            			console.log(data.user[i])
+		                $('#results').append('<a href="/fellowreport/'+ data.user[i].id +'"><li class="list">' + data.user[i].user__username +'</li></a>')
+		          		 }
+            		}
+            	}
+        });
+
+    });
+
+});
+
+    
+</script>
+</body>
+<style type="text/css">
+	body{
+	background-color:	 #eee;
+	font-family: sans-serif;
+	width: 95%;
+}
+
+  #top-button{
+    margin-bottom: 5%;
+  }
+.list{
+	color: black;
+	box-shadow: 3px 4px #999;
+	font-size: 20px;
+	font-weight: 700;
+	padding: 5px 3%;
+	margin-right: 10%;
+	margin-left: 9%;
+	background-color: white;
+	list-style-type: none;
+}
+.list:hover{
+	cursor: pointer;
+	background-color: #f2f2f2;
+}
+#res{
+	width: 100vh;
+}
+.btn-block{
+padding: 6%;
+margin-top: 5%;
+font-weight: 700;
+}
+.baby_cont1{
+	margin-top: 15px;
+	margin: 0 auto;
+	margin-right: 9%;
+	margin-left: 9%;
+	margin-top: 17%; 
+}
+
+.form-control{
+	padding: 30px 3%;
+	font-weight: 600;
+	font-size: 21px;
+	width: 98%;
+	border: none;
+	border-bottom: 1px solid #eee !important;
+}
+
+@media only screen and (max-width: 450px) {
+  .form-control{
+	font-size: 12px;
+	width: 100%;
+	}
+   .baby_cont1{
+   	margin-top: 20%;
+   }
+   #top-button{
+    width: 90% !important;
+    margin-left: 6%;
+
+  }
+}
+a:hover{
+text-decoration: none;
+}
+</style>
+
+{% endblock %}

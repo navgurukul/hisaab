@@ -1,5 +1,6 @@
 
 from django.shortcuts import render, redirect, get_object_or_404
+from django.http import JsonResponse
 from django.contrib.auth.decorators import login_required, user_passes_test
 from .models import *
 from .forms import *
@@ -8,10 +9,11 @@ from django import forms
 
 from django.urls import reverse
 from django.utils import timezone
-
+import json
 from django.utils import timezone
 from social_core.pipeline.utils import partial_load
 from social_django.utils import load_strategy
+from django.core import serializers
 
 
 #For checking the usertype
@@ -53,15 +55,15 @@ def home(request):
     return render(request, 'fellow.html')
 
 
-@user_passes_test(is_admin, login_url='/access_denied/')
 @login_required
+@user_passes_test(is_admin, login_url='/access_denied/')
 def add_facility(request):
     print('adding facility')
 
 
 #For making money request by the students
-@user_passes_test(is_fellow, login_url='/access_denied/')
 @login_required
+@user_passes_test(is_fellow, login_url='/access_denied/')
 def moneytransferrequest(request):
     if request.method =='POST':
         form = MoneyTransferForm(request.POST, request=request)
@@ -93,8 +95,8 @@ def utilitybillrequest(request):
 
 
 #Creating Records of the payment made to a Facility
-@user_passes_test(is_admin, login_url='/access_denied/')
 @login_required
+@user_passes_test(is_admin, login_url='/access_denied/')
 def recordpayment(request):
     if request.method ==  'POST':
         form = RecordPaymentForm(request.POST, request.FILES)
@@ -103,7 +105,7 @@ def recordpayment(request):
             instance.fellow = request.user.nguser
             instance.is_payment_to_ng = True
             facility= Facility.objects.get(id = form.cleaned_data.get('facility'))
-            facility.cash_in_hand += int(form.cleaned_data.get('payment_amount')) 
+            facility.cash_in_hand += int(form.cleaned_data.get('payment_amount'))
             facility.save()()
             instance.save()
             return redirect('home')
@@ -122,12 +124,11 @@ def addexpense(request):
                 instance.is_personal_expense = True
             else:
                 instance.is_facility_expense = True
-
-            facility= form.cleaned_data.get('facility')
-            facility.cash_in_hand -= int(form.cleaned_data.get('expense_amount')) 
-            facility.save()
-            instance.save()
-            return redirect('home')
+                facility= form.cleaned_data.get('facility')
+                facility.cash_in_hand -= int(form.cleaned_data.get('expense_amount'))
+                facility.save()
+                instance.save()
+                return redirect('home')
     else:
         form = AddExpenseForm(request=request)
     return render(request, 'addexpenses.html',{'form':form})
@@ -140,20 +141,19 @@ def facilityreport(request, pk):
         start_date = request.POST.get('start_date')
         end_date = request.POST.get('end_date')
         categories = request.POST.getlist('categories')
+        print start_date,end_date,categories
         if 'payment' in request.POST:
-            data = CashEntry.objects.all().filter(created_date__range=(start_date,end_date),\
-            is_payment_to_ng=True,facility__id=pk)
+            data = CashEntry.objects.all().filter(created_date__range=(start_date,end_date),is_payment_to_ng=True,facility__id=pk)
+            print data
             payment = True
         elif 'expense' in request.POST:
-            if categories:
-                data = CashEntry.objects.all().filter(created_date__range=(start_date, end_date),category__in=categories,is_facility_expense=True,facility__id=pk)
-            else:
-                data = CashEntry.objects.all().filter(created_date__range=(start_date, end_date),is_facility_expense=True,facility__id=pk)
-
+          
+            data = CashEntry.objects.all().filter(created_date__range=(start_date, end_date),category__in=categories,is_facility_expense=True,facility__id=pk)
+           
             payment = False
         return render(request, 'facilityreport.html', {'entries': data, 'facility':facility, 'payment': payment })
     payment = False
-    data = CashEntry.objects.all().filter(facility__id=pk)
+    data = CashEntry.objects.all().filter(facility__id=pk,is_facility_expense=True)
     return render(request, 'facilityreport.html',{'facility':facility,'entries': data,'payment':payment})
 
 #Getting the Detail report the student expense and payments.
@@ -163,26 +163,23 @@ def fellowreport(request, pk):
     if request.method == 'POST':
         start_date = request.POST.get('start_date')
         end_date = request.POST.get('end_date')
-        categories = request.POST.getlist('categories') 
+        categories = request.POST.getlist('categories')
 
         if 'payment' in request.POST:
             data = CashEntry.objects.all().filter(created_date__range=(start_date,end_date),\
             is_pay_forward=True,fellow__id=pk)
             payment = True
         elif 'expense' in request.POST:
-            if categories:
-                data = CashEntry.objects.all().filter(created_date__range=(start_date, end_date),category__in=categories,is_personal_expense=True,fellow__id=pk)
-            else:
-                data = CashEntry.objects.all().filter(created_date__range=(start_date, end_date),is_personal_expense=True,fellow__id=pk)
+            data = CashEntry.objects.all().filter(created_date__range=(start_date, end_date),category__in=categories,is_personal_expense=True,fellow__id=pk)
             payment = False
         return render(request, 'fellowreport.html', {'entries': data, 'fellow':fellow, 'payment': payment })
     payment = False
     data = CashEntry.objects.all().filter(fellow__id=pk,is_personal_expense=True)
     return render(request, 'fellowreport.html',{'fellow':fellow, 'payment':payment, 'entries': data,})
- 
+
 #Rending all the request that are pending
-@user_passes_test(is_admin, login_url='/access_denied/')
 @login_required
+@user_passes_test(is_admin, login_url='/access_denied/')
 def viewpendingrequests(request):
     transfer_requests = MoneyRequest.objects.all().filter(is_queued=True)
     paginator = Paginator(transfer_requests, 3)
@@ -193,15 +190,15 @@ def viewpendingrequests(request):
         money_requests = paginator.page(1)
     except EmptyPage:
         money_requests = paginator.page(paginator.num_pages)
-    
+
     return render(request,'viewpendingrequests.html',{'money_requests':money_requests})
 
 
 
 #Detail Page for each requests for money or bill payment.
-@user_passes_test(is_admin, login_url='/access_denied/')
 @login_required
-def viewpendingrequest(request, pk):    
+@user_passes_test(is_admin, login_url='/access_denied/')
+def viewpendingrequest(request, pk):
     money_request = get_object_or_404(MoneyRequest, pk=pk)
     if request.method == 'POST':
         if 'accept' in request.POST:
@@ -222,8 +219,12 @@ def viewpendingrequest(request, pk):
     return render(request,'viewpendingrequest.html',{'money_request':money_request})
 
 
-@user_passes_test(is_admin, login_url='/access_denied/')
 @login_required
+@user_passes_test(is_admin, login_url='/access_denied/')
 def searchfellow(request):
-    if request.method == 'POST' and request.is_ajax():
-        pass
+    if request.is_ajax() and request.method=='GET':
+        query = request.GET.get('query')
+        print"commit"
+        data = {'user': list(NgUser.objects.all().filter(user_type="FELLOW", user__username__icontains= query).values('user__username', 'id', 'facility__name'))}
+        return JsonResponse(data)
+    return render(request, 'searchuser.html')
