@@ -8,10 +8,10 @@
 			<div class="row">
 				<div class="hisab_containt">
 					<div class="centeritem">
-					<center><h4>Hisaab</h4></center>
-					<p >NG Accounting App</p>
+					<center><h3>Hisaab</h3></center>
+					<p style="color: #888;">NavGurukul Accounting App</p>
 					</div>
-					<a id="sbmt1" href="{% url 'social:begin' 'google-oauth2' %}?next=/"><button id="btnbottom2" type="button" class="btn btn-danger">Sign in With Google</button></a>
+					<a id="sbmt1" href="{% url 'social:begin' 'google-oauth2' %}?next=/"><button id="btnbottom2" type="button" class="btn btn-danger"><i class="fab fa-lg fa-google-plus-g"></i>  Sign In!</button></a>
 				</div>	
 			</div>
 		</div>
@@ -32,10 +32,12 @@
 		}
 
 		.hisab_containt{
-			border: 1px solid #555;
+			/*border: 2px solid #555;*/
+			box-shadow: 2px 2px 2px #aaa;
 			width: 300px;
 			padding-top: 15%;
 			padding-bottom: 15%;
+			border-radius: 0px;
 			background-color: white;
 		}
 		.hedding4{
@@ -47,6 +49,8 @@
 		}
 		body{
 			background: #eee;
+			margin: 0 auto;
+			width: 97% !important;
 		}
 	</style>
 {% endif %}
