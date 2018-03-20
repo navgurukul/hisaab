@@ -2,9 +2,9 @@
 {% block content %}
 	 <div class="dropdown pull-right" style="margin-right: 10%; ">
        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fas fa-bell fa-lg"></i></a>
-       <ul class="dropdown-menu" style="padding: 15px; min-width: 500px;">
+       <ul class="dropdown-menu" style="padding: 20px;">
        	{% for money_request in money_requests %}
-          	<a href="{% url 'detailrequest' pk=money_request.id %}">
+          	<a class='bg' href="{% url 'detailrequest' pk=money_request.id %}">
           		<li>
           		{% if money_request.is_approve and money_request.is_money_request %}
 		             <div class="row">
@@ -87,6 +87,9 @@ color: white;
 padding: 4px;
 
 }
+.bg{
+	background-color: #ececec !important;
+}
 
 .border{
 height: 550px;
@@ -101,7 +104,7 @@ a{
 }
 a:hover{
 	color:#000;
-	/*background-color: #000 !important;*/
+	/*background-color: #eee !important;*/
 }
 h3{
 font-weight: 900;
@@ -126,7 +129,11 @@ color: white;
 .wrap{
 	white-space: pre-wrap;  
 	word-wrap: break-word;
-	padding-top: 0 !important;
+	padding-top: 20px !important;
+}
+.wrap:hover{
+	background-color: #eeeeff;
+	border-radius: 3px;
 }
 .footer{
 margin-bottom: 25px;
@@ -141,11 +148,20 @@ margin-top:-4% !important;
     max-height: 80vh;
     overflow-y: scroll;
 }
-@media only screen and (max-width: 450px) {
+@media screen and (max-width: 450px) {
 	.dropdown-menu{
 		min-width: 300px !important;
 	}
 }
-
+@media screen and (min-width: 450px ){
+	.dropdown-menu{
+		min-width: 400px !important;
+	}
+}
+@media screen and (min-width: 600px ){
+	.dropdown-menu{
+		min-width: 500px !important;
+	}
+}
 </style>
 {% endblock %}
