@@ -50,7 +50,7 @@ def home(request):
 
         facilities = Facility.objects.all()
         return render(request, 'admin.html', {'facilities': facilities,'money_requests':money_requests  })
-    money_requests = MoneyRequest.objects.all().filter(is_queued=False)
+    money_requests = MoneyRequest.objects.all().filter(is_queued=False, money_requested_by=request.user.nguser )
     return render(request, 'fellow.html',{'money_requests':money_requests})
 
 
