@@ -17,7 +17,7 @@ urlpatterns = [
     url(r'^recordpayment/$', views.recordpayment,  name='recordpayment'),
     url(r'^viewpendingrequests/$', views.viewpendingrequests,  name='viewpendingrequests'),
     url(r'^viewpendingrequest/(?P<pk>\d+)$', views.viewpendingrequest,  name='viewpendingrequest'),
-
+    url(r'^addfacility/$', views.add_facility,  name='addfacility'),
 
 ]
 if settings.DEBUG:

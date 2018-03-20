@@ -18,8 +18,7 @@ from social_django.utils import load_strategy
 def is_fellow(user):
     return user.nguser.user_type == "FELLOW"
 def is_admin(user):
-    return user.nguser.user_type == "ADMIN"
-
+    return user.nguser.user_type == "ADMIN" or "SUPER_ADMIN"
 
 def access_denied(request):
     return render(request,'access_denied.html')
@@ -53,10 +52,18 @@ def home(request):
     return render(request, 'fellow.html')
 
 
-@user_passes_test(is_admin, login_url='/access_denied/')
+@user_passes_test(is_admin , login_url='/access_denied/')
 @login_required
 def add_facility(request):
-    print('adding facility')
+    if request.method =='POST':
+        form=AddFacilityForm(request.POST,request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect('home')
+    else:
+        form = AddFacilityForm(request.POST,request.FILES)
+    return render(request,'addfacility.html',{'form':form})
+
 
 
 #For making money request by the students
