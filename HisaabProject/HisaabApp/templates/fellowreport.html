@@ -11,7 +11,7 @@
         </center>
     </div>
 <div class="div-container">
-    <div class="col-md-4">
+    <div class="col-md-3">
       <h3><b>Money Owned to NG:</b> ₹{{ user.nguser.total_weekly_expenses }}</h3>
     </div>
     <form method="POST" action="{% url 'fellowreport' pk=fellow.pk %}">
@@ -21,7 +21,7 @@
       </div>
       <div class="col-md-2">
           <div class="form-group">
-            <input class="form-control" id="date" name="start_date" placeholder="MM/DD/YYYY" type="date"/>
+            <input class="form-control" id="date" name="start_date" placeholder="MM/DD/YYYY" type="date" required/>
           </div>
       </div>
       <div class="col-md-2 end-date">
@@ -29,45 +29,49 @@
       </div>
       <div class="col-md-2">
           <div class="form-group"> <!-- Date input -->
-            <input class="form-control" id="date" name="end_date" placeholder="MM/DD/YYYY" type="date"/>
+            <input class="form-control" id="date" name="end_date" placeholder="MM/DD/YYYY" type="date" required/>
           </div>
       </div>
     </div>
   </div>
   <div class="col-md-12">
-    <div class="col-md-4 col-sm-4 "></div>
-    <div class="col-md-3 col-sm-4 margin-top border">
+    <div class="col-md-3"></div>
+    <div class="col-md-3 margin-top border">
         <button id="btnbottom" type="submit" name="payment" class="btn">Payment</button>
         <button id="btnbottom" type="submit" name="expense" class="btn">Expenses</button>
     </div>
-      <div class="col-md-2 col-sm-2 Checkbox1">
-        <div class="Checkbox">
-            <input type="checkbox" name="categories" value="EGGS"> Eggs
+      <div style="display: flex;" class="col-md-5" id="p">
+        <div class="col-md-6 Checkbox1">
+          <div class="Checkbox">
+              <input type="checkbox" name="categories" value="EGGS"> Eggs
+          </div>
+          <div class="Checkbox">
+              <input type="checkbox" name="categories" value="MILK"> Milk
+          </div>
+          <div class="Checkbox">
+              <input type="checkbox" name="categories" value="TECH EXPENCE"> Tech Expence
+          </div>
+          <div class="Checkbox">
+              <input type="checkbox" name="categories" value="OTHER"> Other
+          </div>
         </div>
-        <div class="Checkbox">
-            <input type="checkbox" name="categories" value="MILK"> Milk
+        <div class="col-md-6 Checkbox1">
+          <div class="Checkbox">
+            <input type="checkbox" name="categories" value="VEGETABLES"> Vegetables
+          </div>
+          <div class="Checkbox">
+            <input type="checkbox" name="categories" value="GROCERIES"> Groceries
+          </div>
+          <div class="Checkbox">
+            <input type="checkbox" name="categories" value="HOUSEHOLD">Household Items
+          </div>
+          <div class="Checkbox">
+            <input type="checkbox" name="categories" value="TRAVEL"> Travel
+          </div>
         </div>
-        <div class="Checkbox">
-            <input type="checkbox" name="categories" value="TECH EXPENCE"> Tech Expence
-        </div>
-        <div class="Checkbox">
-            <input type="checkbox" name="categories" value="OTHER"> Other
-        </div>
-      </div>
-      <div class="col-md-2 col-sm-2 Checkbox1">
-        <div class="Checkbox">
-          <input type="checkbox" name="categories" value="VEGETABLES"> Vegetables
-        </div>
-        <div class="Checkbox">
-          <input type="checkbox" name="categories" value="GROCERIES"> Groceries
-        </div>
-        <div class="Checkbox">
-          <input type="checkbox" name="categories" value="HOUSEHOLD"> HouseholdItems
-        </div>
-        <div class="Checkbox">
-          <input type="checkbox" name="categories" value="TRAVEL"> Travel
-        </div>
-      </div>
+    </div>
+    </div>
+
   </form>
 </div>
 
@@ -135,9 +139,11 @@ body {
     /*margin-top: 0px;*/
     margin-bottom: 20px;
     padding: 0;
-    margin: 20px;
+    margin: 0 20px;
+
     background: #eee;
     font-family: sans-serif;
+    width: 95% !important;
 
 }
 .end-date{

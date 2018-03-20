@@ -9,7 +9,7 @@
             <div id="main">
               <div id="clonebaby" class="baby_container">
                 <div class="baby_cont1">
-                  <input type="text" min="0" name='payment_amount' placeholder="Money paid" class="form-control" id="usr">
+                  <input type="text" min="0" name='payment_amount' placeholder="Money paid" class="form-control" id="usr" required>
                 </div>
                 <div class="baby_cont1">
                   <select name='facility' class="selectpicker">
@@ -20,12 +20,12 @@
                   </select>
                 </div>
                 <div class="baby_cont1">
-                  <textarea type="text" name='description' placeholder="Extra notes" class="form-control" id="usr"></textarea>
+                  <textarea type="text" name='description' placeholder="Extra notes" class="form-control" id="usr" required></textarea>
                     <span  id="fileselector">
                       <label style="width: 100%; margin-top: 10px; " class="btn btnbottom btn-default" for="upload-file-selector">
                         <br>
                         Upload Bank Screenshot
-                        <input class="invisible" name='bank_screenshot' id="upload-file-selector" type="file">
+                        <input class="invisible" name='bank_screenshot' id="upload-file-selector" type="file" required>
                       </label>
                     </span>
                 </div>
@@ -42,7 +42,7 @@
   margin-top: 30px;
   margin-bottom: 20px;
   padding: 0;
-  margin: 20px;
+  margin: 0 20px;
   background-color: #eee;
   font-family: "Lato", sans-serif;
   transition: background-color .5s;

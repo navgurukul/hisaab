@@ -1,98 +1,145 @@
 {% extends 'base.html' %}
 {% block content %}
+	 <div class="dropdown pull-right" style="margin-right: 10%; ">
+       <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fas fa-bell fa-lg"></i></a>
+       <ul class="dropdown-menu" style="padding: 15px; min-width: 500px;">
+       	{% for money_request in money_requests %}
+          	<a href="{% url 'detailrequest' pk=money_request.id %}">
+          		<li>
+          		{% if money_request.is_approve and money_request.is_money_request %}
+		             <div class="row">
+		                <div class="col-md-12 wrap">Money Transfer Request of ₹ {{ money_request.amount }} for {{ money_request.description }} by you have been approve by {{ money_request.approve_or_rejected_by }}!
+		                </div>
+		             </div>
+	            {% elif money_request.is_approve and money_request.is_utility_request %} 
+		            <div class="row">
+		                <div class="col-md-12 wrap">Bill Payment Request for {{ money_request.type_of_bill }} of ₹ {{ money_request.amount }} have been approve by {{ money_request.approve_or_rejected_by }}!
+		                </div>
+		            </div>
+		        {% elif not money_request.is_approve and money_request.is_money_request %} 
+		            <div class="row">
+		                <div class="col-md-12 wrap">Money Transfer Request for ₹ {{ money_request.amount }} has been rejected by {{ money_request.approve_or_rejected_by }}! Reason was {{ money_request.reason_for_reject }}.
+		                </div>
+		            </div>
+		        {% elif not money_request.is_approve and money_request.is_utility_request %} 
+		            <div class="row">
+		                <div class="col-md-12 wrap">Bill Payment Request for Water of ₹ {{ money_request.amount }} have been rejected by {{ money_request.approve_or_rejected_by }}! Reason was {{ money_request.reason_for_reject }}.
+		                </div>
+		            </div>
+	            {% endif %}
+          	</li>
+          </a>
+        <li class="divider"></li>
+    {% endfor %}
+       </ul>
+</div>
 
+<div class="row-fluid " style="margin-top:3% !important;">
+	<div class="col-md-1"></div>
+	<div class="col-md-5 child">
+		<div class="col-md-12">
+			<a href="{% url 'addexpense' %}"><button type="button" class="btn btn-danger btn-block"><i class="fas fa-money-bill-alt fa-lg"></i>  Add Expense</button></a>
+		</div>
+		<div class="col-md-6">
+			<a href="{% url 'utilityrequest' %}"><button type="button" class="btn btn-success btn-block"><span class="glyphicon">&#xe177;</span>
+		  Request Bill Payment</button></a>
+		</div>
+		<div class="col-md-6">
+		<a href="{% url 'moneyrequest' %}"><button type="button" class="btn btn-success btn-block"><i class="fa fa-angle-double-down fa-lg"></i>  Request Transfer</button></a>
+		</div>
+		<div class="col-md-12">
+			<a href="{% url 'facilityreport' pk=user.nguser.facility.id %}"> <button type="button" class="btn btn-success btn-block"><span class="glyphicon">&#xe105;</span>   View Payment to your Facility</button></a>
+		</div>
+	</div>
+	<div class="col-md-1 hidden-xs hidden-sm border"></div>
+	<div class="col-md-4">
+	 	 <h2>Your Status</h2>
+		<div class="col-md-12 green">
+			<h3>₹ {{ user.nguser.total_weekly_expenses }} </h3>
+			<p>you've spent {{ user.nguser.total_time_in_ng }} days with NG family now.</p>
+		</div>
+		<div class="pull-right">
+			<a href="{% url 'fellowreport' pk=user.nguser.id %}">View Detailed personal Reports ></a>
+		</div>
+		<div>
+			<h2 style="margin-top: 40px !important;" class="hadding2">{{ user.nguser.facility.name }} Facility Status</h2>
+		</div>
+		<div class="col-md-12 green">
+			<h3>₹ {{ user.nguser.last_week_facility_expenses }} spent in the last week</h3>
+			<p>you are within the ₹{{ user.nguser.facility.student_expenses_limit }}/month limit of your facility. wohoo!</p>
+		</div>
+		<div class="col-md-12 green">
+			<h3>₹ {{ user.nguser.last_month_facility_expense }} spent in the last month</h3>
+			<p>you have execeeded the ₹{{ user.nguser.facility.student_expenses_limit }}/month limit of your facility by ₹500 per student. start saving up buddy :)</p>
+		</div>
+		<div class="pull-right footer">
+			<a href="{% url 'facilityreport' pk=user.nguser.facility.id %}">View Detailed Facility Reports ></a>
+		</div>
+	</div>
+	<div class="col-md-1"></div>
+</div>
 
-					<div class="row-fluid " style="margin-top:3% !important;">
-					    <div class="col-md-1"></div>
-					    <div class="col-md-5 child">
-					      <div class="col-md-12">
-					        <a href="{% url 'addexpense' %}"><button type="button" class="btn btn-danger btn-block"><i class="fas fa-money-bill-alt fa-lg"></i>
+<style type="text/css">
+.green{
+background-color: #5cb85c;
+margin-top: 3%;
+color: white;
+padding: 4px;
 
- Add Expense</button></a>
-					      </div>
-					      <div class="col-md-6">
-					        <a href="{% url 'utilityrequest' %}"><button type="button" class="btn btn-success btn-block"><span class="glyphicon">&#xe177;</span>
-					        Request Bill Payment</button></a>
-					      </div>
-					      <div class="col-md-6">
-					        <a href="{% url 'moneyrequest' %}"><button type="button" class="btn btn-success btn-block"><i class="fa fa-angle-double-down"></i>Request Transfer</button></a>
-					      </div>
-					      <div class="col-md-12">
-					        <a href="{% url 'facilityreport' pk=user.nguser.facility.id %}"> <button type="button" class="btn btn-success btn-block"><span class="glyphicon">&#xe105;</span>View Payment to your Facility</button></a>
-					      </div>
-					    </div>
-					    <div class="col-md-1 hidden-xs hidden-sm border"></div>
-					    <div class="col-md-4">
-					      <h2>Your Status</h2>
-					      <div class="col-md-12 green">
-					        <h3>₹ {{ user.nguser.total_weekly_expenses }} </h3>
-					        <p>you've spent {{ user.nguser.total_time_in_ng }} days with NG family now.</p>
-					      </div>
-					      <div class="pull-right">
-					        <a href="{% url 'fellowreport' pk=user.nguser.id %}">View Detailed personal Reports ></a>
-					      </div>
-					      <div>
-					        <h2 style="margin-top: 40px !important;" class="hadding2">{{ user.nguser.facility.name }} Facility Status</h2>
-					      </div>
-					      <div class="col-md-12 green">
-					        <h3>₹ {{ user.nguser.last_week_facility_expenses }} spent in the last week</h3>
-					        <p>you are within the ₹{{ user.nguser.facility.student_expenses_limit }}/month limit of your facility. wohoo!</p>
-					      </div>
-					      <div class="col-md-12 green">
-					        <h3>₹ {{ user.nguser.last_month_facility_expense }} spent in the last month</h3>
-					        <p>you have execeeded the ₹{{ user.nguser.facility.student_expenses_limit }}/month limit of your facility by ₹500 per student. start saving up buddy :)</p>
-					      </div>
-					      <div class="pull-right footer">
-					        <a href="{% url 'facilityreport' pk=user.nguser.facility.id %}">View Detailed Facility Reports ></a>
-					      </div>
-					    </div>
-					    <div class="col-md-1"></div>
-					  </div>
+}
 
-			<style type="text/css">
-			  .green{
-			    background-color: #5cb85c;
-			    margin-top: 3%;
-			    color: white;
-			    padding: 4px;
+.border{
+height: 550px;
+border-right: 1px solid black;
+width: 1px !important;
+margin-right: 10px;
+}
+a{
+	text-decoration: none !important;
+	color:#444;
 
-			  }
+}
+a:hover{
+	color:#000;
+	/*background-color: #000 !important;*/
+}
+h3{
+font-weight: 900;
+}
+body{
+	background: #eee;
+}
+.glyphicon{
+	font-size: 15px;
+}
+.child{
+margin-top: 10%;
+}
+.btn-block{
+padding: 3%;
+margin-top: 5%;
+font-weight: 900;
+}
+p{
+color: white;
+}
+.wrap{
+	white-space: pre-wrap;  
+	word-wrap: break-word;
+	padding-top: 0 !important;
+}
+.footer{
+margin-bottom: 25px;
+}
 
-			  .border{
-			    height: 550px;
-			    border-right: 1px solid black;
-			    width: 1px !important;
-			    margin-right: 10px;
-			}
-			  a{
-			  	text-decoration: none !important;
+.row-fluid{
+margin-top:-4% !important;
+}
+@media only screen and (max-width: 450px) {
+	.dropdown-menu{
+		min-width: 300px !important;
+	}
+}
 
-			  }
-			  h3{
-			    font-weight: 900;
-			  }
-			  body{
-			  	background: #eee;
-			  }
-
-			  .child{
-			    margin-top: 10%;
-			  }
-			  .btn-block{
-			    padding: 3%;
-			    margin-top: 5%;
-			    font-weight: 900;
-			  }
-			  p{
-			    color: white;
-			  }
-			  .footer{
-			    margin-bottom: 25px;
-			  }
-
-			.row-fluid{
-				margin-top:-4% !important;
-			}
-
-			</style>
+</style>
 {% endblock %}

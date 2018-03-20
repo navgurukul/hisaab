@@ -11,19 +11,19 @@
         </div>
         <div class="col-md-2">
           <a class='text' href="{% url 'addexpense' %}">
-            <button id="top-button" type="button" class="btn btn-danger btn-block"><i class="fa fa-money-bill-alt fa-lg" ></i>Add an Expense</button>
+            <button id="top-button" type="button" class="btn btn-danger btn-block"><i class="fa fa-money-bill-alt fa-lg" ></i>  Add an Expense</button>
           </a>
 
         </div>
         <div class="col-md-2">
           <a class='text' href="{% url 'recordpayment' %}">
-            <button id="top-button" type="button" class="btn btn-success btn-block"><i class="fa fa-angle-double-up"></i>Record a Payment</button>
+            <button id="top-button" type="button" class="btn btn-success btn-block"><i class="fa fa-angle-double-up"></i>  Record a Payment</button>
           </a>
 
         </div>
         <div class="col-md-2">
-          <a class='text' href="#">
-            <button id="top-button" type="button" class="btn btn-primary btn-block"><i class="fas fa-user-plus"></i>Student Level Expenses</button>
+          <a class='text' href="{% url 'searchfellow' %}">
+            <button id="top-button" type="button" class="btn btn-primary btn-block"><i class="fas fa-user-plus"></i> Student Level Expenses</button>
           </a>
         </div>
     </div>
@@ -71,7 +71,7 @@
             <button style="padding-right: 20px;" id="top-button" name='accept' type="submit" class="btn btn-success btn-block">Approve Request</button>
           </div>
           <div class="col-md-3 pull-right">
-            <button style="padding-right: 30px;" id="top-button" name='reject' type="button" data-toggle="modal" data-target="#myModal" class="btn btn-danger btn-block">Reject Request</button>
+            <button style="padding-right: 30px;" id="top-button" type="button" data-toggle="modal" data-target="#myModal" onclick="rejecting()" class="btn btn-danger btn-block">Reject Request</button>
           </div>
         </div>
             <!-- Modal box -->
@@ -88,11 +88,11 @@
             <h4 class="modal-title">Description</h4>
           </div>
           <div class="modal-body">
-            <textarea type="text" name="reason_for_reject" placeholder="Why do you want to reject this Request?" name="description" class="form-control" id="usr"></textarea>
+            <textarea type="text" name="reason_for_reject" placeholder="Why do you want to reject this Request?"  class="form-control" id="rejection"></textarea>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-            <button type="submit" class="btn btn-default" name='reject'>Submit</button>
+            <button type="button" class="btn btn-default" onclick="cancel()" data-dismiss="modal">Cancel</button>
+            <button  id='reject' type="submit" class="btn btn-default" onclick="inputchange()" name='reject'>Submit</button>
           </div>
         </div>
 
@@ -106,13 +106,24 @@
 
 
     <!-- ================================================================================ -->
+    <script>
+    var input = document.getElementById("rejection");
 
-
-
-    <script type="text/javascript">
-
+    function inputchange() {
+      if (input.value == '') {
+        input.style.borderColor = "red";   
+      }
+    }
+    input.onclick = function(){
+        input.style.borderColor = "white";
+    }
+    function cancel() {
+      $('#rejection').prop('required',false);
+    }
+    function rejecting() {
+      $('#rejection').prop('required',true);
+    }
     </script>
-
 <style type="text/css">
   h4{
     margin-top: 8%;

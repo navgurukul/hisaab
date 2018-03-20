@@ -10,7 +10,7 @@
 			<div id="main">			
 				<div id="clonebaby" class="baby_container">
 					<div class="baby_cont1">
-					 	<select name='facility' class="selectpicker">
+					 	<select name='facility' class="selectpicker" required>
 		                    <option>In which Facility are you joining up buddy?</option>
 		                  	{% for values, name in form.fields.facility.choices %}
 		                    	<option value='{{ values }}' >{{ name }}</option>
