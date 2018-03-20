@@ -36,9 +36,9 @@ class MoneyTransferForm(forms.ModelForm):
         self.request = kwargs.pop('request', None)
         facility__id = NgUser.objects.get(user = self.request.user).facility.id
         super(MoneyTransferForm, self).__init__(*args, **kwargs)
-        self.fields['money_requested_by'].queryset = NgUser.objects.all().filter(facility__id = facility__id)
-        self.fields['nguser_with_upi'].queryset = NgUser.objects.all().filter(facility__id= facility__id ,upi_id__isnull = False)
-        self.fields['nguser_without_upi'].queryset = NgUser.objects.all().filter(facility__id= facility__id,upi_id__isnull = True)
+        self.fields['money_requested_by'].queryset = NgUser.objects.all().filter(facility__id = facility__id, user_type='FELLOW')
+        self.fields['nguser_with_upi'].queryset = NgUser.objects.all().filter(facility__id= facility__id ,user_type='FELLOW',upi_id__isnull = False)
+        self.fields['nguser_without_upi'].queryset = NgUser.objects.all().filter(facility__id= facility__id,user_type='FELLOW',upi_id__isnull = True)
 
     def save(self, commit=True, *args, **kwargs):
         instance = super(MoneyTransferForm, self).save(commit=False)

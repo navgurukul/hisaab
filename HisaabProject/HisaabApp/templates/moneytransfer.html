@@ -22,7 +22,7 @@
 
 					</div>
 					<div class="baby_cont1">
-						<select class="selectpicker" name = "money_requested_by" >
+						<select class="selectpicker" required name = "money_requested_by" >
 							<option>For whom do you need the money?</option>
 							{% for value, name in form.fields.money_requested_by.choices %}
 							  	<option value='{{ value }}' {% if value == user.nguser.id %} selected {% endif %}>{{ name }}</option>
@@ -31,7 +31,7 @@
 
 					</div>
 					<div class="baby_cont1">
-						<textarea type="text" name="description" placeholder="Why is the money needed?" class="form-control" id="usr"></textarea>
+						<textarea type="text" name="description" placeholder="Why is the money needed?" class="form-control" id="usr" required></textarea>
 					</div>
 				</div>
 
@@ -92,7 +92,7 @@
 	margin-top: 30px;
 	margin-bottom: 20px;
 	padding: 0;
-	margin: 20px;
+	margin: 0 20px;
 	background-color: #eee;
 	font-family: sans-serif;
 }

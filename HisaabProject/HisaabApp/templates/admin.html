@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
 
-  <div class="main-container">
+  <div class="row">
     <div class="col-md-1">
     </div>
     <div class="col-md-1">
@@ -10,17 +10,19 @@
     </div>
     <div class="col-md-3">
     	<a href="{% url 'addexpense' %}">
-	      <button id="top-button" style="width:102%;" type="button" class="btn btn-danger btn-block"><i class="fas fa-money-bill-alt fa-lg"></i>  Add an Expense</button>
+	      <button id="top-button"  type="button" class="btn btn-danger btn-block"><i class="fa fa-money-bill-alt fa-lg"></i>  Add an Expense</button>
     	</a>
     </div>
     <div class="col-md-3">
     	<a href="{% url 'recordpayment' %}">
-	      <button id="top-button" style="width:102%;" type="button" class="btn btn-success btn-block"><i class="fas fa-angle-double-up"></i>Record a Payment</button>
+	      <button id="top-button"  type="button" class="btn btn-success btn-block"><i class="fa fa-angle-double-up"></i>  Record a Payment</button>
     	</a>
 
       </div>
       <div class="col-md-3">
-        <button id="top-button" style="width:102%;" type="button" class="btn btn-primary btn-block"><i class="fas fa-user-plus "></i>  Student Level Expenses</button>
+        <a href="{% url 'searchfellow' %}">  
+        <button id="top-button"  type="button" class="btn btn-primary btn-block"><i class="fa fa-user-plus "></i>  Student Level Expenses</button>
+        </a>
       </div>
 <!--
       <div class="col-md-1">
@@ -46,12 +48,13 @@
         </div>
         {% endif %}
       {% endfor %}
-      <div class="pull-right">
       	<a href="{% url 'viewpendingrequests' %}">
-	        <button type="button" class="btn btn-button btn1">View all Request ></button>
+          <div class="pull-right">
+    	        <button type="button" class="btn btn-button btn1">View all Request ></button> 
+          </div>
       	</a>
-      </div>
     </div>
+    <br><br>
     <div class="col-md-1 hidden-xs hidden-sm border"></div>
     <div class="col-md-6">
       <h2>Facility Level Status</h2>
@@ -65,13 +68,7 @@
 
 
 <style type="text/css">
-  .green{
-    background-color: #5cb85c;
-    margin-top: 5%;
-    color: white;
-    padding: 2%;
 
-  }
    a:hover    {
     text-decoration: none;
   }
@@ -80,6 +77,7 @@
   }
   body{
     background-color: #eee;
+    width: 95%;
   }
   #top-button{
     margin-bottom: 5%;
@@ -87,6 +85,13 @@
   .btn1{
     margin-top: 20px;
     margin-bottom: 20px;
+  }
+  .green{
+    background-color: #5cb85c;
+    margin-top: 5%;
+    color: white;
+    padding: 10px;
+
   }
   .border{
     height: 550px;
@@ -106,8 +111,13 @@
   p{
     color: white;
   }
+@media only screen and (max-width: 450px) {
+  #top-button{
+    width: 90% !important;
+    margin-left: 6%;
 
-
+  }
+}
 body {
     font-family: "Lato", sans-serif;
     transition: background-color .5s;

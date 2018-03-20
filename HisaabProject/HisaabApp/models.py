@@ -21,7 +21,8 @@ class Facility(models.Model):
         return self.name
 
 class NgUser(models.Model):
-    ROLES = (('ADMIN','admin'),('FELLOW','fellow'))
+
+    ROLES = (('ADMIN','admin'),('SUPER_ADMIN','super_admin'),('FELLOW','fellow'))
     user_type= models.CharField(choices=ROLES,max_length=6,default='FELLOW',blank=False)
     user = models.OneToOneField(User,unique=True, related_query_name = 'nguser', on_delete=models.CASCADE)
     created_date = models.DateField(auto_now_add=True)
