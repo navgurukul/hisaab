@@ -17,7 +17,9 @@ from django.utils import timezone
 def is_fellow(user):
     return user.nguser.user_type == "FELLOW"
 def is_admin(user):
-    return user.nguser.user_type == "ADMIN"
+    return user.nguser.user_type == "ADMIN" or user.nguser.user_type == "SUPER_ADMIN"
+def is_super_admin(user):
+    return user.nguser.user_type == "SUPER_ADMIN"
 
 
 def access_denied(request):
@@ -52,10 +54,19 @@ def home(request):
     return render(request, 'fellow.html',{'money_requests':money_requests})
 
 
+# @user_passes_test(is_admin , login_url='/access_denied/')
 @login_required
-@user_passes_test(is_admin, login_url='/access_denied/')
+@user_passes_test(is_super_admin, login_url='/access_denied/')
 def add_facility(request):
-    print('adding facility')
+    if request.method =='POST':
+        form=AddFacilityForm(request.POST,request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect('home')
+    else:
+        form = AddFacilityForm(request.POST,request.FILES)
+    return render(request,'addfacility.html',{'form':form})
+
 
 
 #For making money request by the students
@@ -144,9 +155,9 @@ def facilityreport(request, pk):
             print data
             payment = True
         elif 'expense' in request.POST:
-          
+
             data = CashEntry.objects.all().filter(created_date__range=(start_date, end_date),category__in=categories,is_facility_expense=True,facility__id=pk)
-           
+
             payment = False
         return render(request, 'facilityreport.html', {'entries': data, 'facility':facility, 'payment': payment })
     payment = False
@@ -217,6 +228,7 @@ def viewpendingrequest(request, pk):
         return redirect('home')
 
     return render(request,'viewpendingrequest.html',{'money_request':money_request})
+
 
 
 #Detail Page for each requests for money or bill payment for fellow.
