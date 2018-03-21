@@ -54,10 +54,23 @@ def home(request):
     return render(request, 'fellow.html',{'money_requests':money_requests})
 
 
+<<<<<<< HEAD
 # @login_urlrequired
+=======
+# @user_passes_test(is_admin , login_url='/access_denied/')
+@login_required
+>>>>>>> refs/remotes/origin/master
 @user_passes_test(is_super_admin, login_url='/access_denied/')
 def add_facility(request):
-    print('adding facility')
+    if request.method =='POST':
+        form=AddFacilityForm(request.POST,request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect('home')
+    else:
+        form = AddFacilityForm(request.POST,request.FILES)
+    return render(request,'addfacility.html',{'form':form})
+
 
 
 #For making money request by the students
@@ -146,9 +159,9 @@ def facilityreport(request, pk):
             print data
             payment = True
         elif 'expense' in request.POST:
-          
+
             data = CashEntry.objects.all().filter(created_date__range=(start_date, end_date),category__in=categories,is_facility_expense=True,facility__id=pk)
-           
+
             payment = False
         return render(request, 'facilityreport.html', {'entries': data, 'facility':facility, 'payment': payment })
     payment = False

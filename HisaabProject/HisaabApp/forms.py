@@ -5,7 +5,7 @@ from HisaabApp.models import *
 from django import forms
 
 
-class FacilityForm(forms.ModelForm):
+class AddFacilityForm(forms.ModelForm):
     class Meta:
         model = Facility
         fields = ('name', 'student_expenses_limit')
@@ -109,4 +109,3 @@ class AddExpenseForm(forms.ModelForm):
         else:
             facility__id = NgUser.objects.get(user = self.request.user).facility.id
             self.fields['fellow'].queryset = NgUser.objects.all().filter(facility__id= facility__id)
-       

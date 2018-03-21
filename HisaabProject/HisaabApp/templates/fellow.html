@@ -2,9 +2,13 @@
 {% block content %}
 	 <div class="dropdown pull-right" style="margin-right: 10%; ">
        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fas fa-bell fa-lg"></i></a>
+<<<<<<< HEAD
        <ul class="dropdown-menu">
+=======
+       <ul class="dropdown-menu" style="padding: 20px;">
+>>>>>>> refs/remotes/origin/master
        	{% for money_request in money_requests %}
-          	<a href="{% url 'detailrequest' pk=money_request.id %}">
+          	<a class='bg' href="{% url 'detailrequest' pk=money_request.id %}">
           		<li>
           		{% if money_request.is_approve and money_request.is_money_request %}
 		             <div class="row">
@@ -79,13 +83,24 @@
 	<div class="col-md-1"></div>
 </div>
 
+<<<<<<< HEAD
+					<div class="row-fluid " style="margin-top:3% !important;">
+					    <div class="col-md-1"></div>
+					    <div class="col-md-5 child">
+					      <div class="col-md-12">
+					        <a href="{% url 'addexpense' %}"><button type="button" class="btn btn-danger btn-block"><i class="fa fa-money-bill-alt fa-lg "></i>
+=======
 <style type="text/css">
 .green{
 background-color: #5cb85c;
 margin-top: 3%;
 color: white;
 padding: 4px;
+>>>>>>> 75dd64adba870d87287187e92a0f14d1e5bef0dd
 
+}
+.bg{
+	background-color: #ececec !important;
 }
 
 .border{
@@ -101,7 +116,7 @@ a{
 }
 a:hover{
 	color:#000;
-	/*background-color: #000 !important;*/
+	/*background-color: #eee !important;*/
 }
 h3{
 font-weight: 900;
@@ -126,7 +141,11 @@ color: white;
 .wrap{
 	white-space: pre-wrap;  
 	word-wrap: break-word;
-	padding-top: 0 !important;
+	padding-top: 20px !important;
+}
+.wrap:hover{
+	background-color: #eeeeff;
+	border-radius: 3px;
 }
 .footer{
 margin-bottom: 25px;
@@ -141,21 +160,32 @@ margin-top:-4% !important;
     max-height: 80vh;
     overflow-y: scroll;
 }
-@media only screen and (max-width: 450px) {
+@media screen and (max-width: 450px) {
 	.dropdown-menu{
 		min-width: 300px !important;
 	}
 }
+<<<<<<< HEAD
 @media only screen and (min-width: 450px) {
+=======
+@media screen and (min-width: 450px ){
+>>>>>>> refs/remotes/origin/master
 	.dropdown-menu{
 		min-width: 400px !important;
 	}
 }
+<<<<<<< HEAD
 @media only screen and (min-width: 600px) {
+=======
+@media screen and (min-width: 600px ){
+>>>>>>> refs/remotes/origin/master
 	.dropdown-menu{
 		min-width: 500px !important;
 	}
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> refs/remotes/origin/master
 </style>
 {% endblock %}
