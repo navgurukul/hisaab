@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<form method="POST">
+  {% csrf_token %}    
+  <div class="main_container">
+    <div class="baby_container0">
+      <center><h1>Make <b>Admin</b></h1></center>
+      
+      <div id="">     
+        <div id="clonebaby" class="baby_container">
+          <div class="baby_cont1">
+            <select name='facility' id="id_facility" onchange="showFellow(this.value)" class=" form-control" required>
+                <option value="">Select a facility to find the user!</option>
+                 
+                {% for facilty in facilities %}
+                  <option value='{{ facilty.id }}'>{{ facilty.name }}</option>
+                {% endfor %}
+            </select>
+            <div class="baby_cont1">
+            <select name='fellow' id='fellow' class="form-control" required>
+                  <option>Which user do you want to make admin?</option>
+                  
+                    
+            </select>
+          </div>
+        </div>
+        <a href="{% url 'home' %}">
+            <button id="btnbottom" type="button" class="btn btn-default pull-left">Cancel</button>
+        </a>
+        <button id="btnbottom" type="submit" class="btn btn-success pull-right">Save My Details ></button>
+      </div>
+    </div>          
+  </div>
+</form>
+
+
+
+<script type="text/javascript">
+  function showFellow(value) {
+      var result = $('#fellow')
+      result.empty().append('<option value="">Which user do you want to make admin?</option>');
+
+      console.log(value);
+      $.ajax({
+                type: 'GET',
+                url: "{% url 'make_admin' %}",
+                data: {facility:value},
+                success: function(data) {
+                  console.log(data)
+                  
+                  if (data){
+
+                    for (var i = data.users.length - 1; i >= 0; i--) {
+                      console.log(data.users[i])
+                        result.append('<option value="'+data.users[i].id +'" >'+ data.users[i].user__username+'</option>')
+                       }
+                    }
+                  }
+            });
+};
+</script>
+
+
+<style type="text/css">
+  body{
+  background-color:  #eee;
+  font-family: sans-serif;
+  margin-bottom: 0;
+
+}
+.main_container{
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+
+}
+
+.baby_cont1{
+  margin-top: 15px;
+
+}
+
+#btnbottom{
+  font-size: 120%;
+  margin-top: 20px;
+}
+@media only screen and (max-width: 450px) {
+  form{
+    margin-top:-30%; 
+  }
+}
+@media only screen and (min-width: 450px) {
+  form{
+    margin-top:-10%; 
+  }
+}
+</style>
+{% endblock %}

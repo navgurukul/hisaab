@@ -15,7 +15,7 @@
 					</div>
 					<div class="baby_cont1">
 						<select  name= "type_of_bill" class="selectpicker" required>
-						  <option>Type of bill</option>
+						  <option value="">Select type of the Bill</option>
 						  {% for value, name in form.fields.type_of_bill.choices %}
 							  	<option value='{{ value }}' >{{ name }}</option>
 						  {% endfor %}

@@ -70,6 +70,9 @@ class NgUser(models.Model):
 
     def is_admin(self):
         return self.user_type == 'ADMIN'
+        
+    def is_super_admin(self):
+        return self.user_type == 'SUPER_ADMIN'
 
 
     def in_weekly_limit(self):

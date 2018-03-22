@@ -69,7 +69,7 @@
             	if (data){
             		for (var i = data.user.length - 1; i >= 0; i--) {
             			console.log(data.user[i])
-		                $('#results').append('<a href="/fellowreport/'+ data.user[i].id +'"><li class="list">' + data.user[i].user__username +'</li></a>')
+		                $('#results').append('<a href="/fellowreport/'+ data.user[i].id +'"><li class="list">' + data.user[i].user__username +' from '+data.user[i].facility+'</li></a>')
 		          		 }
             		}
             	}

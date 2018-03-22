@@ -59,12 +59,12 @@ def home(request):
 @user_passes_test(is_super_admin, login_url='/access_denied/')
 def add_facility(request):
     if request.method =='POST':
-        form=AddFacilityForm(request.POST,request.FILES)
+        form=AddFacilityForm(request.POST)
         if form.is_valid():
             form.save()
             return redirect('home')
     else:
-        form = AddFacilityForm(request.POST,request.FILES)
+        form = AddFacilityForm()
     return render(request,'addfacility.html',{'form':form})
 
 
@@ -135,8 +135,12 @@ def addexpense(request):
                 facility= form.cleaned_data.get('facility')
                 facility.cash_in_hand -= int(form.cleaned_data.get('expense_amount'))
                 facility.save()
-                instance.save()
-                return redirect('home')
+            instance.save()
+            return redirect('home')
+    elif request.method == 'GET' and request.is_ajax():
+        facility = request.GET.get('facility', None)
+        data = {'users': list(NgUser.objects.all().filter(facility__id= facility).values('user__username', 'id',))}
+        return JsonResponse(data)
     else:
         form = AddExpenseForm(request=request)
     return render(request, 'addexpenses.html',{'form':form})
@@ -152,12 +156,9 @@ def facilityreport(request, pk):
         print start_date,end_date,categories
         if 'payment' in request.POST:
             data = CashEntry.objects.all().filter(created_date__range=(start_date,end_date),is_payment_to_ng=True,facility__id=pk)
-            print data
             payment = True
         elif 'expense' in request.POST:
-
             data = CashEntry.objects.all().filter(created_date__range=(start_date, end_date),category__in=categories,is_facility_expense=True,facility__id=pk)
-
             payment = False
         return render(request, 'facilityreport.html', {'entries': data, 'facility':facility, 'payment': payment })
     payment = False
@@ -246,6 +247,27 @@ def searchfellow(request):
     if request.is_ajax() and request.method=='GET':
         query = request.GET.get('query')
         print"commit"
-        data = {'user': list(NgUser.objects.all().filter(user_type="FELLOW", user__username__icontains= query).values('user__username', 'id', 'facility__name'))}
+        data = {'users': list(NgUser.objects.all().filter(user_type="FELLOW", user__username__icontains= query).values('user__username', 'id', 'facility__name'))}
         return JsonResponse(data)
     return render(request, 'searchuser.html')
+
+
+@login_required
+@user_passes_test(is_super_admin, login_url='/access_denied/')
+def make_admin(request):
+    if request.method == 'GET' and request.is_ajax():
+        #send data by getting the facility value
+        facility = request.GET.get('facility')
+        print facility
+        data = {'users': list(NgUser.objects.all().filter(user_type="FELLOW",facility__id= facility).values('user__username', 'id',))}
+        return JsonResponse(data)
+    elif request.method == 'POST':
+        #Add it to be admin
+        fellow_id = request.POST.get('fellow',None)
+        fellow = get_object_or_404(NgUser, pk=fellow_id)
+        fellow.user_type='ADMIN'
+        fellow.save()
+        return redirect('home')
+    #render the Page
+    facilities = Facility.objects.all()
+    return render(request, 'makeadmin.html',{'facilities':facilities})
