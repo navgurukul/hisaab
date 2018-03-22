@@ -33,15 +33,16 @@
 		    </div>
 			<div class="col-md-12">
 			    <h2 class="text-center">Pending Request</h2>
+			    <div class="col-md-1"></div>
 			    {% for request in money_requests %}
 				    	{% if request.is_money_request %}
-					    <div class="col-md-12 green">
+					    <div class="col-md-10 green">
 					       <h3>₹{{ request.amount }} for NG Day to Day Expenses</h3>
 					       <p>for {{ request.facility.name }} Facility by {{ request.money_requested_by.user.first_name }} {{ request.money_requested_by.user.last_name }}</p>
 					       <a class="pull-right underline" href="{% url 'viewpendingrequest' pk=request.id %}">View Request</a>
 					    </div>
 					    {% else %}
-					    <div class="col-md-12 green">
+					    <div class="col-md-10 green">
 					       <h3>₹{{ request.amount }} for {{request.type_of_bill }} Bill Payment</h3>
 					       <p>for {{ request.facility.name }} Facility by {{ request.money_requested_by.user.first_name }} {{ request.money_requested_by.user.last_name }}</p>
 					       <a class="pull-right underline" href="{% url 'viewpendingrequest' pk=request.id %}">View Request</a>
@@ -51,6 +52,8 @@
 			    <div style="margin-top: 20px; margin-bottom: 20px;" class="col-md-12">
 			        <div class="col-md-1">
 			        </div>
+					<div class="col-md-1">
+					</div>
 					<div class="col-md-1">
 					</div>
 					<div class="col-md-1">

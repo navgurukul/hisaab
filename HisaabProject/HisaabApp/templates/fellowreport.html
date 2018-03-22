@@ -12,7 +12,7 @@
     </div>
 <div class="div-container">
     <div class="col-md-3">
-      <h3><b>Money Owned to NG:</b> ₹{{ user.nguser.total_weekly_expenses }}</h3>
+      <h3><b>Money Owned to NG:</b> ₹{{ fellow.total_weekly_expenses }}</h3>
     </div>
     <form method="POST" action="{% url 'fellowreport' pk=fellow.pk %}">
       {% csrf_token %}
