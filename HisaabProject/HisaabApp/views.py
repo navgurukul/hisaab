@@ -54,12 +54,7 @@ def home(request):
     return render(request, 'fellow.html',{'money_requests':money_requests})
 
 
-<<<<<<< HEAD
-# @login_urlrequired
-=======
-# @user_passes_test(is_admin , login_url='/access_denied/')
-@login_required
->>>>>>> refs/remotes/origin/master
+
 @user_passes_test(is_super_admin, login_url='/access_denied/')
 def add_facility(request):
     if request.method =='POST':
