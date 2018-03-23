@@ -11,17 +11,17 @@
 		                <div class="col-md-12 wrap">Money Transfer Request of ₹ {{ money_request.amount }} for {{ money_request.description }} by you have been approve by {{ money_request.approve_or_rejected_by }}!
 		                </div>
 		             </div>
-	            {% elif money_request.is_approve and money_request.is_utility_request %} 
+	            {% elif money_request.is_approve and money_request.is_utility_request %}
 		            <div class="row">
 		                <div class="col-md-12 wrap">Bill Payment Request for {{ money_request.type_of_bill }} of ₹ {{ money_request.amount }} have been approve by {{ money_request.approve_or_rejected_by }}!
 		                </div>
 		            </div>
-		        {% elif not money_request.is_approve and money_request.is_money_request %} 
+		        {% elif not money_request.is_approve and money_request.is_money_request %}
 		            <div class="row">
 		                <div class="col-md-12 wrap">Money Transfer Request for ₹ {{ money_request.amount }} has been rejected by {{ money_request.approve_or_rejected_by }}! Reason was {{ money_request.reason_for_reject }}.
 		                </div>
 		            </div>
-		        {% elif not money_request.is_approve and money_request.is_utility_request %} 
+		        {% elif not money_request.is_approve and money_request.is_utility_request %}
 		            <div class="row">
 		                <div class="col-md-12 wrap">Bill Payment Request for Water of ₹ {{ money_request.amount }} have been rejected by {{ money_request.approve_or_rejected_by }}! Reason was {{ money_request.reason_for_reject }}.
 		                </div>
@@ -79,20 +79,12 @@
 	<div class="col-md-1"></div>
 </div>
 
-<<<<<<< HEAD
-					<div class="row-fluid " style="margin-top:3% !important;">
-					    <div class="col-md-1"></div>
-					    <div class="col-md-5 child">
-					      <div class="col-md-12">
-					        <a href="{% url 'addexpense' %}"><button type="button" class="btn btn-danger btn-block"><i class="fa fa-money-bill-alt fa-lg "></i>
-=======
 <style type="text/css">
 .green{
 background-color: #5cb85c;
 margin-top: 3%;
 color: white;
 padding: 4px;
->>>>>>> 75dd64adba870d87287187e92a0f14d1e5bef0dd
 
 }
 
@@ -132,7 +124,7 @@ p{
 color: white;
 }
 .wrap{
-	white-space: pre-wrap;  
+	white-space: pre-wrap;
 	word-wrap: break-word;
 	padding-top: 0 !important;
 }
@@ -144,7 +136,7 @@ margin-bottom: 25px;
 margin-top:-4% !important;
 }
 .dropdown-menu{
-	
+
     min-height: 60vh;
     max-height: 80vh;
     overflow-y: scroll;
