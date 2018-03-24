@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
 
+#Project Routes to connect all the app
 urlpatterns = [
     url(r'^', include('HisaabApp.urls')),
     url(r'^account/', include('social_django.urls' ,namespace='social')),
