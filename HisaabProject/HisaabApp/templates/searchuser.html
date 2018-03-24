@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+s{% extends 'base.html' %}
 {% block content %}
 	<div class="row">
 	    <div class="col-md-1">
@@ -38,10 +38,10 @@
 							
 							<input  type="text" placeholder="Which student expense do you want to see?" id="search" class="form-control" autofocus>
 						</div>
-					</div>
 						<div class="bet-fluid" id="results" style="overflow: scroll; height: 50%;">
 
 						</div>
+					</div>
 				
 				</div>
 				<div class="col-md-2"></div>
@@ -67,9 +67,9 @@
             	console.log(data)
 
             	if (data){
-            		for (var i = data.user.length - 1; i >= 0; i--) {
-            			console.log(data.user[i])
-		                $('#results').append('<a href="/fellowreport/'+ data.user[i].id +'"><li class="list">' + data.user[i].user__username +'</li></a>')
+            		for (var i = data.users.length - 1; i >= 0; i--) {
+            			console.log(data.users[i])
+		                $('#results').append('<a href="/fellowreport/'+ data.users[i].id +'"><li class="list">' + data.users[i].user__username +'<span class="pull-right"> from '+data.users[i].facility__name+'</span></li></a>')
 		          		 }
             		}
             	}
@@ -88,14 +88,13 @@
 	font-family: sans-serif;
 	width: 95%;
 }
-
   #top-button{
     margin-bottom: 5%;
   }
 .list{
 	color: black;
-	box-shadow: 3px 4px #999;
-	font-size: 20px;
+	box-shadow: 1px 2px #999;
+	font-size: 15px;
 	font-weight: 700;
 	padding: 5px 3%;
 	margin-right: 10%;
@@ -107,8 +106,8 @@
 	cursor: pointer;
 	background-color: #f2f2f2;
 }
-#res{
-	width: 100vh;
+#results{
+	width: 100%;
 }
 .btn-block{
 padding: 6%;
@@ -144,6 +143,9 @@ font-weight: 700;
     width: 90% !important;
     margin-left: 6%;
 
+  }
+  .list{
+  	font-size: 10px;
   }
 }
 a:hover{

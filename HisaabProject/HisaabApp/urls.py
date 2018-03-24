@@ -6,7 +6,7 @@ from . import views
 urlpatterns = [
     url(r'^$', views.home,name='home'),
     url(r'^account/logout/$', logout,{'next_page':'/'}, name='logout',),
-    url(r'^addfacility$', views.add_facility, name='add_facility',),
+    url(r'^addfacility$', views.add_facility, name='addfacility',),
     url(r'^moneyrequest/$', views.moneytransferrequest, name='moneyrequest'),
     url(r'^utilityrequest/$', views.utilitybillrequest, name='utilityrequest'),
     url(r'^access_denied/$', views.access_denied, name='access_denied'),
@@ -19,6 +19,7 @@ urlpatterns = [
     url(r'^searchfellow/$', views.searchfellow,  name='searchfellow'),
     url(r'^viewpendingrequest/(?P<pk>\d+)$', views.viewpendingrequest,  name='viewpendingrequest'),
     url(r'^detailrequest/(?P<pk>\d+)$', views.detailrequest,  name='detailrequest'),
+    url(r'^makeadmin/$', views.make_admin,  name='make_admin'),
 
 
 ]

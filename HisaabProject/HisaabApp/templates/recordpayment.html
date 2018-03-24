@@ -13,7 +13,7 @@
                 </div>
                 <div class="baby_cont1">
                   <select name='facility' class="selectpicker">
-                    <option> Which facility you are paying this amount to?</option>
+                    <option value=""> Which facility you are paying this amount to?</option>
                   {% for values, name in form.fields.facility.choices %}
                     <option value='{{ values }}' >{{ name }}</option>
                   {% endfor %}

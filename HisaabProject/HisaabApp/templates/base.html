@@ -9,7 +9,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
- <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+<!--  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
  <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
 
 
@@ -26,7 +26,7 @@
                 document.getElementById("mySidenav").style.width = "250px";
                 document.getElementById("main").style.marginLeft = "250px";
                 document.getElementById("open").style.display= 'none';
-                document.body.style.backgroundColor = "#ddd";
+                document.body.style.backgroundColor = "#aaa";
                 document.body.style.marginTop = '42px'
 
             }
@@ -44,24 +44,30 @@
             <div class='body'>
                 <div id="mySidenav" class="sidenav">
                   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                  <a href="{% url 'home' %}">Home</a>
-                  <a href="{% url 'addexpense' %}">Add Expense</a>
-                  <a href="{% url 'addfacility' %}">Add Facility</a>
-
+                  <a href="{% url 'home' %}"><i class="fas fa-home"></i>  &nbsp;&nbsp;Home</a>
+                  <a href="{% url 'addexpense' %}"><i class="fas fa-money-bill-alt"></i>&nbsp;&nbsp;Add Expense</a>
 
                   {% if user.nguser.is_fellow %}
-                    <a href="{% url 'moneyrequest' %}">Transfer Request</a>
-                    <a href="{% url 'utilityrequest' %}">Utility Bill Request</a>
-                    <a href="{% url 'facilityreport' pk=user.nguser.facility.pk %}">Facility Report</a>
+                    <a href="{% url 'moneyrequest' %}"><i class="fa fa-angle-double-down"></i>&nbsp;&nbsp;&nbsp;  Request Transfer</a>
+                    <a href="{% url 'utilityrequest' %}"><span class="glyphicon lg">&#xe177;</span>&nbsp;&nbsp;&nbsp;Utility Bill Request</a>
+                    <a href="{% url 'facilityreport' pk=user.nguser.facility.pk %}"><span class="glyphicon lg">&#xe105;</span>&nbsp;&nbsp;&nbsp;Facility Report</a>
+                 
+                  
                   {% else %}
-                    <a href="{% url 'searchfellow' %}">Student Level Expense</a>
-                    <a href="{% url 'recordpayment' %}">Record Payment</a>
+                    <a href="{% url 'searchfellow' %}"><i class="fa fa-user-plus "></i>&nbsp;&nbsp;&nbsp;Student Level Expense</a>
+                    <a href="{% url 'recordpayment' %}"><i class="fa fa-angle-double-up"></i>&nbsp;&nbsp;&nbsp; Record Payment</a>
                   {% endif %}
 
+                  {% if user.nguser.is_super_admin %}
+                  <a href="{% url 'addfacility' %}"><i class="fas fa-home"></i>&nbsp;&nbsp;&nbsp;Add Facility</a>
+                  <a href="{% url 'make_admin' %}"><i class="fas fa-user-plus"></i>  Make New Admins</a>
+                  {% endif %}
+
+
                   <!-- <a href="#">About</a> -->
-                  <a href="http://navgurukul.org/#contact">Contact</a>
+                  <a href="http://navgurukul.org/#contact"><i class="fa fa-phone" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Contact</a>
                   <!-- <a href="#">Help</a> -->
-                  <a href="{% url 'logout' %}">Logout</a>
+                  <a href="{% url 'logout' %}"><i class="fa fa-sign-out-alt"></i>&nbsp;&nbsp;&nbsp;Logout</a>
               </div>
             <div id="main">
               <span id='open' style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
@@ -76,11 +82,17 @@
 
 </body>
     <style type="text/css">
+      body{
+        background-color: #eee;
+        margin-bottom: 5%;
+      }
       .body {
           font-family: "Lato", sans-serif;
           transition: background-color .5s;
-          /*width: 95%;*/
             
+      }
+      .lg{
+        font-size: 20px;
       }
       .main{
           margin-top: -5%;
@@ -93,23 +105,18 @@
           z-index: 1;
           top: 0;
           left: 0;
-          background-color:  rgba(0, 0 ,0, 0.9);
+          background-color:  rgba(255, 255 ,255, 1);
           overflow-x: hidden;
-          transition: 0.5s;
+          transition: 0.6s;
           padding-top: 60px;
       }
 
       .sidenav a {
           padding: 8px 8px 8px 32px;
           text-decoration: none;
-          font-size: 25px;
-          color: white;
+          font-size: 20px;
+          color: black;
           display: block;
-          transition: 0.3s;
-      }
-
-      .sidenav a:hover {
-          color: #666;
       }
 
       .sidenav .closebtn {
@@ -124,9 +131,9 @@
           padding: 16px;
       }
 
-      @media screen and (max-height: 450px) {
+      @media only screen and (max-width: 450px) {
         .sidenav {padding-top: 15px;}
-        .sidenav a {font-size: 18px;}
+        .sidenav a {font-size: 17px !important;}
       }
 
     </style>
