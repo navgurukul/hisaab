@@ -26,11 +26,11 @@ SECRET_KEY = 'hh9zq5e04p3-*jfkbbk$ttm7cwgee(r6^radkiq6o9@=x7hj)v'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+#Host to be Deploy in
 ALLOWED_HOSTS = []
 
 
 # Application definition
-
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -43,14 +43,16 @@ INSTALLED_APPS = [
 
 ]
 
-#Some other dependencies
+#User data handling backends
 AUTHENTICATION_BACKENDS = (
  'social_core.backends.open_id.OpenIdAuth',
  'social_core.backends.google.GoogleOpenId',
  'social_core.backends.google.GoogleOAuth2',
  'django.contrib.auth.backends.ModelBackend',
 )
+
 SOCIAL_AUTH_URL_NAMESPACE = 'social'
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -64,6 +66,8 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'HisaabProject.urls'
 
+
+#Handling the templates
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -82,6 +86,7 @@ TEMPLATES = [
     },
 ]
 
+#Pipeline to handle signin
 SOCIAL_AUTH_PIPELINE = (
         'social.pipeline.social_auth.social_details',
         'social.pipeline.social_auth.social_uid',
@@ -103,14 +108,14 @@ SOCIAL_AUTH_PIPELINE = (
 
 WSGI_APPLICATION = 'HisaabProject.wsgi.application'
 
-# SOCIAL_AUTH_PROFILE_MODULE = 'HisaabApp.models.NgUser'
 AUTH_PROFILE_MODULE = 'HisaabApp.models.NgUser'
 
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
+#Session fields for during pipeline
 SOCIAL_AUTH_FIELDS_STORED_IN_SESSION = ['facility',]
-SESSION_COOKIE_SECURE = False
+
 
 DATABASES = {
     'default': {

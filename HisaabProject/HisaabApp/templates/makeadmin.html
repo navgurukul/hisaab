@@ -40,7 +40,9 @@
   function showFellow(value) {
       var result = $('#fellow')
       result.empty().append('<option value="">Which user do you want to make admin?</option>');
-
+      if (value == ''){
+        return false
+      }
       console.log(value);
       $.ajax({
                 type: 'GET',
