@@ -3,6 +3,6 @@ db.sqlite3
 *.sql
 __pycache__
 /migrations
-viratualenviroment
-staticfiles
+/viratualenviroment
+/staticfiles
 
