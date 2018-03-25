@@ -1,54 +1,61 @@
 {% extends 'base.html' %}
 {% block content %}
 
+ <!-- *******************************form for create new admin***************************************************-->
 <form method="POST">
-  {% csrf_token %}    
+  <!-- token for security purpose in the form -->
+  {% csrf_token %}
+
   <div class="main_container">
     <div class="baby_container0">
       <center><h1>Make <b>Admin</b></h1></center>
-      
-      <div id="">     
-        <div id="clonebaby" class="baby_container">
+      <div id="clonebaby" class="baby_container">
           <div class="baby_cont1">
+            <!-- select the facility field  -->
             <select name='facility' id="id_facility" onchange="showFellow(this.value)" class=" form-control" required>
                 <option value="">Select a facility to find the user!</option>
-                 
                 {% for facilty in facilities %}
                   <option value='{{ facilty.id }}'>{{ facilty.name }}</option>
                 {% endfor %}
             </select>
             <div class="baby_cont1">
+              <!-- select the fellow fields -->
             <select name='fellow' id='fellow' class="form-control" required>
                   <option>Which user do you want to make admin?</option>
-                  
-                    
-            </select>
+                </select>
           </div>
         </div>
+        <!-- for cancel the make admin  -->
         <a href="{% url 'home' %}">
             <button id="btnbottom" type="button" class="btn btn-default pull-left">Cancel</button>
         </a>
+        <!--  for Submit details of  new admin  -->
         <button id="btnbottom" type="submit" class="btn btn-success pull-right">Save My Details ></button>
       </div>
-    </div>          
+    </div>
   </div>
 </form>
+<!-- ***************************************************************************************************** -->
 
 
 
 <script type="text/javascript">
+// function for getting all the user from a specific facility
   function showFellow(value) {
       var result = $('#fellow')
       result.empty().append('<option value="">Which user do you want to make admin?</option>');
-
+      if (value == ''){
+        return false
+      }
       console.log(value);
+
       $.ajax({
                 type: 'GET',
                 url: "{% url 'make_admin' %}",
                 data: {facility:value},
                 success: function(data) {
                   console.log(data)
-                  
+
                   if (data){
 
                     for (var i = data.users.length - 1; i >= 0; i--) {
@@ -60,7 +67,6 @@
             });
 };
 </script>
-
 
 <style type="text/css">
   body{
@@ -88,12 +94,12 @@
 }
 @media only screen and (max-width: 450px) {
   form{
-    margin-top:-30%; 
+    margin-top:-30%;
   }
 }
 @media only screen and (min-width: 450px) {
   form{
-    margin-top:-10%; 
+    margin-top:-10%;
   }
 }
 </style>

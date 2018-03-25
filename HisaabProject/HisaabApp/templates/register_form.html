@@ -1,14 +1,17 @@
+<!-- Template to get the facility of the user when he signup for first timwe -->
+
 {% extends 'base.html' %}
 {% block content %}
 
+<!-- Form to get the facility -->
 <form method="POST">
 	{% csrf_token %}    
 	<div class="main_container">
 		<div class="baby_container0">
 			<center><h1>Choose your <b>Facility</b></h1></center>
-			
 			<div id="main">			
 				<div id="clonebaby" class="baby_container">
+					<!-- facility field -->
 					<div class="baby_cont1">
 					 	<select name='facility' class="selectpicker" required>
 		                    <option>In which Facility are you joining up buddy?</option>
@@ -18,11 +21,13 @@
                  		 </select>
 					</div>
 				</div>
+				<!-- button field -->
 				<button id="btnbottom" type="submit" class="btn btn-success pull-right">Save My Details ></button>
 			</div>
 		</div>          
 	</div>
 </form>
+
 <style type="text/css">
 	body{
 	background-color:	 #eee;
