@@ -1,135 +1,151 @@
+<!-- Fellow Report Page -->
+
 {%extends 'base.html'%}
 {% block content %}
 <div class="container ">
-<div class="main-container">
-    <div class="col-md-12 col-sm-12">
-        <center>
-          <h2><b>Detailed Report</b> </h2> 
-          <h4 style="margin-left: 8%; margin-top:0px;">of 
-            <b>{{ fellow.user.first_name }}  {{ fellow.user.last_name }}</b>
-          </h4>
-        </center>
-    </div>
-<div class="div-container">
-    <div class="col-md-3">
-      <h3><b>Money Owned to NG:</b> ₹{{ fellow.total_weekly_expenses }}</h3>
-    </div>
-    <form method="POST" action="{% url 'fellowreport' pk=fellow.pk %}">
-      {% csrf_token %}
-      <div class="col-md-2 start-date">
-        <p>Starting Date</p>
-      </div>
-      <div class="col-md-2">
-          <div class="form-group">
-            <input class="form-control" id="date" name="start_date" placeholder="MM/DD/YYYY" type="date" required/>
-          </div>
-      </div>
-      <div class="col-md-2 end-date">
-        <p>End Date</p>
-      </div>
-      <div class="col-md-2">
-          <div class="form-group"> <!-- Date input -->
-            <input class="form-control" id="date" name="end_date" placeholder="MM/DD/YYYY" type="date" required/>
-          </div>
-      </div>
-    </div>
-  </div>
-  <div class="col-md-12">
-    <div class="col-md-3"></div>
-    <div class="col-md-3 margin-top border">
-        <button id="btnbottom" type="submit" name="payment" class="btn">Payment</button>
-        <button id="btnbottom" type="submit" name="expense" class="btn">Expenses</button>
-    </div>
-      <div style="display: flex;" class="col-md-5" id="p">
-        <div class="col-md-6 Checkbox1">
-          <div class="Checkbox">
-              <input type="checkbox" name="categories" value="EGGS"> Eggs
-          </div>
-          <div class="Checkbox">
-              <input type="checkbox" name="categories" value="MILK"> Milk
-          </div>
-          <div class="Checkbox">
-              <input type="checkbox" name="categories" value="TECH EXPENCE"> Tech Expence
-          </div>
-          <div class="Checkbox">
-              <input type="checkbox" name="categories" value="OTHER"> Other
-          </div>
+        <!-- Fellow Report heading -->
+        <div class="col-md-12 col-sm-12">
+            <center>
+                <h2><b>Detailed Report</b> </h2> 
+                <h4 style="margin-left: 8%; margin-top:0px;">of 
+                  <b>{{ fellow.user.first_name }}  {{ fellow.user.last_name }}</b>
+                </h4>
+            </center>
         </div>
-        <div class="col-md-6 Checkbox1">
-          <div class="Checkbox">
-            <input type="checkbox" name="categories" value="VEGETABLES"> Vegetables
-          </div>
-          <div class="Checkbox">
-            <input type="checkbox" name="categories" value="GROCERIES"> Groceries
-          </div>
-          <div class="Checkbox">
-            <input type="checkbox" name="categories" value="HOUSEHOLD">Household Items
-          </div>
-          <div class="Checkbox">
-            <input type="checkbox" name="categories" value="TRAVEL"> Travel
-          </div>
+
+        <!-- Money remian to provie back To Navgurukul -->
+        <div class="col-md-3">
+            <h3><b>Money Owned to NG:</b> ₹{{ fellow.total_weekly_expenses }}</h3>
         </div>
-    </div>
-    </div>
 
-  </form>
-</div>
+        <!-- Form to Filter the data -->
+        <form method="POST" action="{% url 'fellowreport' pk=fellow.pk %}">
+            {% csrf_token %}
+            <!-- Start Date  -->
+            <div class="col-md-2 start-date">
+                <p>Starting Date</p>
+                </div>
+            <div class="col-md-2">
+                <div class="form-group">
+                  <input class="form-control" id="date" name="start_date" placeholder="MM/DD/YYYY" type="date"      required/>
+                </div>
+            </div>
+            <!-- End Date -->
+            <div class="col-md-2 end-date">
+                <p>End Date</p>
+            </div>
+            <div class="col-md-2">
+                <div class="form-group"> <!-- Date input -->
+                    <input class="form-control" id="date" name="end_date" placeholder="MM/DD/YYYY" type="date" required/>
+                </div>
+            </div>
 
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12 col-md-12">
-      <div class="table-responsive">
-        <hr>
-       {% if entries %}
-        <table class="table table-condensed table-striped" id="complainttable" >
-          {% if not payment %}
-           <thead>
-               <tr>
-                   <th class="col-sm-2 col-md-2">Name</th>
-                   <th class="col-sm-2 col-md-2">Expense Amount</th>
-                   <th class="col-sm-2 col-md-2">Category</th>
-                   <th class="col-sm-2 col-md-2">Date</th>
-                   <th class="col-sm-4 col-md-4">Description</th>
-               </tr>
-           </thead>
-           <tbody>
-               {% for entry in entries %}
-                   <tr>
-                       <td>{{ entry.fellow }}</td>
-                       <td>{{ entry.expense_amount }}</td>
-                       <td>{{ entry.category }}</td>
-                       <td>{{ entry.created_date }}</td>
-                       <td>{{ entry.description }}</td>
-                   </tr>
-               {% endfor %}
-           </tbody>
-         {% else %}
-           <thead>
-           <tr>
-               <th class="col-sm-3 col-md-3">Name</th>
-               <th class="col-sm-3 col-md-3">Payment Amount</th>
-               <th class="col-sm-3 col-md-3">Date</th>
-               <th class="col-sm-3 col-md-3">Description</th>
-           </tr>
-           </thead>
-           <tbody>
-             {% for entry in entries %}
-                 <tr>
-                     <td>{{ entry.fellow }}</td>
-                     <td>{{ entry.payment_amount }}</td>
-                     <td>{{ entry.created_date }}</td>
-                     <td>{{ entry.description }}</td>
-                 </tr>
-             {% endfor %}
-           </tbody>
-           {% endif %}
-        </table>
-        {% else %}
-              <tr><h3 class="text text-danger">Sorry there's nothing to show you!</h3></tr>
-        {% endif %}
+            <div class="col-md-12">
+                <div class="col-md-3"></div>
+                <!-- Buttons for Filtering the Cash entry type Payment or Expense -->
+                <div class="col-md-3 margin-top border">
+                    <button id="btnbottom" type="submit" name="payment" class="btn">Payment</button>
+                    <button id="btnbottom" type="submit" name="expense" class="btn">Expenses</button>
+                </div>
+                <div style="display: flex;" class="col-md-5" id="p">
+                <!-- Categories of expenses -->
+                    <!-- col 1 -->
+                    <div class="col-md-6 Checkbox1">
+                        <div class="Checkbox">
+                            <input type="checkbox" name="categories" value="EGGS"> Eggs
+                        </div>
+                        <div class="Checkbox">
+                            <input type="checkbox" name="categories" value="MILK"> Milk
+                        </div>
+                        <div class="Checkbox">
+                            <input type="checkbox" name="categories" value="TECH EXPENCE"> Tech Expence
+                        </div>
+                        <div class="Checkbox">
+                            <input type="checkbox" name="categories" value="OTHER"> Other
+                        </div>
+                    </div>
+                    <!-- col-2 -->
+                    <div class="col-md-6 Checkbox1">
+                        <div class="Checkbox">
+                            <input type="checkbox" name="categories" value="VEGETABLES"> Vegetables
+                        </div>
+                        <div class="Checkbox">
+                            <input type="checkbox" name="categories" value="GROCERIES"> Groceries
+                        </div>
+                        <div class="Checkbox">
+                            <input type="checkbox" name="categories" value="HOUSEHOLD">Household Items
+                        </div>
+                        <div class="Checkbox">
+                            <input type="checkbox" name="categories" value="TRAVEL"> Travel
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </form>
+      <!-- Data to be shown here-->
+      <div class="row">
+          <div class="col-xs-12 col-md-12">
+          <div class="table-responsive">
+              {% if entries %}
+                  <!-- Data to be shown for expense entries -->
+                  <table class="table table-condensed table-striped" id="complainttable" >
+                      {% if not payment %}
+                          <thead>
+                              <!-- Column Heading -->
+
+                              <tr>
+                                  <th class="col-sm-2 col-md-2">Name</th>
+                                  <th class="col-sm-2 col-md-2">Expense Amount</th>
+                                  <th class="col-sm-2 col-md-2">Category</th>
+                                  <th class="col-sm-2 col-md-2">Date</th>
+                                  <th class="col-sm-4 col-md-4">Description</th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                              <!-- Columns data to be shown here -->
+
+                              {% for entry in entries %}
+                                  <tr>
+                                  <td>{{ entry.fellow }}</td>
+                                  <td>{{ entry.expense_amount }}</td>
+                                  <td>{{ entry.category }}</td>
+                                  <td>{{ entry.created_date }}</td>
+                                  <td>{{ entry.description }}</td>
+                                  </tr>
+                              {% endfor %}
+                          </tbody>
+                      {% else %}
+                          <thead>
+                              <!-- Column Heading -->
+                              <tr>
+                                  <th class="col-sm-3 col-md-3">Name</th>
+                                  <th class="col-sm-3 col-md-3">Payment Amount</th>
+                                  <th class="col-sm-3 col-md-3">Date</th>
+                                  <th class="col-sm-3 col-md-3">Description</th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                              <!-- Columns data to be shown here -->
+
+                              {% for entry in entries %}
+                                  <tr>
+                                      <td>{{ entry.fellow }}</td>
+                                      <td>{{ entry.payment_amount }}</td>
+                                      <td>{{ entry.created_date }}</td>
+                                      <td>{{ entry.description }}</td>
+                                  </tr>
+                              {% endfor %}
+                          </tbody>
+                      {% endif %}
+                  </table>
+              <!-- Displayed when there is not data to shiw -->
+              {% else %}
+                  <tr><h3 class="text text-danger">Sorry there's nothing to show you!</h3></tr>
+              {% endif %}
+          </div>
+          </div>
       </div>
-    </div>
-  </div>
 </div>
 
 <style type="text/css">
