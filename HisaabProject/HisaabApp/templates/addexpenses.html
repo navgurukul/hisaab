@@ -13,7 +13,7 @@
 					<div id="clonebaby" class="baby_container">
 						<div class="baby_cont1">
 							<select name='expense_type' class="selectpicker" required>
-							  <option>What kind of an expense is this?</option>
+							  <option value="">What kind of an expense is this?</option>
 							  {% for value, type_name in form.fields.expense_type.choices %}
 							  	<option value='{{ value }}' >{{ type_name }}</option>
 							  {% endfor %}
@@ -21,11 +21,17 @@
 						</div>
 
 						<div class="baby_cont1">
-							<select name ='facility' class="selectpicker" required>
+							{% if user.nguser.is_admin or user.nguser.is_super_admin %}
+
+								<select name ='facility' onchange="showFellow(this.value);" class="selectpicker" required>
+							{% else %}
+								<select name ='facility' class="selectpicker" required>
+					  		{% endif %}
 							  <!-- The facility of the student will be auto selected -->
 							  {% for value, facility_name in form.fields.facility.choices %}
 							  		<option value='{{ value }}' {% if value == user.nguser.facility.id %} selected {% endif %}> {{ facility_name }} </option>
 							  {% endfor %}
+
 							</select>
 
 						</div>
@@ -43,18 +49,18 @@
 								</div>
 							</div>
 						</div>
-						<div class="baby_cont1">
-							<select name="fellow" required class="selectpicker">
-							  <option>Who made the expense?</option>
-  									{% for value, name in form.fields.fellow.choices %}
-							  			<option value='{{ value }}' >{{ name }}</option>
-							  		{% endfor %}
-							</select>
 
-						</div>
 						<div class="baby_cont1">
-							<select  name="category" required class="selectpicker">
-								<option>Category</option>
+							<select name="fellow" id='fellow' required class="selectpicker">
+							  <option value="">Who made the expense?</option>
+							 	  	{% for value, name in form.fields.fellow.choices %}
+								  			<option value='{{ value }}' >{{ name }}</option>
+								  	{% endfor %}
+							</select>
+							</div>
+						<div class="baby_cont1">
+							<select  name="category"  required class="selectpicker">
+								<option value="">Category</option>
  								{% for value, name in form.fields.category.choices %}
 								<option value='{{ value }}' >{{ name }}</option>
 							  {% endfor %}
@@ -93,6 +99,27 @@
       };
       date_input.datepicker(options);
     })
+
+  	function showFellow(value) {
+		var result = $('#fellow')
+		result.empty().append('<option value="">Who made the expense?</option>');
+		console.log(value);
+		$.ajax({
+                type: 'GET',
+                url: "{% url 'addexpense' %}",
+                data: {facility:value},
+                success: function(data) {
+                    console.log(data)
+                  
+                 	if (data){
+	                    for (var i = data.users.length - 1; i >= 0; i--) {
+	                      console.log(data.users[i])
+	                        result.append('<option value="'+data.users[i].id +'" >'+ data.users[i].user__username+'</option>')
+	                        }
+                    }
+                }
+            });
+	};
 </script>
 {% endblock javascript %}
 

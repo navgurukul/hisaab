@@ -7,9 +7,11 @@ def add_facility(strategy,	backend, user,request, *args, **kwargs):
 	# print request.session
 	if backend.name == 'google-oauth2':
 		new_user = kwargs['is_new']
+		uid = kwargs['uid']
+		super_admin_list=['a@navgurukul.org', 'r@navgurukul.org','amar17@navgurukul.org',]
 		strategy.session_set('is_new', new_user)
 		has_facility = strategy.session_get('facility', None)
-		if new_user and not has_facility:
+		if new_user and not has_facility and not uid in super_admin_list:
 			return redirect('register')
 
 	return
@@ -20,7 +22,7 @@ def save_profile(strategy, backend, user, request, *args, **kwargs):
 	if user and backend.name == 'google-oauth2':
 		new_user = kwargs['is_new']
 		uid = kwargs['uid']
-		super_admin_list=['a@navgurukul.org', 'r@navgurukul.org']
+		super_admin_list=['a@navgurukul.org', 'r@navgurukul.org','amar17@navgurukul.org',]
 		if new_user and uid in super_admin_list:
 			nguser = NgUser(user = user, user_type='SUPER_ADMIN')
 			nguser.save()

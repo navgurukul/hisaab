@@ -2,11 +2,8 @@
 {% block content %}
 	 <div class="dropdown pull-right" style="margin-right: 10%; ">
        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fas fa-bell fa-lg"></i></a>
-<<<<<<< HEAD
-       <ul class="dropdown-menu">
-=======
+
        <ul class="dropdown-menu" style="padding: 20px;">
->>>>>>> refs/remotes/origin/master
        	{% for money_request in money_requests %}
           	<a class='bg' href="{% url 'detailrequest' pk=money_request.id %}">
           		<li>
@@ -68,35 +65,42 @@
 		<div>
 			<h2 style="margin-top: 40px !important;" class="hadding2">{{ user.nguser.facility.name }} Facility Status</h2>
 		</div>
+		{% if user.nguser.in_weekly_limit %}
 		<div class="col-md-12 green">
 			<h3>₹ {{ user.nguser.last_week_facility_expenses }} spent in the last week</h3>
 			<p>you are within the ₹{{ user.nguser.facility.student_expenses_limit }}/month limit of your facility. wohoo!</p>
 		</div>
+		{% else %}
+		<div class="col-md-12 green">
+			<h3>₹ {{ user.nguser.last_week_facility_expenses }} spent in the last week</h3>
+			<p>you have execeeded the ₹{{ user.nguser.facility.student_expenses_limit }}/month limit of your facility by ₹{{ user.nguser.week_limit_exceed_by }} per student. start saving up buddy :)</p>
+		</div>
+		{% endif %}
+
+		{% if user.nguser.in_monthly_limit %}
 		<div class="col-md-12 green">
 			<h3>₹ {{ user.nguser.last_month_facility_expense }} spent in the last month</h3>
-			<p>you have execeeded the ₹{{ user.nguser.facility.student_expenses_limit }}/month limit of your facility by ₹500 per student. start saving up buddy :)</p>
+			<p>you are within the ₹{{ user.nguser.facility.student_expenses_limit }}/month limit of your facility. wohoo!</p>
 		</div>
+		{% else %}
+		<div class="col-md-12 green">
+			<h3>₹ {{ user.nguser.last_month_facility_expense }} spent in the last month</h3>
+			<p>you have execeeded the ₹{{ user.nguser.facility.student_expenses_limit }}/month limit of your facility by ₹{{ user.nguser.month_limit_exceed_by }} per student. start saving up buddy :)</p>
+		</div>
+		{% endif %}
+
 		<div class="pull-right footer">
 			<a href="{% url 'facilityreport' pk=user.nguser.facility.id %}">View Detailed Facility Reports ></a>
 		</div>
 	</div>
 	<div class="col-md-1"></div>
 </div>
-
-<<<<<<< HEAD
-					<div class="row-fluid " style="margin-top:3% !important;">
-					    <div class="col-md-1"></div>
-					    <div class="col-md-5 child">
-					      <div class="col-md-12">
-					        <a href="{% url 'addexpense' %}"><button type="button" class="btn btn-danger btn-block"><i class="fa fa-money-bill-alt fa-lg "></i>
-=======
 <style type="text/css">
 .green{
 background-color: #5cb85c;
 margin-top: 3%;
 color: white;
 padding: 4px;
->>>>>>> 75dd64adba870d87287187e92a0f14d1e5bef0dd
 
 }
 .bg{
@@ -115,7 +119,7 @@ a{
 
 }
 a:hover{
-	color:#000;
+	color: :#000;
 	/*background-color: #eee !important;*/
 }
 h3{
@@ -165,27 +169,17 @@ margin-top:-4% !important;
 		min-width: 300px !important;
 	}
 }
-<<<<<<< HEAD
-@media only screen and (min-width: 450px) {
-=======
+
 @media screen and (min-width: 450px ){
->>>>>>> refs/remotes/origin/master
+
 	.dropdown-menu{
 		min-width: 400px !important;
 	}
 }
-<<<<<<< HEAD
 @media only screen and (min-width: 600px) {
-=======
-@media screen and (min-width: 600px ){
->>>>>>> refs/remotes/origin/master
-	.dropdown-menu{
+
 		min-width: 500px !important;
 	}
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> refs/remotes/origin/master
 </style>
 {% endblock %}

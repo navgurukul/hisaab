@@ -92,7 +92,7 @@ class AddExpenseForm(forms.ModelForm):
     EXPENSETYPE = (("FACILITY",'Navgurukul'),('PERSONAL','Personal'))
     CATEGORY =(('TRAVEL','Travel Expense'),('GROCERIES','Groceries'),('VEGETABLES','Vegetables'), ('HOUSEHOLD','HouseholdItems'),('EGG','Egg'),('MILK','Milk & Bread'),('TECH EXPENCE','Tech Expenses'),('OTHER','Other'))
     facility = forms.ModelChoiceField(queryset = Facility.objects.all(), widget=forms.Select(attrs={'class': 'form-control form-control-sm'}))
-    fellow = forms.ModelChoiceField(queryset = NgUser.objects.all(),widget=forms.Select(attrs={'class': 'form-control form-control-sm'}))
+    fellow = forms.ModelChoiceField(queryset = NgUser.objects.all().filter(user_type='FELLOW'),widget=forms.Select(attrs={'class': 'form-control form-control-sm'}))
     expense_type = forms.ChoiceField(choices = EXPENSETYPE, widget=forms.Select(attrs={'class': 'form-control form-control-sm'}))
     category = forms.ChoiceField(choices =CATEGORY, widget=forms.Select(attrs={'class': 'form-control form-control-sm'}))
     expense_amount = forms.IntegerField(widget=forms.NumberInput(attrs={'class':'form-control form-control-sm','placeholder': 'How much money do you need?'}))
@@ -103,9 +103,11 @@ class AddExpenseForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         self.request = kwargs.pop('request', None)
+        print self.request.user.nguser.user_type
         super(AddExpenseForm, self).__init__(*args, **kwargs)
-        if self.request.user.nguser.is_admin:
-          self.fields['fellow'].queryset = NgUser.objects.all()
+        if self.request.user.nguser.is_admin() or self.request.user.nguser.is_super_admin():
+            self.fields['fellow'].queryset = NgUser.objects.all()
         else:
+            print "yes"
             facility__id = NgUser.objects.get(user = self.request.user).facility.id
-            self.fields['fellow'].queryset = NgUser.objects.all().filter(facility__id= facility__id)
+            self.fields['fellow'].queryset = NgUser.objects.all().filter(facility__id= facility__id).filter(user_type='FELLOW')
