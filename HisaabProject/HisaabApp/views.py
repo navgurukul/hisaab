@@ -238,7 +238,7 @@ def facilityreport(request, pk):
             payment = False
         return render(request, 'facilityreport.html', {'entries': data, 'facility':facility, 'payment': payment })
     payment = False
-    data = CashEntry.objects.all().filter(facility__id=pk,is_facility_expense=True)\
+    data = CashEntry.objects.all().filter(facility__id=pk,is_facility_expense=True)
     return render(request, 'facilityreport.html',{'facility':facility,'entries': data,'payment':payment})
 
 #Getting the Detail report the student expense and payments.
