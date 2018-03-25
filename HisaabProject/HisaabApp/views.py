@@ -335,7 +335,7 @@ def searchfellow(request):
         data = {'users': list(NgUser.objects.all().filter(user_type="FELLOW", user__username__icontains= query).values('user__username', 'id', 'facility__name'))}
 
         return JsonResponse(data)
-    #render the serch page    
+    #render the search page    
     return render(request, 'searchuser.html')
 
 # views for giving a permission to super admin to create a admin
