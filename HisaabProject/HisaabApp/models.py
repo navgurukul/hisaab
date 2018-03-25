@@ -5,14 +5,16 @@ from django.dispatch import receiver
 from django.utils import timezone
 import datetime
 
-# The functions are  define for save the images in database.
+#********* path to save the images in media folder **************
 def fellowScreenshot(instance , filename):
     return 'fellowpayment/{0}/{1}'.format(instance.fellow.user.id, filename)
 def bankScreenshot(instance , filename):
     return 'bankScreenshot/{0}/{1}'.format(instance.fellow.user.id, filename)
 def billImage(instance , filename):
     return 'billimage/{0}/{1}'.format(instance.fellow.user.id, filename)
-#******************************************************************************************
+#************************************************************************************
+
+
 
 # The Facility model is created for assign the name of facility and expense limit of particular facility.
 class Facility(models.Model):
@@ -30,10 +32,11 @@ class NgUser(models.Model):
     user_type= models.CharField(choices=ROLES,max_length=11,default='FELLOW',blank=False)
     user = models.OneToOneField(User,unique=True, related_query_name = 'nguser', on_delete=models.CASCADE)
     created_date = models.DateField(auto_now_add=True)
-    upi_id = models.CharField(max_length=40, blank= True, null=True)
     facility= models.ForeignKey(Facility,blank=True, null=True, )
+    #for fellow
+    upi_id = models.CharField(max_length=40, blank= True, null=True)
 
-    # for disaplay the user first name and last name on admin site.
+    #To display the name of the model instance.
     def __str__(self):
         return self.user.first_name + " " + self.user.last_name
 
@@ -86,6 +89,8 @@ class NgUser(models.Model):
         return self.user_type == 'SUPER_ADMIN'
     # *************************************************
 
+
+
     #flag to check if student facility has exceed weekly facility expense limit.
     def in_weekly_limit(self):
         total_fellow = len(NgUser.objects.all().filter(facility = self.facility))
@@ -94,11 +99,12 @@ class NgUser(models.Model):
             return True
         return False
 
+    #calculate expense exceed by per student in facility of last week
     def week_limit_exceed_by(self):
         total_fellow = len(NgUser.objects.filter(facility = self.facility))
         total_limit = total_fellow * self.facility.student_expenses_limit
         return abs(int(total_limit - self.last_week_facility_expenses())/total_fellow)
-    #************************************************************************************
+    
 
     #flag to check if student facility has exceed monthly facility expense limit.
     def in_monthly_limit(self):
@@ -112,6 +118,7 @@ class NgUser(models.Model):
             return True
         return False
 
+    #calculate expense exceed by per student in facility of last month
     def month_limit_exceed_by(self):
         total_fellow = len(NgUser.objects.filter(facility = self.facility))
         today = datetime.date.today()
@@ -119,18 +126,23 @@ class NgUser(models.Model):
         last_month_startdate = last_month_enddate.replace(day=1)
         total_limit = (total_fellow * self.facility.student_expenses_limit)/7 *((last_month_enddate - last_month_startdate).days+1)
         return abs((self.last_month_facility_expense() - int(total_limit))/total_fellow)
-    #*********************************************************************************************
 
-# the class created for request the money for utility bill,facility level expenses and personal expenses.
+
+#Model tom  handle all kind of Money and Bill requests data
 class MoneyRequest(models.Model):
+    #Fields specifically for BillPaymentRequest
     BILL = (('INTERNET','Internet'),('ELECTRICITY','Electricity'),('WATER','WaterBill'),('HOUSERENT', 'Houserent'))
-    is_money_request= models.BooleanField(default=False)
     is_utility_request= models.BooleanField(default=False)
-    money_requested_by = models.ForeignKey(NgUser,null=True, related_name = "money_requested_by", blank=True)
-    money_received_by = models.ForeignKey(NgUser, related_name = "money_received_by",null=True,blank=True)
-    facility = models.ForeignKey(Facility,null=True,blank=True)
     type_of_bill = models.CharField(max_length=50, choices=BILL, blank=True, null =True)
     bill_image = models.ImageField(upload_to='billpayment/%Y/%m/%d', blank=True, null = True)
+    
+    #Fields specifically for TransferRequest
+    is_money_request= models.BooleanField(default=False)
+    money_received_by = models.ForeignKey(NgUser, related_name = "money_received_by",null=True,blank=True)
+    
+    #Fields that are included in both TranserRequest and BillPaymentRequest
+    facility = models.ForeignKey(Facility,null=True,blank=True)
+    money_requested_by = models.ForeignKey(NgUser,null=True, related_name = "money_requested_by", blank=True)
     amount = models.IntegerField()
     description = models.TextField()
     created_date = models.DateTimeField(auto_now_add=True)
@@ -142,22 +154,31 @@ class MoneyRequest(models.Model):
     def __str__(self):
         return '{0}'.format(self.created_date)
 
-# the model created for the add the expense details.
+#Model to Handle all the cash Entry made in Ng
 class CashEntry(models.Model):
+    
+    #Add Expense Fields
     CATEGORY =(('TRAVEL','Travel Expense'),('GROCERIES','Groceries'),('VEGETABLES','Vegetables'), ('HOUSEHOLD','HouseholdItems'),('EGG','Egg'),('MILK','Milk & Bread'),('TECH EXPENCE','Tech Expenses'),('OTHER','Other'))
-    created_date = models.DateField(default = timezone.now)
-    fellow = models.ForeignKey(NgUser, related_name='cash_entry', related_query_name = 'cash_entry')
-    facility=models.ForeignKey(Facility, blank=True, null = True)
-    expense_amount = models.IntegerField(blank=True, null=True)
-    payment_amount = models.IntegerField(blank=True, null=True)
     category = models.CharField(max_length=25, choices= CATEGORY, blank=True, null = True)
+    expense_amount = models.IntegerField(blank=True, null=True)
+    bill_image = models.ImageField(upload_to=billImage,blank=True, null = True)
     is_personal_expense = models.BooleanField(default=False)
     is_facility_expense = models.BooleanField(default=False)
-    is_pay_forward = models.BooleanField(default=False)
+    fellow = models.ForeignKey(NgUser, related_name='cash_entry', related_query_name = 'cash_entry')
+
+
+    #Record Payment Fields
     is_payment_to_ng = models.BooleanField(default=False)
-    bank_screenshot = models.ImageField(upload_to=bankScreenshot, blank=True, null=True)
+    bank_screenshot = models.ImageField(upload_to=bankScreenshot, blank=True, null=True)   
+    payment_amount = models.IntegerField(blank=True, null=True)
+    
+    #to handle payforward
+    is_pay_forward = models.BooleanField(default=False)
     fellow_payment_screenshot = models.ImageField(upload_to=fellowScreenshot, blank=True, null=True)
-    bill_image = models.ImageField(upload_to=billImage,blank=True, null = True)
+    
+    #Fields for AddExpense, RecordPayment
+    created_date = models.DateField(default = timezone.now)
+    facility=models.ForeignKey(Facility, blank=True, null = True)
     description = models.TextField(blank=True, null= True)
 
     def __str__(self):

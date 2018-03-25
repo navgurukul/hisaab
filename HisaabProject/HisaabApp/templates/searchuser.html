@@ -1,74 +1,78 @@
-s{% extends 'base.html' %}
+<!-- Page to search feloow and there detail report page -->
+{% extends 'base.html' %}
 {% block content %}
-	<div class="row">
-	    <div class="col-md-1">
-	    </div>
-	    <div class="col-md-1">
-	    </div>
-	    <div class="col-md-1">
-	    </div>
-	    <div class="col-md-3">
-	    	<a href="{% url 'addexpense' %}">
-		      <button id="top-button"  type="button" class="btn btn-danger btn-block"><i class="fas fa-money-bill-alt fa-lg"></i>  Add an Expense</button>
-	    	</a>
-	    </div>
-	    <div class="col-md-3">
-	    	<a href="{% url 'recordpayment' %}">
-		      <button id="top-button"  type="button" class="btn btn-success btn-block"><i class="fas fa-angle-double-up"></i>  Record a Payment</button>
-	    	</a>
-
-	    </div>
-	    <div class="col-md-3">
-	        <a href="{% url 'searchfellow' %}">  
-	        <button id="top-button" type="button" class="btn btn-primary btn-block"><i class="fas fa-user-plus "></i>  Student Level Expenses</button>
-	        </a>
-	    </div>
-	   </div>
-<!--
-      <div class="col-md-1">
-      </div> -->
-	<!-- <img class="img-responsive" src="img/logo.png"> -->
-	<div class="main_container">
-		<div class="baby_container0">
-			<div class="row-fluid">
-				<div class="col-md-2"></div>
-				<div id="main col-md-8">			
-					<div id="clonebaby" class="baby_container">
-						<div class="baby_cont1">
-							
-							<input  type="text" placeholder="Which student expense do you want to see?" id="search" class="form-control" autofocus>
-						</div>
-						<div class="bet-fluid" id="results" style="overflow: scroll; height: 50%;">
-
-						</div>
+<!-- top buttons -->
+<div class="row">
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-1">
+    </div>
+    <!-- add expense button -->
+    <div class="col-md-3">
+    	<a href="{% url 'addexpense' %}">
+	      <button id="top-button"  type="button" class="btn btn-danger btn-block"><i class="fas fa-money-bill-alt fa-lg"></i>  Add an Expense</button>
+    	</a>
+    </div>
+    <!-- record payment buttons -->
+    <div class="col-md-3">
+    	<a href="{% url 'recordpayment' %}">
+	      <button id="top-button"  type="button" class="btn btn-success btn-block"><i class="fas fa-angle-double-up"></i>  Record a Payment</button>
+    	</a>
+    </div>
+    <!-- search user button -->
+    <div class="col-md-3">
+        <a href="{% url 'searchfellow' %}">  
+        <button id="top-button" type="button" class="btn btn-primary btn-block"><i class="fas fa-user-plus "></i>  Student Level Expenses</button>
+        </a>
+    </div>
+</div>
+<!-- field to search user -->
+<div class="main_container">
+	<div class="baby_container0">
+		<div class="row-fluid">
+			<div class="col-md-2"></div>
+			<div id="main col-md-8">			
+				<div id="clonebaby" class="baby_container">
+					<!-- search box -->
+					<div class="baby_cont1">
+						<input  type="text" placeholder="Which student expense do you want to see?" id="search" class="form-control" autofocus>
 					</div>
-				
+					<div class="bet-fluid" id="results" style="overflow: scroll; height: 50%;">
+
+					</div>
 				</div>
-				<div class="col-md-2"></div>
-			</div>
 			
-	</div>
-	
+			</div>
+			<div class="col-md-2"></div>
+		</div>
+		
+</div>
+
 <script>
+	// function to search the fellow from data base when ever key is pressed in the search box
     $(function (){
 
     $('#search').keyup(function(event){
         $('#results').html('')
-     
+     	
+     	// for handling key pressed the search box is empty
         if($('#search').val()==''){
         	$('#results').html('');
         	return false;
         }
+
+        // Searching the database for user of specific facility
         $.ajax({
             type: 'GET',
             url: "{% url 'searchfellow' %}",
             data: {query:$('#search').val()},
             success: function(data) {
-            	console.log(data)
 
+            	// appending the user is exist
             	if (data){
             		for (var i = data.users.length - 1; i >= 0; i--) {
-            			console.log(data.users[i])
 		                $('#results').append('<a href="/fellowreport/'+ data.users[i].id +'"><li class="list">' + data.users[i].user__username +'<span class="pull-right"> from '+data.users[i].facility__name+'</span></li></a>')
 		          		 }
             		}
@@ -81,7 +85,7 @@ s{% extends 'base.html' %}
 
     
 </script>
-</body>
+
 <style type="text/css">
 	body{
 	background-color: #eee;

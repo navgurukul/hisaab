@@ -1,38 +1,41 @@
+<!-- Page for Accepting or rejecting the request on admin side -->
 {% extends 'base.html' %}
-
 {% block content %}
-
+    <!-- Top buttons -->
     <div class="main-container">
-        <div class="col-md-2">
+        <div class="col-md-1">
         </div>
-        <div class="col-md-2">
+        <div class="col-md-1">
         </div>
-        <div class="col-md-2">
+        <div class="col-md-1">
         </div>
-        <div class="col-md-2">
+        <!-- Add expense button -->
+        <div class="col-md-3">
           <a class='text' href="{% url 'addexpense' %}">
             <button id="top-button" type="button" class="btn btn-danger btn-block"><i class="fa fa-money-bill-alt fa-lg" ></i>  Add an Expense</button>
           </a>
-
         </div>
-        <div class="col-md-2">
+        <!-- Record Payment button -->
+        <div class="col-md-3">
           <a class='text' href="{% url 'recordpayment' %}">
             <button id="top-button" type="button" class="btn btn-success btn-block"><i class="fa fa-angle-double-up"></i>  Record a Payment</button>
           </a>
-
         </div>
-        <div class="col-md-2">
+        <!-- Student Level Expense -->
+        <div class="col-md-3">
           <a class='text' href="{% url 'searchfellow' %}">
             <button id="top-button" type="button" class="btn btn-primary btn-block"><i class="fas fa-user-plus"></i> Student Level Expenses</button>
           </a>
         </div>
     </div>
-
+  <!-- Detail about the request -->
   <div class="bottom-container">
       <div class="col-md-3">
       </div>
+      <!-- block for Transfer request -->
       {% if money_request.is_money_request %}
       <div class="col-md-6 center">
+        <!-- Detail about request  -->
         <center><h2>Request Details</h2></center>
         <h4><b>Details</b></h4>
         <p><b>Amount</b> <span>₹{{ money_request.amount }}</span></p>
@@ -41,11 +44,13 @@
         <p><b>Date:</b><span>{{ money_request.created_date }}</span></p>
         <p><b>Description:</b> <span>{{ money_request.description }}</span></p>
 
+
+        <!-- Account Information to transfer -->
         <h4><b>Account Details</b></h4>
-       <!--  <p><b>Account Number:</b> <span>0021412414352352</span></p> -->
         <p><b>Account Holder Name</b><span>{{ money_request.money_received_by }}</span></p>
         <p><b>UPI Id:</b> <span>{{ money_request.money_received_by.upi_id }}</span></p>
       </div>
+      <!-- block for Bill Payment request -->
       {% else %}
       <div class="col-md-6 center">
        <center><h2>Request Details</h2></center>
@@ -53,20 +58,19 @@
         <p><b>Amount</b> <span>₹{{ money_request.amount }}</span> for {{ money_request.type_of_bill }} Bill</p>
         <p><b>Who made the request?</b><span>{{ money_request.money_requested_by }}</span></p>
         <p><b>For Whom?:</b> <span>{{ money_request.facility }} Batch</span></p>
-
         <p><b>Date:</b><span>{{ money_request.created_date }}</span></p>
         <p><b>Description:</b> <span>{{ money_request.description }}</span></p>
         <p><b>Bill Image:</b><a href="{{ money_request.bill_image.url }}"> <img src="{{ money_request.bill_image.url }}" height='100px'></a></p>
-
       </div>
       {% endif %}
       <div class="col-md-3">
       </div>
       <div class="col-md-4">
       </div>
+      <!-- form to accept or reject the request -->
       <form method='POST' action="{% url 'viewpendingrequest' pk=money_request.id %}">
       	{% csrf_token %}
-		<div class="col-md-6">
+		    <div class="col-md-6">
           <div class="col-md-3 pull-right">
             <button style="padding-right: 20px;" id="top-button" name='accept' type="submit" class="btn btn-success btn-block">Approve Request</button>
           </div>
@@ -74,32 +78,35 @@
             <button style="padding-right: 30px;" id="top-button" type="button" data-toggle="modal" data-target="#myModal" onclick="rejecting()" class="btn btn-danger btn-block">Reject Request</button>
           </div>
         </div>
-            <!-- Modal box -->
+        <!-- Modal box -->
 
-    <div class="container">
-    <!-- Modal -->
-    <div class="modal fade" id="myModal" role="dialog">
-      <div class="modal-dialog">
+        <div class="container">
+          <!-- Modal -->
+          <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
 
-        <!-- Modal content-->
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title">Description</h4>
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">Description</h4>
+                </div>
+                <div class="modal-body">
+                  <!-- Description field -->
+                  <textarea type="text" name="reason_for_reject" placeholder="Why do you want to reject this Request?"  class="form-control" id="rejection"></textarea>
+                </div>
+                <div class="modal-footer">
+                  <!-- cancel button -->
+                  <button type="button" class="btn btn-default" onclick="cancel()" data-dismiss="modal">Cancel</button>
+                  <!-- submit for rejection -->
+                  <button  id='reject' type="submit" class="btn btn-default" onclick="inputchange()" name='reject'>Submit</button>
+                </div>
+              </div>
+
+            </div>
           </div>
-          <div class="modal-body">
-            <textarea type="text" name="reason_for_reject" placeholder="Why do you want to reject this Request?"  class="form-control" id="rejection"></textarea>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" onclick="cancel()" data-dismiss="modal">Cancel</button>
-            <button  id='reject' type="submit" class="btn btn-default" onclick="inputchange()" name='reject'>Submit</button>
-          </div>
-        </div>
 
       </div>
-    </div>
-
-</div>
       </form>
 
     </div>
@@ -124,6 +131,8 @@
       $('#rejection').prop('required',true);
     }
     </script>
+    <!-- ================================================================================ -->
+
 <style type="text/css">
   h4{
     margin-top: 8%;
@@ -139,18 +148,14 @@
     padding: 10px;
 
   }
-  a{
+  a:hover{
   	text-decoration: none;
-  }
-  .center{
-    /*margin-left: 20%;*/
   }
   span{
     margin-left: 20px;
   }
   body{
     background-color: #eee;
-    /*margin-top: 2%;*/
   }
   #top-button{
     margin-bottom: 5%;

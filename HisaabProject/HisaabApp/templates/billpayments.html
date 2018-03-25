@@ -1,46 +1,56 @@
+
 {% extends 'base.html' %}
 {% block content %}
 
 	<div class="main_container">
 		<div class="baby_container0">
 			<center><h1>Add <b>Bill Payment Request</b></h1></center>
+			<!-- Form for Bill Payment -->
 			<form method="POST" enctype="multipart/form-data">
 				{% csrf_token %}
-			
-			<div id="main">			
-				<div id="clonebaby" class="baby_container">
-					<div class="baby_cont1">
-						<input type="number" placeholder="Bill Amount" min="0" name="amount" class="form-control" id="usr" required>
+				<!-- Form Fields -->
+				<div id="main">			
+					<div id="clonebaby" class="baby_container">
+						<div class="baby_cont1">
+							<input type="number" placeholder="Bill Amount" min="0" name="amount" class="form-control" id="usr" required>
 
-					</div>
-					<div class="baby_cont1">
-						<select  name= "type_of_bill" class="selectpicker" required>
-						  <option value="">Select type of the Bill</option>
-						  {% for value, name in form.fields.type_of_bill.choices %}
-							  	<option value='{{ value }}' >{{ name }}</option>
-						  {% endfor %}
-						</select>
+						</div>
 
-					</div>
-					<div class="baby_cont1">
-						<textarea type="text" placeholder="Description" name="description" class="form-control" id="usr" required></textarea>
-						<span  id="fileselector">
-						        <label style="width: 100%;  margin-top: 10px;" class="btn btn-default" for="upload-file-selector">
-						            <input class="invisible" id="upload-file-selector" name="bill_image" type="file" required>
-						           <h4>Upload Bill Photo</h4>
-						        </label>
-						    </span>
-						
+						<!-- Bill Categoriers Dropwon -->
+						<div class="baby_cont1">
+							<select  name= "type_of_bill" class="selectpicker" required>
+							  <option value="">Select type of the Bill</option>
+							  {% for value, name in form.fields.type_of_bill.choices %}
+								  	<option value='{{ value }}' >{{ name }}</option>
+							  {% endfor %}
+							</select>
+
+						</div>
+
+
+						<div class="baby_cont1">
+							<!-- Description for the field -->
+							<textarea type="text" placeholder="Description" name="description" class="form-control" id="usr" required></textarea>
+							
+							<!-- Image Fields Upload -->
+							<span  id="fileselector">
+								<label style="width: 100%;  margin-top: 10px;" class="btn btn-default" for="upload-file-selector">
+									<input class="invisible" id="upload-file-selector" name="bill_image" type="file" required>
+									<h4>Upload Bill Photo</h4>
+								</label>
+							</span>
+							
+						</div>
 					</div>
 				</div>
-			</div>
-			
-			<button id="btnbottom" type="submit" class="btn btn-success pull-right">Submit Bill Payment Request ></button>
+				<!-- Submit button -->
+				<button id="btnbottom" type="submit" class="btn btn-success pull-right">Submit Bill Payment Request ></button>
 		</form>
 		</div>
 	</div>
 </body>
 
+<!-- CSS for BillPayment -->
 {% block style %}
 <style type="text/css">
 	body{
@@ -91,4 +101,5 @@
 }
 </style>
 {% endblock style %}
+<!-- end of css -->
 {% endblock %}
