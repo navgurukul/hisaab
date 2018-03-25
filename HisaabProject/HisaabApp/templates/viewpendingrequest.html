@@ -112,26 +112,26 @@
     </div>
 
 
-    <!-- ================================================================================ -->
-    <script>
-    var input = document.getElementById("rejection");
+<!-- ================================================================================ -->
+<script>
+  var input = $("rejection");
 
-    function inputchange() {
-      if (input.value == '') {
-        input.style.borderColor = "red";   
-      }
+  function inputchange() {
+    if (input.value == '') {
+      input.addClass('is-invalid');   
     }
-    input.onclick = function(){
-        input.style.borderColor = "white";
-    }
-    function cancel() {
-      $('#rejection').prop('required',false);
-    }
-    function rejecting() {
-      $('#rejection').prop('required',true);
-    }
-    </script>
-    <!-- ================================================================================ -->
+  }
+  input.onclick = function(){
+      input.removeClass('is-invalid');   
+  }
+  function cancel() {
+    $('#rejection').prop('required',false);
+  }
+  function rejecting() {
+    $('#rejection').prop('required',true);
+  }
+</script>
+<!-- ================================================================================ -->
 
 <style type="text/css">
   h4{
