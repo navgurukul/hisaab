@@ -1,17 +1,21 @@
 {% extends 'base.html' %}
 {% block content %}
 
+<!-- Record Payment made to the facility  -->
  <form method='post' enctype = 'multipart/form-data'>
-     {% csrf_token %}<!-- Record Payment made to the facility  -->
+
+     {% csrf_token %}
         <div class="main_container">
           <div class="baby_container0">
             <center><h1 style="margin-right: 100px; margin-left: 100px;">Record<b>Payment</b></h1></center>
             <div id="main">
               <div id="clonebaby" class="baby_container">
                 <div class="baby_cont1">
+                  <!-- enter amount for paying -->
                   <input type="text" min="0" name='payment_amount' placeholder="Money paid" class="form-control" id="usr" required>
                 </div>
                 <div class="baby_cont1">
+                  <!-- select facility fields-->
                   <select name='facility' class="selectpicker">
                     <option value=""> Which facility you are paying this amount to?</option>
                   {% for values, name in form.fields.facility.choices %}
@@ -20,7 +24,9 @@
                   </select>
                 </div>
                 <div class="baby_cont1">
+                  <!-- description about money paid -->
                   <textarea type="text" name='description' placeholder="Extra notes" class="form-control" id="usr" required></textarea>
+                  <!-- select the image file name -->
                     <span  id="fileselector">
                       <label style="width: 100%; margin-top: 10px; " class="btn btnbottom btn-default" for="upload-file-selector">
                         <br>

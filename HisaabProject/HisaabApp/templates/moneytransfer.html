@@ -2,8 +2,6 @@
 {% block content %}
 
 <!-- Form for Requesting the money from the Admin -->
-
-
 <div class="main_container">
 		<div class="baby_container0">
 			<center><h1 style="margin-right: 80px;">Add <b>Transfer Request</b></h1></center>
@@ -12,16 +10,17 @@
 				<p id="tag-p">Transfer Details</p>
 				<div id="clonebaby" class="baby_container">
 					<div class="baby_cont1">
+							<!-- token for security purpose -->
 							{% csrf_token %}
 							<div class="form-component input--medium">
 								<div class="input--with-icon">
-						<input type="number" placeholder="How much money do you need?" name = "amount" class="form-control" id="usr">
-
-					</div>
-				</div>
-
-					</div>
+									<!-- enter the amount  -->
+									<input type="number" placeholder="How much money do you need?" name = "amount" class="form-control" id="usr">
+								</div>
+							</div>
+						</div>
 					<div class="baby_cont1">
+					 <!-- enter the name  -->
 						<select class="selectpicker" required name = "money_requested_by" >
 							<option value="">For whom do you need the money?</option>
 							{% for value, name in form.fields.money_requested_by.choices %}
@@ -31,25 +30,16 @@
 
 					</div>
 					<div class="baby_cont1">
+						<!-- description for money needed -->
 						<textarea type="text" name="description" placeholder="Why is the money needed?" class="form-control" id="usr" required></textarea>
 					</div>
 				</div>
 
 			<p id="tag-p">Pre-existing UPI Users :</p>
 			<div class="baby_container">
-			<!-- 	<div class="baby_cont1">
-					<input type="text"  placeholder="Account Number" class="form-control" id="usr">
-				</div>
+
 				<div class="baby_cont1">
-					<input type="text" placeholder="Confirm Account Number" class="form-control" id="usr">
-				</div>
-				<div class="baby_cont1">
-					<input type="text" placeholder="IFSC Code" class="form-control" id="usr">
-				</div>
-				<div class="baby_cont1">
-					<input type="text" placeholder="Name of Account Holder" class="form-control" id="usr">
-				</div> -->
-				<div class="baby_cont1">
+					<!-- option for select user which have already upi -->
 					<select class="selectpicker" class="form-control" name = "nguser_with_upi" >
 						<option value="">Users who already have there UPI Id</option>
 						{% for values, name in form.fields.nguser_with_upi.choices %}
@@ -59,8 +49,10 @@
 				</div>
 
 				<p id="tag-p">OR</p>
+				<!-- create new upi -->
 				<p id="tag-p">Create a new UPI users :</p>
 				<div class="baby_cont1">
+					<!-- user name of UPI request -->
 					<select class="selectpicker" class="form-control" name = "nguser_without_upi" >
 						<option value="">Create a UPI for these user</option>
 						{% for values, name in form.fields.nguser_without_upi.choices %}
@@ -69,6 +61,7 @@
 					</select>
 				</div>
 				<div class="baby_cont1">
+					<!-- enter the upi id -->
 					<input type="text" id='upi_id' placeholder="UPI Id" class="form-control" name="upi_id" id="usr">
 				</div>
 			</div>
@@ -77,11 +70,6 @@
 			</form>
 		</div>
 	</div>
-
-	<script type="text/javascript">
-		
-
-	</script>
 
 {% block style %}
 <style type="text/css">
@@ -133,6 +121,5 @@
 }
 </style>
 {% endblock style %}
-
 
 {% endblock %}
