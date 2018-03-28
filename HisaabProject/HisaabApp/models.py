@@ -29,6 +29,7 @@ class Facility(models.Model):
 # The NgUser models create  for add the user type , created date of user and there upi id .
 class NgUser(models.Model):
     ROLES = (('ADMIN','admin'),('SUPER_ADMIN','super_admin'),('FELLOW','fellow'))
+
     user_type= models.CharField(choices=ROLES,max_length=11,default='FELLOW',blank=False)
     user = models.OneToOneField(User,unique=True, related_query_name = 'nguser', on_delete=models.CASCADE)
     created_date = models.DateField(auto_now_add=True)

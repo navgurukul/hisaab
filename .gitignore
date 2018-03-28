@@ -2,7 +2,8 @@
 db.sqlite3
 *.sql
 __pycache__
-migrations
-viratualenviroment
-staticfiles
+/migrations
+/viratualenviroment
+/staticfiles
 media
+

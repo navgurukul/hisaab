@@ -1,3 +1,4 @@
+<!-- the base page which extended to all other html pages -->
 {% load staticfiles %}
 <html>
 <head>
@@ -20,8 +21,10 @@
 </head>
 
 <body>
+    <!-- user authentication -->
     {% if user.is_authenticated %}
         <script>
+            // function for side nav-bar
             function openNav() {
                 document.getElementById("mySidenav").style.width = "250px";
                 document.getElementById("main").style.marginLeft = "250px";
@@ -41,6 +44,7 @@
 
             }
          </script>
+         <!-- url handling  -->
             <div class='body'>
                 <div id="mySidenav" class="sidenav">
                   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -63,8 +67,16 @@
                   <a href="{% url 'make_admin' %}"><i class="fas fa-user-plus"></i>&nbsp;Make New Admins</a>
                   {% endif %}
 
+<<<<<<< HEAD
+
+                  <!-- <a href="#">About</a> -->
+                  <a href="http://navgurukul.org/#contact"><i class="fa fa-phone" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Contact</a>
+                  
+                  <a href="{% url 'logout' %}"><i class="fa fa-sign-out-alt"></i>&nbsp;&nbsp;&nbsp;Logout</a>
+=======
                   <!-- <a href="#">Help</a> -->
                   <a href="{% url 'logout' %}"><i class="fa fa-sign-out-alt"></i>&nbsp;&nbsp;Logout</a>
+>>>>>>> f487f77a42047780d5282798ecc11095e3930bec
               </div>
             <div id="main">
               <span id='open' style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>

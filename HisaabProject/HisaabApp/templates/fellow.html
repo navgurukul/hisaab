@@ -1,6 +1,15 @@
 <!-- HomePage for fellow -->
 {% extends 'base.html' %}
 {% block content %}
+<<<<<<< HEAD
+	 <div class="dropdown pull-right" style="margin-right: 10%; ">
+       <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fas fa-bell fa-lg"></i></a>
+
+       <ul class="dropdown-menu" style="padding: 20px;">
+       	{% for money_request in money_requests %}
+          	<a class='bg' href="{% url 'detailrequest' pk=money_request.id %}">
+          		<li>
+=======
 
 <!-- Notification icon -->
 <div class="dropdown pull-right" style="margin-right: 10%; ">
@@ -11,6 +20,7 @@
       	<a class='bg' href="{% url 'detailrequest' pk=money_request.id %}">
       		<li>
       			<!-- for Transer request which are accepted-->
+>>>>>>> f487f77a42047780d5282798ecc11095e3930bec
           		{% if money_request.is_approve and money_request.is_money_request %}
 		             <div class="row">
 		                <div class="col-md-12 wrap">Money Transfer Request of ₹ {{ money_request.amount }} for {{ money_request.description }} by you have been approve by {{ money_request.approve_or_rejected_by }}!
@@ -188,13 +198,15 @@ margin-top:-4% !important;
 		min-width: 300px !important;
 	}
 }
+
 @media screen and (min-width: 450px ){
+
 	.dropdown-menu{
 		min-width: 400px !important;
 	}
 }
-@media screen and (min-width: 600px ){
-	.dropdown-menu{
+@media only screen and (min-width: 600px) {
+
 		min-width: 500px !important;
 	}
 }
