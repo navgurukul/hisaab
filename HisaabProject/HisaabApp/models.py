@@ -45,6 +45,9 @@ class NgUser(models.Model):
         print timezone.now(), self.created_date
         return (datetime.date.today() - self.created_date).days
 
+    ###############################################################
+    # Still need to add payforward entry calculation
+    ###############################################################
     # the function for calculate the total weekly expense of fellow.
     def total_weekly_expenses(self):
         fellow_balance = (self.total_time_in_ng()/7) * self.facility.student_expenses_limit

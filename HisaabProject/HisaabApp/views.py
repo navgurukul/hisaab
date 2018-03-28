@@ -112,9 +112,9 @@ def recordpayment(request):
             instance = form.save(commit = False)
             instance.fellow = request.user.nguser
             instance.is_payment_to_ng = True
-            facility= Facility.objects.get(id = form.cleaned_data.get('facility'))
+            facility = instance.facility
             facility.cash_in_hand += int(form.cleaned_data.get('payment_amount'))
-            facility.save()()
+            facility.save()
             instance.save()
             return redirect('home')
     else:
