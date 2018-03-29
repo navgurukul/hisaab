@@ -90,9 +90,8 @@
         <div class="row">
           <div class="col-xs-12 col-md-12">
             <div class="table-responsive">
-              <table class="table table-condensed table-striped" id="example" style="width:100%">
+              <table class="table table-condensed table-bordered table-striped" id="example" style="width:100%">
                   {% if entries %}  
-                    {% for entry in entries %}
                         <thead>
                             <!-- Column Heading -->
                             <tr>
@@ -105,36 +104,41 @@
                                <th class="col-sm-4 col-md-2">Cash In Hand</th>
                             </tr>
                         </thead>
-                        <!-- Data to be shown for expense entries -->
-                        {% if not entry.is_payment_to_ng %}
                           <tbody>
-                            <!-- Columns data to be shown here -->
-                               <tr>
-                                   <td>{{ entry.fellow }}</td>
-                                   <td>Debit</td>
-                                   <td>{{ entry.expense_amount }}</td>
-                                   <td>{{ entry.category }}</td>
-                                   <td>{{ entry.created_date }}</td>
-                                   <td>{{ entry.description }}</td>
-                                   <td>{{ entry.cash_in_hand_currently }}</td>
-                               </tr>
-                         </tbody>
-                      <!-- Data to be Displayed for Payment Entries -->
-                      {% else %}
-                        <tbody>
-                            <!-- Columns data to be shown here -->
-                               <tr>
-                                  <td>{{ entry.fellow }}</td>
-                                  <td>Credit</td>
-                                  <td>{{ entry.payment_amount }}</td>
-                                  <td>None</td>
-                                  <td>{{ entry.created_date }}</td>
-                                  <td>{{ entry.description }}</td>
-                                  <td>{{ entry.cash_in_hand_currently }}</td>
-                               </tr>
+                          {% for entry in entries %}
+                            <!-- Data to be shown for expense entries -->
+                               {% if not entry.is_payment_to_ng %}
+                                <!-- Columns data to be shown here -->
+                                   <tr>
+                                       <td>{{ entry.fellow }}</td>
+                                       {% if entry.is_personal_expense %}
+                                          <td>Debit(Personal)</td>
+                                       {% else %}
+                                          <td>Debit(Navgurukul)</td>
+                                       {% endif %}
+                                       <td>{{ entry.expense_amount }}</td>
+                                       <td>{{ entry.category }}</td>
+                                       <td>{{ entry.created_date }}</td>
+                                       <td>{{ entry.description }}</td>
+                                       <td>{{ entry.cash_in_hand_currently }}</td>
+                                   </tr>
+                             
+                              <!-- Data to be Displayed for Payment Entries -->
+                              {% else %}
+                            
+                                <!-- Columns data to be shown here -->
+                                   <tr>
+                                      <td>{{ entry.fellow }}</td>
+                                      <td>Credit</td>
+                                      <td>{{ entry.payment_amount }}</td>
+                                      <td>None</td>
+                                      <td>{{ entry.created_date }}</td>
+                                      <td>{{ entry.description }}</td>
+                                      <td>{{ entry.cash_in_hand_currently }}</td>
+                                   </tr>
+                              {% endif %}
+                        {% endfor %}
                         </tbody>
-                      {% endif %}
-                    {% endfor %}
                   <!-- Displayed when there is not data to shiw -->
                   {% else %}
                         <tr><h3 class="text text-danger">Sorry there's nothing to show you! :) </h3></tr>
@@ -158,15 +162,24 @@
     $('#example').DataTable( {
         dom: 'Bfrtip',
         buttons: [
-             {extend:'csv', className:'btn btn-success',text:'Download Csv!'}
+             {
+               extend:'csv', 
+               className:'btn btn-success btn-lg',
+               text:'Download Csv!',    
+               exportOptions: {
+                  modifier: {
+                      search: 'none'
+                  }
+            }}
         ],
         language: {
             search: "_INPUT_",
-            searchPlaceholder: "Search to filter the mesh!"
-        }
+            searchPlaceholder: "Filter the mesh from here!"
+        },
     } );
     // $.fn.dataTable.ext.classes.sPageButton = 'btn btn-default'; // Change Pagination Button Class
-    $('#example_filter input').addClass('form-control');  
+    $('#example_filter input').addClass('form-control input-lg'); 
+    // $('#example_previous').addClass('btn');
 
 } );
 

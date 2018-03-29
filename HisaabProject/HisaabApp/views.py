@@ -12,6 +12,9 @@ from django.utils import timezone
 import json
 from django.utils import timezone
 
+from django.db.models import Q
+
+
 
 #For checking the usertype
 # For checking is the user is fellow(student in the navgurukul)
@@ -197,6 +200,7 @@ def addexpense(request):
 #Getting the Detail Report about the expense and payment made to the Facility.
 @login_required
 def facilityreport(request, pk):
+
     facility = get_object_or_404(Facility,pk=pk)
     # Handling the post request data  
     if request.method == 'POST':
@@ -212,11 +216,11 @@ def facilityreport(request, pk):
 
         # expence filtering part handling for facility   
         elif 'expense' in request.POST:
-            data = CashEntry.objects.all().filter(created_date__range=(start_date, end_date),category__in=categories,is_facility_expense=True,facility__id=pk)
+            data = CashEntry.objects.all().filter(created_date__range=(start_date, end_date),category__in=categories,facility__id=pk).filter(Q(is_personal_expense=True)|Q(is_facility_expense=True))
             payment = False
         return render(request, 'facilityreport.html', {'entries': data, 'facility':facility, 'payment': payment })
     payment = False
-    data = CashEntry.objects.all().filter(facility__id=pk,is_facility_expense=True)
+    data = CashEntry.objects.all().filter(facility__id=pk).filter(Q(is_personal_expense=True)|Q(is_facility_expense=True))
     return render(request, 'facilityreport.html',{'facility':facility,'entries': data,'payment':payment})
 
 #Getting the Detail report the student expense and payments.
@@ -357,7 +361,7 @@ def add_facility(request):
 
 
 @user_passes_test(is_super_admin, login_url='/access_denied/')
-#views for adding a new facility by super admin
+#views for adding a new add category by super admin
 def add_category(request):
     #Handling the post request data and a form is made
     if request.method =='POST':
@@ -366,7 +370,7 @@ def add_category(request):
         if form.is_valid():
             form.save()
             return redirect('home')
-    #new empty form instance for add_facility is created        
+    #new empty form instance for add_cateogry form is created        
     else:
         form = AddCategoryForm()
     return render(request,'addcategory.html',{'form':form})
@@ -385,7 +389,7 @@ def update_facility(request):
             facility.student_expenses_limit = form.cleaned_data.get('student_expenses_limit')
             facility.save()
             return redirect('home')
-    #new empty form instance for add_facility is created        
+    #new empty form instance for Updatingfacility is created        
     else:
         form = UpdateFacilityForm()
     return render(request,'updatefacility.html',{'form':form})
