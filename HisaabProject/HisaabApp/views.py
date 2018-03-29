@@ -26,7 +26,7 @@ def is_admin(user):
 def is_super_admin(user):
     return user.nguser.user_type == "SUPER_ADMIN"
 
-# If the user tries to do the things for which he doesn'e have the permission then this page will shown to the user
+# If the user tries to do the things for which he doesn't have the permission then this page will shown to the user
 def access_denied(request):
     return render(request,'access_denied.html')
 
@@ -75,33 +75,9 @@ def home(request):
     return render(request, 'fellow.html',{'money_requests':money_requests})
 
 
-#checking is user is super admin by giving this test
-@user_passes_test(is_super_admin, login_url='/access_denied/')
 
-#views for adding a new facility by super admin
-def add_facility(request):
-
-    #Handling the post request data and a form is made
-    if request.method =='POST':
-        form=AddFacilityForm(request.POST)
-
-        #validating and storing the form for further use
-        if form.is_valid():
-            form.save()
-            return redirect('home')
-
-    #new empty form instance for add_facility is created        
-    else:
-        form = AddFacilityForm()
-    return render(request,'addfacility.html',{'form':form})
-
-
-#give a check for login
 @login_required
-
-#checking is user is fellow by giving this test
 @user_passes_test(is_fellow, login_url='/access_denied/')
-
 #For making money request by the students
 def moneytransferrequest(request):
 
@@ -123,7 +99,6 @@ def moneytransferrequest(request):
 
 @login_required
 @user_passes_test(is_fellow, login_url='/access_denied/')
-
 #For making the Bill request by the students
 def utilitybillrequest(request):
 
@@ -169,6 +144,7 @@ def recordpayment(request):
             instance.is_payment_to_ng = True
             facility = instance.facility
             facility.cash_in_hand += int(form.cleaned_data.get('payment_amount'))
+            instance.cash_in_hand_currently = facility.cash_in_hand
             facility.save()
             instance.save()
             return redirect('home')
@@ -185,23 +161,25 @@ def addexpense(request):
     # Handling the post request data and a form is made
     if request.method =='POST':
         form = AddExpenseForm(request.POST,request.FILES, request=request)
+        print"him"
 
         #validating the form 
         if form.is_valid():
-
+            print"hi"
             #saving the instance
             instance = form.save(commit=False)
 
             # handling the data when expence type is personal
-            if form.cleaned_data.get('expense_type').encode('utf8') == 'PERSONAL':
+            if form.cleaned_data.get('expense_type') == 'PERSONAL':
                 instance.is_personal_expense = True
-
+                print "yeh"
             # handling the data when the expence type is not personal and save it    
             else:
                 instance.is_facility_expense = True
-                facility= form.cleaned_data.get('facility')
-                facility.cash_in_hand -= int(form.cleaned_data.get('expense_amount'))
-                facility.save()
+            facility= form.cleaned_data.get('facility')
+            facility.cash_in_hand -= int(form.cleaned_data.get('expense_amount'))
+            instance.cash_in_hand_currently = facility.cash_in_hand
+            facility.save()
             instance.save()
             return redirect('home')
 
@@ -301,7 +279,6 @@ def viewpendingrequest(request, pk):
             money_request.save()
         # request handling if the the request is rejected   
         elif 'reject' in request.POST:
-            print 'hogya'
             money_request.is_queued = False
             money_request.approve_or_rejected_by = request.user.nguser
             reason_for_reject = request.POST.get('reason_for_reject', None)
@@ -359,3 +336,57 @@ def make_admin(request):
     #render the Page
     facilities = Facility.objects.all()
     return render(request, 'makeadmin.html',{'facilities':facilities})
+
+
+
+@user_passes_test(is_super_admin, login_url='/access_denied/')
+#views for adding a new facility by super admin
+def add_facility(request):
+    #Handling the post request data and a form is made
+    if request.method =='POST':
+        form=AddFacilityForm(request.POST)
+        #validating and storing the form for further use
+        if form.is_valid():
+            form.save()
+            return redirect('home')
+    #new empty form instance for add_facility is created        
+    else:
+        form = AddFacilityForm()
+    return render(request,'addfacility.html',{'form':form})
+
+
+
+@user_passes_test(is_super_admin, login_url='/access_denied/')
+#views for adding a new facility by super admin
+def add_category(request):
+    #Handling the post request data and a form is made
+    if request.method =='POST':
+        form=AddCategoryForm(request.POST)
+        #validating and storing the form for further use
+        if form.is_valid():
+            form.save()
+            return redirect('home')
+    #new empty form instance for add_facility is created        
+    else:
+        form = AddCategoryForm()
+    return render(request,'addcategory.html',{'form':form})
+
+
+
+@user_passes_test(is_super_admin, login_url='/access_denied/')
+#views for Updating facility detail by super admin
+def update_facility(request):
+    #Handling the post request data and a form is made
+    if request.method =='POST':
+        form=UpdateFacilityForm(request.POST)
+        #validating and storing the form for further use
+        if form.is_valid():
+            facility = form.cleaned_data.get('facility')
+            facility.student_expenses_limit = form.cleaned_data.get('student_expenses_limit')
+            facility.save()
+            return redirect('home')
+    #new empty form instance for add_facility is created        
+    else:
+        form = UpdateFacilityForm()
+    return render(request,'updatefacility.html',{'form':form})
+

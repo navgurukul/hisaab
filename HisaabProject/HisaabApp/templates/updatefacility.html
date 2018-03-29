@@ -1,0 +1,51 @@
+<!-- page made to any add facility by admin -->
+{% extends 'base.html' %}
+{% block content %}
+
+      <!-- Form code begins -->
+
+<form method="post">
+  {% csrf_token %}
+  <div class="main-container" style="display: flex;flex-direction: column;height: 100vh;align-items: center;justify-content: center;">
+    <center><h1>Add the new <b>Facility</b></h1></center>
+    <div class="col-md-12">
+      <div class="col-md-4">
+      </div>
+      <!-- adding facility(input field) by admin --> 
+      <div class="col-md-4">
+         <!-- select facility fields-->
+        <select class="form-control" name='facility' class="selectpicker">
+          <option value=""> Which facility you are paying this amount to?</option>
+          {% for values, name in form.fields.facility.choices %}<option value='{{ values }}' >{{ name }}</option>{% endfor %}
+        </select>
+      </div>
+      <div class="col-md-4">
+      </div>
+    </div>
+    <br>
+    <div class="col-md-12">
+      <div class="col-md-4">
+      </div>
+      <!-- Adding facility expence limit -->
+      <div class="col-md-4">
+        <input type="number" min="0" placeholder="Add expense amount limit here!" name="student_expenses_limit" class="form-control">
+      </div>
+      <div class="col-md-4">
+      </div>
+    </div>
+    <br>
+    <div class="col-md-12">
+      <div class="col-md-4">
+      </div>
+      <!-- submit button after the form field -->
+      <div class="col-md-4">
+        <button id="btnbottom" type="submit" class="btn btn-success pull-right"> <b><i class="fa fa-home"></i>+ Update Facility </b></button>
+      </div>
+      <div class="col-md-4">
+      </div>
+    </div>
+  </div>
+</form>
+
+
+{% endblock %}
