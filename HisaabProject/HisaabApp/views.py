@@ -143,6 +143,10 @@ def recordpayment(request):
 
             # making instances and getting objects from models and saving it
             instance = form.save(commit = False)
+            ###################################################################
+            # Should we save the admin who accepted as or the payment
+            ###################################################################
+
             instance.fellow = request.user.nguser
             instance.is_payment_to_ng = True
             facility = instance.facility
@@ -277,21 +281,49 @@ def viewpendingrequest(request, pk):
     if request.method == 'POST':
         # request handling if the the request is accepted 
         if 'accept' in request.POST:
-            money_request.is_queued = False
-            money_request.is_approve = True
-            money_request.approve_or_rejected_by = request.user.nguser
-            money_request.save()
+            form = PaymentRecordForm(request.POST, request.FILES)
+            if form.is_valid():
+                # Updating the MoneyRequest data
+                money_request.is_queued = False
+                money_request.is_approve = True
+                money_request.approve_or_rejected_by = request.user.nguser
+                money_request.save()
+
+                # Creating the cash entry data
+                entry['facility'] = money_request.facility
+                entry['bank_screenshot'] = forms.cleaned_data.get('bank_screenshot')
+                entry['payment_amount'] = money_request.amount
+                entry['description'] = money_request.description
+                entry['fellow'] =  money_request.money_requested_by
+
+                # facility cash_in_hand update
+                facility = entry['facility']
+                facility.cash_in_hand += int(entry['payment_amount'] )
+                entry['cash_in_hand_currently'] = facility.cash_in_hand
+                facility.save()
+
+                ###################################################################
+                # what to do about the bil_image in the MoneyRequest?
+                ###################################################################
+               
+                # saving to database
+                CashEntry.objects.create(facility = entry['facility'], bank_screenshot = entry['bank_screenshot'],payment_amount = entry['payment_amount'],description = entry['description'], fellow = entry['fellow'], is_personal_expense=True,cash_in_hand_currently = entry['cash_in_hand_currently'])
+                return redirect('home')
+
+
         # request handling if the the request is rejected   
         elif 'reject' in request.POST:
             money_request.is_queued = False
             money_request.approve_or_rejected_by = request.user.nguser
             reason_for_reject = request.POST.get('reason_for_reject', None)
+
             # reson handling if the request is rejected
             if not reason_for_reject:
                 raise forms.ValidationError('Please Provide a reason')
             money_request.reason_for_reject = reason_for_reject
             money_request.save()
-        return redirect('home')
+            return redirect('home')
+
     # url handling after the request handling
     return render(request,'viewpendingrequest.html',{'money_request':money_request})
 

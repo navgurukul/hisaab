@@ -20,6 +20,9 @@ class AddCategoryForm(forms.ModelForm):
         model = Category
         fields = '__all__'
 
+#to check the image fileis valid or not aftering accepting
+class PaymentRecordForm(forms.Form):
+    bank_screenshot = forms.ImageField()
 
 #form to Update the detail of the facility
 class UpdateFacilityForm(forms.Form):
