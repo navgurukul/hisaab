@@ -14,6 +14,12 @@ def billImage(instance , filename):
     return 'billimage/{0}/{1}'.format(instance.fellow.user.id, filename)
 #************************************************************************************
 
+#Category for expenses can be added by admin
+class Category(models.Model):
+    name= models.CharField(max_length=30)
+
+    def __str__(self):
+        return self.name
 
 
 # The Facility model is created for assign the name of facility and expense limit of particular facility.
@@ -47,6 +53,9 @@ class NgUser(models.Model):
         print timezone.now(), self.created_date
         return (datetime.date.today() - self.created_date).days
 
+    ###############################################################
+    # Still need to add payforward entry calculation
+    ###############################################################
     # the function for calculate the total weekly expense of fellow.
     def total_weekly_expenses(self):
         fellow_balance = (self.total_time_in_ng()/7) * self.facility.student_expenses_limit
@@ -165,8 +174,7 @@ class MoneyRequest(models.Model):
 class CashEntry(models.Model):
     
     #Add Expense Fields
-    CATEGORY =(('TRAVEL','Travel Expense'),('GROCERIES','Groceries'),('VEGETABLES','Vegetables'), ('HOUSEHOLD','HouseholdItems'),('EGG','Egg'),('MILK','Milk & Bread'),('TECH EXPENCE','Tech Expenses'),('OTHER','Other'))
-    category = models.CharField(max_length=25, choices= CATEGORY, blank=True, null = True)
+    category = models.ForeignKey(Category, default=1)
     expense_amount = models.IntegerField(blank=True, null=True)
     bill_image = models.ImageField(upload_to=billImage,blank=True, null = True)
     is_personal_expense = models.BooleanField(default=False)
@@ -187,6 +195,7 @@ class CashEntry(models.Model):
     created_date = models.DateField(default = timezone.now)
     facility=models.ForeignKey(Facility, blank=True, null = True)
     description = models.TextField(blank=True, null= True)
+    cash_in_hand_currently = models.IntegerField(default= 0, blank = True, null= True)
 
     def __str__(self):
         return '{0}'.format(self.fellow)

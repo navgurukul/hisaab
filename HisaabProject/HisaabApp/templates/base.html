@@ -13,9 +13,6 @@
 <!--  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
  <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
 
-
-  <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/solid.js" ></script>
-<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js" ></script>
   <!-- <link rel="shortcut icon" href="img/favicon.png" /> -->
   <title>Hisaab</title>
 </head>
@@ -64,6 +61,7 @@
 
                   {% if user.nguser.is_super_admin %}
                   <a href="{% url 'addfacility' %}"><i class="fas fa-home"></i>&nbsp;&nbsp;Add Facility</a>
+                  <a href="{% url 'updatefacility' %}"><i class="fas fa-home"></i>&nbsp;&nbsp;Update Facility</a>
                   <a href="{% url 'make_admin' %}"><i class="fas fa-user-plus"></i>&nbsp;Make New Admins</a>
                   {% endif %}
 

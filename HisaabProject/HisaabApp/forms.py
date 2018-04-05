@@ -14,6 +14,22 @@ class AddFacilityForm(forms.ModelForm):
         model = Facility
         fields = ('name', 'student_expenses_limit')
 
+#form to add new category
+class AddCategoryForm(forms.ModelForm):
+    class Meta:
+        model = Category
+        fields = '__all__'
+
+#to check the image fileis valid or not aftering accepting
+class PaymentRecordForm(forms.Form):
+    bank_screenshot = forms.ImageField()
+
+#form to Update the detail of the facility
+class UpdateFacilityForm(forms.Form):
+    facility = forms.ModelChoiceField(queryset= Facility.objects.all())
+    student_expenses_limit = forms.IntegerField()
+
+
 
 #Form to get the Facility of the user when the user signup for the first time
 class RegisterForm(forms.Form):
@@ -22,9 +38,18 @@ class RegisterForm(forms.Form):
 
 #Form to Handle the data whenever someone make a request to the user from TransferRequestPage 
 class MoneyTransferForm(forms.ModelForm):
+<<<<<<< HEAD
     money_requested_by = forms.ModelChoiceField(queryset= NgUser.objects.all())
     amount = forms.IntegerField()
     description = forms.Textarea()
+=======
+    upi_id = forms.CharField(max_length=40,required=False)
+    money_requested_by = forms.ModelChoiceField(queryset= NgUser.objects.all())
+    amount = forms.IntegerField()
+    description = forms.CharField()
+    nguser_with_upi = forms.ModelChoiceField(queryset = NgUser.objects.all(), required=False)
+    nguser_without_upi = forms.ModelChoiceField(queryset = NgUser.objects.all(),required=False)
+>>>>>>> 66c63d872869abdf962d5d27e57aa4a5d3dd9887
 
     #fields to be displayed and the model to be used
     class Meta:
@@ -56,9 +81,9 @@ class AccountDetailForm(forms.ModelForm):
 
 #Form to handle the data from the RecordPaymentPage 
 class RecordPaymentForm(forms.ModelForm):
-    facility = forms.ModelChoiceField(queryset= Facility.objects.all() ,widget=forms.Select(attrs={'class': 'form-control form-control-sm'}))
-    description = forms.CharField(widget=forms.Textarea(attrs={'class':'form-control form-control-sm','placeholder': 'Why is the money needed?'}))
-    payment_amount = forms.IntegerField(widget=forms.NumberInput(attrs={'class':'form-control form-control-sm','placeholder': 'How much money do you need?'}))
+    facility = forms.ModelChoiceField(queryset= Facility.objects.all())
+    description = forms.CharField()
+    payment_amount = forms.IntegerField()
 
     #fields to be displayed and the model to be used
     class Meta:
@@ -84,14 +109,14 @@ class AddExpenseForm(forms.ModelForm):
     EXPENSETYPE = (("FACILITY",'Navgurukul'),('PERSONAL','Personal'))
 
     #categories for the expenses made
-    CATEGORY =(('TRAVEL','Travel Expense'),('GROCERIES','Groceries'),('VEGETABLES','Vegetables'), ('HOUSEHOLD','HouseholdItems'),('EGG','Egg'),('MILK','Milk & Bread'),('TECH EXPENCE','Tech Expenses'),('OTHER','Other'))
+    # CATEGORY =(('TRAVEL','Travel Expense'),('GROCERIES','Groceries'),('VEGETABLES','Vegetables'), ('HOUSEHOLD','HouseholdItems'),('EGG','Egg'),('MILK','Milk & Bread'),('TECH EXPENCE','Tech Expenses'),('OTHER','Other'))
 
-    facility = forms.ModelChoiceField(queryset = Facility.objects.all(), widget=forms.Select(attrs={'class': 'form-control form-control-sm'}))
-    fellow = forms.ModelChoiceField(queryset = NgUser.objects.all().filter(user_type='FELLOW'),widget=forms.Select(attrs={'class': 'form-control form-control-sm'}))
-    expense_type = forms.ChoiceField(choices = EXPENSETYPE, widget=forms.Select(attrs={'class': 'form-control form-control-sm'}))
-    category = forms.ChoiceField(choices =CATEGORY, widget=forms.Select(attrs={'class': 'form-control form-control-sm'}))
-    expense_amount = forms.IntegerField(widget=forms.NumberInput(attrs={'class':'form-control form-control-sm','placeholder': 'How much money do you need?'}))
-    description = forms.CharField(widget=forms.Textarea(attrs={'class':'form-control form-control-sm','placeholder': 'Why is the money needed?'}))
+    facility = forms.ModelChoiceField(queryset = Facility.objects.all())
+    fellow = forms.ModelChoiceField(queryset = NgUser.objects.all().filter(user_type='FELLOW'))
+    expense_type = forms.ChoiceField(choices = EXPENSETYPE)
+    category = forms.ModelChoiceField(queryset = Category.objects.all())
+    expense_amount = forms.IntegerField()
+    description = forms.CharField()
 
 
     #fields to be displayed and the model to be used

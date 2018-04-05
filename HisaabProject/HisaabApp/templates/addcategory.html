@@ -1,0 +1,36 @@
+<!-- page made to any add facility by admin -->
+{% extends 'base.html' %}
+{% block content %}
+
+      <!-- Form code begins -->
+
+<form method="post">
+  {% csrf_token %}
+  <div class="main-container" style="display: flex;flex-direction: column;height: 100vh;align-items: center;justify-content: center;">
+    <center><h1>Add the new <b>Facility</b></h1></center>
+    <div class="col-md-12">
+      <div class="col-md-4">
+      </div>
+      <!-- Adding facility expence limit -->
+      <div class="col-md-4">
+        <input type="text" placeholder="Add the new category for expenses here!" name="name" class="form-control">
+      </div>
+      <div class="col-md-4">
+      </div>
+    </div>
+    <br>
+    <div class="col-md-12">
+      <div class="col-md-6">
+      </div>
+      <!-- submit button after the form field -->
+      <div class="col-md-2">
+        <button id="btnbottom" type="submit" class="btn btn-success pull-right"> <b><i class="fa fa-database"></i>+ Add Category </b></button>
+      </div>
+      <div class="col-md-4">
+      </div>
+    </div>
+  </div>
+</form>
+
+
+{% endblock %}
