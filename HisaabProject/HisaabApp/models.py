@@ -34,8 +34,9 @@ class NgUser(models.Model):
     user = models.OneToOneField(User,unique=True, related_query_name = 'nguser', on_delete=models.CASCADE)
     created_date = models.DateField(auto_now_add=True)
     facility= models.ForeignKey(Facility,blank=True, null=True, )
-    #for fellow
-    upi_id = models.CharField(max_length=40, blank= True, null=True)
+    has_account_id = models.BooleanField(default=False)
+    # #for fellow
+    # account_id = models.CharField(max_length=40, blank= True, null=True)
 
     #To display the name of the model instance.
     def __str__(self):
@@ -127,9 +128,14 @@ class NgUser(models.Model):
         last_month_startdate = last_month_enddate.replace(day=1)
         total_limit = (total_fellow * self.facility.student_expenses_limit)/7 *((last_month_enddate - last_month_startdate).days+1)
         return abs((self.last_month_facility_expense() - int(total_limit))/total_fellow)
+# Model to handle all account details when request is made
+class AccountDetail(models.Model):
+    #Fields specifically for BillPaymentRequest
+    account_number = models.IntegerField()
+    IFSC_code = models.CharField(max_length=40)
+    account_holder_name = models.CharField(max_length=40)
 
-
-#Model tom  handle all kind of Money and Bill requests data
+#Model to handle all kind of Money and Bill requests data
 class MoneyRequest(models.Model):
     #Fields specifically for BillPaymentRequest
     BILL = (('INTERNET','Internet'),('ELECTRICITY','Electricity'),('WATER','WaterBill'),('HOUSERENT', 'Houserent'))
@@ -139,7 +145,7 @@ class MoneyRequest(models.Model):
     
     #Fields specifically for TransferRequest
     is_money_request= models.BooleanField(default=False)
-    money_received_by = models.ForeignKey(NgUser, related_name = "money_received_by",null=True,blank=True)
+    account_detail = models.OneToOneField(AccountDetail, blank=True, null =True)
     
     #Fields that are included in both TranserRequest and BillPaymentRequest
     facility = models.ForeignKey(Facility,null=True,blank=True)
@@ -184,3 +190,4 @@ class CashEntry(models.Model):
 
     def __str__(self):
         return '{0}'.format(self.fellow)
+

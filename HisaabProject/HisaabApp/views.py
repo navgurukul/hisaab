@@ -105,19 +105,23 @@ def add_facility(request):
 #For making money request by the students
 def moneytransferrequest(request):
 
-    # Handling the post request data and a form is made
+    # Handling the post request data and handling two forms
     if request.method =='POST':
-        form = MoneyTransferForm(request.POST, request=request)
+        transfer_request_form = MoneyTransferForm(request.POST, request=request)
+        account_detail_form = AccountDetailForm(request.POST) 
+        #validating the forms
+        if account_detail_form.is_valid() and transfer_requests_form.is_valid():
+            instance = transfer_requests_form.save(commit = False)
+            instance.account_detail = account_detail_form.save()
+            instance.save()
 
-        #validating and storing the form data
-        if form.is_valid():
-            form.save()
-            return redirect('home')
+        return redirect('home')
 
     # new empty form instance for moneytransferrequest is created        
     else:
-        form = MoneyTransferForm(request=request)
-    return render(request,'moneytransfer.html',{'form':form})
+        account_detail_form = AccountDetailForm() 
+        transfer_request_form = MoneyTransferForm(request=request)
+    return render(request,'moneytransfer.html',{'transfer_request_form':transfer_request_form,'account_detail_form':account_detail_form})
 
 
 
