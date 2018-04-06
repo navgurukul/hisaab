@@ -119,7 +119,6 @@ SOCIAL_AUTH_FIELDS_STORED_IN_SESSION = ['facility',]
 
 DATABASES = {
     'default': {
-<<<<<<< HEAD
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR,'db.sqlite3'),
         # 'ENGINE': 'django.db.backends.mysql',
@@ -128,16 +127,14 @@ DATABASES = {
         # 'PASSWORD':'',
         # 'HOST':'localhost',
         # 'PORT':'',
-=======
         # 'ENGINE': 'django.db.backends.sqlite3',
         # 'NAME': os.path.join(BASE_DIR,'db.sqlite3'),
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME':'hisaab',
-        'USER':'root',
-        'PASSWORD':'amar',
-        'HOST':'localhost',
-        'PORT':'',
->>>>>>> 127fb460fbdb28a159be23461e9e8d7bb489228f
+        # 'ENGINE': 'django.db.backends.mysql',
+        # 'NAME':'hisaab',
+        # 'USER':'root',
+        # 'PASSWORD':'amar',
+        # 'HOST':'localhost',
+        # 'PORT':'',
     }
 }
 
