@@ -14,6 +14,12 @@ def billImage(instance , filename):
     return 'billimage/{0}/{1}'.format(instance.fellow.user.id, filename)
 #************************************************************************************
 
+#Category for expenses can be added by admin
+class Category(models.Model):
+    name= models.CharField(max_length=30)
+
+    def __str__(self):
+        return self.name
 
 
 # The Facility model is created for assign the name of facility and expense limit of particular facility.
@@ -29,12 +35,14 @@ class Facility(models.Model):
 # The NgUser models create  for add the user type , created date of user and there upi id .
 class NgUser(models.Model):
     ROLES = (('ADMIN','admin'),('SUPER_ADMIN','super_admin'),('FELLOW','fellow'))
+
     user_type= models.CharField(choices=ROLES,max_length=11,default='FELLOW',blank=False)
     user = models.OneToOneField(User,unique=True, related_query_name = 'nguser', on_delete=models.CASCADE)
     created_date = models.DateField(auto_now_add=True)
     facility= models.ForeignKey(Facility,blank=True, null=True, )
-    #for fellow
-    upi_id = models.CharField(max_length=40, blank= True, null=True)
+    has_account_id = models.BooleanField(default=False)
+    # #for fellow
+    # account_id = models.CharField(max_length=40, blank= True, null=True)
 
     #To display the name of the model instance.
     def __str__(self):
@@ -45,6 +53,9 @@ class NgUser(models.Model):
         print timezone.now(), self.created_date
         return (datetime.date.today() - self.created_date).days
 
+    ###############################################################
+    # Still need to add payforward entry calculation
+    ###############################################################
     # the function for calculate the total weekly expense of fellow.
     def total_weekly_expenses(self):
         fellow_balance = (self.total_time_in_ng()/7) * self.facility.student_expenses_limit
@@ -126,9 +137,14 @@ class NgUser(models.Model):
         last_month_startdate = last_month_enddate.replace(day=1)
         total_limit = (total_fellow * self.facility.student_expenses_limit)/7 *((last_month_enddate - last_month_startdate).days+1)
         return abs((self.last_month_facility_expense() - int(total_limit))/total_fellow)
+# Model to handle all account details when request is made
+class AccountDetail(models.Model):
+    #Fields specifically for BillPaymentRequest
+    account_number = models.IntegerField()
+    IFSC_code = models.CharField(max_length=40)
+    account_holder_name = models.CharField(max_length=40)
 
-
-#Model tom  handle all kind of Money and Bill requests data
+#Model to handle all kind of Money and Bill requests data
 class MoneyRequest(models.Model):
     #Fields specifically for BillPaymentRequest
     BILL = (('INTERNET','Internet'),('ELECTRICITY','Electricity'),('WATER','WaterBill'),('HOUSERENT', 'Houserent'))
@@ -138,7 +154,7 @@ class MoneyRequest(models.Model):
     
     #Fields specifically for TransferRequest
     is_money_request= models.BooleanField(default=False)
-    money_received_by = models.ForeignKey(NgUser, related_name = "money_received_by",null=True,blank=True)
+    account_detail = models.OneToOneField(AccountDetail, blank=True, null =True)
     
     #Fields that are included in both TranserRequest and BillPaymentRequest
     facility = models.ForeignKey(Facility,null=True,blank=True)
@@ -158,8 +174,7 @@ class MoneyRequest(models.Model):
 class CashEntry(models.Model):
     
     #Add Expense Fields
-    CATEGORY =(('TRAVEL','Travel Expense'),('GROCERIES','Groceries'),('VEGETABLES','Vegetables'), ('HOUSEHOLD','HouseholdItems'),('EGG','Egg'),('MILK','Milk & Bread'),('TECH EXPENCE','Tech Expenses'),('OTHER','Other'))
-    category = models.CharField(max_length=25, choices= CATEGORY, blank=True, null = True)
+    category = models.ForeignKey(Category, default=1)
     expense_amount = models.IntegerField(blank=True, null=True)
     bill_image = models.ImageField(upload_to=billImage,blank=True, null = True)
     is_personal_expense = models.BooleanField(default=False)
@@ -180,6 +195,8 @@ class CashEntry(models.Model):
     created_date = models.DateField(default = timezone.now)
     facility=models.ForeignKey(Facility, blank=True, null = True)
     description = models.TextField(blank=True, null= True)
+    cash_in_hand_currently = models.IntegerField(default= 0, blank = True, null= True)
 
     def __str__(self):
         return '{0}'.format(self.fellow)
+

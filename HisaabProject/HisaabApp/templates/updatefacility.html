@@ -13,7 +13,11 @@
       </div>
       <!-- adding facility(input field) by admin --> 
       <div class="col-md-4">
-        <input type="text"  placeholder="Add new facility name here!" name="name" class="form-control" >
+         <!-- select facility fields-->
+        <select class="form-control" name='facility' class="selectpicker">
+          <option value=""> Which facility you are paying this amount to?</option>
+          {% for values, name in form.fields.facility.choices %}<option value='{{ values }}' >{{ name }}</option>{% endfor %}
+        </select>
       </div>
       <div class="col-md-4">
       </div>
@@ -35,7 +39,7 @@
       </div>
       <!-- submit button after the form field -->
       <div class="col-md-4">
-        <button id="btnbottom" type="submit" class="btn btn-success pull-right"> <b><i class="fa fa-home"></i>+ Add Facility </b></button>
+        <button id="btnbottom" type="submit" class="btn btn-success pull-right"> <b><i class="fa fa-home"></i>+ Update Facility </b></button>
       </div>
       <div class="col-md-4">
       </div>

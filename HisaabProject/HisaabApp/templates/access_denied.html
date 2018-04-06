@@ -1,7 +1,11 @@
+<!-- Page made to show a user that he doesn't have permission to certain pages -->
 {% extends 'base.html' %}
 {% block content %}
 <div class="container text-center" style="">
   <h4 class="text-danger">Hey, {{ user.first_name }} {{ user.last_name }}.</h4><br>
   Oops! you don't have access to this page, Have nice day ahead!
- </div>
+  <div class='pull right'>
+  	<a href="{% url 'home' %}">home</a>
+  </div>
+</div>
 {% endblock %}

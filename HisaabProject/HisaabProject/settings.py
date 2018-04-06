@@ -124,9 +124,10 @@ DATABASES = {
         # 'ENGINE': 'django.db.backends.mysql',
         # 'NAME':'hisaab',
         # 'USER':'root',
-        # 'PASSWORD':'',
+        # 'PASSWORD':'amar',
         # 'HOST':'localhost',
         # 'PORT':'',
+<<<<<<< HEAD
         # 'ENGINE': 'django.db.backends.sqlite3',
         # 'NAME': os.path.join(BASE_DIR,'db.sqlite3'),
         # 'ENGINE': 'django.db.backends.mysql',
@@ -135,6 +136,8 @@ DATABASES = {
         # 'PASSWORD':'amar',
         # 'HOST':'localhost',
         # 'PORT':'',
+=======
+>>>>>>> 041e1378adb49485560d3fbc191fb3e94c8136ae
     }
 }
 

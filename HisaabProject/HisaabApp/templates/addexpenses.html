@@ -1,12 +1,11 @@
+<!-- page made for make expence by all NG users -->
 {% extends 'base.html' %}
 {% block content %}
 
-
-	<!-- <img class="img-responsive" src="img/logo.png"> -->
 	<div class="main_container">
 		<div class="baby_container0">
 			<center><h1>Add <b>Expense</b></h1></center>
-		    <!-- Form code begins -->
+		    <!-- Form code begins here-->
 		    <form method="post" enctype="multipart/form-data">
 		    	{% csrf_token %}
 				<div id="main">
@@ -14,6 +13,7 @@
 						<div class="baby_cont1">
 							<select name='expense_type' class="selectpicker" required>
 							  <option value="">What kind of an expense is this?</option>
+							  <!-- choice for what kind of expence is made by NG user -->
 							  {% for value, type_name in form.fields.expense_type.choices %}
 							  	<option value='{{ value }}' >{{ type_name }}</option>
 							  {% endfor %}
@@ -41,8 +41,8 @@
 						<div class="bootstrap-iso">
 							<div style="margin-top: 10px; margin-bottom: -20px !important;" class="container-fluid">
 								<div class="row">
-									    <div class="form-group"> <!-- Date input -->
-
+									    <div class="form-group"> 
+									    	<!-- Date input by NG users -->
 									        <input class="form-control" id="date" name="created_date"  placeholder="MM/DD/YYY" type="text" required/>
 
 									   	</div>
@@ -53,6 +53,7 @@
 						<div class="baby_cont1">
 							<select name="fellow" id='fellow' required class="selectpicker">
 							  <option value="">Who made the expense?</option>
+							        <!-- by whome the expence is made by in NG -->
 							 	  	{% for value, name in form.fields.fellow.choices %}
 								  			<option value='{{ value }}' >{{ name }}</option>
 								  	{% endfor %}
@@ -61,6 +62,7 @@
 						<div class="baby_cont1">
 							<select  name="category"  required class="selectpicker">
 								<option value="">Category</option>
+								<!-- choosing the category of item on which expence have to made(ctageroyfield) -->
  								{% for value, name in form.fields.category.choices %}
 								<option value='{{ value }}' >{{ name }}</option>
 							  {% endfor %}
@@ -70,12 +72,14 @@
 						<div class="baby_cont1">
 							    <span  id="fileselector">
 							        <label style="width: 100%;" class="btn btn-default" for="upload-file-selector">
+							        	<!-- image field(upload of the bill images by ng user) -->
 							            <input class="invisible" name="bill_image" id="upload-file-selector" type="file" required>
 							           <h4>Upload Bill Photo</h4>
 							        </label>
 							    </span>
 						</div>
 						<div class="baby_cont1">
+							<!-- description for the expence made -->
 							<textarea type="text" placeholder="Description" name="description" class="form-control" id="usr" required></textarea>
 						</div>
 					</div>
@@ -85,9 +89,10 @@
 			<!-- Form code ends -->
 			</form>
 		</div>
-	</div>
+	</div>	
 {% block javascript %}
 <script type="text/javascript">
+    // function to customize date field input
     $(document).ready(function(){
       var date_input=$('input[name="created_date"]'); //our date input has the name "date"
       var container=$('.bootstrap-iso row').length>0 ? $('.bootstrap-iso row').parent() : "body";
@@ -100,6 +105,7 @@
       date_input.datepicker(options);
     })
 
+    //fucntions to get the user from particular facility whenever facility is chosen
   	function showFellow(value) {
 		var result = $('#fellow')
 		result.empty().append('<option value="">Who made the expense?</option>');
