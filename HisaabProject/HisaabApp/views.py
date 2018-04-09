@@ -47,7 +47,7 @@ def register(request):
             # Validating the form and storing the facility in session for further use
             if form.is_valid():
                 request.session['facility'] =  form.cleaned_data.get('facility',None).id
-                print "redirecting"
+                # print "redirecting"
                 return redirect(reverse('social:complete', args=("google-oauth2",)))
         
         #new empty form instance for register is created
@@ -123,7 +123,7 @@ def utilitybillrequest(request):
     #new empty form instance for utilitybillrequest is created       
     else:
         form = UtilityBillRequestForm()
-        print form
+        # print form
     return render(request,'billpayments.html',{'form':form})
 
 
@@ -168,18 +168,15 @@ def addexpense(request):
     # Handling the post request data and a form is made
     if request.method =='POST':
         form = AddExpenseForm(request.POST,request.FILES, request=request)
-        print"him"
 
         #validating the form 
         if form.is_valid():
-            print"hi"
             #saving the instance
             instance = form.save(commit=False)
 
             # handling the data when expence type is personal
             if form.cleaned_data.get('expense_type') == 'PERSONAL':
                 instance.is_personal_expense = True
-                print "yeh"
             # handling the data when the expence type is not personal and save it    
             else:
                 instance.is_facility_expense = True
@@ -211,7 +208,6 @@ def facilityreport(request, pk):
         start_date = request.POST.get('start_date')
         end_date = request.POST.get('end_date')
         categories = request.POST.getlist('categories')
-        print start_date,end_date,categories
 
         # payment fitering part handling for facility 
         if 'payment' in request.POST:
@@ -344,7 +340,6 @@ def searchfellow(request):
     #handling for serch student name by ajax
     if request.is_ajax() and request.method=='GET':
         query = request.GET.get('query')
-        print"commit"
         data = {'users': list(NgUser.objects.all().filter(user_type="FELLOW", user__username__icontains= query).values('user__username', 'id', 'facility__name'))}
 
         return JsonResponse(data)
@@ -359,7 +354,6 @@ def make_admin(request):
 
         #sending the data by getting the facility value
         facility = request.GET.get('facility')
-        print facility
         data = {'users': list(NgUser.objects.all().filter(user_type="FELLOW",facility__id= facility).values('user__username', 'id',))}
         return JsonResponse(data)
     elif request.method == 'POST':

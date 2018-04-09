@@ -49,7 +49,7 @@ class NgUser(models.Model):
 
     # the function created for calculate the total time of fellows in Navgurukul.
     def total_time_in_ng(self):
-        print timezone.now(), self.created_date
+        # print timezone.now(), self.created_date
         return (datetime.date.today() - self.created_date).days
 
     ###############################################################
@@ -85,7 +85,6 @@ class NgUser(models.Model):
         last_month_amount = 0
         for expense in last_month_expense:
             last_month_amount += expense.expense_amount
-        print last_month_amount
         return last_month_amount
 
     #******* flags for checking user user_type ********
