@@ -71,7 +71,7 @@ class NgUser(models.Model):
         today = datetime.date.today()
         weekend_date = today - datetime.timedelta(today.weekday()+1)
         last_week_date = weekend_date - datetime.timedelta(7)
-        last_week_expense=CashEntry.objects.filter(created_date__range=(last_week_date,weekend_date),is_facility_expense=True, facility = self.facility)
+        last_week_expense=CashEntry.objects.filter(created_date__range=(last_week_date,weekend_date),is_personal_expense=True, facility = self.facility)
         last_week_amount = 0
         for expense in last_week_expense:
             last_week_amount += expense.expense_amount
@@ -82,7 +82,7 @@ class NgUser(models.Model):
         today = datetime.date.today()
         last_month_enddate = today.replace(day=1)-datetime.timedelta(1)
         last_month_startdate = last_month_enddate.replace(day=1)
-        last_month_expense=CashEntry.objects.filter(created_date__range=(last_month_startdate,last_month_enddate),is_facility_expense=True, facility = self.facility)
+        last_month_expense=CashEntry.objects.filter(created_date__range=(last_month_startdate,last_month_enddate),is_personal_expense=True, facility = self.facility)
         last_month_amount = 0
         for expense in last_month_expense:
             last_month_amount += expense.expense_amount
@@ -114,7 +114,7 @@ class NgUser(models.Model):
         total_fellow = len(NgUser.objects.filter(facility = self.facility))
         total_limit = total_fellow * self.facility.student_expenses_limit
         return abs(int(total_limit - self.last_week_facility_expenses())/total_fellow)
-    
+
 
     #flag to check if student facility has exceed monthly facility expense limit.
     def in_monthly_limit(self):
@@ -150,11 +150,11 @@ class MoneyRequest(models.Model):
     is_utility_request= models.BooleanField(default=False)
     type_of_bill = models.CharField(max_length=50, choices=BILL, blank=True, null =True)
     bill_image = models.ImageField(upload_to='billpayment/%Y/%m/%d', blank=True, null = True)
-    
+
     #Fields specifically for TransferRequest
     is_money_request= models.BooleanField(default=False)
     account_detail = models.OneToOneField(AccountDetail, blank=True, null =True)
-    
+
     #Fields that are included in both TranserRequest and BillPaymentRequest
     facility = models.ForeignKey(Facility,null=True,blank=True)
     money_requested_by = models.ForeignKey(NgUser,null=True, related_name = "money_requested_by", blank=True)
@@ -171,7 +171,7 @@ class MoneyRequest(models.Model):
 
 #Model to Handle all the cash Entry made in Ng
 class CashEntry(models.Model):
-    
+
     #Add Expense Fields
     category = models.ForeignKey(Category, default=1)
     expense_amount = models.IntegerField(blank=True, null=True)
@@ -183,13 +183,13 @@ class CashEntry(models.Model):
 
     #Record Payment Fields
     is_payment_to_ng = models.BooleanField(default=False)
-    bank_screenshot = models.ImageField(upload_to=bankScreenshot, blank=True, null=True)   
+    bank_screenshot = models.ImageField(upload_to=bankScreenshot, blank=True, null=True)
     payment_amount = models.IntegerField(blank=True, null=True)
-    
+
     #to handle payforward
     is_pay_forward = models.BooleanField(default=False)
     fellow_payment_screenshot = models.ImageField(upload_to=fellowScreenshot, blank=True, null=True)
-    
+
     #Fields for AddExpense, RecordPayment
     created_date = models.DateField(default = timezone.now)
     facility=models.ForeignKey(Facility, blank=True, null = True)
@@ -198,4 +198,3 @@ class CashEntry(models.Model):
 
     def __str__(self):
         return '{0}'.format(self.fellow)
-

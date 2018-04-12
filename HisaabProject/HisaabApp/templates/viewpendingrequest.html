@@ -46,9 +46,14 @@
 
 
         <!-- Account Information to transfer -->
+        <!-- ############################################################## -->
+        <!-- #what if the person doesn't have there own account like ranjan -->
+        <!-- ############################################################## -->
+
         <h4><b>Account Details</b></h4>
-        <p><b>Account Holder Name</b><span>{{ money_request.money_received_by }}</span></p>
-        <p><b>UPI Id:</b> <span>{{ money_request.money_received_by.upi_id }}</span></p>
+        <p><b>Account Holder Name</b><span>{{ money_request.account_detail.account_holder_name }}</span></p>
+        <p><b>Account Number</b><span>{{ money_request.account_detail.account_number }}</span></p>
+        <p><b>IFSC code:</b> <span>{{ money_request.account_detail.IFSC_code }}</span></p>
       </div>
       <!-- block for Bill Payment request -->
       {% else %}
