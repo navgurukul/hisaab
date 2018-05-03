@@ -19,16 +19,18 @@ from django.db.models import Q
 #For checking the usertype
 # For checking is the user is fellow(student in the navgurukul)
 def is_fellow(user):
-    return user.nguser.user_type == "FELLOW" and user.email.endswith('navgurukul.org')
-    
+    return user.nguser.user_type == "FELLOW" and is_from_navgurukul(user)
+
 #For checking the is the user is admin(volenture in the navgurukul)
 def is_admin(user):
-    return (user.nguser.user_type == "ADMIN" or user.nguser.user_type == "SUPER_ADMIN") and user.email.endswith('navgurukul.org')
+    return (user.nguser.user_type == "ADMIN" or user.nguser.user_type == "SUPER_ADMIN") and is_from_navgurukul(user)
 
+def is_from_navgurukul(user):
+    return user.email.endswith('navgurukul.org')
 
 #For checking is the user is Super_admin(Abhisek Gupta or Rishabh verma(CO-FOUNDERS OF NAVGURUKUL))
 def is_super_admin(user):
-    return user.nguser.user_type == "SUPER_ADMIN" and user.email.endswith('navgurukul.org')
+    return user.nguser.user_type == "SUPER_ADMIN" and is_from_navgurukul(user)
 
 
 # If the user tries to do the things for which he doesn't have the permission then this page will shown to the user
@@ -38,7 +40,6 @@ def access_denied(request):
 
 # Views for registering the facility of the user
 def register(request):
-
     # Getting the is_new from google authentication session
     if request.session.get('is_new', None):
 
@@ -63,7 +64,9 @@ def register(request):
 
 
 #Rendering the home page to user.
+
 @login_required
+@user_passes_test(is_from_navgurukul, login_url='/access_denied')
 def home(request):
 
     #Checkin is the user is_admin
