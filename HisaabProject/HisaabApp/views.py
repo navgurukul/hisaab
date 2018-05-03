@@ -19,15 +19,17 @@ from django.db.models import Q
 #For checking the usertype
 # For checking is the user is fellow(student in the navgurukul)
 def is_fellow(user):
-    return user.nguser.user_type == "FELLOW"
+    return user.nguser.user_type == "FELLOW" and user.email.endswith('navgurukul.org')
 
 #For checking the is the user is admin(volenture in the navgurukul)
 def is_admin(user):
-    return user.nguser.user_type == "ADMIN" or user.nguser.user_type == "SUPER_ADMIN"
+    return (user.nguser.user_type == "ADMIN" or user.nguser.user_type == "SUPER_ADMIN") and user.email.endswith('navgurukul.org')
+
 
 #For checking is the user is Super_admin(Abhisek Gupta or Rishabh verma(CO-FOUNDERS OF NAVGURUKUL))
 def is_super_admin(user):
-    return user.nguser.user_type == "SUPER_ADMIN"
+    return user.nguser.user_type == "SUPER_ADMIN" and user.email.endswith('navgurukul.org')
+
 
 # If the user tries to do the things for which he doesn't have the permission then this page will shown to the user
 def access_denied(request):
