@@ -20,7 +20,7 @@ from django.db.models import Q
 # For checking is the user is fellow(student in the navgurukul)
 def is_fellow(user):
     return user.nguser.user_type == "FELLOW" and user.email.endswith('navgurukul.org')
-
+    
 #For checking the is the user is admin(volenture in the navgurukul)
 def is_admin(user):
     return (user.nguser.user_type == "ADMIN" or user.nguser.user_type == "SUPER_ADMIN") and user.email.endswith('navgurukul.org')
