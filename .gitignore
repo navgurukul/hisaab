@@ -1,8 +1,8 @@
 /*.pyc
-/db.sqlite3
+HisaabProject/db.sqlite3
 *.sql
 __pycache__/
 migrations/
 staticfiles/
 media/
-
+virtualenviroment/
