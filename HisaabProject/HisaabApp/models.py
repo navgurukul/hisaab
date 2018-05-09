@@ -49,7 +49,7 @@ class NgUser(models.Model):
 
     # the function created for calculate the total time of fellows in Navgurukul.
     def total_time_in_ng(self):
-        print timezone.now(), self.created_date
+        # print timezone.now(), self.created_date
         return (datetime.date.today() - self.created_date).days
 
     ###############################################################
@@ -70,7 +70,7 @@ class NgUser(models.Model):
         today = datetime.date.today()
         weekend_date = today - datetime.timedelta(today.weekday()+1)
         last_week_date = weekend_date - datetime.timedelta(7)
-        last_week_expense=CashEntry.objects.filter(created_date__range=(last_week_date,weekend_date),is_facility_expense=True, facility = self.facility)
+        last_week_expense=CashEntry.objects.filter(created_date__range=(last_week_date,weekend_date),is_personal_expense=True, facility = self.facility)
         last_week_amount = 0
         for expense in last_week_expense:
             last_week_amount += expense.expense_amount
@@ -81,11 +81,10 @@ class NgUser(models.Model):
         today = datetime.date.today()
         last_month_enddate = today.replace(day=1)-datetime.timedelta(1)
         last_month_startdate = last_month_enddate.replace(day=1)
-        last_month_expense=CashEntry.objects.filter(created_date__range=(last_month_startdate,last_month_enddate),is_facility_expense=True, facility = self.facility)
+        last_month_expense=CashEntry.objects.filter(created_date__range=(last_month_startdate,last_month_enddate),is_personal_expense=True, facility = self.facility)
         last_month_amount = 0
         for expense in last_month_expense:
             last_month_amount += expense.expense_amount
-        print last_month_amount
         return last_month_amount
 
     #******* flags for checking user user_type ********

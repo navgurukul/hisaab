@@ -20,9 +20,11 @@ class AddCategoryForm(forms.ModelForm):
         model = Category
         fields = '__all__'
 
+
 #to check the image fileis valid or not aftering accepting
 class PaymentRecordForm(forms.Form):
     bank_screenshot = forms.ImageField()
+
 
 #form to Update the detail of the facility
 class UpdateFacilityForm(forms.Form):
@@ -38,15 +40,18 @@ class RegisterForm(forms.Form):
 
 #Form to Handle the data whenever someone make a request to the user from TransferRequestPage
 class MoneyTransferForm(forms.ModelForm):
+# <<<<<<< HEAD
     money_requested_by = forms.ModelChoiceField(queryset= NgUser.objects.all())
     amount = forms.IntegerField()
     description = forms.Textarea()
-    upi_id = forms.CharField(max_length=40,required=False)
-    money_requested_by = forms.ModelChoiceField(queryset= NgUser.objects.all())
-    amount = forms.IntegerField()
-    description = forms.CharField()
-    nguser_with_upi = forms.ModelChoiceField(queryset = NgUser.objects.all(), required=False)
-    nguser_without_upi = forms.ModelChoiceField(queryset = NgUser.objects.all(),required=False)
+# =======
+#     upi_id = forms.CharField(max_length=40,required=False)
+#     money_requested_by = forms.ModelChoiceField(queryset= NgUser.objects.all())
+#     amount = forms.IntegerField()
+#     description = forms.CharField()
+#     nguser_with_upi = forms.ModelChoiceField(queryset = NgUser.objects.all(), required=False)
+#     nguser_without_upi = forms.ModelChoiceField(queryset = NgUser.objects.all(),required=False)
+# >>>>>>> 66c63d872869abdf962d5d27e57aa4a5d3dd9887
 
     #fields to be displayed and the model to be used
     class Meta:
