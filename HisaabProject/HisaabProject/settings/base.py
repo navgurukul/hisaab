@@ -14,7 +14,7 @@ import os
 # from .pipelines import *
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 
 # Quick-start development settings - unsuitable for production
@@ -119,15 +119,14 @@ SOCIAL_AUTH_FIELDS_STORED_IN_SESSION = ['facility',]
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR,'db.sqlite3'),
-        # 'ENGINE': 'django.db.backends.mysql',
-        # 'NAME':'hisaab',
-        # 'USER':'root',
-        # 'PASSWORD':'amar',
-        # 'HOST':'localhost',
+        # 'ENGINE': 'django.db.backends.sqlite3',
+        # 'NAME': os.path.join(BASE_DIR,'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME':'hisaab',
+        'USER':'root',
+        'PASSWORD':'navgurukul',
+        'HOST':'localhost',
         # 'PORT':'',
-<<<<<<< HEAD
         # 'ENGINE': 'django.db.backends.sqlite3',
         # 'NAME': os.path.join(BASE_DIR,'db.sqlite3'),
         # 'ENGINE': 'django.db.backends.mysql',
@@ -136,8 +135,6 @@ DATABASES = {
         # 'PASSWORD':'amar',
         # 'HOST':'localhost',
         # 'PORT':'',
-=======
->>>>>>> 041e1378adb49485560d3fbc191fb3e94c8136ae
     }
 }
 
