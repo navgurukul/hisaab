@@ -175,10 +175,9 @@ class CashEntry(models.Model):
     category = models.ForeignKey(Category, default=1)
     expense_amount = models.IntegerField(blank=True, null=True)
     bill_image = models.ImageField(upload_to=billImage,blank=True, null = True)
-    is_personal_expense = models.BooleanField(default=False)
+    is_personal_expense = models.BooleanField(default=False) # INN SAAREIN BOOLEANS KO REPLACE EK SIMPLE SA BOOLEAN BANANA HAI
     is_facility_expense = models.BooleanField(default=False)
     fellow = models.ForeignKey(NgUser, related_name='cash_entry', related_query_name = 'cash_entry')
-
 
     #Record Payment Fields
     is_payment_to_ng = models.BooleanField(default=False)
@@ -193,7 +192,7 @@ class CashEntry(models.Model):
     created_date = models.DateField(default = timezone.now)
     facility=models.ForeignKey(Facility, blank=True, null = True)
     description = models.TextField(blank=True, null= True)
-    cash_in_hand_currently = models.IntegerField(default= 0, blank = True, null= True)
+    cash_in_hand_currently = models.IntegerField(default= 0, blank = True, null= True) # TODO ISSE HATA DO
 
     def __str__(self):
         return '{0}'.format(self.fellow)

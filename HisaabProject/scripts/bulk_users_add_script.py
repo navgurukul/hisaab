@@ -1,7 +1,7 @@
 import csv
 from HisaabApp.models import User, NgUser, Facility
 
-with open( "user.csv" ) as f:
+with open( "data/users.csv" ) as f:
         reader = csv.reader(f)
         reader.next()
 
@@ -27,7 +27,7 @@ with open( "user.csv" ) as f:
             facility_subname = row[4]
             facility = Facility.objects.filter(name__icontains=facility_subname)[0]
 
-            print user.id, facility_id
+            print user.id, facility.id
 
             _, created = NgUser.objects.get_or_create(
                 user = User.objects.get(id=user.id),
