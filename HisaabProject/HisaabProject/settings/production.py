@@ -27,8 +27,7 @@ SECRET_KEY = 'hh9zq5e04p3-*jfkbbk$ttm7cwgee(r6^radkiq6o9@=x7hj)v'
 DEBUG = False
 
 #Host to be Deploy in
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['localhost', 'hisaab.navgurukul.org']
 
 # Application definition
 INSTALLED_APPS = [
