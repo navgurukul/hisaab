@@ -121,11 +121,15 @@ DATABASES = {
     'default': {
         # 'ENGINE': 'django.db.backends.sqlite3',
         # 'NAME': os.path.join(BASE_DIR,'db.sqlite3'),
+        'OPTIONS': {
+            'sql_mode': 'traditional',
+        },
         'ENGINE': 'django.db.backends.mysql',
         'NAME':'hisaab',
-        'USER':'root',
+        'USER':'hisaab',
         'PASSWORD':'navgurukul',
-        'HOST':'localhost',
+        'HOST':'navgurukulsql.cosodeda78lq.ap-south-1.rds.amazonaws.com',
+        'PORT':'3306',
         # 'PORT':'',
         # 'ENGINE': 'django.db.backends.sqlite3',
         # 'NAME': os.path.join(BASE_DIR,'db.sqlite3'),
@@ -182,7 +186,7 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
 
-STATIC_ROOT= os.path.join(BASE_DIR,'staticfiles')
+STATIC_ROOT= os.path.join(BASE_DIR,'static')
 
 
 
