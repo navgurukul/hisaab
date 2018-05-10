@@ -33,7 +33,7 @@ urlpatterns = [
     url(r'^addfacility/$', views.add_facility, name='addfacility',),
     url(r'^addcategory/$', views.add_category, name='addcategory',),
     url(r'^updatefacility/$', views.update_facility, name='updatefacility',),
-    url(r'^makeadmin/$', views.make_admin,  name='make_admin'),	
+    url(r'^makeadmin/$', views.make_admin,  name='makeadmin'),	
 ]
 # To save the static files in the media folder
 if settings.DEBUG:

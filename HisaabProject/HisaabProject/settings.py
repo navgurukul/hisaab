@@ -27,7 +27,7 @@ SECRET_KEY = 'hh9zq5e04p3-*jfkbbk$ttm7cwgee(r6^radkiq6o9@=x7hj)v'
 DEBUG = True
 
 #Host to be Deploy in
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*',]
 
 
 # Application definition
@@ -119,14 +119,14 @@ SOCIAL_AUTH_FIELDS_STORED_IN_SESSION = ['facility',]
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR,'db.sqlite3'),
-        # 'ENGINE': 'django.db.backends.mysql',
-        # 'NAME':'hisaab',
-        # 'USER':'root',
-        # 'PASSWORD':'amar',
-        # 'HOST':'localhost',
-        # 'PORT':'',
+        # 'ENGINE': 'django.db.backends.sqlite3',
+        # 'NAME': os.path.join(BASE_DIR,'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME':'hisaab',
+        'USER':'root',
+        'PASSWORD':'diwakar',
+        'HOST':'localhost',
+        'PORT':'',
     }
 }
 
