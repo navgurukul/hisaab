@@ -171,6 +171,7 @@ def recordpayment(request):
 
 #For adding all the expenses made by a person.
 @login_required
+@user_passes_test(is_from_navgurukul, login_url='/access_denied')
 def addexpense(request):
 
     # Handling the post request data and a form is made
@@ -208,6 +209,7 @@ def addexpense(request):
 
 #Getting the Detail Report about the expense and payment made to the Facility.
 @login_required
+@user_passes_test(is_from_navgurukul, login_url='/access_denied')
 def facilityreport(request, pk):
 
     facility = get_object_or_404(Facility,pk=pk)
@@ -233,6 +235,7 @@ def facilityreport(request, pk):
 
 #Getting the Detail report the student expense and payments.
 @login_required
+@user_passes_test(is_from_navgurukul, login_url='/access_denied')
 def fellowreport(request, pk):
     fellow = get_object_or_404(NgUser,pk=pk)
     #Handling the post request data

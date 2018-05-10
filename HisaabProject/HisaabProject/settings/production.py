@@ -14,7 +14,7 @@ import os
 # from .pipelines import *
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 
 # Quick-start development settings - unsuitable for production
@@ -24,11 +24,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'hh9zq5e04p3-*jfkbbk$ttm7cwgee(r6^radkiq6o9@=x7hj)v'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 #Host to be Deploy in
-ALLOWED_HOSTS = ['*',]
-
+ALLOWED_HOSTS = ['localhost', 'hisaab.navgurukul.org']
 
 # Application definition
 INSTALLED_APPS = [
@@ -119,8 +118,20 @@ SOCIAL_AUTH_FIELDS_STORED_IN_SESSION = ['facility',]
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR,'db.sqlite3'),
+        # 'ENGINE': 'django.db.backends.sqlite3',
+        # 'NAME': os.path.join(BASE_DIR,'db.sqlite3'),
+        'OPTIONS': {
+            'sql_mode': 'traditional',
+        },
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME':'hisaab',
+        'USER':'hisaab',
+        'PASSWORD':'navgurukul',
+        'HOST':'navgurukulsql.cosodeda78lq.ap-south-1.rds.amazonaws.com',
+        'PORT':'3306',
+        # 'PORT':'',
+        # 'ENGINE': 'django.db.backends.sqlite3',
+        # 'NAME': os.path.join(BASE_DIR,'db.sqlite3'),
         # 'ENGINE': 'django.db.backends.mysql',
         # 'NAME':'hisaab',
         # 'USER':'root',
@@ -174,7 +185,7 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
 
-STATIC_ROOT= os.path.join(BASE_DIR,'staticfiles')
+STATIC_ROOT= os.path.join(BASE_DIR,'static')
 
 
 

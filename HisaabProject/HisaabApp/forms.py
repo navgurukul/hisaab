@@ -38,7 +38,7 @@ class RegisterForm(forms.Form):
     facility = forms.ModelChoiceField(queryset = Facility.objects.all(),widget=forms.Select(attrs={'class': 'form-control form-control-sm'}))
 
 
-#Form to Handle the data whenever someone make a request to the user from TransferRequestPage 
+#Form to Handle the data whenever someone make a request to the user from TransferRequestPage
 class MoneyTransferForm(forms.ModelForm):
 # <<<<<<< HEAD
     money_requested_by = forms.ModelChoiceField(queryset= NgUser.objects.all())
@@ -63,7 +63,7 @@ class MoneyTransferForm(forms.ModelForm):
 
         #calling the parent class __init__() method
         super(MoneyTransferForm, self).__init__(*args, **kwargs)
-            
+
             # # including all the user if authenticated user is admin or super_admin
             # self.fields['money_requested_by'].queryset = NgUser.objects.all().filter(facility__id=self.request.user.nguser.facility.id)
 
@@ -81,7 +81,7 @@ class AccountDetailForm(forms.ModelForm):
         model = AccountDetail
         fields = ('confirm_account_number', 'account_number', 'IFSC_code', 'account_holder_name')
 
-#Form to handle the data from the RecordPaymentPage 
+#Form to handle the data from the RecordPaymentPage
 class RecordPaymentForm(forms.ModelForm):
     facility = forms.ModelChoiceField(queryset= Facility.objects.all())
     description = forms.CharField()
@@ -105,7 +105,7 @@ class UtilityBillRequestForm(forms.ModelForm):
         fields = ('amount','type_of_bill','description','bill_image')
 
 
-#Form to handle the Add Expense Page 
+#Form to handle the Add Expense Page
 class AddExpenseForm(forms.ModelForm):
 
     EXPENSETYPE = (("FACILITY",'Navgurukul'),('PERSONAL','Personal'))
@@ -132,7 +132,7 @@ class AddExpenseForm(forms.ModelForm):
 
         #calling the parent class __init__() method
         super(AddExpenseForm, self).__init__(*args, **kwargs)
-        
+
         # including all the user if authenticated user is admin or super_admin
         if self.request.user.nguser.is_admin() or self.request.user.nguser.is_super_admin():
             self.fields['fellow'].queryset = NgUser.objects.all()
@@ -141,4 +141,3 @@ class AddExpenseForm(forms.ModelForm):
         else:
             facility__id = NgUser.objects.get(user = self.request.user).facility.id
             self.fields['fellow'].queryset = NgUser.objects.all().filter(facility__id= facility__id).filter(user_type='FELLOW')
-
