@@ -52,8 +52,8 @@
                     <a href="{% url 'moneyrequest' %}"><i class="fa fa-angle-double-down"></i>&nbsp;&nbsp;&nbsp;  Request Transfer</a>
                     <a href="{% url 'utilityrequest' %}"><span class="glyphicon lg">&#xe177;</span>&nbsp;&nbsp;&nbsp;Utility Bill Request</a>
                     <a href="{% url 'facilityreport' pk=user.nguser.facility.pk %}"><span class="glyphicon lg">&#xe105;</span>&nbsp;&nbsp;&nbsp;Facility Report</a>
-                 
-                  
+
+
                   {% else %}
                     <a href="{% url 'searchfellow' %}"><i class="fa fa-user-plus "></i>&nbsp;&nbsp;Student Level Expense</a>
                     <a href="{% url 'recordpayment' %}"><i class="fa fa-angle-double-up"></i>&nbsp;&nbsp;&nbsp; Record Payment</a>
@@ -88,8 +88,8 @@
       }
       .body {
           font-family: "Lato", sans-serif;
-          transition: background-color .5s;
-            
+          transition: background-color .1s;
+
       }
       .lg{
         font-size: 20px;

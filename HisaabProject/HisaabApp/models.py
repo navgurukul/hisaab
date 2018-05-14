@@ -35,11 +35,10 @@ class Facility(models.Model):
 # The NgUser models create  for add the user type , created date of user and there upi id .
 class NgUser(models.Model):
     ROLES = (('ADMIN','admin'),('SUPER_ADMIN','super_admin'),('FELLOW','fellow'))
-
-    user_type= models.CharField(choices=ROLES,max_length=11,default='FELLOW',blank=False)
+    user_type = models.CharField(choices=ROLES,max_length=11,default='FELLOW',blank=False)
     user = models.OneToOneField(User,unique=True, related_query_name = 'nguser', on_delete=models.CASCADE)
     created_date = models.DateField(auto_now_add=True)
-    facility= models.ForeignKey(Facility,blank=True, null=True, )
+    facility = models.ForeignKey(Facility,blank=True, null=True) # think of this as current_facility
     has_account_id = models.BooleanField(default=False)
     # #for fellow
     # account_id = models.CharField(max_length=40, blank= True, null=True)
@@ -176,10 +175,9 @@ class CashEntry(models.Model):
     category = models.ForeignKey(Category, default=1)
     expense_amount = models.IntegerField(blank=True, null=True)
     bill_image = models.ImageField(upload_to=billImage,blank=True, null = True)
-    is_personal_expense = models.BooleanField(default=False)
+    is_personal_expense = models.BooleanField(default=False) # INN SAAREIN BOOLEANS KO REPLACE EK SIMPLE SA BOOLEAN BANANA HAI
     is_facility_expense = models.BooleanField(default=False)
     fellow = models.ForeignKey(NgUser, related_name='cash_entry', related_query_name = 'cash_entry')
-
 
     #Record Payment Fields
     is_payment_to_ng = models.BooleanField(default=False)
@@ -194,7 +192,7 @@ class CashEntry(models.Model):
     created_date = models.DateField(default = timezone.now)
     facility=models.ForeignKey(Facility, blank=True, null = True)
     description = models.TextField(blank=True, null= True)
-    cash_in_hand_currently = models.IntegerField(default= 0, blank = True, null= True)
+    cash_in_hand_currently = models.IntegerField(default= 0, blank = True, null= True) # TODO ISSE HATA DO
 
     def __str__(self):
         return '{0}'.format(self.fellow)
