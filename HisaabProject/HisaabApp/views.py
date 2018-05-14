@@ -358,9 +358,10 @@ def searchfellow(request):
     return render(request, 'searchuser.html')
 
 # views for giving a permission to super admin to create a admin
-@login_required
-@user_passes_test(is_super_admin, login_url='/access_denied/')
+# @login_required
+# @user_passes_test(is_super_admin, login_url='/access_denied/')
 def make_admin(request):
+    # import pdb; pdb.set_trace()
     if request.method == 'GET' and request.is_ajax():
 
         #sending the data by getting the facility value
@@ -379,7 +380,7 @@ def make_admin(request):
     return render(request, 'makeadmin.html',{'facilities':facilities})
 
 
-
+@login_required
 @user_passes_test(is_super_admin, login_url='/access_denied/')
 #views for adding a new facility by super admin
 def add_facility(request):
@@ -396,7 +397,7 @@ def add_facility(request):
     return render(request,'addfacility.html',{'form':form})
 
 
-
+@login_required
 @user_passes_test(is_super_admin, login_url='/access_denied/')
 #views for adding a new add category by super admin
 def add_category(request):
@@ -413,7 +414,7 @@ def add_category(request):
     return render(request,'addcategory.html',{'form':form})
 
 
-
+@login_required
 @user_passes_test(is_super_admin, login_url='/access_denied/')
 #views for Updating facility detail by super admin
 def update_facility(request):
