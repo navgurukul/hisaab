@@ -2,31 +2,43 @@ import csv
 from datetime import datetime
 from HisaabApp.models import *
 
-with open('data/sarita_vihar.csv' ) as f:
+with open('data/Dharamsala_expense.csv' ) as f:
         reader = csv.reader(f)
         reader.next()
 
         last_added_name = ""
 
-        # sample row
-        # Milk & Bread-21,Shivam Monga,1 April 2017,-21,NavGurukul PayTM,Milk & Bread,bought by milk 21,4/1/2017 7:08am,SV,Navgurukul
-
         for row in reader:
-            user = row[1].split(",")[0]
+            user = row[4].split(",")[0]
+            if user == '':continue
+            date=row[1]
+            date=datetime.datetime.strptime(date, "%Y-%m-%d")
+            amount= row[2]
+            if amount == '':
+                amount = None
+            try:
+                amount = int(amount)
+                # print amount
+            except:
+                pass
+
+            user = row[4].split(",")[0]
+
             if user:
                 user = user.split()[0]
                 last_added_name = user
             else:
                 user = last_added_name
 
-            facility = Facility.objects.filter(name__icontains="sarita")[0]
+            facility = Facility.objects.filter(name__icontains="Dharamsala")[0]
 
             # Find corresponding user from the user name
-            print user
+            print row
             userObj = User.objects.filter(username__icontains=user[:5]).first()
             if not userObj:
                 User.objects.filter(first_name__icontains=user).first()
             if not userObj:
+                print row
                 print "YEH KAHA AAAAAAAA GAYE HUMMMMMMMM!!!!!!!!!"
 
             ngUserObj = NgUser.objects.get(user=userObj.id)
@@ -40,10 +52,10 @@ with open('data/sarita_vihar.csv' ) as f:
         		# split_name=expense_made_by.split(','),
         		# fellow=split_name[0],
                 fellow = ngUserObj,
-        		created_date=row[2],
-        		expense_amount=row[3],
+        		created_date=date,
+        		expense_amount=amount,
         		category=category,
-        		description=row[6],
+        		description=row[0],
         		facility=facility,
         		is_facility_expense=1
             )

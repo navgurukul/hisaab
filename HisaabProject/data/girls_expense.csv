@@ -1,0 +1,374 @@
+Date,Category,Expense,Description,name
+2018-02-01,Milk,21,milk,Kanika
+2018-02-01,Milk,40,bread,Savita
+2018-02-01,Groceries,1050,grocery,Khushboo
+2018-02-01,Vegetables,27,vegetable,Annu
+2018-02-01,Milk,21,milk,Harjeet
+2018-02-02,medical,60,medical,Savita
+2018-02-02,Other,100,others,Rani
+2018-02-02,Milk,21,milk,Ankita
+2018-02-03,Vegetables,240,vegetable,Khushboo
+2018-02-04,Milk,21,milk,Rani
+2018-02-04,Milk,40,bread,Harjeet
+2018-02-04,Eggs,36,eggs,Rani
+2018-02-04,Groceries,868,grocery,Khushboo
+2018-02-04,Travel,110,Transpotation,Kanika
+2018-02-04,medical,500,medical,Kanika
+2018-02-04,Travel,120,Transpotation,Lalita
+2018-02-05,Milk,21,milk,Rani
+2018-02-05,medical,58,medical,Lalita
+2018-02-05,medical,640,medical,Lalita
+2018-02-05,Travel,140,Transpotation,Kanika
+2018-02-06,Milk,21,milk,Harjeet
+2018-02-06,Vegetables,90,vegetable,Annu
+2018-02-07,Milk,21,milk,Pooja
+2018-02-07,Vegetables,30,vegetable,Ankita
+2018-02-08,Milk,21,milk,Khushboo
+2018-02-08,Milk,30,bread,Pooja
+2018-02-09,Milk,21,milk,Savita
+2018-02-09,Vegetables,173,vegetable,Harjeet
+2018-02-10,Milk,21,milk,Ankita
+2018-02-10,Vegetables,70,vegetable,Khushboo
+2018-02-11,Milk,21,milk,Annu
+2018-02-11,Eggs,30,eggs,Rani
+2018-02-11,Milk,20,bread,Ankita
+2018-02-11,Groceries,115,wheatflour,Kanika
+2018-02-11,Groceries,80,grocery,Khushboo
+2018-02-12,Milk,42,milk,Kanika
+2018-02-12,Vegetables,30,vegetable,Ankita
+2018-02-13,Milk,21,milk,Ankita
+2018-02-13,Groceries,40,dahi,Pooja
+2018-02-13,Groceries,20,kulcha,Pooja
+2018-02-14,Milk,21,milk,Savita
+2018-02-14,Eggs,18,eggs,Annu
+2018-02-15,Milk,22,milk,Rani
+2018-02-15,Groceries,433,grocery,Kanika
+2018-02-16,Vegetables,10,vegetable,Savita
+2018-02-16,Milk,21,milk,Savita
+2018-02-16,medical,70,medical,Harjeet
+2018-02-16,Vegetables,259,vegetable,Khushboo
+2018-02-16,Vegetables,100,vegetable,Khushboo
+2018-02-16,Groceries,10,grocery,Savita
+2018-02-17,Other,900,gas,Khushboo
+2018-02-17,Travel,100,Transpotation,Ankita
+2018-02-17,Milk,21,milk,Kanika
+2018-02-17,Groceries,520,groucery,Ankita
+2018-02-17,Travel,40,Transpotation,Rani
+2018-02-17,Travel,100,Transpotation,Kanika
+2018-02-17,medical,58,medical,Kanika
+2018-02-18,Milk ,80,milk and eggs,Pooja
+2018-02-18,Milk,20,bread,Lalita
+2018-02-18,Vegetables,200,vegetable,Kanika
+2018-02-19,Vegetables,125,vegetable,Ankita
+2018-02-19,Groceries,310,groucery,Lalita
+2018-02-20,Groceries,49,Honey,Kanika
+2018-02-20,Household Items,152,house-hold,Savita
+2018-02-21,Groceries,30,groucery,Harjeet
+2018-02-22,Groceries,50,groucery,Rani
+2018-02-22,Vegetables,80,vegetable,Khushboo
+2018-02-23,groucery,540,groucery,Khushboo
+2018-02-23,Travel,40,Transpotation,Kanika
+2018-02-24,Vegetables,67,vegetable,Pooja
+2018-02-25,Vegetables,205,vegetable,Kanika
+2018-02-26,Other,15,others,Pooja
+2018-02-26,Other,7,others,Harjeet
+2018-02-27,Other,300,others,Khushboo
+2018-02-27,Groceries,336,groucery,Kanika
+2018-02-28,Eggs,28,eggs,Harjeet
+2018-02-28,Milk,20,bread,Khushboo
+2018-02-28,Travel,40,Transpotation,Kanika
+2018-02-28,Other,70,field food,Savita
+2018-02-28,Other,10,others,Harjeet
+2018-02-28,Household Items,225,house-hold,Annu
+2018-02-28,Groceries,115,groucery,Pooja
+2018-03-01,Milk,21,milk,Harjeet
+2018-03-05,Other,100,Othrs,Savita
+2018-03-05,Milk,21,milk,Annu
+2018-03-06,Milk,21,milk,Rani
+2018-03-07,Milk,21,milk,Khushboo
+2018-03-07,Eggs,18,eggs,Lalita
+2018-03-07,Milk,20,bread,Pooja
+2018-03-07,Other,70,field-food,Kanika
+2018-03-07,Household Items,122,houe-hold,Rani
+2018-03-07,Travel,40,Transpotation,Rani
+2018-03-08,Milk,21,milk,Lalita
+2018-03-08,Vegetables,35,vegetable,Annu
+2018-03-08,Groceries,1155,grocery,Savita
+2018-03-09,Vegetables,25,vegetable,Harjeet
+2018-03-10,Milk,21,milk,Annu
+2018-03-10,Groceries,230,grocery,Savita
+2018-03-11,Milk,26,milk,Khushboo
+2018-03-11,Eggs,18,eggs,Savita
+2018-03-11,Milk,20,bread,Annu
+2018-03-12,Milk,21,milk,Savita
+2018-03-12,Travel,40,Transpotation,Annu
+2018-03-13,Milk,21,milk,Lalita
+2018-03-13,Travel,40,Transpotation,Kanika
+2018-03-13,Vegetables,40,vegetable,Lalita
+2018-03-14,Eggs,20,eggs,Annu
+2018-03-14,Milk,20,bread,Pooja
+2018-03-14,Milk,21,milk,Khushboo
+2018-03-14,Travel,240,Transpotation,Harjeet
+2018-03-15,Milk,21,milk,Lalita
+2018-03-15,Travel,40,Transpotation,Ankita
+2018-03-15,Other,80,field-food,Annu
+2018-03-16,Milk,21,milk,Annu
+2018-03-16,Vegetables,10,vegetable,Kanika
+2018-03-16,medical,16,medical,Annu
+2018-03-16,Vegetables,25,vegetable,Savita
+2018-03-16,Vegetables,40,vegetable,Lalita
+2018-03-16,Groceries,90,grocery,Khushboo
+2018-03-17,Milk,21,milk,Khushboo
+2018-03-17,Vegetables,50,vegetable,Pooja
+2018-03-17,Groceries,330,grocery,Ankita
+2018-03-17,medical,250,medical,Pooja
+2018-03-17,Travel,47,Transpotation,Rani
+2018-03-18,Milk,21,milk,Lalita
+2018-03-18,Milk,40,bread,Rani
+2018-03-18,Eggs,35,eggs,Lalita
+2018-02-19,Milk,20,milk,Lalita
+2018-03-20,Milk,21,milk,Ankita
+2018-03-20,Milk,21,milk,Annu
+2018-03-20,Travel,30,Transpotation,Ankita
+2018-03-20,medical,50,medical,Kanika
+2018-03-20,Travel,760,Transpotation,Ankita
+2018-03-20,Travel,400,Transpotation,Kanika
+2018-03-21,Milk,21,milk,Ankita
+2018-03-21,Vegetables,30,vegetable,Rani
+2018-03-22,Milk,21,milk,Annu
+2018-03-22,Milk,21,milk,Lalita
+2018-03-22,Travel,40,Transpotaion,Ankita
+2018-03-22,Groceries,342,Grocery,Ankita
+2018-03-23,Milk,22,milk,Khushboo
+2018-03-23,medical,86,medical,Annu
+2018-03-23,Groceries,350,Grocery,Ankita
+2018-03-24,Vegetables,16,vegetable,Harjeet
+2018-03-24,Milk,21,milk,Pooja
+2018-03-24,Vegetables,40,vegetable,Rani
+2018-03-24,Vegetables,20,vegetable,Harjeet
+2018-03-24,Vegetables,50,vegetable,Annu
+2018-03-25,Milk,21,milk,Savita
+2018-03-25,Milk,22,milk,Savita
+2018-03-25,Milk,22,milk,Annu
+2018-03-25,medical,54,medical,Ankita
+2018-03-26,Milk,20,milk,Lalita
+2018-03-26,medical,20,medical,Savita
+2018-03-26,Groceries,110,grocery,Ankita
+2018-03-26,Other,50,field-food,Kanika
+2018-03-26,Travel,460,Transpotaion,Khushboo
+2018-03-26,Other,900,Gas,Savita
+2018-03-27,Groceries,50,grocery,Khushboo
+2018-03-27,Milk,20,milk,Rani
+2018-03-27,Vegetables,44,vegetable,Ankita
+2018-03-28,Milk,21,milk,Annu
+2018-03-28,Eggs,45,eggs,Kanika
+2018-03-28,Milk,40,bread,Lalita
+2018-03-28,Travel,410,Transpotaion,Savita
+2018-03-28,Other,80,field-food,Kanika
+2018-03-29,Milk,20,milk,Rani
+2018-03-29,Groceries,30,suji,Kanika
+2018-03-29,Groceries,10,lemon,Lalita
+2018-03-29,Groceries,30,spices,Savita
+2018-03-29,Groceries,150,grocery,Ankita
+2018-03-30,Milk,21,milk,Annu
+2018-03-30,Groceries,160,paneer,Kanika
+2018-03-30,Vegetables,30,vegetable,Khushboo
+2018-03-30,Travel,400,Transpotaion,Annu
+2018-03-30,medical,200,medical,Annu
+2018-03-30,Travel,60,Transpotaion,Kanika
+2018-03-30,Other,150,others,Kanika
+2018-03-31,Groceries,120,grocery,Lalita
+2018-03-31,medical,30,medical,Khushboo
+2018-03-31,Travel,440,Transpotaion,Savita
+2018-03-31,Travel,60,Transpotaion,Lalita
+2018-03-31,Vegetables,219,vegetable,Lalita
+2018-03-31,Groceries,519,grocery,Ankita
+2018-04-01,Milk,26,milk,Annu
+2018-04-01,Other,200,traspotation,Lalita
+2018-04-01,Travel,568,others,Savita
+2018-04-01,Other,200,food,Harjeet
+2018-04-02,Groceries,170,break-fast,Savita
+2018-04-03,Other,190,traspotation,Ankita
+2018-04-03,Travel,150,transportation,Rani
+2018-04-04,Milk,20,milk,Lalita
+2018-04-04,Groceries,52,wheat flour,Ankita
+2018-04-05,Milk,20,milk,Ankita
+2018-04-05,Groceries,27,tea leaves,Pooja
+2018-04-05,Household Items,20,broom,Savita
+2018-04-05,Other,4520,labor,Annu
+2018-04-05,Travel,230,tranpotaion,Pooja
+2018-04-05,Groceries,470,grocery,Pooja
+2018-04-05,Other,6,xerox,Savita
+2018-04-05,Other,50,photo,Savita
+2018-04-05,Other,30,seasor,Savita
+2018-04-05,"Household Items
+",235,dustbin,Ankita
+2018-04-05,Household Items,49,garbage bag,Lalita
+2018-04-05,Groceries,1305,grocery,Harjeet
+2018-04-05,Household Items,300,utensils,Pooja
+2018-04-05,Household Items,210,mirror,Savita
+2018-04-06,Milk,30,milk,Savita
+2018-04-06,Vegetables,40,potato,Pooja
+2018-04-06,Groceries,40,sugar,Lalita
+2018-04-06,Groceries,10,sarso,Khushboo
+2018-04-06,Other,2700,electical thing,Pooja
+2018-04-06,Vegetables,30,ginger,Rani
+2018-04-06,Travel,80,transpotation,Pooja
+2018-04-06,Other,20,filed-food,Harjeet
+2018-04-06,Groceries,36,curd,Harjeet
+2018-04-06,Other,1500,labor payment,Ankita
+2018-04-06,Vegetables,20,onion,Pooja
+2018-04-06,Groceries,1981,grocery,Lalita
+2018-04-07,Milk,20,milk,Pooja
+2018-04-07,Milk,65,bread and eggs,Pooja
+2018-04-08,Milk,30,milk,Harjeet
+2018-04-08,Groceries,25,soap,Kanika
+2018-04-08,Groceries,40,besan,Lalita
+2018-04-09,Milk,30,milk,Annu
+2018-04-09,Travel,32,transpotation,Kanika
+2018-04-09,Other,4570,for connection,Kanika
+2018-04-09,Other,30,field-food,Kanika
+2018-04-09,Travel,400,transpotation,Ankita
+2018-04-09,Groceries,170,grocery,Rani
+2018-04-09,Milk,10,milk,Rani
+2018-04-10,Milk,30,milk,Ankita
+2018-04-10,Travel,100,transpotation,Annu
+2018-04-10,Other,45,field-food,Harjeet
+2018-04-10,Other,1500,labour payment,Khushboo
+2018-04-10,Other,8500,for tank thing to labour,Annu
+2018-04-11,Milk,30,milk,Lalita
+2018-04-11,Milk,40,bread,Rani
+2018-04-12,Milk,30,milk,Rani
+2018-04-12,Other,165,recharge,Khushboo
+2018-04-12,Other,80,field-food,Harjeet
+2018-04-12,Groceries,140,paneer,Savita
+2018-04-12,Travel,55,transpotation,Annu
+2018-04-12,Vegetables,40,vegetable,Rani
+2018-04-12,Groceries,,oil,Ankita
+2018-04-13,Milk,45,milk,Annu
+2018-04-13,Eggs,60,eggs,Pooja
+2018-04-13,Milk,40,bread,Pooja
+2018-04-14,Milk,30,milk,Annu
+2018-04-14,Vegetables,20,vegetable,Khushboo
+2018-04-14,Other,270,stamp,Rani
+2018-04-14,Travel,80,transpotation,Ankita
+2018-04-14,Other,80,field-food,Rani
+2018-04-14,Vegetables,130,vegetable,Savita
+2018-04-14,Groceries,1008,grocery,Savita
+2018-04-14,medical,110,medical,Savita
+2018-04-15,Vegetables,15,vegetable,Pooja
+2018-04-15,Groceries,1450,mate,Kanika
+2018-04-15,Travel,56,transpotation,Kanika
+2018-04-15,Groceries,44,curd,Khushboo
+2018-04-16,Milk,45,milk,Pooja
+2018-04-16,Eggs,35,eggs,Annu
+2018-04-16,Groceries,40,banana,Harjeet
+2018-04-16,Groceries,40,choclate,Lalita
+2018-04-16,Groceries,900,tab,Khushboo
+2018-04-16,Other,54,field-food,Pooja
+2018-04-16,other,15,xerox,Rani
+2018-04-16,Travel,58,transpotation,Pooja
+2018-04-16,Vegetables,30,vegetable,Kanika
+2018-04-17,Milk,20,milk,Kanika
+2018-04-17,Travel,60,transpotation,Khushboo
+2018-04-17,Household Items,1150,fan,Harjeet
+2018-04-17,Other,4080,electrical thing,Annu
+2018-04-17,Vegetables,45,veg,Kanika
+2018-04-18,Milk,45,milk,Harjeet
+2018-04-18,Eggs,30,egg,Kanika
+2018-04-18,Milk,30,bread,Lalita
+2018-04-18,Travel,56,transport,Rani
+2018-04-18,Household Items,300,banner,Kanika
+2018-04-19,Milk,45,milk,Ankita
+2018-04-19,Groceries,30,besan,Pooja
+2018-04-19,Household Items,600,fan,Pooja
+2018-04-19,Other,500,pendrive,Kanika
+2018-04-19,Travel,46,transport,Lalita
+2018-04-19,Other,2950,labor payment,Khushboo
+2018-04-19,Groceries,40,Rice,Annu
+2018-04-19,Groceries,116,grocery,Ankita
+2018-04-19,Groceries,809,grocery,Lalita
+2018-04-19,Groceries,33,curd,Pooja
+2018-04-21,Travel,230,auto,Savita
+2018-04-21,Other,70,field-food,Kanika
+2018-04-21,Vegetables,70,vegetable,Annu
+2018-04-21,Household Items,3110,house-hold,Harjeet
+2018-04-21,Milk,45,milk,Rani
+2018-04-22,Milk,60,milk,Khushboo
+2018-04-23,Milk,60,milk,Harjeet
+2018-04-24,Other,10,xerox,Kanika
+2018-04-24,Other,40,field-food,Ankita
+2018-04-24,Vegetables,80,vegetable,Rani
+2018-04-24,Household Items,5315,house-hold,Rani
+2018-04-24,Groceries,67,grocery,Rani
+2018-04-24,Travel,56,transport,Savita
+2018-04-24,Household Items,100,house-hold,Kanika
+2018-04-24,Milk,45,milk,Lalita
+2018-04-25,Milk,40,bread,Harjeet
+2018-04-25,Vegetables,10,vegetable,Kanika
+2018-04-25,Milk,45,milk,Harjeet
+2018-04-25,Eggs,30,egg,Ankita
+2018-04-25,Groceries,40,curd,Harjeet
+2018-04-25,Groceries,20,bundi,Savita
+2018-04-25,Groceries,150,grocery,Lalita
+2018-04-25,Travel,32,transport,Pooja
+2018-04-25,Groceries,25,dal,Ankita
+2018-04-26,Milk,45,milk,Ankita
+2018-04-26,Travel,226,transport,Khushboo
+2018-04-26,Groceries,295,grocery,Khushboo
+2018-04-26,Household Items,38,house-hold,Harjeet
+2018-04-26,Groceries,90,oil,Ankita
+2018-04-26,Groceries,140,mustard oil,Pooja
+2018-04-26,Other,40,field-food,Annu
+2018-04-26,Other,900,labour payment,Lalita
+2018-04-26,Milk,45,milk,Khushboo
+2018-04-26,Travel,330,transport,Lalita
+2018-04-27,Other,4560,carpetry thing,Khushboo
+2018-04-27,Travel,40,transport,Khushboo
+2018-04-27,Groceries,270,grocery,Rani
+2018-04-27,Other,1000,labour payment,Annu
+2018-04-28,Milk,45,milk,Kanika
+2018-04-28,Other,3750,plumbering material,Pooja
+2018-04-28,Other,1000,labour payment,Harjeet
+2018-04-28,Other,2000,labour payment,Savita
+2018-04-28,Travel,60,transport,Savita
+2018-04-29,Milk,45,milk,Savita
+2018-04-29,Groceries,977,grocery,Rani
+2018-04-29,Travel,74,transport,Kanika
+2018-04-30,Milk,60,milk,Savita
+2018-04-30,travel,32,transport,Khushboo
+2018-04-30,Groceries,230,wheat flour,Annu
+2018-04-30,Vegetables,50,vegetable,Khushboo
+2018-04-30,Groceries,22,rava,Harjeet
+2018-04-30,Milk,20,milk,Kanika
+2018-04-30,Groceries,40,besan,Pooja
+2018-04-30,Travel,81,transport,Savita
+2018-04-30,Groceries,50,jagery,Khushboo
+2018-05-01,Milk,60,milk,Harjeet
+2018-05-01,Groceries,210,grocery,Ankita
+2018-05-01,Vegetables,30,onion,Ankita
+2018-05-01,Travel,60,transport,Annu
+2018-05-01,Milk,60,milk,Kanika
+2018-05-01,Other,50,keyboard repair,Lalita
+2018-05-02,Milk,60,milk,Harjeet
+2018-05-02,Groceries,115,grocery,Lalita
+2018-05-02,Travel,565,transport,Savita
+2018-05-02,Other,25,bag,Kanika
+2018-05-02,Milk,60,milk,Khushboo
+2018-05-02,Groceries,140,grocery,Khushboo
+2018-05-02,Other,200,labour payment,Kanika
+2018-05-04,Groceries,450,grocery,Kanika
+2018-05-04,Travel,36,transport,Harjeet
+2018-05-04,medical,280,medical,Savita
+2018-05-04,Travel,60,transport,Khushboo
+2018-05-04,Groceries,140,paneer,Kanika
+2018-05-05,Milk,60,milk,Khushboo
+2018-03-15,Travel,2800,bus fare for all 7 by annu,Savita
+2018-03-15,Travel,200,auto fare by annu,Rani
+2018-03-15,Travel,100,auto fare of metro by annu,Savita
+2018-03-15,Travel,150,metro to home by annu,Harjeet
+2018-03-15,Travel,100,auto fare annu,Savita
+2018-03-15,Other,180,food annu,Pooja
+2018-03-15,Travel,150,metro tickets by annu,Khushboo
+2018-03-15,withdrawal amount ,3000,withdrawal amount by annu,Ankita
+2018-03-15,Travel,150,bank expense by annu,Savita
