@@ -54,10 +54,12 @@
                 <!-- Categories of expenses -->
                     <!-- col 1 -->
                     <div class="col-md-6 Checkbox1">
+                      {% for category in categories %}
                         <div class="Checkbox">
-                            <input type="checkbox" name="categories" value="EGGS"> Eggs
+                            <input type="checkbox" name="categories" value="{{ category.id }}"> {{ category.name }}
                         </div>
-                        <div class="Checkbox">
+                      {% endfor %}
+                        <!-- <div class="Checkbox">
                             <input type="checkbox" name="categories" value="MILK"> Milk
                         </div>
                         <div class="Checkbox">
@@ -65,10 +67,10 @@
                         </div>
                         <div class="Checkbox">
                             <input type="checkbox" name="categories" value="OTHER"> Other
-                        </div>
+                        </div> -->
                     </div>
                     <!-- col-2 -->
-                    <div class="col-md-6 Checkbox1">
+                 <!--    <div class="col-md-6 Checkbox1">
                         <div class="Checkbox">
                             <input type="checkbox" name="categories" value="VEGETABLES"> Vegetables
                         </div>
@@ -81,7 +83,7 @@
                         <div class="Checkbox">
                             <input type="checkbox" name="categories" value="TRAVEL"> Travel
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
 

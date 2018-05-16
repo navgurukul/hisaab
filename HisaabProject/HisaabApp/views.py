@@ -229,11 +229,13 @@ def addexpense(request):
 @user_passes_test(is_from_navgurukul, login_url='/access_denied')
 def facilityreport(request, pk):
     facility = get_object_or_404(Facility,pk=pk)
+    category = Category.objects.all()
     # Handling the post request data
     if request.method == 'POST':
         start_date = request.POST.get('start_date')
         end_date = request.POST.get('end_date')
         categories = request.POST.getlist('categories')
+
 
         # payment fitering part handling for facility
         if 'payment' in request.POST:
@@ -244,10 +246,10 @@ def facilityreport(request, pk):
         elif 'expense' in request.POST:
             data = CashEntry.objects.all().filter(created_date__range=(start_date, end_date),category__in=categories,is_facility_expense=True,facility__id=pk)
             payment = False
-        return render(request, 'facilityreport.html', {'entries': data, 'facility':facility, 'payment': payment })
+        return render(request, 'facilityreport.html', {'entries': data, 'facility':facility, 'payment': payment, 'categories': category  })
     payment = False
     data = CashEntry.objects.all().filter(facility__id=pk,is_facility_expense=True)
-    return render(request, 'facilityreport.html',{'facility':facility,'entries': data,'payment':payment})
+    return render(request, 'facilityreport.html',{'facility':facility,'entries': data,'payment':payment, 'categories':category})
 
 #Getting the Detail report the student expense and payments.
 @login_required
