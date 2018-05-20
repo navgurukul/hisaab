@@ -1,5 +1,4 @@
 import csv
-from datetime import datetime
 from HisaabApp.models import *
 
 with open('data/sarita_vihar.csv' ) as f:
@@ -36,14 +35,14 @@ with open('data/sarita_vihar.csv' ) as f:
             )
 
             _, created = CashEntry.objects.get_or_create(
-        		# expense_made_by=row[1],
-        		# split_name=expense_made_by.split(','),
-        		# fellow=split_name[0],
+        # expense_made_by=row[1],
+        # split_name=expense_made_by.split(','),
+        # fellow=split_name[0],
                 fellow = ngUserObj,
-        		created_date=row[2],
-        		expense_amount=row[3],
-        		category=category,
-        		description=row[6],
-        		facility=facility,
-        		is_facility_expense=1
+        created_date=row[2],
+        expense_amount=row[3],
+        category=category,
+        description=row[6],
+        facility=facility,
+        is_facility_expense=1
             )

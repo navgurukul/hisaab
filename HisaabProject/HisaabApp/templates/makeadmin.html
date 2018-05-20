@@ -12,7 +12,7 @@
       <div id="clonebaby" class="baby_container">
           <div class="baby_cont1">
             <!-- select the facility field  -->
-            <select name='facility' id="id_facility" onchange="showFellow(this.value)" class=" form-control" required>
+            <select name='facility' id="id_facility" onchange="showFellow(this.value)" class="form-control" required>
                 <option value="">Select a facility to find the user!</option>
                 {% for facilty in facilities %}
                   <option value='{{ facilty.id }}'>{{ facilty.name }}</option>
@@ -57,7 +57,6 @@
                   console.log(data)
 
                   if (data){
-
                     for (var i = data.users.length - 1; i >= 0; i--) {
                       console.log(data.users[i])
                         result.append('<option value="'+data.users[i].id +'" >'+ data.users[i].user__username+'</option>')

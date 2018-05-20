@@ -24,7 +24,7 @@ with open( "data/users.csv" ) as f:
                 Facility.objects.get_or_create(
                     name = facility_name,
                     student_expenses_limit = 1750,
-                    cash_in_hand = 0
+      #              cash_in_hand = 0
                 )
 
             facility_subname = row[4]

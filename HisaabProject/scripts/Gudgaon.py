@@ -1,8 +1,7 @@
 import csv
-from datetime import datetime
 from HisaabApp.models import *
 
-with open('data/sarita_vihar.csv' ) as f:
+with open('data/Gudgaon.csv' ) as f:
         reader = csv.reader(f)
         reader.next()
 
@@ -19,8 +18,8 @@ with open('data/sarita_vihar.csv' ) as f:
             else:
                 user = last_added_name
 
-            facility = Facility.objects.filter(name__icontains="sarita")[0]
-
+            facility = Facility.objects.filter(name__icontains="Gurgaon - Boys facility")[0]
+            print facility
             # Find corresponding user from the user name
             print user
             userObj = User.objects.filter(username__icontains=user[:5]).first()

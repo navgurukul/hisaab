@@ -1,0 +1,1555 @@
+<<<<<<< HEAD
+Name,Expense Made By,Expense Date,Actual Amount,Source,Category,Description,Date Recorded,Campus
+Milk & Bread-161,Dhannu,30 September 2017,-161,Manoj's Account,Milk & Bread,buy 3 ltr milk and 1 bread packed,9/30/2017 6:58am,GB
+Vegetables-135,Dhannu,30 September 2017,-135,Manoj's Account,Vegetables,buy 1.300kg karela and 2.5 kg aalu.,9/30/2017 7:06am,GB
+Groceries-335,Dhannu,30 September 2017,-335,Manoj's Account,Groceries,buy 2kg rice and sabut mirch packed and sabji masala and bada garlic packed and daniya powder and haldi powder and long ka packed ,9/30/2017 7:20am,GB
+Groceries-30,Deepanshu Panchal,30 September 2017,-30,Manoj's Account,Groceries,"Ararot 
+
+",10/1/2017 4:52am,GB
+Vegetables-105,Deepanshu Panchal,30 September 2017,-105,Manoj's Account,Vegetables,"1kg Tomato
+1kg Potato
+1kg onion
+",10/1/2017 4:54am,GB
+Milk & Bread-126,Deepanshu Panchal,30 September 2017,-126,Manoj's Account,Milk & Bread,milk,10/1/2017 4:55am,GB
+Groceries-620,"Deepanshu Panchal,Manoj Kumar",1 October 2017,-620,Manoj's Account,Groceries,"2kg Rice, 2bread , kachup , 2 liter oil .",10/1/2017 3:26pm,GB
+Milk & Bread-126,Deepanshu Panchal,2 October 2017,-126,Manoj's Account,Milk & Bread,3l milk,10/2/2017 5:10am,GB
+NG Fixes/Maintenance-100,Deepanshu Panchal,2 October 2017,-100,Manoj's Account,NG Fixes/Maintenance,Paid to plumber,10/2/2017 5:11am,GB
+Vegetables-135,Deepanshu Panchal,2 October 2017,-135,Manoj's Account,Vegetables,vegitables,10/2/2017 8:56am,GB
+Milk & Bread-126,Deepanshu Panchal,2 October 2017,-126,Manoj's Account,Milk & Bread,"milk 3 kg
+",10/2/2017 4:30pm,GB
+Groceries-50,Deepanshu Panchal,2 October 2017,-50,Manoj's Account,Groceries,Bartan dhone ke Juney,10/2/2017 4:36pm,GB
+Cooking Gas (Cylinder)-500,Dhannu,2 October 2017,-500,Manoj's Account,Cooking Gas (Cylinder),Refill gas cylinder 6.250kg 500rs 80rs per kg. ,10/3/2017 6:22am,GB
+Vegetables-346,"Shivam Monga,Aslam DSouza",3 October 2017,-346,Manoj's Account,Vegetables,"vegetables of 100 rupees
+2 kg dal of 246 rupees",10/3/2017 6:53am,GB
+Groceries-70,Shivam Monga,3 October 2017,-70,Manoj's Account,Groceries,buy 1 kg rice of 80 rupees,10/3/2017 1:04pm,GB
+Milk & Bread-164,"Dhannu,Manoj Kumar",3 October 2017,-164,Manoj's Account,Milk & Bread,buy 3 ltr milk 126 and 1 packed bread 38 ,10/3/2017 5:52pm,GB
+Groceries-685,"Dhannu,Manoj Kumar",3 October 2017,-685,Manoj's Account,Groceries,buy 3kg rice 135rs and 5g aata 160rs and 110 cooking oil and 2kg daal 180rs and  2 packed  garbage panni100rs. ,10/3/2017 6:03pm,GB
+Vegetables-80,Dhannu,3 October 2017,-80,Manoj's Account,Vegetables,buy 4kg aalu 80rs.,10/3/2017 6:07pm,GB
+Tech Expenses (Laptop/Phone etc.)-1500,Aslam DSouza,3 October 2017,-1500,Manoj's Account,Tech Expenses (Laptop/Phone etc.),"for ajay's laptop = 900
+sandeep's charger = 600",10/3/2017 9:12pm,GB
+Transportation-400,Aslam DSouza,3 October 2017,-400,Manoj's Account,Transportation,"300 - for travel expenses
+100 - for food ",10/3/2017 9:13pm,GB
+Money Given by NG--203682,Nitin Gupta,4 October 2017,203682,Other,Money Given by NG,This entry is added just to make the actual amount to 0.,10/4/2017 5:51am,GB
+Money Given by NG--5568,Nitin Gupta,5 October 2017,5568,Manoj's Account,Money Given by NG,Cash in hand lying with Manoj.,10/4/2017 5:54am,GB
+Transportation-150,Shakrudin Pathan,4 October 2017,-150,Manoj's Account,Transportation,for office - shakruddin,10/4/2017 6:08am,GB
+Medical Expenses-130,"Manoj Kumar,Sanjay",4 October 2017,-130,Manoj's Account,Medical Expenses,Manoj and Sanjay took Aslam to the doctor.  130 rupes  including medition .,10/4/2017 6:02pm,GB
+Transportation-100,"Manoj Kumar,Sanjay",4 October 2017,-100,Manoj's Account,Transportation,"Manoj and Sanjay took Aslam to the Doctor Bengali colony by auto.
+up and down from NG 100 rupes.",10/4/2017 6:06pm,GB
+Vegetables-80,Sandeep,5 October 2017,-80,Manoj's Account,Vegetables,1 kg tamator 1kg payaz.,10/4/2017 6:13pm,GB
+Milk & Bread-126,Shakrudin Pathan,5 October 2017,-126,Manoj's Account,Milk & Bread,Milk 3l   rs= 126,10/5/2017 1:56am,GB
+Transportation-150,Shakrudin Pathan,5 October 2017,-150,Manoj's Account,Transportation,ghar se matro ka aana jana = 40 and matro se sikanderpur tak aana jana 40 and matro se office aana jana 40,10/5/2017 2:00am,GB
+Groceries-771,Dhannu,5 October 2017,-771,Manoj's Account,Groceries,"daal chini 30 
+=======
+Name,Expense Made By,Expense Date,Actual Amount,Source,Category,Description,Date Recorded,Facility,Type_Of_Expense
+Milk & Bread-161,Dhannu,2017-09-30,-161,Manoj's Account,Milk & Bread,buy 3 ltr milk and 1 bread packed,9/30/2017 6:58am,GB,
+Vegetables-135,Dhannu,2017-09-30,-135,Manoj's Account,Vegetables,buy 1.300kg karela and 2.5 kg aalu.,9/30/2017 7:06am,GB,
+Groceries-335,Dhannu,2017-09-30,-335,Manoj's Account,Groceries,buy 2kg rice and sabut mirch packed and sabji masala and bada garlic packed and daniya powder and haldi powder and long ka packed ,9/30/2017 7:20am,GB,
+Groceries-30,Deepanshu Panchal,2017-09-30,-30,Manoj's Account,Groceries,"Ararot 
+
+",10/1/2017 4:52am,GB,
+Vegetables-105,Deepanshu Panchal,2017-09-30,-105,Manoj's Account,Vegetables,"1kg Tomato
+1kg Potato
+1kg onion
+",10/1/2017 4:54am,GB,
+Milk & Bread-126,Deepanshu Panchal,2017-09-30,-126,Manoj's Account,Milk & Bread,milk,10/1/2017 4:55am,GB,
+Groceries-620,"Deepanshu Panchal,Manoj Kumar",2017-10-01,-620,Manoj's Account,Groceries,"2kg Rice, 2bread , kachup , 2 liter oil .",10/1/2017 3:26pm,GB,
+Milk & Bread-126,Deepanshu Panchal,2017-10-02,-126,Manoj's Account,Milk & Bread,3l milk,10/2/2017 5:10am,GB,
+NG Fixes/Maintenance-100,Deepanshu Panchal,2017-10-02,-100,Manoj's Account,NG Fixes/Maintenance,Paid to plumber,10/2/2017 5:11am,GB,
+Vegetables-135,Deepanshu Panchal,2017-10-02,-135,Manoj's Account,Vegetables,vegitables,10/2/2017 8:56am,GB,
+Milk & Bread-126,Deepanshu Panchal,2017-10-02,-126,Manoj's Account,Milk & Bread,"milk 3 kg
+",10/2/2017 4:30pm,GB,
+Groceries-50,Deepanshu Panchal,2017-10-02,-50,Manoj's Account,Groceries,Bartan dhone ke Juney,10/2/2017 4:36pm,GB,
+Cooking Gas (Cylinder)-500,Dhannu,2017-10-02,-500,Manoj's Account,Cooking Gas (Cylinder),Refill gas cylinder 6.250kg 500rs 80rs per kg. ,10/3/2017 6:22am,GB,
+Vegetables-346,"Shivam Monga,Aslam DSouza",2017-10-03,-346,Manoj's Account,Vegetables,"vegetables of 100 rupees
+2 kg dal of 246 rupees",10/3/2017 6:53am,GB,
+Groceries-70,Shivam Monga,2017-10-03,-70,Manoj's Account,Groceries,buy 1 kg rice of 80 rupees,10/3/2017 1:04pm,GB,
+Milk & Bread-164,"Dhannu,Manoj Kumar",2017-10-03,-164,Manoj's Account,Milk & Bread,buy 3 ltr milk 126 and 1 packed bread 38 ,10/3/2017 5:52pm,GB,
+Groceries-685,"Dhannu,Manoj Kumar",2017-10-03,-685,Manoj's Account,Groceries,buy 3kg rice 135rs and 5g aata 160rs and 110 cooking oil and 2kg daal 180rs and  2 packed  garbage panni100rs. ,10/3/2017 6:03pm,GB,
+Vegetables-80,Dhannu,2017-10-03,-80,Manoj's Account,Vegetables,buy 4kg aalu 80rs.,10/3/2017 6:07pm,GB,
+Tech Expenses (Laptop/Phone etc.)-1500,Aslam DSouza,2017-10-03,-1500,Manoj's Account,Tech Expenses (Laptop/Phone etc.),"for ajay's laptop = 900
+sandeep's charger = 600",10/3/2017 9:12pm,GB,
+Transportation-400,Aslam DSouza,2017-10-03,-400,Manoj's Account,Transportation,"300 - for travel expenses
+100 - for food ",10/3/2017 9:13pm,GB,
+Money Given by NG--203682,Nitin Gupta,2017-10-04,203682,Other,Money Given by NG,This entry is added just to make the actual amount to 0.,10/4/2017 5:51am,GB,
+Money Given by NG--5568,Nitin Gupta,2017-10-05,5568,Manoj's Account,Money Given by NG,Cash in hand lying with Manoj.,10/4/2017 5:54am,GB,
+Transportation-150,Shakrudin Pathan,2017-10-04,-150,Manoj's Account,Transportation,for office - shakruddin,10/4/2017 6:08am,GB,
+Medical Expenses-130,"Manoj Kumar,Sanjay",2017-10-04,-130,Manoj's Account,Medical Expenses,Manoj and Sanjay took Aslam to the doctor.  130 rupes  including medition .,10/4/2017 6:02pm,GB,
+Transportation-100,"Manoj Kumar,Sanjay",2017-10-04,-100,Manoj's Account,Transportation,"Manoj and Sanjay took Aslam to the Doctor Bengali colony by auto.
+up and down from NG 100 rupes.",10/4/2017 6:06pm,GB,
+Vegetables-80,Sandeep,2017-10-05,-80,Manoj's Account,Vegetables,1 kg tamator 1kg payaz.,10/4/2017 6:13pm,GB,
+Milk & Bread-126,Shakrudin Pathan,2017-10-05,-126,Manoj's Account,Milk & Bread,Milk 3l   rs= 126,10/5/2017 1:56am,GB,
+Transportation-150,Shakrudin Pathan,2017-10-05,-150,Manoj's Account,Transportation,ghar se matro ka aana jana = 40 and matro se sikanderpur tak aana jana 40 and matro se office aana jana 40,10/5/2017 2:00am,GB,
+Groceries-771,Dhannu,2017-10-05,-771,Manoj's Account,Groceries,"daal chini 30 
+>>>>>>> 1712c0d351f7deda9831c799e6aa9c299c489b7f
+jira 30 
+fennel 45 
+masala 66 
+ilaychi 10 
+tez patta 30
+1 littr oil 110
+5 kg rice 250
+1/5 kg soya bin ki badi 80
+2 kg chidwa 120
+<<<<<<< HEAD
+",10/5/2017 6:58am,GB
+Vegetables-150,Dhannu,5 October 2017,-150,Manoj's Account,Vegetables,"1kg tamtor,
+1kg payaz,
+bins, gajar,pudina,karela.",10/6/2017 4:31am,GB
+Transportation-150,Shakrudin Pathan,6 October 2017,-150,Manoj's Account,Transportation,"ghar se matro tak aana jana = 40
+huda city center se sikanderpur aana jana = 40
+sikanderpur matro se office tak aana = 40
+and kuch khane ke liye = 30",10/6/2017 3:40am,GB
+Milk & Bread-168,Shakrudin Pathan,6 October 2017,-168,Manoj's Account,Milk & Bread,milk = 168,10/6/2017 4:28am,GB
+Groceries-120,Sandeep,6 October 2017,-120,Manoj's Account,Groceries,buy two k.g sugar of rs 60 per kg total  120 for 2 kg,10/6/2017 3:25pm,GB
+Vegetables-100,Manoj Kumar,6 October 2017,-100,Manoj's Account,Vegetables,"1kg tomatr 40
+1kg pyaaz 40
+10 rupy ki nimboo
+10 ka mirchi",10/7/2017 5:41am,GB
+Transportation-150,Shakrudin Pathan,7 October 2017,-150,Manoj's Account,Transportation,"ghar se matro aana jana = 40
+matro se sikanderpur aana jana = 40
+sikanderpur se office 40
+or kuch khane ke liye = 30",10/7/2017 3:30am,GB
+Milk & Bread-168,Shakrudin Pathan,7 October 2017,-168,Manoj's Account,Milk & Bread,"milk = 4l
+MRP = 168",10/7/2017 5:03am,GB
+Cooking Gas (Cylinder)-1300,"Deepanshu Panchal,Sandeep",7 October 2017,-1300,Manoj's Account,Cooking Gas (Cylinder),1200rs full cylinder and 100rs rikshe ka kiraya diya,10/7/2017 10:02am,GB
+Vegetables-290,"Dhannu,Monu",7 October 2017,-290,Manoj's Account,Vegetables,"2 kg aalu 40rs and 3 kg aalu 40rs and 1kg tomato 50rs and 1kg onion 50rs and  
+bhindi 80rs 2 kg and 30rs 1kg ghiya........
+",10/7/2017 10:12am,GB
+Household Items-110,"Dhannu,Monu",7 October 2017,-110,Manoj's Account,Household Items,buy one full seek chadu and phenyl 110rs.,10/7/2017 10:14am,GB
+Groceries-530,Manoj Kumar,7 October 2017,-530,Manoj's Account,Groceries,"4kg rice :180
+daaal 2kg: 240
+1 littter oil: 110",10/7/2017 4:15pm,GB
+Transportation-150,Shakrudin Pathan,8 October 2017,-150,Manoj's Account,Transportation,"Ghar se aana jana = 40
+matro se sikanderpur aana jana = 40
+sikanderpur par office aana jana = 40
+kuch khane ke liye = 30",10/8/2017 3:40am,GB
+Milk & Bread-147,Ranjan,8 October 2017,-147,Manoj's Account,Milk & Bread,3/2 llt milk,10/8/2017 4:06am,GB
+Vegetables-90,Deepanshu Panchal,8 October 2017,-90,Manoj's Account,Vegetables,1 kg Tomato 50 rs  and 1 kg onion 40 Rs,10/8/2017 5:55am,GB
+Groceries-380,Deepanshu Panchal,8 October 2017,-380,Manoj's Account,Groceries,"oil of rs 100, salt rs 20, aata rs 170, rice rs 90",10/8/2017 5:58am,GB
+Vegetables-300,Sandeep,9 October 2017,-300,NavGurukul Cash,Vegetables,"3kg alloo :60
+=======
+",10/5/2017 6:58am,GB,
+Vegetables-150,Dhannu,2017-10-05,-150,Manoj's Account,Vegetables,"1kg tamtor,
+1kg payaz,
+bins, gajar,pudina,karela.",10/6/2017 4:31am,GB,
+Transportation-150,Shakrudin Pathan,2017-10-06,-150,Manoj's Account,Transportation,"ghar se matro tak aana jana = 40
+huda city center se sikanderpur aana jana = 40
+sikanderpur matro se office tak aana = 40
+and kuch khane ke liye = 30",10/6/2017 3:40am,GB,
+Milk & Bread-168,Shakrudin Pathan,2017-10-06,-168,Manoj's Account,Milk & Bread,milk = 168,10/6/2017 4:28am,GB,
+Groceries-120,Sandeep,2017-10-06,-120,Manoj's Account,Groceries,buy two k.g sugar of rs 60 per kg total  120 for 2 kg,10/6/2017 3:25pm,GB,
+Vegetables-100,Manoj Kumar,2017-10-06,-100,Manoj's Account,Vegetables,"1kg tomatr 40
+1kg pyaaz 40
+10 rupy ki nimboo
+10 ka mirchi",10/7/2017 5:41am,GB,
+Transportation-150,Shakrudin Pathan,2017-10-07,-150,Manoj's Account,Transportation,"ghar se matro aana jana = 40
+matro se sikanderpur aana jana = 40
+sikanderpur se office 40
+or kuch khane ke liye = 30",10/7/2017 3:30am,GB,
+Milk & Bread-168,Shakrudin Pathan,2017-10-07,-168,Manoj's Account,Milk & Bread,"milk = 4l
+MRP = 168",10/7/2017 5:03am,GB,
+Cooking Gas (Cylinder)-1300,"Deepanshu Panchal,Sandeep",2017-10-07,-1300,Manoj's Account,Cooking Gas (Cylinder),1200rs full cylinder and 100rs rikshe ka kiraya diya,10/7/2017 10:02am,GB,
+Vegetables-290,"Dhannu,Monu",2017-10-07,-290,Manoj's Account,Vegetables,"2 kg aalu 40rs and 3 kg aalu 40rs and 1kg tomato 50rs and 1kg onion 50rs and  
+bhindi 80rs 2 kg and 30rs 1kg ghiya........
+",10/7/2017 10:12am,GB,
+Household Items-110,"Dhannu,Monu",2017-10-07,-110,Manoj's Account,Household Items,buy one full seek chadu and phenyl 110rs.,10/7/2017 10:14am,GB,
+Groceries-530,Manoj Kumar,2017-10-07,-530,Manoj's Account,Groceries,"4kg rice :180
+daaal 2kg: 240
+1 littter oil: 110",10/7/2017 4:15pm,GB,
+Transportation-150,Shakrudin Pathan,2017-10-08,-150,Manoj's Account,Transportation,"Ghar se aana jana = 40
+matro se sikanderpur aana jana = 40
+sikanderpur par office aana jana = 40
+kuch khane ke liye = 30",10/8/2017 3:40am,GB,
+Milk & Bread-147,Ranjan,2017-10-08,-147,Manoj's Account,Milk & Bread,3/2 llt milk,10/8/2017 4:06am,GB,
+Vegetables-90,Deepanshu Panchal,2017-10-08,-90,Manoj's Account,Vegetables,1 kg Tomato 50 rs  and 1 kg onion 40 Rs,10/8/2017 5:55am,GB,
+Groceries-380,Deepanshu Panchal,2017-10-08,-380,Manoj's Account,Groceries,"oil of rs 100, salt rs 20, aata rs 170, rice rs 90",10/8/2017 5:58am,GB,
+Vegetables-300,Sandeep,2017-10-09,-300,NavGurukul Cash,Vegetables,"3kg alloo :60
+>>>>>>> 1712c0d351f7deda9831c799e6aa9c299c489b7f
+2kg totatr: 100
+2kg pyaaz:80
+1kg mulli + nimboo :80
+
+<<<<<<< HEAD
+",10/9/2017 8:21am,GB
+Groceries-643,Sandeep,9 October 2017,-643,NavGurukul Cash,Groceries,"5kg chawal: 225
+2lt  oil: 210
+2kg curd : 140
+washing gel : 58
+washing bar : 10",10/9/2017 8:25am,GB
+Money Given by NG--5000,Ajay,9 October 2017,5000,NavGurukul Account / Card,Money Given by NG,send by Rishabh bhaiya to Ajay17 account to manage the Navgurukul,10/9/2017 2:03pm,GB
+Transportation-150,Shakrudin Pathan,10 October 2017,-150,NavGurukul Cash,Transportation,"ghar se metro aana jana = 40
+metro se sikanderpur metro aana jana = 40
+sikanderpur metro se office aana jana = 40",10/10/2017 3:49am,GB
+Milk & Bread-168,Shakrudin Pathan,10 October 2017,-168,NavGurukul Cash,Milk & Bread,"milk = 4l
+MRP = 168",10/10/2017 4:16am,GB
+Groceries-406,"Pratyush,Dhannu,Deepanshu Panchal",10 October 2017,-406,NavGurukul Cash,Groceries,"2kg dal :210Rs
+4kg rice : 180Rs
+6 machis : 6Rs
+masala : 10Rs
+",10/10/2017 2:52pm,GB
+Vegetables-295,"Pratyush,Dhannu,Deepanshu Panchal",10 October 2017,-295,NavGurukul Cash,Vegetables,"5kg onion : 155Rs
+3kg tomato : 120Rs
+250gm chilli : 20Rs",10/10/2017 2:57pm,GB
+Household Items-150,"Dhannu,Deepanshu Panchal",10 October 2017,-150,NavGurukul Cash,Household Items,6 piece plastic glass : 150Rs,10/10/2017 2:59pm,GB
+Milk & Bread-147,Diwakar,11 October 2017,-147,NavGurukul Cash,Milk & Bread,3.5lt milk : 147Rs,10/11/2017 3:25am,GB
+Transportation-150,Shakrudin Pathan,11 October 2017,-150,NavGurukul Cash,Transportation,"ghar se metro aana jana = 40
+huda metro se sikanderpur metro aana jana = 40
+sikanderpur se office aana jana = 40
+kuch khane ke liye = 30",10/11/2017 4:10am,GB
+Groceries-340,Deepanshu Panchal,11 October 2017,-340,NavGurukul Cash,Groceries,10kg aatta : 340Rs,10/11/2017 4:20pm,GB
+Transportation-150,Shakrudin Pathan,12 October 2017,-150,NavGurukul Cash,Transportation,"ghar se huda metro aana jana  = 40
+huda metro se sikanderpur metro aana jana = 40
+sikanderpur metro se office aana jana = 40
+or kuch khana ke liye = 30",10/12/2017 3:59am,GB
+Groceries-1350,"Dhannu,Manoj Kumar",12 October 2017,-1350,NavGurukul Cash,Groceries,"chawal 10kg : 450Rs
+=======
+",10/9/2017 8:21am,GB,
+Groceries-643,Sandeep,2017-10-09,-643,NavGurukul Cash,Groceries,"5kg chawal: 225
+2lt  oil: 210
+2kg curd : 140
+washing gel : 58
+washing bar : 10",10/9/2017 8:25am,GB,
+Money Given by NG--5000,Ajay,2017-10-09,5000,NavGurukul Account / Card,Money Given by NG,send by Rishabh bhaiya to Ajay17 account to manage the Navgurukul,10/9/2017 2:03pm,GB,
+Transportation-150,Shakrudin Pathan,2017-10-10,-150,NavGurukul Cash,Transportation,"ghar se metro aana jana = 40
+metro se sikanderpur metro aana jana = 40
+sikanderpur metro se office aana jana = 40",10/10/2017 3:49am,GB,
+Milk & Bread-168,Shakrudin Pathan,2017-10-10,-168,NavGurukul Cash,Milk & Bread,"milk = 4l
+MRP = 168",10/10/2017 4:16am,GB,
+Groceries-406,"Pratyush,Dhannu,Deepanshu Panchal",2017-10-10,-406,NavGurukul Cash,Groceries,"2kg dal :210Rs
+4kg rice : 180Rs
+6 machis : 6Rs
+masala : 10Rs
+",10/10/2017 2:52pm,GB,
+Vegetables-295,"Pratyush,Dhannu,Deepanshu Panchal",2017-10-10,-295,NavGurukul Cash,Vegetables,"5kg onion : 155Rs
+3kg tomato : 120Rs
+250gm chilli : 20Rs",10/10/2017 2:57pm,GB,
+Household Items-150,"Dhannu,Deepanshu Panchal",2017-10-10,-150,NavGurukul Cash,Household Items,6 piece plastic glass : 150Rs,10/10/2017 2:59pm,GB,
+Milk & Bread-147,Diwakar,2017-10-11,-147,NavGurukul Cash,Milk & Bread,3.5lt milk : 147Rs,10/11/2017 3:25am,GB,
+Transportation-150,Shakrudin Pathan,2017-10-11,-150,NavGurukul Cash,Transportation,"ghar se metro aana jana = 40
+huda metro se sikanderpur metro aana jana = 40
+sikanderpur se office aana jana = 40
+kuch khane ke liye = 30",10/11/2017 4:10am,GB,
+Groceries-340,Deepanshu Panchal,2017-10-11,-340,NavGurukul Cash,Groceries,10kg aatta : 340Rs,10/11/2017 4:20pm,GB,
+Transportation-150,Shakrudin Pathan,2017-10-12,-150,NavGurukul Cash,Transportation,"ghar se huda metro aana jana  = 40
+huda metro se sikanderpur metro aana jana = 40
+sikanderpur metro se office aana jana = 40
+or kuch khana ke liye = 30",10/12/2017 3:59am,GB,
+Groceries-1350,"Dhannu,Manoj Kumar",2017-10-12,-1350,NavGurukul Cash,Groceries,"chawal 10kg : 450Rs
+>>>>>>> 1712c0d351f7deda9831c799e6aa9c299c489b7f
+dal(masur) 3kg :300Rs
+dal(arhar) 2kg : 240Rs
+chini 1kg : 50Rs
+oil(fortune) 3lt : 270Rs
+<<<<<<< HEAD
+garam masala 100gm : 40Rs",10/12/2017 7:31am,GB
+Milk & Bread-147,Shakrudin Pathan,12 October 2017,-147,NavGurukul Cash,Milk & Bread,Milk = 3.5l,10/12/2017 7:34am,GB
+Transportation-150,Shakrudin Pathan,13 October 2017,-150,NavGurukul Cash,Transportation,"ghar se huda metro aana jana  = 40
+huda metro se sikanderpur metro aana jana = 40
+sikanderpur metro se office aana jana = 40
+or kuch khana ke liye = 30",10/13/2017 3:55am,GB
+Milk & Bread-147,Shakrudin Pathan,13 October 2017,-147,NavGurukul Cash,Milk & Bread,milk = 3.5l,10/13/2017 3:57am,GB
+Vegetables-90,Manoj Kumar,13 October 2017,-90,NavGurukul Cash,Vegetables,"1 kg payaz 45
+1 kg tomoto 50",10/13/2017 8:31am,GB
+Transportation-150,Shakrudin Pathan,14 October 2017,-150,NavGurukul Cash,Transportation,"ghar se huda metro aana jana  = 40
+huda metro se sikanderpur metro aana jana = 40
+sikanderpur metro se office aana jana = 40
+or kuch khana ke liye = 30",10/14/2017 3:44am,GB
+Money Given by NG--5000,Ajay,14 October 2017,5000,NavGurukul Account / Card,Money Given by NG,5000 Rs given by Rishav Verma to ajay's account,10/14/2017 11:25am,GB
+Other (Kuch Aur)-150,Ajay,14 October 2017,-150,NavGurukul Account / Card,Other (Kuch Aur),charges apply to transfer the ng student money from paytm to sandeep's account,10/14/2017 11:29am,GB
+Milk & Bread-126,Ranjan,14 October 2017,-126,NavGurukul Cash,Milk & Bread,3lt milk : 126pRs,10/14/2017 12:23pm,GB
+Groceries-308,"Deepanshu Panchal,Dhannu",14 October 2017,-308,NavGurukul Cash,Groceries,"namak 1kg : 20Rs
+=======
+garam masala 100gm : 40Rs",10/12/2017 7:31am,GB,
+Milk & Bread-147,Shakrudin Pathan,2017-10-12,-147,NavGurukul Cash,Milk & Bread,Milk = 3.5l,10/12/2017 7:34am,GB,
+Transportation-150,Shakrudin Pathan,2017-10-13,-150,NavGurukul Cash,Transportation,"ghar se huda metro aana jana  = 40
+huda metro se sikanderpur metro aana jana = 40
+sikanderpur metro se office aana jana = 40
+or kuch khana ke liye = 30",10/13/2017 3:55am,GB,
+Milk & Bread-147,Shakrudin Pathan,2017-10-13,-147,NavGurukul Cash,Milk & Bread,milk = 3.5l,10/13/2017 3:57am,GB,
+Vegetables-90,Manoj Kumar,2017-10-13,-90,NavGurukul Cash,Vegetables,"1 kg payaz 45
+1 kg tomoto 50",10/13/2017 8:31am,GB,
+Transportation-150,Shakrudin Pathan,2017-10-14,-150,NavGurukul Cash,Transportation,"ghar se huda metro aana jana  = 40
+huda metro se sikanderpur metro aana jana = 40
+sikanderpur metro se office aana jana = 40
+or kuch khana ke liye = 30",10/14/2017 3:44am,GB,
+Money Given by NG--5000,Ajay,2017-10-14,5000,NavGurukul Account / Card,Money Given by NG,5000 Rs given by Rishav Verma to ajay's account,10/14/2017 11:25am,GB,
+Other (Kuch Aur)-150,Ajay,2017-10-14,-150,NavGurukul Account / Card,Other (Kuch Aur),charges apply to transfer the ng student money from paytm to sandeep's account,10/14/2017 11:29am,GB,
+Milk & Bread-126,Ranjan,2017-10-14,-126,NavGurukul Cash,Milk & Bread,3lt milk : 126pRs,10/14/2017 12:23pm,GB,
+Groceries-308,"Deepanshu Panchal,Dhannu",2017-10-14,-308,NavGurukul Cash,Groceries,"namak 1kg : 20Rs
+>>>>>>> 1712c0d351f7deda9831c799e6aa9c299c489b7f
+dhaniya powder 200gm : 56Rs
+haldi 200gm : 54 Rs
+mirchi 200gm : 58Rs
+jeera 100gm : 45Rs
+<<<<<<< HEAD
+garam masala 200gm : 75Rs",10/14/2017 12:28pm,GB
+Eggs-65,Dhannu,14 October 2017,-65,NavGurukul Cash,Eggs,13 eggs :  65Rs,10/14/2017 12:28pm,GB
+Vegetables-127,Dhannu,14 October 2017,-127,NavGurukul Cash,Vegetables,"1kg tamatr : 50 Rs
+1kg onion : 45 Rs
+mirchi 300 gm : 32 RS",10/14/2017 12:30pm,GB
+Milk & Bread-147,Shakrudin Pathan,15 October 2017,-147,NavGurukul Cash,Milk & Bread,milk = 4litter,10/15/2017 4:01am,GB
+Transportation-150,Shakrudin Pathan,15 October 2017,-150,NavGurukul Cash,Transportation,"ghar se huda metro aana jana  = 40
+huda metro se sikanderpur metro aana jana = 40
+sikanderpur metro se office aana jana = 40
+or kuch khana ke liye = 30",10/15/2017 4:03am,GB
+Vegetables-64,"Dhannu,Shivam Monga",15 October 2017,-64,NavGurukul Cash,Vegetables,"tomato 1kg : 50 Rs
+onion 400gm : 14 Rs",10/15/2017 2:12pm,GB
+Groceries-90,Dhannu,15 October 2017,-90,NavGurukul Cash,Groceries,chawal 2kg : 90 Rs,10/15/2017 2:13pm,GB
+Transportation-150,Shakrudin Pathan,16 October 2017,-150,NavGurukul Cash,Transportation,"ghar se huda metro aana jana  = 40
+huda metro se sikanderpur metro aana jana = 40
+sikanderpur metro se office aana jana = 40
+or kuch khana ke liye = 30",10/16/2017 4:43am,GB
+Milk & Bread-147,Shakrudin Pathan,16 October 2017,-147,NavGurukul Cash,Milk & Bread,milk = 3.5litter,10/16/2017 4:43am,GB
+Groceries-1480,"Dhannu,Diwakar",16 October 2017,-1480,NavGurukul Cash,Groceries,"16 kg Rice = 720
+=======
+garam masala 200gm : 75Rs",10/14/2017 12:28pm,GB,
+Eggs-65,Dhannu,2017-10-14,-65,NavGurukul Cash,Eggs,13 eggs :  65Rs,10/14/2017 12:28pm,GB,
+Vegetables-127,Dhannu,2017-10-14,-127,NavGurukul Cash,Vegetables,"1kg tamatr : 50 Rs
+1kg onion : 45 Rs
+mirchi 300 gm : 32 RS",10/14/2017 12:30pm,GB,
+Milk & Bread-147,Shakrudin Pathan,2017-10-15,-147,NavGurukul Cash,Milk & Bread,milk = 4litter,10/15/2017 4:01am,GB,
+Transportation-150,Shakrudin Pathan,2017-10-15,-150,NavGurukul Cash,Transportation,"ghar se huda metro aana jana  = 40
+huda metro se sikanderpur metro aana jana = 40
+sikanderpur metro se office aana jana = 40
+or kuch khana ke liye = 30",10/15/2017 4:03am,GB,
+Vegetables-64,"Dhannu,Shivam Monga",2017-10-15,-64,NavGurukul Cash,Vegetables,"tomato 1kg : 50 Rs
+onion 400gm : 14 Rs",10/15/2017 2:12pm,GB,
+Groceries-90,Dhannu,2017-10-15,-90,NavGurukul Cash,Groceries,chawal 2kg : 90 Rs,10/15/2017 2:13pm,GB,
+Transportation-150,Shakrudin Pathan,2017-10-16,-150,NavGurukul Cash,Transportation,"ghar se huda metro aana jana  = 40
+huda metro se sikanderpur metro aana jana = 40
+sikanderpur metro se office aana jana = 40
+or kuch khana ke liye = 30",10/16/2017 4:43am,GB,
+Milk & Bread-147,Shakrudin Pathan,2017-10-16,-147,NavGurukul Cash,Milk & Bread,milk = 3.5litter,10/16/2017 4:43am,GB,
+Groceries-1480,"Dhannu,Diwakar",2017-10-16,-1480,NavGurukul Cash,Groceries,"16 kg Rice = 720
+>>>>>>> 1712c0d351f7deda9831c799e6aa9c299c489b7f
+2kg chidwa = 100
+2kg chana daal= 220
+2kg lal malaka daal= 200
+2kg arhar ki daal = 240
+<<<<<<< HEAD
+  ",10/16/2017 7:07am,GB
+Vegetables-255,Sandeep,16 October 2017,-255,NavGurukul Cash,Vegetables,"5 kg Alloo = 75
+=======
+  ",10/16/2017 7:07am,GB,
+Vegetables-255,Sandeep,2017-10-16,-255,NavGurukul Cash,Vegetables,"5 kg Alloo = 75
+>>>>>>> 1712c0d351f7deda9831c799e6aa9c299c489b7f
+1kg bangan = 60
+mirchi =25
+tomto= 50
+payaz =45
+
+<<<<<<< HEAD
+",10/16/2017 7:11am,GB
+Household Items-100,Dhannu,16 October 2017,-100,NavGurukul Cash,Household Items,Gas lighter.,10/16/2017 7:12am,GB
+Transportation-40,"Dhannu,Diwakar",16 October 2017,-40,NavGurukul Cash,Transportation,Dhannu and Diwakar went to bangali maarket by sharing auto !!,10/16/2017 7:15am,GB
+Milk & Bread-147,Shakrudin Pathan,17 October 2017,-147,NavGurukul Cash,Milk & Bread,"milk = 3.5litter
+",10/17/2017 5:52am,GB
+Vegetables-90,"Monu,Diwakar",17 October 2017,-90,NavGurukul Cash,Vegetables,"1kg onion = 45 Rs
+1kg Tomato = 45 Rs",10/17/2017 5:54am,GB
+Groceries-60,Sanjay,17 October 2017,-60,NavGurukul Cash,Groceries,1kg cheeni  = 60 Rs,10/17/2017 5:57am,GB
+Milk & Bread-147,Shakrudin Pathan,18 October 2017,-147,NavGurukul Cash,Milk & Bread,milk = 3.5litter,10/18/2017 3:33am,GB
+Transportation-150,Shakrudin Pathan,18 October 2017,-150,NavGurukul Cash,Transportation,"ghar se huda metro aana jana  = 40
+huda metro se sikanderpur metro aana jana = 40
+sikanderpur metro se office aana jana = 40
+or kuch khana ke liye = 30",10/18/2017 3:34am,GB
+Groceries-160,"Ranjan,Aslam DSouza",18 October 2017,-160,NavGurukul Cash,Groceries,5Kg Atta = 160 Rs,10/18/2017 4:53am,GB
+Milk & Bread-165,Pratyush,18 October 2017,-165,NavGurukul Cash,Milk & Bread,2.5lt milk = 105Rs,10/18/2017 3:56pm,GB
+Eggs-60,Pratyush,18 October 2017,-60,NavGurukul Cash,Eggs,eggs  = 60 Rs ,10/18/2017 3:58pm,GB
+Groceries-105,Pratyush,19 October 2017,-105,NavGurukul Cash,Groceries,oil 1kg ,10/19/2017 12:31pm,GB
+Milk & Bread-85,Diwakar,20 October 2017,-85,NavGurukul Cash,Milk & Bread,2lt milk : 85 Rs,10/20/2017 11:40am,GB
+Vegetables-140,"Shivam Monga,Deepanshu Panchal",20 October 2017,-140,NavGurukul Cash,Vegetables,"1kg onion : 50 Rs
+1k tomato : 50 Rs
+1.5 ghiya : 40 Rs",10/20/2017 12:15pm,GB
+Household Items-40,Aslam DSouza,21 October 2017,-40,NavGurukul Cash,Household Items,"2 tape : 30 rs
+1  glue :10 rs",10/21/2017 9:11am,GB
+Milk & Bread-105,"Shivam Monga,Diwakar",21 October 2017,-105,NavGurukul Cash,Milk & Bread,2.5 lt milk  : 105 rs ,10/21/2017 9:12am,GB
+Vegetables-80,"Diwakar,Shivam Monga",21 October 2017,-80,NavGurukul Cash,Vegetables,"1kg onion : 50 rs
+600  gm tomato : 30 rs",10/21/2017 9:15am,GB
+Vegetables-30,Aslam DSouza,21 October 2017,-30,NavGurukul Cash,Vegetables,1 kg : potato,10/21/2017 3:42pm,GB
+Transportation-150,Shakrudin Pathan,23 October 2017,-150,NavGurukul Cash,Transportation,"anne se anne jane ka = 40Rs
+huda se office anne jane ka assi",10/24/2017 1:49pm,GB
+Money Given by NG--2000,Diwakar,24 October 2017,2000,Manoj's Account,Money Given by NG,2000 rupees is given manoj's account,10/24/2017 1:47pm,GB
+Transportation-150,Shakrudin Pathan,24 October 2017,-150,NavGurukul Cash,Transportation,"NG se huda centerv anna jana = 40 Rs
+huda center se office se anna jana",10/24/2017 1:51pm,GB
+Vegetables-190,Diwakar,24 October 2017,-190,NavGurukul Cash,Vegetables,"1.3 kg tomato  = 70 Rs
+1 kg onion = 60 Rs
+1 .2 kg couli flower = 60 Rs ",10/24/2017 1:53pm,GB
+Groceries-170,Diwakar,24 October 2017,-170,NavGurukul Cash,Groceries,5 Kg atta : 170 Rs,10/24/2017 4:14pm,GB
+Other (Kuch Aur)-240,Shivam Monga,24 October 2017,-240,NavGurukul Cash,Other (Kuch Aur),mponey given to lekh bhaiya as he don't have enough cash to bpay the cab,11/2/2017 5:18am,GB
+Milk & Bread-105,Aslam DSouza,25 October 2017,-105,NavGurukul Cash,Milk & Bread,2.5 Lt milk : 105 Rs,10/25/2017 2:40am,GB
+Vegetables-90,Diwakar,25 October 2017,-90,NavGurukul Cash,Vegetables,"1 Kg onion = 50 Rs
+2 Kg potato  = 40 Rs",10/25/2017 5:30am,GB
+Groceries-100,Ranjan,25 October 2017,-100,NavGurukul Cash,Groceries, 1 lt oil : 100 rs. ,10/25/2017 5:50am,GB
+Groceries-270,Pratyush,25 October 2017,-270,NavGurukul Cash,Groceries,3 lt oil : 270 Rs,10/25/2017 11:51am,GB
+Household Items-40,Sanjay,25 October 2017,-40,NavGurukul Cash,Household Items,2 marker : 40 Rs,10/25/2017 11:52am,GB
+Groceries-70,Shakrudin Pathan,25 October 2017,-70,NavGurukul Cash,Groceries,1 Kg rice flour : 70 Rs,10/25/2017 11:55am,GB
+Vegetables-130,Diwakar,26 October 2017,-130,NavGurukul Cash,Vegetables,"2 Kg onion : 70 Rs
+1 Kg tomato : 60 Rs",10/26/2017 8:38am,GB
+Milk & Bread-105,Aslam DSouza,26 October 2017,-105,NavGurukul Cash,Milk & Bread,2.5 Lt milk : 105 Rs,10/26/2017 8:39am,GB
+Groceries-90,Diwakar,26 October 2017,-90,NavGurukul Cash,Groceries,2 kg rice : 90 Rs,10/26/2017 9:31am,GB
+Groceries-150,Ranjan,26 October 2017,-150,NavGurukul Cash,Groceries,2 packet cookies : 150 Rs,10/26/2017 1:34pm,GB
+Transportation-150,Shakrudin Pathan,27 October 2017,-150,NavGurukul Cash,Transportation,"ghar se huda metro aana jana  = 40
+huda metro se sikanderpur metro aana jana = 40
+sikanderpur metro se office aana jana = 40
+or kuch khana ke liye = 30",10/27/2017 3:35am,GB
+Milk & Bread-110,Shivam Monga,27 October 2017,-110,NavGurukul Cash,Milk & Bread,2.5 Lt milk : 110 RS,10/27/2017 1:54pm,GB
+Groceries-60,Shivam Monga,27 October 2017,-60,NavGurukul Cash,Groceries,1 Kg sugar : 60 Rs,10/27/2017 1:55pm,GB
+Vegetables-50,Shivam Monga,27 October 2017,-50,NavGurukul Cash,Vegetables,1 Kg tomato : 50 RS,10/27/2017 1:56pm,GB
+Money Given by NG--5000,Aslam DSouza,27 October 2017,5000,NavGurukul Account / Card,Money Given by NG,5000 rupees transfered to aslam account by bhaiya.,11/7/2017 3:17am,GB
+Transportation-150,Shakrudin Pathan,28 October 2017,-150,NavGurukul Cash,Transportation,"ghar se huda metro aana jana  = 40
+huda metro se sikanderpur metro aana jana = 40
+sikanderpur metro se office aana jana = 40
+or kuch khana ke liye = 30",10/28/2017 3:39am,GB
+Vegetables-50,Deepanshu Panchal,29 October 2017,-50,NavGurukul Cash,Vegetables,1 kg onion : 50 Rs,10/29/2017 12:26pm,GB
+Milk & Bread-130,Diwakar,30 October 2017,-130,NavGurukul Cash,Milk & Bread,"milk 2lt : 89 Rs
+bread  : 41 Rs
+",10/31/2017 4:52am,GB
+Vegetables-200,Deepanshu Panchal,30 October 2017,-200,NavGurukul Cash,Vegetables,"1 Kg onion : 50 Rs
+1 Kg tomato : 55 Rs
+1 Kg methi ka sag : 65 
+1.6 Kg Potato : 30 Rs ",10/31/2017 5:10am,GB
+Groceries-100,Ranjan,30 October 2017,-100,NavGurukul Cash,Groceries,1 Lt oil : 105,10/31/2017 5:13am,GB
+Milk & Bread-105,Shivam Monga,31 October 2017,-105,NavGurukul Cash,Milk & Bread,2.5 Lt milk  :  105 Rs,10/31/2017 5:53am,GB
+Money Given by NG--2000,Manoj Kumar,31 October 2017,2000,Manoj's Account,Money Given by NG,2000 Rs  money given to NavGurukul from manoj account,10/31/2017 8:04am,GB
+Vegetables-150,Shivam Monga,31 October 2017,-150,NavGurukul Cash,Vegetables,"1 kg tomato : 70 Rs
+=======
+",10/16/2017 7:11am,GB,
+Household Items-100,Dhannu,2017-10-16,-100,NavGurukul Cash,Household Items,Gas lighter.,10/16/2017 7:12am,GB,
+Transportation-40,"Dhannu,Diwakar",2017-10-16,-40,NavGurukul Cash,Transportation,Dhannu and Diwakar went to bangali maarket by sharing auto !!,10/16/2017 7:15am,GB,
+Milk & Bread-147,Shakrudin Pathan,2017-10-17,-147,NavGurukul Cash,Milk & Bread,"milk = 3.5litter
+",10/17/2017 5:52am,GB,
+Vegetables-90,"Monu,Diwakar",2017-10-17,-90,NavGurukul Cash,Vegetables,"1kg onion = 45 Rs
+1kg Tomato = 45 Rs",10/17/2017 5:54am,GB,
+Groceries-60,Sanjay,2017-10-17,-60,NavGurukul Cash,Groceries,1kg cheeni  = 60 Rs,10/17/2017 5:57am,GB,
+Milk & Bread-147,Shakrudin Pathan,2017-10-18,-147,NavGurukul Cash,Milk & Bread,milk = 3.5litter,10/18/2017 3:33am,GB,
+Transportation-150,Shakrudin Pathan,2017-10-18,-150,NavGurukul Cash,Transportation,"ghar se huda metro aana jana  = 40
+huda metro se sikanderpur metro aana jana = 40
+sikanderpur metro se office aana jana = 40
+or kuch khana ke liye = 30",10/18/2017 3:34am,GB,
+Groceries-160,"Ranjan,Aslam DSouza",2017-10-18,-160,NavGurukul Cash,Groceries,5Kg Atta = 160 Rs,10/18/2017 4:53am,GB,
+Milk & Bread-165,Pratyush,2017-10-18,-165,NavGurukul Cash,Milk & Bread,2.5lt milk = 105Rs,10/18/2017 3:56pm,GB,
+Eggs-60,Pratyush,2017-10-18,-60,NavGurukul Cash,Eggs,eggs  = 60 Rs ,10/18/2017 3:58pm,GB,
+Groceries-105,Pratyush,2017-10-19,-105,NavGurukul Cash,Groceries,oil 1kg ,10/19/2017 12:31pm,GB,
+Milk & Bread-85,Diwakar,2017-10-20,-85,NavGurukul Cash,Milk & Bread,2lt milk : 85 Rs,10/20/2017 11:40am,GB,
+Vegetables-140,"Shivam Monga,Deepanshu Panchal",2017-10-20,-140,NavGurukul Cash,Vegetables,"1kg onion : 50 Rs
+1k tomato : 50 Rs
+1.5 ghiya : 40 Rs",10/20/2017 12:15pm,GB,
+Household Items-40,Aslam DSouza,2017-10-21,-40,NavGurukul Cash,Household Items,"2 tape : 30 rs
+1  glue :10 rs",10/21/2017 9:11am,GB,
+Milk & Bread-105,"Shivam Monga,Diwakar",2017-10-21,-105,NavGurukul Cash,Milk & Bread,2.5 lt milk  : 105 rs ,10/21/2017 9:12am,GB,
+Vegetables-80,"Diwakar,Shivam Monga",2017-10-21,-80,NavGurukul Cash,Vegetables,"1kg onion : 50 rs
+600  gm tomato : 30 rs",10/21/2017 9:15am,GB,
+Vegetables-30,Aslam DSouza,2017-10-21,-30,NavGurukul Cash,Vegetables,1 kg : potato,10/21/2017 3:42pm,GB,
+Transportation-150,Shakrudin Pathan,2017-10-23,-150,NavGurukul Cash,Transportation,"anne se anne jane ka = 40Rs
+huda se office anne jane ka assi",10/24/2017 1:49pm,GB,
+Money Given by NG--2000,Diwakar,2017-10-24,2000,Manoj's Account,Money Given by NG,2000 rupees is given manoj's account,10/24/2017 1:47pm,GB,
+Transportation-150,Shakrudin Pathan,2017-10-24,-150,NavGurukul Cash,Transportation,"NG se huda centerv anna jana = 40 Rs
+huda center se office se anna jana",10/24/2017 1:51pm,GB,
+Vegetables-190,Diwakar,2017-10-24,-190,NavGurukul Cash,Vegetables,"1.3 kg tomato  = 70 Rs
+1 kg onion = 60 Rs
+1 .2 kg couli flower = 60 Rs ",10/24/2017 1:53pm,GB,
+Groceries-170,Diwakar,2017-10-24,-170,NavGurukul Cash,Groceries,5 Kg atta : 170 Rs,10/24/2017 4:14pm,GB,
+Other (Kuch Aur)-240,Shivam Monga,2017-10-24,-240,NavGurukul Cash,Other (Kuch Aur),mponey given to lekh bhaiya as he don't have enough cash to bpay the cab,11/2/2017 5:18am,GB,
+Milk & Bread-105,Aslam DSouza,2017-10-25,-105,NavGurukul Cash,Milk & Bread,2.5 Lt milk : 105 Rs,10/25/2017 2:40am,GB,
+Vegetables-90,Diwakar,2017-10-25,-90,NavGurukul Cash,Vegetables,"1 Kg onion = 50 Rs
+2 Kg potato  = 40 Rs",10/25/2017 5:30am,GB,
+Groceries-100,Ranjan,2017-10-25,-100,NavGurukul Cash,Groceries, 1 lt oil : 100 rs. ,10/25/2017 5:50am,GB,
+Groceries-270,Pratyush,2017-10-25,-270,NavGurukul Cash,Groceries,3 lt oil : 270 Rs,10/25/2017 11:51am,GB,
+Household Items-40,Sanjay,2017-10-25,-40,NavGurukul Cash,Household Items,2 marker : 40 Rs,10/25/2017 11:52am,GB,
+Groceries-70,Shakrudin Pathan,2017-10-25,-70,NavGurukul Cash,Groceries,1 Kg rice flour : 70 Rs,10/25/2017 11:55am,GB,
+Vegetables-130,Diwakar,2017-10-26,-130,NavGurukul Cash,Vegetables,"2 Kg onion : 70 Rs
+1 Kg tomato : 60 Rs",10/26/2017 8:38am,GB,
+Milk & Bread-105,Aslam DSouza,2017-10-26,-105,NavGurukul Cash,Milk & Bread,2.5 Lt milk : 105 Rs,10/26/2017 8:39am,GB,
+Groceries-90,Diwakar,2017-10-26,-90,NavGurukul Cash,Groceries,2 kg rice : 90 Rs,10/26/2017 9:31am,GB,
+Groceries-150,Ranjan,2017-10-26,-150,NavGurukul Cash,Groceries,2 packet cookies : 150 Rs,10/26/2017 1:34pm,GB,
+Transportation-150,Shakrudin Pathan,2017-10-27,-150,NavGurukul Cash,Transportation,"ghar se huda metro aana jana  = 40
+huda metro se sikanderpur metro aana jana = 40
+sikanderpur metro se office aana jana = 40
+or kuch khana ke liye = 30",10/27/2017 3:35am,GB,
+Milk & Bread-110,Shivam Monga,2017-10-27,-110,NavGurukul Cash,Milk & Bread,2.5 Lt milk : 110 RS,10/27/2017 1:54pm,GB,
+Groceries-60,Shivam Monga,2017-10-27,-60,NavGurukul Cash,Groceries,1 Kg sugar : 60 Rs,10/27/2017 1:55pm,GB,
+Vegetables-50,Shivam Monga,2017-10-27,-50,NavGurukul Cash,Vegetables,1 Kg tomato : 50 RS,10/27/2017 1:56pm,GB,
+Money Given by NG--5000,Aslam DSouza,2017-10-27,5000,NavGurukul Account / Card,Money Given by NG,5000 rupees transfered to aslam account by bhaiya.,11/7/2017 3:17am,GB,
+Transportation-150,Shakrudin Pathan,2017-10-28,-150,NavGurukul Cash,Transportation,"ghar se huda metro aana jana  = 40
+huda metro se sikanderpur metro aana jana = 40
+sikanderpur metro se office aana jana = 40
+or kuch khana ke liye = 30",10/28/2017 3:39am,GB,
+Vegetables-50,Deepanshu Panchal,2017-10-29,-50,NavGurukul Cash,Vegetables,1 kg onion : 50 Rs,10/29/2017 12:26pm,GB,
+Milk & Bread-130,Diwakar,2017-10-30,-130,NavGurukul Cash,Milk & Bread,"milk 2lt : 89 Rs
+bread  : 41 Rs
+",10/31/2017 4:52am,GB,
+Vegetables-200,Deepanshu Panchal,2017-10-30,-200,NavGurukul Cash,Vegetables,"1 Kg onion : 50 Rs
+1 Kg tomato : 55 Rs
+1 Kg methi ka sag : 65 
+1.6 Kg Potato : 30 Rs ",10/31/2017 5:10am,GB,
+Groceries-100,Ranjan,2017-10-30,-100,NavGurukul Cash,Groceries,1 Lt oil : 105,10/31/2017 5:13am,GB,
+Milk & Bread-105,Shivam Monga,2017-10-31,-105,NavGurukul Cash,Milk & Bread,2.5 Lt milk  :  105 Rs,10/31/2017 5:53am,GB,
+Money Given by NG--2000,Manoj Kumar,2017-10-31,2000,Manoj's Account,Money Given by NG,2000 Rs  money given to NavGurukul from manoj account,10/31/2017 8:04am,GB,
+Vegetables-150,Shivam Monga,2017-10-31,-150,NavGurukul Cash,Vegetables,"1 kg tomato : 70 Rs
+>>>>>>> 1712c0d351f7deda9831c799e6aa9c299c489b7f
+1 Kg onion : 50 Rs
+1 Kg potato : 20 Rs
+chillies 200 gm : 10 Rs
+
+<<<<<<< HEAD
+",10/31/2017 8:09am,GB
+Groceries-20,Shivam Monga,31 October 2017,-20,NavGurukul Cash,Groceries,salt : 20 Rs,11/1/2017 4:48am,GB
+Transportation-150,Shakrudin Pathan,1 November 2017,-150,NavGurukul Cash,Transportation,"ghar se huda metro aana jana  = 40
+huda metro se sikanderpur metro aana jana = 40
+sikanderpur metro se office aana jana = 40
+or kuch khana ke liye = 30",11/1/2017 4:01am,GB
+Milk & Bread-108,"Diwakar,Ranjan",1 November 2017,-108,NavGurukul Cash,Milk & Bread,2.5 Lt : 108 Rs,11/1/2017 4:50am,GB
+Vegetables-110,Diwakar,1 November 2017,-110,NavGurukul Cash,Vegetables,"600 gm tomato : 40 Rs
+1 kg onion : 60 Rs
+chillies : 10 Rs",11/1/2017 4:55am,GB
+Groceries-105,Ranjan,1 November 2017,-105,NavGurukul Cash,Groceries,1 lt oil : 105 Rs,11/1/2017 10:03am,GB
+Vegetables-275,Diwakar,1 November 2017,-275,NavGurukul Cash,Vegetables,25 Kg potato : 275 Rs,11/1/2017 10:07am,GB
+Groceries-641,Diwakar,1 November 2017,-641,NavGurukul Cash,Groceries,"10 kg atta : 271 Rs
+2 kg chane ki dal : 178 Rs
+2 kg rajma : 192 Rs
+",11/1/2017 10:25am,GB
+Transportation-220,Manoj Kumar,1 November 2017,-220,NavGurukul Cash,Transportation,monoj went for interview,11/2/2017 5:02am,GB
+Student Field Expenses-30,Manoj Kumar,1 November 2017,-30,NavGurukul Cash,Student Field Expenses,manoj had lunch while he went out for interview,11/2/2017 5:04am,GB
+Milk & Bread-110,Shakrudin Pathan,2 November 2017,-110,NavGurukul Cash,Milk & Bread,milk = 2.5 litter,11/2/2017 5:10am,GB
+Transportation-150,Shakrudin Pathan,2 November 2017,-150,NavGurukul Cash,Transportation,"ghar se huda metro aana jana  = 40
+huda metro se sikanderpur metro aana jana = 40
+sikanderpur metro se office aana jana = 40
+or kuch khana ke liye = 30",11/2/2017 5:10am,GB
+Vegetables-117,"Sanjay,Pratyush",2 November 2017,-117,NavGurukul Cash,Vegetables,"1 kg tomato : 72 Rs
+1 Kg onion : 45 Rs",11/2/2017 1:46pm,GB
+Groceries-305,"Sanjay,Pratyush",2 November 2017,-305,NavGurukul Cash,Groceries,"dhaniya : 70 Rs
+haldi : 70 Rs
+lal mirchi : 60 Rs
+oil : 105 Rs ",11/2/2017 1:56pm,GB
+Household Items-148,Dhannu,2 November 2017,-148,NavGurukul Cash,Household Items,"phenyl : 40 Rs
+harpic : 108 Rs
+",11/2/2017 2:00pm,GB
+Milk & Bread-131,Diwakar,3 November 2017,-131,NavGurukul Cash,Milk & Bread,3 lt milk : 131 Rs,11/3/2017 5:04am,GB
+Vegetables-117,Diwakar,3 November 2017,-117,NavGurukul Cash,Vegetables,"1 kg Tomato : 64 Rs
+1 Kg onion  : 53 Rs",11/3/2017 5:10am,GB
+Groceries-550,Diwakar,3 November 2017,-550,NavGurukul Cash,Groceries,"5 Lt : 450 Rs
+jeera : 50 Rs
+lal mirchi : 50 Rs",11/3/2017 2:35pm,GB
+Vegetables-115,"Pratyush,Monu",3 November 2017,-115,NavGurukul Cash,Vegetables,"1 Kg onion : 55 Rs
+1 Kg tomato : 60 Rs",11/3/2017 2:47pm,GB
+Transportation-200,Shivam Monga,3 November 2017,-200,NavGurukul Cash,Transportation,interviwe ke liye G.K - 2 jana aana (shivam),11/3/2017 5:27pm,GB
+Transportation-200,Manoj Kumar,3 November 2017,-200,NavGurukul Cash,Transportation,manoj had go for interview ,11/3/2017 5:29pm,GB
+Transportation-150,Shakrudin Pathan,3 November 2017,-150,NavGurukul Cash,Transportation,"ghar se huda metro aana jana  = 40
+huda metro se sikanderpur metro aana jana = 40
+sikanderpur metro se office aana jana = 40
+or kuch khana ke liye = 30",11/4/2017 6:08am,GB
+Transportation-150,Shakrudin Pathan,4 November 2017,-150,NavGurukul Cash,Transportation,"ghar se huda metro aana jana  = 40
+huda metro se sikanderpur metro aana jana = 40
+sikanderpur metro se office aana jana = 40
+or kuch khana ke liye = 30",11/4/2017 6:09am,GB
+Milk & Bread-126,Pratyush,4 November 2017,-126,NavGurukul Cash,Milk & Bread,"3 Lt milk : 126 Rs
+",11/4/2017 2:58pm,GB
+Vegetables-134,Shivam Monga,4 November 2017,-134,NavGurukul Cash,Vegetables,"1 Kg onion : 55 Rs
+1 Kg tomato : 65 Rs
+chillies : 14 Rs",11/4/2017 3:05pm,GB
+Milk & Bread-147,Monu,5 November 2017,-147,NavGurukul Cash,Milk & Bread,"3.5 Lt milk : 147 Rs
+",11/5/2017 12:34pm,GB
+Vegetables-150,Ajay,5 November 2017,-150,NavGurukul Cash,Vegetables,"1 kg tomatto : 70 Rs
+1 Kg onion : 65 Rs
+chillies : 15 Rs",11/5/2017 12:37pm,GB
+Groceries-65,Ajay,5 November 2017,-65,NavGurukul Cash,Groceries,masala : 64 Rs,11/5/2017 12:38pm,GB
+Transportation-150,Shakrudin Pathan,5 November 2017,-150,NavGurukul Cash,Transportation,"ghar se huda metro aana jana  = 40
+huda metro se sikanderpur metro aana jana = 40
+sikanderpur metro se office aana jana = 40
+or kuch khana ke liye = 30",11/5/2017 1:03pm,GB
+Transportation-150,Shakrudin Pathan,6 November 2017,-150,NavGurukul Cash,Transportation,"ghar se huda metro aana jana  = 40
+huda metro se sikanderpur metro aana jana = 40
+sikanderpur metro se office aana jana = 40
+or kuch khana ke liye = 30",11/6/2017 4:10am,GB
+Transportation-150,Shakrudin Pathan,7 November 2017,-150,NavGurukul Cash,Transportation,"ghar se huda metro aana jana  = 40
+huda metro se sikanderpur metro aana jana = 40
+sikanderpur metro se office aana jana = 40
+or kuch khana ke liye = 30",11/7/2017 3:53am,GB
+Milk & Bread-147,Dhannu,7 November 2017,-147,NavGurukul Cash,Milk & Bread,3.5 lt milk : 147 Rs,11/7/2017 4:52am,GB
+Eggs-100,"Monu,Ajay",5 November 2017,-100,NavGurukul Cash,Eggs,eggs : 85 RS,11/7/2017 4:58am,GB
+Groceries-15,"Monu,Ajay",5 November 2017,-15,NavGurukul Cash,Groceries,"10 Rs masala
+garlic paste 5 Rs",11/7/2017 5:00am,GB
+Vegetables-55,Monu,5 November 2017,-55,NavGurukul Cash,Vegetables,1 Kg : onion,11/7/2017 5:01am,GB
+Groceries-100,Dhannu,6 November 2017,-100,NavGurukul Cash,Groceries,2 Kg cheeni : 100 Rs,11/7/2017 5:08am,GB
+Milk & Bread-38,Dhannu,6 November 2017,-38,NavGurukul Cash,Milk & Bread,bread : 38 Rs,11/7/2017 5:09am,GB
+Vegetables-125,Dhannu,6 November 2017,-125,NavGurukul Cash,Vegetables,"1 Kg tomato : 70 Rs
+1 Kg onion : 50 Rs
+mirchi : 5",11/7/2017 5:11am,GB
+Medical Expenses-268,Aslam DSouza,6 November 2017,-268,NavGurukul Cash,Medical Expenses,"dettole , banded(8),
+bandege (5) , paracitamole,
+calcium(goli) , pain killer,
+cotton.",11/7/2017 6:20am,GB
+Transportation-150,Shakrudin Pathan,7 November 2017,-150,NavGurukul Cash,Transportation,"ghar se huda metro aana jana  = 40
+huda metro se sikanderpur metro aana jana = 40
+sikanderpur metro se office aana jana = 40
+or kuch khana ke liye = 30",11/8/2017 7:38am,GB
+Transportation-150,Shakrudin Pathan,8 November 2017,-150,NavGurukul Cash,Transportation,"ghar se huda metro aana jana  = 40
+huda metro se sikanderpur metro aana jana = 40
+sikanderpur metro se office aana jana = 40
+or kuch khana ke liye = 30",11/8/2017 7:38am,GB
+Transportation-120,Deepanshu Panchal,7 November 2017,-120,NavGurukul Cash,Transportation,Ng se apurve bhaiya ke pas jana aur aana,11/8/2017 7:45am,GB
+Milk & Bread-147,Sanjay,7 November 2017,-147,NavGurukul Cash,Milk & Bread,3.5 Lt milk : 147,11/8/2017 7:47am,GB
+Vegetables-65,Sanjay,7 November 2017,-65,NavGurukul Cash,Vegetables,"1/2 kg tomato : 35 Rs
+1/2 Kg onion : 30 Rs",11/8/2017 7:57am,GB
+Money Given by NG--5000,Pratyush,8 November 2017,5000,NavGurukul Account / Card,Money Given by NG,5000 Rs transferred to pratyush's account,11/8/2017 8:00am,GB
+Milk & Bread-126,Pratyush,8 November 2017,-126,NavGurukul Cash,Milk & Bread,3 lt milk : 126 Rs,11/8/2017 8:01am,GB
+Vegetables-235,Pratyush,8 November 2017,-235,NavGurukul Cash,Vegetables,"2.4 Kg onion : 135 Rs
+1.3 kg tomato : 90 Rs
+mirchi : 10 Rs",11/8/2017 8:05am,GB
+Household Items-20,Pratyush,8 November 2017,-20,NavGurukul Cash,Household Items,vim bar  : 20 Rs,11/8/2017 8:06am,GB
+Medical Expenses-110,Monu,8 November 2017,-110,NavGurukul Cash,Medical Expenses,beetaden : 110 Rs,11/8/2017 8:54am,GB
+Vegetables-136,"Pratyush,Diwakar,Monu",8 November 2017,-136,NavGurukul Cash,Vegetables,"2kg gobhi : 65 Rs
+methi ka sag : 50 Rs
+garlic and chillies : 21 Rs",11/8/2017 2:14pm,GB
+Groceries-730,"Diwakar,Pratyush,Monu",8 November 2017,-730,NavGurukul Cash,Groceries,25 Kg chawal : 730 Rs,11/8/2017 2:16pm,GB
+Transportation-150,Shakrudin Pathan,9 November 2017,-150,NavGurukul Cash,Transportation,"ghar se huda metro aana jana  = 40
+huda metro se sikanderpur metro aana jana = 40
+sikanderpur metro se office aana jana = 40
+or kuch khana ke liye = 30",11/9/2017 5:33am,GB
+Milk & Bread-147,Pratyush,9 November 2017,-147,NavGurukul Cash,Milk & Bread,"3.5 lt : 147 Rs
+",11/9/2017 3:19pm,GB
+Vegetables-25,Pratyush,9 November 2017,-25,NavGurukul Cash,Vegetables,"adrak : 15 Rs
+lashun : 10 Rs",11/9/2017 3:22pm,GB
+Vegetables-320,Diwakar,9 November 2017,-320,NavGurukul Cash,Vegetables,"5 Kg potato : 80 Rs
+5 Kg onion : 80 Rs
+2 kg tomato : 80 Rs",11/9/2017 3:46pm,GB
+Groceries-1000,Pratyush,9 November 2017,-1000,NavGurukul Cash,Groceries,"3 Kg chane ki dal : 300 Rs
+
+",10/31/2017 8:09am,GB,
+Groceries-20,Shivam Monga,2017-10-31,-20,NavGurukul Cash,Groceries,salt : 20 Rs,11/1/2017 4:48am,GB,
+Transportation-150,Shakrudin Pathan,2017-11-01,-150,NavGurukul Cash,Transportation,"ghar se huda metro aana jana  = 40
+huda metro se sikanderpur metro aana jana = 40
+sikanderpur metro se office aana jana = 40
+or kuch khana ke liye = 30",11/1/2017 4:01am,GB,
+Milk & Bread-108,"Diwakar,Ranjan",2017-11-01,-108,NavGurukul Cash,Milk & Bread,2.5 Lt : 108 Rs,11/1/2017 4:50am,GB,
+Vegetables-110,Diwakar,2017-11-01,-110,NavGurukul Cash,Vegetables,"600 gm tomato : 40 Rs
+1 kg onion : 60 Rs
+chillies : 10 Rs",11/1/2017 4:55am,GB,
+Groceries-105,Ranjan,2017-11-01,-105,NavGurukul Cash,Groceries,1 lt oil : 105 Rs,11/1/2017 10:03am,GB,
+Vegetables-275,Diwakar,2017-11-01,-275,NavGurukul Cash,Vegetables,25 Kg potato : 275 Rs,11/1/2017 10:07am,GB,
+Groceries-641,Diwakar,2017-11-01,-641,NavGurukul Cash,Groceries,"10 kg atta : 271 Rs
+2 kg chane ki dal : 178 Rs
+2 kg rajma : 192 Rs
+",11/1/2017 10:25am,GB,
+Transportation-220,Manoj Kumar,2017-11-01,-220,NavGurukul Cash,Transportation,monoj went for interview,11/2/2017 5:02am,GB,
+Student Field Expenses-30,Manoj Kumar,2017-11-01,-30,NavGurukul Cash,Student Field Expenses,manoj had lunch while he went out for interview,11/2/2017 5:04am,GB,
+Milk & Bread-110,Shakrudin Pathan,2017-11-02,-110,NavGurukul Cash,Milk & Bread,milk = 2.5 litter,11/2/2017 5:10am,GB,
+Transportation-150,Shakrudin Pathan,2017-11-02,-150,NavGurukul Cash,Transportation,"ghar se huda metro aana jana  = 40
+huda metro se sikanderpur metro aana jana = 40
+sikanderpur metro se office aana jana = 40
+or kuch khana ke liye = 30",11/2/2017 5:10am,GB,
+Vegetables-117,"Sanjay,Pratyush",2017-11-02,-117,NavGurukul Cash,Vegetables,"1 kg tomato : 72 Rs
+1 Kg onion : 45 Rs",11/2/2017 1:46pm,GB,
+Groceries-305,"Sanjay,Pratyush",2017-11-02,-305,NavGurukul Cash,Groceries,"dhaniya : 70 Rs
+haldi : 70 Rs
+lal mirchi : 60 Rs
+oil : 105 Rs ",11/2/2017 1:56pm,GB,
+Household Items-148,Dhannu,2017-11-02,-148,NavGurukul Cash,Household Items,"phenyl : 40 Rs
+harpic : 108 Rs
+",11/2/2017 2:00pm,GB,
+Milk & Bread-131,Diwakar,2017-11-03,-131,NavGurukul Cash,Milk & Bread,3 lt milk : 131 Rs,11/3/2017 5:04am,GB,
+Vegetables-117,Diwakar,2017-11-03,-117,NavGurukul Cash,Vegetables,"1 kg Tomato : 64 Rs
+1 Kg onion  : 53 Rs",11/3/2017 5:10am,GB,
+Groceries-550,Diwakar,2017-11-03,-550,NavGurukul Cash,Groceries,"5 Lt : 450 Rs
+jeera : 50 Rs
+lal mirchi : 50 Rs",11/3/2017 2:35pm,GB,
+Vegetables-115,"Pratyush,Monu",2017-11-03,-115,NavGurukul Cash,Vegetables,"1 Kg onion : 55 Rs
+1 Kg tomato : 60 Rs",11/3/2017 2:47pm,GB,
+Transportation-200,Shivam Monga,2017-11-03,-200,NavGurukul Cash,Transportation,interviwe ke liye G.K - 2 jana aana (shivam),11/3/2017 5:27pm,GB,
+Transportation-200,Manoj Kumar,2017-11-03,-200,NavGurukul Cash,Transportation,manoj had go for interview ,11/3/2017 5:29pm,GB,
+Transportation-150,Shakrudin Pathan,2017-11-03,-150,NavGurukul Cash,Transportation,"ghar se huda metro aana jana  = 40
+huda metro se sikanderpur metro aana jana = 40
+sikanderpur metro se office aana jana = 40
+or kuch khana ke liye = 30",11/4/2017 6:08am,GB,
+Transportation-150,Shakrudin Pathan,2017-11-04,-150,NavGurukul Cash,Transportation,"ghar se huda metro aana jana  = 40
+huda metro se sikanderpur metro aana jana = 40
+sikanderpur metro se office aana jana = 40
+or kuch khana ke liye = 30",11/4/2017 6:09am,GB,
+Milk & Bread-126,Pratyush,2017-11-04,-126,NavGurukul Cash,Milk & Bread,"3 Lt milk : 126 Rs
+",11/4/2017 2:58pm,GB,
+Vegetables-134,Shivam Monga,2017-11-04,-134,NavGurukul Cash,Vegetables,"1 Kg onion : 55 Rs
+1 Kg tomato : 65 Rs
+chillies : 14 Rs",11/4/2017 3:05pm,GB,
+Milk & Bread-147,Monu,2017-11-05,-147,NavGurukul Cash,Milk & Bread,"3.5 Lt milk : 147 Rs
+",11/5/2017 12:34pm,GB,
+Vegetables-150,Ajay,2017-11-05,-150,NavGurukul Cash,Vegetables,"1 kg tomatto : 70 Rs
+1 Kg onion : 65 Rs
+chillies : 15 Rs",11/5/2017 12:37pm,GB,
+Groceries-65,Ajay,2017-11-05,-65,NavGurukul Cash,Groceries,masala : 64 Rs,11/5/2017 12:38pm,GB,
+Transportation-150,Shakrudin Pathan,2017-11-05,-150,NavGurukul Cash,Transportation,"ghar se huda metro aana jana  = 40
+huda metro se sikanderpur metro aana jana = 40
+sikanderpur metro se office aana jana = 40
+or kuch khana ke liye = 30",11/5/2017 1:03pm,GB,
+Transportation-150,Shakrudin Pathan,2017-11-06,-150,NavGurukul Cash,Transportation,"ghar se huda metro aana jana  = 40
+huda metro se sikanderpur metro aana jana = 40
+sikanderpur metro se office aana jana = 40
+or kuch khana ke liye = 30",11/6/2017 4:10am,GB,
+Transportation-150,Shakrudin Pathan,2017-11-07,-150,NavGurukul Cash,Transportation,"ghar se huda metro aana jana  = 40
+huda metro se sikanderpur metro aana jana = 40
+sikanderpur metro se office aana jana = 40
+or kuch khana ke liye = 30",11/7/2017 3:53am,GB,
+Milk & Bread-147,Dhannu,2017-11-07,-147,NavGurukul Cash,Milk & Bread,3.5 lt milk : 147 Rs,11/7/2017 4:52am,GB,
+Eggs-100,"Monu,Ajay",2017-11-05,-100,NavGurukul Cash,Eggs,eggs : 85 RS,11/7/2017 4:58am,GB,
+Groceries-15,"Monu,Ajay",2017-11-05,-15,NavGurukul Cash,Groceries,"10 Rs masala
+garlic paste 5 Rs",11/7/2017 5:00am,GB,
+Vegetables-55,Monu,2017-11-05,-55,NavGurukul Cash,Vegetables,1 Kg : onion,11/7/2017 5:01am,GB,
+Groceries-100,Dhannu,2017-11-06,-100,NavGurukul Cash,Groceries,2 Kg cheeni : 100 Rs,11/7/2017 5:08am,GB,
+Milk & Bread-38,Dhannu,2017-11-06,-38,NavGurukul Cash,Milk & Bread,bread : 38 Rs,11/7/2017 5:09am,GB,
+Vegetables-125,Dhannu,2017-11-06,-125,NavGurukul Cash,Vegetables,"1 Kg tomato : 70 Rs
+1 Kg onion : 50 Rs
+mirchi : 5",11/7/2017 5:11am,GB,
+Medical Expenses-268,Aslam DSouza,2017-11-06,-268,NavGurukul Cash,Medical Expenses,"dettole , banded(8),
+bandege (5) , paracitamole,
+calcium(goli) , pain killer,
+cotton.",11/7/2017 6:20am,GB,
+Transportation-150,Shakrudin Pathan,2017-11-07,-150,NavGurukul Cash,Transportation,"ghar se huda metro aana jana  = 40
+huda metro se sikanderpur metro aana jana = 40
+sikanderpur metro se office aana jana = 40
+or kuch khana ke liye = 30",11/8/2017 7:38am,GB,
+Transportation-150,Shakrudin Pathan,2017-11-08,-150,NavGurukul Cash,Transportation,"ghar se huda metro aana jana  = 40
+huda metro se sikanderpur metro aana jana = 40
+sikanderpur metro se office aana jana = 40
+or kuch khana ke liye = 30",11/8/2017 7:38am,GB,
+Transportation-120,Deepanshu Panchal,2017-11-07,-120,NavGurukul Cash,Transportation,Ng se apurve bhaiya ke pas jana aur aana,11/8/2017 7:45am,GB,
+Milk & Bread-147,Sanjay,2017-11-07,-147,NavGurukul Cash,Milk & Bread,3.5 Lt milk : 147,11/8/2017 7:47am,GB,
+Vegetables-65,Sanjay,2017-11-07,-65,NavGurukul Cash,Vegetables,"1/2 kg tomato : 35 Rs
+1/2 Kg onion : 30 Rs",11/8/2017 7:57am,GB,
+Money Given by NG--5000,Pratyush,2017-11-08,5000,NavGurukul Account / Card,Money Given by NG,5000 Rs transferred to pratyush's account,11/8/2017 8:00am,GB,
+Milk & Bread-126,Pratyush,2017-11-08,-126,NavGurukul Cash,Milk & Bread,3 lt milk : 126 Rs,11/8/2017 8:01am,GB,
+Vegetables-235,Pratyush,2017-11-08,-235,NavGurukul Cash,Vegetables,"2.4 Kg onion : 135 Rs
+1.3 kg tomato : 90 Rs
+mirchi : 10 Rs",11/8/2017 8:05am,GB,
+Household Items-20,Pratyush,2017-11-08,-20,NavGurukul Cash,Household Items,vim bar  : 20 Rs,11/8/2017 8:06am,GB,
+Medical Expenses-110,Monu,2017-11-08,-110,NavGurukul Cash,Medical Expenses,beetaden : 110 Rs,11/8/2017 8:54am,GB,
+Vegetables-136,"Pratyush,Diwakar,Monu",2017-11-08,-136,NavGurukul Cash,Vegetables,"2kg gobhi : 65 Rs
+methi ka sag : 50 Rs
+garlic and chillies : 21 Rs",11/8/2017 2:14pm,GB,
+Groceries-730,"Diwakar,Pratyush,Monu",2017-11-08,-730,NavGurukul Cash,Groceries,25 Kg chawal : 730 Rs,11/8/2017 2:16pm,GB,
+Transportation-150,Shakrudin Pathan,2017-11-09,-150,NavGurukul Cash,Transportation,"ghar se huda metro aana jana  = 40
+huda metro se sikanderpur metro aana jana = 40
+sikanderpur metro se office aana jana = 40
+or kuch khana ke liye = 30",11/9/2017 5:33am,GB,
+Milk & Bread-147,Pratyush,2017-11-09,-147,NavGurukul Cash,Milk & Bread,"3.5 lt : 147 Rs
+",11/9/2017 3:19pm,GB,
+Vegetables-25,Pratyush,2017-11-09,-25,NavGurukul Cash,Vegetables,"adrak : 15 Rs
+lashun : 10 Rs",11/9/2017 3:22pm,GB,
+Vegetables-320,Diwakar,2017-11-09,-320,NavGurukul Cash,Vegetables,"5 Kg potato : 80 Rs
+5 Kg onion : 80 Rs
+2 kg tomato : 80 Rs",11/9/2017 3:46pm,GB,
+Groceries-1000,Pratyush,2017-11-09,-1000,NavGurukul Cash,Groceries,"3 Kg chane ki dal : 300 Rs
+
+5 Kg atta : 140 Rs",11/9/2017 4:01pm,GB
+Household Items-371,Diwakar,9 November 2017,-371,NavGurukul Cash,Household Items,"vim liquid : 171 Rs
+hand wash : 200 Rs",11/9/2017 4:05pm,GB
+Groceries-350,Deepanshu Panchal,9 November 2017,-350,NavGurukul Cash,Groceries,10 kg atta : 350 Rs,11/10/2017 5:05am,GB
+Milk & Bread-126,Ajay,10 November 2017,-126,NavGurukul Cash,Milk & Bread,3 Lt milk : 126 RS,11/10/2017 5:10am,GB
+Transportation-150,Shakrudin Pathan,9 November 2017,-150,NavGurukul Cash,Transportation,"ghar se huda metro aana jana  = 40
+huda metro se sikanderpur metro aana jana = 40
+sikanderpur metro se office aana jana = 40
+or kuch khana ke liye = 30",11/10/2017 5:44am,GB
+Transportation-220,Manoj Kumar,10 November 2017,-220,NavGurukul Cash,Transportation,interview ke liye jana aur aane ka expence  : 220 Rs,11/11/2017 2:43am,GB
+Transportation-120,Deepanshu Panchal,10 November 2017,-120,NavGurukul Cash,Transportation,vasank kunj ja ke laptop lane ke travel ka expence,11/11/2017 2:45am,GB
+Groceries-35,Pratyush,10 November 2017,-35,NavGurukul Cash,Groceries,"mirchi : 10 Rs
+dhaniya powder : 25 Rs",11/11/2017 2:46am,GB
+Money Given by NG--5000,Pratyush,11 November 2017,5000,NavGurukul Account / Card,Money Given by NG,money transferred to pratyush's account  by rishabh bhaiya : 5000 RS,11/11/2017 5:10am,GB
+Vegetables-214,"Pratyush,Monu",11 November 2017,-214,NavGurukul Cash,Vegetables,"dhaniya patta : 19 Rs
+mirchi : 24 Rs
+channa : 106 rs
+couliflower (1.7 Kg) : 40 Rs
+ghiya 1 kg : 25 rs",11/11/2017 5:20am,GB
+Milk & Bread-105,Diwakar,11 November 2017,-105,NavGurukul Cash,Milk & Bread,2.5 Lt milk : 105 Rs,11/11/2017 5:21am,GB
+Transportation-150,Shakrudin Pathan,10 November 2017,-150,NavGurukul Cash,Transportation,"ghar se huda metro aana jana  = 40
+huda metro se sikanderpur metro aana jana = 40
+sikanderpur metro se office aana jana = 40
+or kuch khana ke liye = 30",11/11/2017 6:20am,GB
+Transportation-160,Deepanshu Panchal,11 November 2017,-160,NavGurukul Cash,Transportation,travel expence from NG to abhay bhaiya's home,11/11/2017 12:39pm,GB
+Tech Expenses (Laptop/Phone etc.)-980,Ajay,11 November 2017,-980,NavGurukul Cash,Tech Expenses (Laptop/Phone etc.),"keyboard : 270 Rs
+mouse : 160 Rs
+charger : 550 Rs",11/11/2017 12:56pm,GB
+Transportation-60,Ajay,11 November 2017,-60,NavGurukul Cash,Transportation,amar aur ajay (NG se sadar bajar jana aur aana ) : ,11/11/2017 1:05pm,GB
+Transportation-150,Shakrudin Pathan,10 November 2017,-150,NavGurukul Cash,Transportation,"ghar se huda metro aana jana  = 40
+huda metro se sikanderpur metro aana jana = 40
+sikanderpur metro se office aana jana = 40
+or kuch khana ke liye = 30",11/11/2017 1:17pm,GB
+Eggs-120,Pratyush,11 November 2017,-120,NavGurukul Cash,Eggs,eggs : 120 Rs,11/11/2017 2:41pm,GB
+Groceries-90,Monu,11 November 2017,-90,NavGurukul Cash,Groceries,1 Kg oil : 90 Rs,11/12/2017 5:43am,GB
+Transportation-150,Shakrudin Pathan,11 November 2017,-150,NavGurukul Cash,Transportation,"ghar se huda metro aana jana  = 40
+huda metro se sikanderpur metro aana jana = 40
+sikanderpur metro se office aana jana = 40
+or kuch khana ke liye = 30",11/12/2017 5:47am,GB
+Milk & Bread-164,"Diwakar,Monu",12 November 2017,-164,NavGurukul Cash,Milk & Bread,"milk 3 Lt : 126 Rs
+bread : 38 Rs",11/12/2017 6:02am,GB
+Milk & Bread-164,"Diwakar,Monu",13 November 2017,-164,NavGurukul Cash,Milk & Bread,"3 Lt milk : 126 Rs
+bread : 38 Rs",11/13/2017 5:12am,GB
+Transportation-150,Shakrudin Pathan,12 November 2017,-150,NavGurukul Cash,Transportation,"ghar se huda metro aana jana  = 40
+huda metro se sikanderpur metro aana jana = 40
+sikanderpur metro se office aana jana = 40
+or kuch khana ke liye = 30",11/13/2017 5:22am,GB
+Tech Expenses (Laptop/Phone etc.)-600,Diwakar,13 November 2017,-600,NavGurukul Cash,Tech Expenses (Laptop/Phone etc.),laptop charger (amar) : 600 Rs,11/13/2017 11:32am,GB
+Transportation-20,Diwakar,13 November 2017,-20,NavGurukul Cash,Transportation,travel expence from NG to sadr market for amr's chrger : 20,11/13/2017 11:33am,GB
+Vegetables-90,Deepanshu Panchal,13 November 2017,-90,NavGurukul Cash,Vegetables,"1 Kg tomato : 70 Rs
+1/2 Kg gobhi : 20 Rs",11/13/2017 2:11pm,GB
+Milk & Bread-129,Pratyush,14 November 2017,-129,NavGurukul Cash,Milk & Bread,3 Lt milk : 129 Rs,11/14/2017 4:04am,GB
+Vegetables-132,Pratyush,14 November 2017,-132,NavGurukul Cash,Vegetables,"1kg  onion : 60 Rs
+1 Kg tomato : 60 Rs 
+ginger : 12 Rs",11/14/2017 4:07am,GB
+Transportation-150,Shakrudin Pathan,14 November 2017,-150,NavGurukul Cash,Transportation,"ghar se huda metro aana jana  = 40
+huda metro se sikanderpur metro aana jana = 40
+sikanderpur metro se office aana jana = 40
+or kuch khana ke liye = 30",11/14/2017 4:26am,GB
+Groceries-116,Monu,14 November 2017,-116,NavGurukul Cash,Groceries,"1 Lt oil : 90 Rs
+haldi  : 26 Rs",11/14/2017 9:31am,GB
+NG Fixes/Maintenance-100,Diwakar,14 November 2017,-100,NavGurukul Cash,NG Fixes/Maintenance,100 Rs kude walo ko diye ,11/14/2017 9:36am,GB
+Transportation-300,Shakrudin Pathan,15 November 2017,-300,NavGurukul Cash,Transportation,"ghar se huda metro aana jana  = 40
+huda metro se sikanderpur metro aana jana = 40
+sikanderpur metro se office aana jana = 40
+or kuch khana ke liye = 30
+or aj mene extra liye hai card ke liye",11/15/2017 5:44am,GB
+Vegetables-110,Pratyush,15 November 2017,-110,NavGurukul Cash,Vegetables,"1 Kg tomator : 60 Rs
+1 Kg onion  : 50 Rs",11/15/2017 1:52pm,GB
+Household Items-80,Pratyush,15 November 2017,-80,NavGurukul Cash,Household Items,80 Rs printing pages,11/15/2017 1:53pm,GB
+Milk & Bread-105,Pratyush,15 November 2017,-105,NavGurukul Cash,Milk & Bread,2.5 Lt milk   :   105 Rs,11/15/2017 1:56pm,GB
+Medical Expenses-40,Pratyush,15 November 2017,-40,NavGurukul Cash,Medical Expenses,pratyush got fever and have medicines of 40 Rs,11/15/2017 1:57pm,GB
+Other (Kuch Aur)-200,Aslam DSouza,15 November 2017,-200,NavGurukul Cash,Other (Kuch Aur),money transferred to aslam's account  and charged 200 Rs for transaction,11/15/2017 2:02pm,GB
+Transportation-150,Shakrudin Pathan,16 November 2017,-150,NavGurukul Cash,Transportation,"ghar se huda metro aana jana  = 40
+huda metro se sikanderpur metro aana jana = 40
+sikanderpur metro se office aana jana = 40
+or kuch khana ke liye = 30",11/16/2017 4:24am,GB
+Vegetables-110,Diwakar,16 November 2017,-110,NavGurukul Cash,Vegetables,"1 Kg onion : 50 Rs
+1 Kg tomato : 60 Rs",11/16/2017 5:11am,GB
+Milk & Bread-138,Pratyush,16 November 2017,-138,NavGurukul Cash,Milk & Bread,"2.5 Lt milk : 105 Rs
+bread : 38 Rs",11/16/2017 5:12am,GB
+Money Given by NG--5000,Pratyush,16 November 2017,5000,NavGurukul Account / Card,Money Given by NG,"500 Rs transfered to pratyush's account by rishabh bhaiya
+",11/16/2017 5:16am,GB
+Cooking Gas (Cylinder)-1200,Pratyush,15 November 2017,-1200,NavGurukul Cash,Cooking Gas (Cylinder),cooking gas of 1200 Rs,11/16/2017 5:19am,GB
+Groceries-440,Diwakar,16 November 2017,-440,NavGurukul Cash,Groceries,5 Lt oil : 440 Rs,11/16/2017 5:21am,GB
+Tech Expenses (Laptop/Phone etc.)-985,Diwakar,16 November 2017,-985,NavGurukul Cash,Tech Expenses (Laptop/Phone etc.),cartridge (black & white / colour) : 985 Rs,11/16/2017 12:33pm,GB
+Tech Expenses (Laptop/Phone etc.)-160,Diwakar,16 November 2017,-160,NavGurukul Cash,Tech Expenses (Laptop/Phone etc.),A4 SHEETS : 160 Rs,11/16/2017 3:27pm,GB
+Transportation-150,Shakrudin Pathan,17 November 2017,-150,NavGurukul Cash,Transportation,"ghar se huda metro aana jana  = 40
+huda metro se sikanderpur metro aana jana = 40
+sikanderpur metro se office aana jana = 40
+or kuch khana ke liye = 30",11/17/2017 5:22am,GB
+Milk & Bread-105,Diwakar,17 November 2017,-105,NavGurukul Cash,Milk & Bread,2.5 Lt milk : 105 Rs,11/17/2017 5:41am,GB
+Vegetables-100,Diwakar,17 November 2017,-100,NavGurukul Cash,Vegetables,"1 Kg onion : 40 Rs
+1 Kg Tomato :  60 Rs",11/17/2017 5:43am,GB
+Tech Expenses (Laptop/Phone etc.)-470,Diwakar,17 November 2017,-470,NavGurukul Cash,Tech Expenses (Laptop/Phone etc.),black cartridge : 440 rs,11/17/2017 2:32pm,GB
+Transportation-200,Dhannu,17 November 2017,-200,NavGurukul Cash,Transportation,interview of dhannu travelling expence from NG to karol bagh ,11/17/2017 2:51pm,GB
+Milk & Bread-126,Diwakar,18 November 2017,-126,NavGurukul Cash,Milk & Bread,3 lt milk : 126 Rs,11/18/2017 5:27am,GB
+Vegetables-55,Diwakar,18 November 2017,-55,NavGurukul Cash,Vegetables,"1/2 kg onion : 20 Rs
+1/2 Kg tomato : 30 RS",11/18/2017 5:29am,GB
+Transportation-150,Shakrudin Pathan,18 November 2017,-150,NavGurukul Cash,Transportation,"ghar se huda metro aana jana  = 40
+huda metro se sikanderpur metro aana jana = 40
+sikanderpur metro se office aana jana = 40
+or kuch khana ke liye = 30",11/18/2017 5:56am,GB
+Transportation-130,Deepanshu Panchal,18 November 2017,-130,NavGurukul Cash,Transportation,going to abhay bhaiya's home from NG,11/18/2017 4:38pm,GB
+Milk & Bread-126,"Deepanshu Panchal,Shakrudin Pathan",19 November 2017,-126,NavGurukul Cash,Milk & Bread,3 Lt milk : 126 Rs,11/19/2017 6:42am,GB
+Groceries-60,Diwakar,19 November 2017,-60,NavGurukul Cash,Groceries,"1 Kg chini : 60 RS
+",11/19/2017 6:43am,GB
+Vegetables-110,Ajay,19 November 2017,-110,NavGurukul Cash,Vegetables,"1 kg onion : 50 Rs
+1 Kg Tomato : 60 Rs",11/19/2017 7:29am,GB
+Transportation-150,Shakrudin Pathan,20 November 2017,-150,NavGurukul Cash,Transportation,"ghar se huda metro aana jana  = 40
+huda metro se sikanderpur metro aana jana = 40
+sikanderpur metro se office aana jana = 40
+or kuch khana ke liye = 30",11/21/2017 5:33am,GB
+Transportation-150,Shakrudin Pathan,21 November 2017,-150,NavGurukul Cash,Transportation,"ghar se huda metro aana jana  = 40
+huda metro se sikanderpur metro aana jana = 40
+sikanderpur metro se office aana jana = 40
+or kuch khana ke liye = 30",11/21/2017 5:34am,GB
+Money Given by NG--5000,Pratyush,21 November 2017,5000,NavGurukul Account / Card,Money Given by NG,5000 Rs transfered to pratyush account,11/21/2017 12:58pm,GB
+Milk & Bread-164,"Monu,Diwakar",21 November 2017,-164,NavGurukul Cash,Milk & Bread,"3 lt milk : 126
+bread : 38 nRs",11/21/2017 1:01pm,GB
+Groceries-340,Diwakar,21 November 2017,-340,NavGurukul Cash,Groceries,10 kg atta : 340,11/21/2017 1:04pm,GB
+Vegetables-80,Pratyush,21 November 2017,-80,NavGurukul Cash,Vegetables,"1 Kg onion : 60 Rs
+1 Kg salt : 20 Rs",11/21/2017 4:06pm,GB
+Milk & Bread-164,Monu,22 November 2017,-164,NavGurukul Cash,Milk & Bread,"3 Lt milk : 126 Rs
+bread : 38",11/22/2017 5:18am,GB
+Vegetables-190,Diwakar,22 November 2017,-190,NavGurukul Cash,Vegetables,"1 Kg tomato : 60 Rs
+nimboo,adrak : 20 Rs
+2 Kg onion : 110 Rs",11/22/2017 5:25am,GB
+Groceries-100,Monu,22 November 2017,-100,NavGurukul Cash,Groceries,"2 Kg sugar : 90 Rs
+cumin seeds : 10 Rs",11/22/2017 5:28am,GB
+Transportation-150,Shakrudin Pathan,22 November 2017,-150,NavGurukul Cash,Transportation,"ghar se huda metro aana jana  = 40
+huda metro se sikanderpur metro aana jana = 40
+sikanderpur metro se office aana jana = 40
+or kuch khana ke liye = 30",11/22/2017 5:40am,GB
+Eggs-63,Diwakar,22 November 2017,-63,NavGurukul Cash,Eggs,9 eggs : 63 Rs,11/22/2017 5:34pm,GB
+Tech Expenses (Laptop/Phone etc.)-1410,Manoj Kumar,22 November 2017,-1410,NavGurukul Cash,Tech Expenses (Laptop/Phone etc.),"(50)copy of A3 size sheet  :  1150
+corrier of rishabh bhaiya's video graph-er friend : 260 Rs ",11/22/2017 5:40pm,GB
+Transportation-80,Manoj Kumar,22 November 2017,-80,NavGurukul Cash,Transportation,"going to market for print out of a3 size sheets  :  40 Rs
+going to transport for mobilization : 40 rs",11/22/2017 5:45pm,GB
+Transportation-150,Shakrudin Pathan,23 November 2017,-150,NavGurukul Cash,Transportation,"ghar se huda metro aana jana  = 40
+huda metro se sikanderpur metro aana jana = 40
+sikanderpur metro se office aana jana = 40
+or kuch khana ke liye = 30",11/23/2017 5:29am,GB
+Milk & Bread-126,"Monu,Diwakar",23 November 2017,-126,NavGurukul Cash,Milk & Bread,3 Lt milk : 126 Rs,11/23/2017 10:54am,GB
+Vegetables-60,Diwakar,23 November 2017,-60,NavGurukul Cash,Vegetables,1 Kg tomato : 60 Rs,11/23/2017 10:56am,GB
+Groceries-370,Shivam Monga,23 November 2017,-370,NavGurukul Cash,Groceries,"paneer : 278 Rs
+butter : 46 Rs
+cream  : 46 Rs",11/23/2017 1:09pm,GB
+Groceries-130,Dhannu,23 November 2017,-130,NavGurukul Cash,Groceries,"mix masala : 120 Rs
+paneer masala  : 10 Rs",11/23/2017 1:11pm,GB
+Vegetables-216,Diwakar,23 November 2017,-216,NavGurukul Cash,Vegetables,"garlic : 27 Rs
+peas : 43  Rs
+Ginger : 18 Rs
+Tomato : 70 Rs
+Onion : 60 rs ",11/23/2017 1:14pm,GB
+Milk & Bread-176,Diwakar,24 November 2017,-176,NavGurukul Cash,Milk & Bread,"3 Lt milk  : 126 Rs
+cream : 30 Rs
+curd : 30 Rs",11/24/2017 4:05pm,GB
+Transportation-200,Shivam Monga,24 November 2017,-200,NavGurukul Cash,Transportation,"From NG to hauz khas 
+and from hauz khas to Ng",11/24/2017 4:09pm,GB
+Transportation-150,Shakrudin Pathan,24 November 2017,-150,NavGurukul Cash,Transportation,"ghar se huda metro aana jana  = 40
+huda metro se sikanderpur metro aana jana = 40
+sikanderpur metro se office aana jana = 40
+or kuch khana ke liye = 30",11/24/2017 4:13pm,GB
+Vegetables-200,Monu,24 November 2017,-200,NavGurukul Cash,Vegetables,"1 Kg tomato : 60 Rs
+1 Kg Onion : 60 Rs
+Brinjal : 80 Rs",11/24/2017 4:13pm,GB
+Transportation-150,Shakrudin Pathan,25 November 2017,-150,NavGurukul Cash,Transportation,"ghar se huda metro aana jana  = 40
+huda metro se sikanderpur metro aana jana = 40
+sikanderpur metro se office aana jana = 40
+or kuch khana ke liye = 30",11/25/2017 5:18am,GB
+Milk & Bread-131,Diwakar,25 November 2017,-131,NavGurukul Cash,Milk & Bread,3 Lt milk : 131 Rs,11/25/2017 11:05am,GB
+Vegetables-140,Diwakar,25 November 2017,-140,NavGurukul Cash,Vegetables,"1 Kg Onion : 65 Rs
+1 Kg Tomato : 70 Rs",11/25/2017 11:08am,GB
+Money Given by NG--5000,Aslam DSouza,25 November 2017,5000,NavGurukul Account / Card,Money Given by NG,Money Given by Rishabh to Aslam Account,11/26/2017 6:21am,GB
+Tech Expenses (Laptop/Phone etc.)-550,"Aslam DSouza,Diwakar",25 November 2017,-550,NavGurukul Cash,Tech Expenses (Laptop/Phone etc.),Diwakar buy a laptop charger of 550INR,11/26/2017 6:24am,GB
+Vegetables-135,Monu,26 November 2017,-135,NavGurukul Cash,Vegetables,"1 kg tamato = 70 Rs,1 kg onion = 65 Rs. ",11/26/2017 6:26am,GB
+NG Fixes/Maintenance-220,"Aslam DSouza,Diwakar",25 November 2017,-220,NavGurukul Cash,NG Fixes/Maintenance,Buy 2 CFL light = 220,11/26/2017 6:26am,GB
+Transportation-60,"Aslam DSouza,Diwakar",25 November 2017,-60,NavGurukul Cash,Transportation,Diwakar and Aslam went to market for Laptop charger and other things like CFL Light ,11/26/2017 6:29am,GB
+Milk & Bread-143,Ajay,26 November 2017,-143,NavGurukul Cash,Milk & Bread,2.5 ltr milk and bread,11/26/2017 6:30am,GB
+Groceries-60,Monu,26 November 2017,-60,NavGurukul Cash,Groceries,1 kg sugar ,11/26/2017 6:34am,GB
+Milk & Bread-143,"Dhannu,Ranjan",27 November 2017,-143,NavGurukul Cash,Milk & Bread,bought 2.5 lt milk and 1packed bread ,11/28/2017 8:08am,GB
+Vegetables-140,"Dhannu,Ranjan",27 November 2017,-140,NavGurukul Cash,Vegetables,buy 1kg tomato and 1kg onion.,11/28/2017 8:11am,GB
+Cooking Gas (Cylinder)-900,Sanjay,28 November 2017,-900,NavGurukul Cash,Cooking Gas (Cylinder),bought 1 cylinder 900rs. ,11/28/2017 8:12am,GB
+Milk & Bread-185,Shakrudin Pathan,28 November 2017,-185,NavGurukul Cash,Milk & Bread,bought 3.5 lt milk and 1 packed bread.,11/28/2017 8:17am,GB
+Vegetables-130,Pratyush,28 November 2017,-130,NavGurukul Cash,Vegetables,bought 1kg tomato and 1kg onion,11/28/2017 8:20am,GB
+Groceries-270,Pratyush,28 November 2017,-270,NavGurukul Cash,Groceries,bought 5kg 175 rice and and bought 95 rs masale.,11/28/2017 8:22am,GB
+Transportation-190,"Shakrudin Pathan,Manoj Kumar",28 November 2017,-190,NavGurukul Cash,Transportation,150 rs give sakru and 40rs give manoj,11/28/2017 8:25am,GB
+Groceries-100,Pratyush,28 November 2017,-100,NavGurukul Cash,Groceries,bought 1 lt cooking oil ,11/28/2017 9:12am,GB
+Household Items-125,"Dhannu,Ranjan",28 November 2017,-125,NavGurukul Cash,Household Items,bought 1 harpick and finail ,11/28/2017 12:27pm,GB
+Transportation-200,Aslam DSouza,28 November 2017,-200,NavGurukul Cash,Transportation,travel to navgurukul to rishabh's house ,11/28/2017 2:21pm,GB
+Transportation-500,Aslam DSouza,28 November 2017,-500,NavGurukul Cash,Transportation,Recharge Metro card 500,11/28/2017 2:22pm,GB
+Groceries-170,Pratyush,28 November 2017,-170,NavGurukul Cash,Groceries,bought 5kg aata 170rs.,11/29/2017 3:14am,GB
+Vegetables-10,Pratyush,28 November 2017,-10,NavGurukul Cash,Vegetables,bought 10 rs garlic ,11/29/2017 3:16am,GB
+Money Given by NG--5000,Pratyush,29 November 2017,5000,NavGurukul Account / Card,Money Given by NG,money transferred by rishabh bhaia to pratyush(5000rs),11/29/2017 5:27pm,GB
+Transportation-240,Shivam Monga,29 November 2017,-240,NavGurukul Cash,Transportation,shivam use 200 rs for transportation and manoj use 40rs for transportation.  ,11/29/2017 5:29pm,GB
+Milk & Bread-164,Manoj Kumar,29 November 2017,-164,NavGurukul Cash,Milk & Bread,bought 3lt milk and 1 packed bread.,11/29/2017 5:30pm,GB
+Groceries-200,"Ranjan,Pratyush",29 November 2017,-200,NavGurukul Cash,Groceries,bought 2 lt cooking oil 200rs.,11/29/2017 5:32pm,GB
+Eggs-70,"Pratyush,Ranjan",29 November 2017,-70,NavGurukul Cash,Eggs,bought 10 eggs 70rs.,11/29/2017 5:34pm,GB
+Vegetables-130,"Pratyush,Ranjan",29 November 2017,-130,NavGurukul Cash,Vegetables,bought 130 rs 1kg onion and 1kg tomato,11/29/2017 5:36pm,GB
+Transportation-390,"Shivam Monga,Manoj Kumar,Shakrudin Pathan",30 November 2017,-390,NavGurukul Cash,Transportation,ana jane ka kiraya 200rs shivam ko and 150rs sakru and 40rs manoj ko.,11/30/2017 5:09am,GB
+Transportation-150,Shakrudin Pathan,30 November 2017,-150,NavGurukul Cash,Transportation,"ghar se huda metro aana jana  = 40
+huda metro se sikanderpur metro aana jana = 40
+sikanderpur metro se office aana jana = 40
+or kuch khana ke liye = 30",11/30/2017 5:11am,GB
+Milk & Bread-126,Shivam Monga,30 November 2017,-126,NavGurukul Cash,Milk & Bread,bought 3 lt milk 126 rs.,11/30/2017 5:13am,GB
+Groceries-150,Ranjan,30 November 2017,-150,NavGurukul Cash,Groceries,bought 120 2kg sugar and 30rs dhaniya powder,11/30/2017 8:24am,GB
+Vegetables-230,Ranjan,30 November 2017,-230,NavGurukul Cash,Vegetables,bought vegetables,11/30/2017 8:29am,GB
+Transportation-130,Dhannu,30 November 2017,-130,NavGurukul Cash,Transportation,"transport, metro and auto kiraya",11/30/2017 8:34am,GB
+Vegetables-120,Diwakar,30 November 2017,-120,NavGurukul Cash,Vegetables,"bought aalu, matar, lemon and simla mirchi and gajar.",11/30/2017 3:46pm,GB
+Groceries-570,"Sanjay,Diwakar",30 November 2017,-570,NavGurukul Cash,Groceries,bought 1/2 kg panner and pao and pao masala and garlic pest and 250g makhan,11/30/2017 3:57pm,GB
+Medical Expenses-110,Pratyush,30 November 2017,-110,NavGurukul Cash,Medical Expenses,spent 110rs for medical.,11/30/2017 4:00pm,GB
+Transportation-230,Dhannu,1 December 2017,-230,NavGurukul Cash,Transportation,aane jane ka kiraya 230rs.,12/1/2017 12:24pm,GB
+Transportation-190,Ranjan,1 December 2017,-190,NavGurukul Cash,Transportation,aana jane ka kiraya ranjan and amar for mobile pickup  ,12/1/2017 12:29pm,GB
+Milk & Bread-164,Diwakar,1 December 2017,-164,NavGurukul Cash,Milk & Bread,"3 lt milk : 126 rs
+bread  : 38 Rs",12/1/2017 12:42pm,GB
+Transportation-40,Manoj Kumar,1 December 2017,-40,NavGurukul Cash,Transportation,ane jane ka kiraya 40rs,12/1/2017 12:42pm,GB
+Vegetables-140,Diwakar,1 December 2017,-140,NavGurukul Cash,Vegetables,"1 Kg onion : 65 Rs
+1 Kg tomato : 65 Rs
+carrot : 10 Rs",12/1/2017 12:44pm,GB
+Eggs-84,Diwakar,1 December 2017,-84,NavGurukul Cash,Eggs,12 eggs : 84 Rs,12/1/2017 1:05pm,GB
+Transportation-0,Shakrudin Pathan,1 December 2017,0,NavGurukul Cash,Transportation,aj ka kal daal diya tha,12/1/2017 1:44pm,GB
+Utility Bills-100,Sanjay,2 December 2017,-100,NavGurukul Cash,Utility Bills,paid for garbage 100rs ,12/2/2017 5:58am,GB
+Transportation-200,Shivam Monga,2 December 2017,-200,NavGurukul Cash,Transportation,aane jane ka kiraya 200rs,12/2/2017 6:00am,GB
+Milk & Bread-105,Ranjan,2 December 2017,-105,NavGurukul Cash,Milk & Bread,bought 2.5 lt milk 105 rs.,12/2/2017 6:02am,GB
+Transportation-150,Shakrudin Pathan,2 December 2017,-150,NavGurukul Cash,Transportation,"ghar se huda metro aana jana  = 40
+huda metro se sikanderpur metro aana jana = 40
+sikanderpur metro se office aana jana = 40
+or kuch khana ke liye = 30",12/2/2017 1:15pm,GB
+Groceries-160,"Ranjan,Dhannu",2 December 2017,-160,NavGurukul Cash,Groceries,buy 4 kg rice 160rs.,12/2/2017 1:29pm,GB
+Vegetables-140,Ranjan,2 December 2017,-140,NavGurukul Cash,Vegetables,bought vegetables 2kg allu and 1/2 kg tomato and 1/2 kg onion and gajar and lemon ,12/2/2017 1:47pm,GB
+Vegetables-150,Ranjan,2 December 2017,-150,NavGurukul Cash,Vegetables,1.5 kg onion and kg tomato   ,12/2/2017 6:58pm,GB
+Transportation-150,Shakrudin Pathan,3 December 2017,-150,NavGurukul Cash,Transportation,"NG se metro aana jana = 40
+metro se office aana jana = 80
+kuch khana = 30",12/3/2017 10:22am,GB
+Milk & Bread-164,Pratyush,3 December 2017,-164,NavGurukul Cash,Milk & Bread,bought 3lt milk and 1 packed bread 164.,12/3/2017 1:38pm,GB
+Groceries-290,"Dhannu,Aslam DSouza",3 December 2017,-290,NavGurukul Cash,Groceries,bought 2lt oil and masale and 2packed salt.,12/4/2017 5:29am,GB
+Vegetables-350,"Dhannu,Aslam DSouza",3 December 2017,-350,NavGurukul Cash,Vegetables,bought 1kg tomato and 2kg potato and 1.5 gobhi and garlic and 1.5 onion and dhaniya and mirch.,12/4/2017 5:34am,GB
+Money Given by NG--5000,Aslam DSouza,3 December 2017,5000,NavGurukul Account / Card,Money Given by NG,transfer to aslam account 5000 rs.,12/4/2017 5:36am,GB
+Milk & Bread-120,Shakrudin Pathan,4 December 2017,-120,NavGurukul Cash,Milk & Bread,bought 2 lt milk and 1 packed bread.,12/4/2017 5:39am,GB
+Other (Kuch Aur)-480,Aslam DSouza,4 December 2017,-480,NavGurukul Cash,Other (Kuch Aur),60 pen and 4 exam bord ,12/4/2017 3:58pm,GB
+Transportation-200,Shivam Monga,4 December 2017,-200,NavGurukul Cash,Transportation,travel expense by shivam,12/4/2017 4:00pm,GB
+Transportation-50,Shakrudin Pathan,4 December 2017,-50,NavGurukul Cash,Transportation,Travel expanse by deepanshu because he was go to market for his laptop,12/4/2017 4:01pm,GB
+Vegetables-160,Aslam DSouza,4 December 2017,-160,NavGurukul Cash,Vegetables,"gobhi = 50
+tomato = 70
+mirch and dhaniya = 40
+",12/4/2017 4:14pm,GB
+Groceries-80,Dhannu,4 December 2017,-80,NavGurukul Cash,Groceries,"mirch masala = 25
+zira  = 25
+dhaniya poweder = 30",12/4/2017 4:15pm,GB
+Transportation-2500,Aslam DSouza,3 December 2017,-2500,NavGurukul Cash,Transportation,given money to ranjan for travel dharamshala ,12/4/2017 4:24pm,GB
+Transportation-150,Aslam DSouza,4 December 2017,-150,NavGurukul Cash,Transportation,"
+NG se metro aana jana = 40
+metro se office aana jana = 80
+kuch khana = 30",12/4/2017 4:43pm,GB
+Other (Kuch Aur)-30,Aslam DSouza,5 December 2017,-30,NavGurukul Cash,Other (Kuch Aur),Marker 1,12/4/2017 8:14pm,GB
+Milk & Bread-94,Aslam DSouza,5 December 2017,-94,NavGurukul Cash,Milk & Bread,2 liter ,12/5/2017 4:04am,GB
+Transportation-200,Aslam DSouza,5 December 2017,-200,NavGurukul Cash,Transportation,for my office travel expense ,12/5/2017 4:47am,GB
+Transportation-120,Manoj Kumar,4 December 2017,-120,NavGurukul Cash,Transportation,office travel expanse ,12/5/2017 7:30am,GB
+Vegetables-200,Dhannu,5 December 2017,-200,NavGurukul Cash,Vegetables,"70 = tomato
+100 = brinjel 2kg
+30 = potato",12/5/2017 7:35am,GB
+Milk & Bread-128,Dhannu,6 December 2017,-128,NavGurukul Cash,Milk & Bread,milk,12/7/2017 3:29am,GB
+Transportation-650,"Dhannu,Shivam Monga,Shakrudin Pathan",6 December 2017,-650,NavGurukul Cash,Transportation,anne jane ka kiraya 200 shivam and 150 rs sakru and 300 rs dhannu going for interview 2 jagah.,12/7/2017 3:30am,GB
+Groceries-200,Dhannu,6 December 2017,-200,NavGurukul Cash,Groceries,oil and rice pisha hua dhaniya,12/7/2017 3:35am,GB
+Transportation-70,Aslam DSouza,6 December 2017,-70,NavGurukul Cash,Transportation,"30 travel
+40 food",12/7/2017 3:37am,GB
+Medical Expenses-80,Deepanshu Panchal,7 December 2017,-80,NavGurukul Cash,Medical Expenses,medical expense for apporv ,12/7/2017 3:42am,GB
+Transportation-40,Aslam DSouza,6 December 2017,-40,NavGurukul Cash,Transportation,travel to Rishabh house to nav gurukul,12/7/2017 3:44am,GB
+Milk & Bread-150,Shakrudin Pathan,7 December 2017,-150,NavGurukul Cash,Milk & Bread,bought 1.5 lt milk and 1 packed bread and 7 eggs.,12/7/2017 3:45am,GB
+Vegetables-70,Deepanshu Panchal,6 December 2017,-70,NavGurukul Cash,Vegetables,bought 1 kg onion.,12/7/2017 3:46am,GB
+Transportation-300,Aslam DSouza,6 December 2017,-300,NavGurukul Cash,Transportation,Recharge metro card ,12/7/2017 3:47am,GB
+Groceries-225,Deepanshu Panchal,7 December 2017,-225,NavGurukul Cash,Groceries,"bought 1lt oil and 5kg rice and masale,haldi and mirch powder",12/7/2017 2:54pm,GB
+Groceries-285,Deepanshu Panchal,7 December 2017,-285,NavGurukul Cash,Groceries,bought oil and masale and haldi and mirch powder,12/7/2017 2:56pm,GB
+Transportation-200,Shivam Monga,7 December 2017,-200,NavGurukul Cash,Transportation,aane jane ka kiraya,12/7/2017 2:57pm,GB
+Vegetables-130,Deepanshu Panchal,7 December 2017,-130,NavGurukul Cash,Vegetables,bought vegetables...,12/7/2017 3:00pm,GB
+Household Items-119,Dhannu,7 December 2017,-119,NavGurukul Cash,Household Items,bought black garbage panni and dishwash.,12/7/2017 3:03pm,GB
+Transportation-150,Shakrudin Pathan,7 December 2017,-150,NavGurukul Cash,Transportation,aane jane ka kiraya,12/7/2017 3:04pm,GB
+Vegetables-50,Shakrudin Pathan,8 December 2017,-50,NavGurukul Cash,Vegetables,bought 2kg aalu50rs.,12/8/2017 8:52am,GB
+Groceries-170,Shakrudin Pathan,8 December 2017,-170,NavGurukul Cash,Groceries,bought 5kg aata.,12/8/2017 8:53am,GB
+Milk & Bread-120,Deepanshu Panchal,8 December 2017,-120,NavGurukul Cash,Milk & Bread,bought 2lt milk and 1 packed bread.,12/8/2017 8:55am,GB
+Transportation-350,"Shivam Monga,Shakrudin Pathan",8 December 2017,-350,NavGurukul Cash,Transportation,aane jane ka kiraya 200 shivam and 150 sakru.,12/8/2017 9:03am,GB
+Money Given by NG--5000,Aslam DSouza,8 December 2017,5000,NavGurukul Account / Card,Money Given by NG,Money Given by NG Transfer to Aslam Account ,12/8/2017 4:58pm,GB
+NG Fixes/Maintenance-4090,Aslam DSouza,8 December 2017,-4090,NavGurukul Cash,NG Fixes/Maintenance,"Fitting karne ke liye pay kiya = 300
+
+5 Kg atta : 140 Rs",11/9/2017 4:01pm,GB,
+Household Items-371,Diwakar,2017-11-09,-371,NavGurukul Cash,Household Items,"vim liquid : 171 Rs
+hand wash : 200 Rs",11/9/2017 4:05pm,GB,
+Groceries-350,Deepanshu Panchal,2017-11-09,-350,NavGurukul Cash,Groceries,10 kg atta : 350 Rs,11/10/2017 5:05am,GB,
+Milk & Bread-126,Ajay,2017-11-10,-126,NavGurukul Cash,Milk & Bread,3 Lt milk : 126 RS,11/10/2017 5:10am,GB,
+Transportation-150,Shakrudin Pathan,2017-11-09,-150,NavGurukul Cash,Transportation,"ghar se huda metro aana jana  = 40
+huda metro se sikanderpur metro aana jana = 40
+sikanderpur metro se office aana jana = 40
+or kuch khana ke liye = 30",11/10/2017 5:44am,GB,
+Transportation-220,Manoj Kumar,2017-11-10,-220,NavGurukul Cash,Transportation,interview ke liye jana aur aane ka expence  : 220 Rs,11/11/2017 2:43am,GB,
+Transportation-120,Deepanshu Panchal,2017-11-10,-120,NavGurukul Cash,Transportation,vasank kunj ja ke laptop lane ke travel ka expence,11/11/2017 2:45am,GB,
+Groceries-35,Pratyush,2017-11-10,-35,NavGurukul Cash,Groceries,"mirchi : 10 Rs
+dhaniya powder : 25 Rs",11/11/2017 2:46am,GB,
+Money Given by NG--5000,Pratyush,2017-11-11,5000,NavGurukul Account / Card,Money Given by NG,money transferred to pratyush's account  by rishabh bhaiya : 5000 RS,11/11/2017 5:10am,GB,
+Vegetables-214,"Pratyush,Monu",2017-11-11,-214,NavGurukul Cash,Vegetables,"dhaniya patta : 19 Rs
+mirchi : 24 Rs
+channa : 106 rs
+couliflower (1.7 Kg) : 40 Rs
+ghiya 1 kg : 25 rs",11/11/2017 5:20am,GB,
+Milk & Bread-105,Diwakar,2017-11-11,-105,NavGurukul Cash,Milk & Bread,2.5 Lt milk : 105 Rs,11/11/2017 5:21am,GB,
+Transportation-150,Shakrudin Pathan,2017-11-10,-150,NavGurukul Cash,Transportation,"ghar se huda metro aana jana  = 40
+huda metro se sikanderpur metro aana jana = 40
+sikanderpur metro se office aana jana = 40
+or kuch khana ke liye = 30",11/11/2017 6:20am,GB,
+Transportation-160,Deepanshu Panchal,2017-11-11,-160,NavGurukul Cash,Transportation,travel expence from NG to abhay bhaiya's home,11/11/2017 12:39pm,GB,
+Tech Expenses (Laptop/Phone etc.)-980,Ajay,2017-11-11,-980,NavGurukul Cash,Tech Expenses (Laptop/Phone etc.),"keyboard : 270 Rs
+mouse : 160 Rs
+charger : 550 Rs",11/11/2017 12:56pm,GB,
+Transportation-60,Ajay,2017-11-11,-60,NavGurukul Cash,Transportation,amar aur ajay (NG se sadar bajar jana aur aana ) : ,11/11/2017 1:05pm,GB,
+Transportation-150,Shakrudin Pathan,2017-11-10,-150,NavGurukul Cash,Transportation,"ghar se huda metro aana jana  = 40
+huda metro se sikanderpur metro aana jana = 40
+sikanderpur metro se office aana jana = 40
+or kuch khana ke liye = 30",11/11/2017 1:17pm,GB,
+Eggs-120,Pratyush,2017-11-11,-120,NavGurukul Cash,Eggs,eggs : 120 Rs,11/11/2017 2:41pm,GB,
+Groceries-90,Monu,2017-11-11,-90,NavGurukul Cash,Groceries,1 Kg oil : 90 Rs,11/12/2017 5:43am,GB,
+Transportation-150,Shakrudin Pathan,2017-11-11,-150,NavGurukul Cash,Transportation,"ghar se huda metro aana jana  = 40
+huda metro se sikanderpur metro aana jana = 40
+sikanderpur metro se office aana jana = 40
+or kuch khana ke liye = 30",11/12/2017 5:47am,GB,
+Milk & Bread-164,"Diwakar,Monu",2017-11-12,-164,NavGurukul Cash,Milk & Bread,"milk 3 Lt : 126 Rs
+bread : 38 Rs",11/12/2017 6:02am,GB,
+Milk & Bread-164,"Diwakar,Monu",2017-11-13,-164,NavGurukul Cash,Milk & Bread,"3 Lt milk : 126 Rs
+bread : 38 Rs",11/13/2017 5:12am,GB,
+Transportation-150,Shakrudin Pathan,2017-11-12,-150,NavGurukul Cash,Transportation,"ghar se huda metro aana jana  = 40
+huda metro se sikanderpur metro aana jana = 40
+sikanderpur metro se office aana jana = 40
+or kuch khana ke liye = 30",11/13/2017 5:22am,GB,
+Tech Expenses (Laptop/Phone etc.)-600,Diwakar,2017-11-13,-600,NavGurukul Cash,Tech Expenses (Laptop/Phone etc.),laptop charger (amar) : 600 Rs,11/13/2017 11:32am,GB,
+Transportation-20,Diwakar,2017-11-13,-20,NavGurukul Cash,Transportation,travel expence from NG to sadr market for amr's chrger : 20,11/13/2017 11:33am,GB,
+Vegetables-90,Deepanshu Panchal,2017-11-13,-90,NavGurukul Cash,Vegetables,"1 Kg tomato : 70 Rs
+1/2 Kg gobhi : 20 Rs",11/13/2017 2:11pm,GB,
+Milk & Bread-129,Pratyush,2017-11-14,-129,NavGurukul Cash,Milk & Bread,3 Lt milk : 129 Rs,11/14/2017 4:04am,GB,
+Vegetables-132,Pratyush,2017-11-14,-132,NavGurukul Cash,Vegetables,"1kg  onion : 60 Rs
+1 Kg tomato : 60 Rs 
+ginger : 12 Rs",11/14/2017 4:07am,GB,
+Transportation-150,Shakrudin Pathan,2017-11-14,-150,NavGurukul Cash,Transportation,"ghar se huda metro aana jana  = 40
+huda metro se sikanderpur metro aana jana = 40
+sikanderpur metro se office aana jana = 40
+or kuch khana ke liye = 30",11/14/2017 4:26am,GB,
+Groceries-116,Monu,2017-11-14,-116,NavGurukul Cash,Groceries,"1 Lt oil : 90 Rs
+haldi  : 26 Rs",11/14/2017 9:31am,GB,
+NG Fixes/Maintenance-100,Diwakar,2017-11-14,-100,NavGurukul Cash,NG Fixes/Maintenance,100 Rs kude walo ko diye ,11/14/2017 9:36am,GB,
+Transportation-300,Shakrudin Pathan,2017-11-15,-300,NavGurukul Cash,Transportation,"ghar se huda metro aana jana  = 40
+huda metro se sikanderpur metro aana jana = 40
+sikanderpur metro se office aana jana = 40
+or kuch khana ke liye = 30
+or aj mene extra liye hai card ke liye",11/15/2017 5:44am,GB,
+Vegetables-110,Pratyush,2017-11-15,-110,NavGurukul Cash,Vegetables,"1 Kg tomator : 60 Rs
+1 Kg onion  : 50 Rs",11/15/2017 1:52pm,GB,
+Household Items-80,Pratyush,2017-11-15,-80,NavGurukul Cash,Household Items,80 Rs printing pages,11/15/2017 1:53pm,GB,
+Milk & Bread-105,Pratyush,2017-11-15,-105,NavGurukul Cash,Milk & Bread,2.5 Lt milk   :   105 Rs,11/15/2017 1:56pm,GB,
+Medical Expenses-40,Pratyush,2017-11-15,-40,NavGurukul Cash,Medical Expenses,pratyush got fever and have medicines of 40 Rs,11/15/2017 1:57pm,GB,
+Other (Kuch Aur)-200,Aslam DSouza,2017-11-15,-200,NavGurukul Cash,Other (Kuch Aur),money transferred to aslam's account  and charged 200 Rs for transaction,11/15/2017 2:02pm,GB,
+Transportation-150,Shakrudin Pathan,2017-11-16,-150,NavGurukul Cash,Transportation,"ghar se huda metro aana jana  = 40
+huda metro se sikanderpur metro aana jana = 40
+sikanderpur metro se office aana jana = 40
+or kuch khana ke liye = 30",11/16/2017 4:24am,GB,
+Vegetables-110,Diwakar,2017-11-16,-110,NavGurukul Cash,Vegetables,"1 Kg onion : 50 Rs
+1 Kg tomato : 60 Rs",11/16/2017 5:11am,GB,
+Milk & Bread-138,Pratyush,2017-11-16,-138,NavGurukul Cash,Milk & Bread,"2.5 Lt milk : 105 Rs
+bread : 38 Rs",11/16/2017 5:12am,GB,
+Money Given by NG--5000,Pratyush,2017-11-16,5000,NavGurukul Account / Card,Money Given by NG,"500 Rs transfered to pratyush's account by rishabh bhaiya
+",11/16/2017 5:16am,GB,
+Cooking Gas (Cylinder)-1200,Pratyush,2017-11-15,-1200,NavGurukul Cash,Cooking Gas (Cylinder),cooking gas of 1200 Rs,11/16/2017 5:19am,GB,
+Groceries-440,Diwakar,2017-11-16,-440,NavGurukul Cash,Groceries,5 Lt oil : 440 Rs,11/16/2017 5:21am,GB,
+Tech Expenses (Laptop/Phone etc.)-985,Diwakar,2017-11-16,-985,NavGurukul Cash,Tech Expenses (Laptop/Phone etc.),cartridge (black & white / colour) : 985 Rs,11/16/2017 12:33pm,GB,
+Tech Expenses (Laptop/Phone etc.)-160,Diwakar,2017-11-16,-160,NavGurukul Cash,Tech Expenses (Laptop/Phone etc.),A4 SHEETS : 160 Rs,11/16/2017 3:27pm,GB,
+Transportation-150,Shakrudin Pathan,2017-11-17,-150,NavGurukul Cash,Transportation,"ghar se huda metro aana jana  = 40
+huda metro se sikanderpur metro aana jana = 40
+sikanderpur metro se office aana jana = 40
+or kuch khana ke liye = 30",11/17/2017 5:22am,GB,
+Milk & Bread-105,Diwakar,2017-11-17,-105,NavGurukul Cash,Milk & Bread,2.5 Lt milk : 105 Rs,11/17/2017 5:41am,GB,
+Vegetables-100,Diwakar,2017-11-17,-100,NavGurukul Cash,Vegetables,"1 Kg onion : 40 Rs
+1 Kg Tomato :  60 Rs",11/17/2017 5:43am,GB,
+Tech Expenses (Laptop/Phone etc.)-470,Diwakar,2017-11-17,-470,NavGurukul Cash,Tech Expenses (Laptop/Phone etc.),black cartridge : 440 rs,11/17/2017 2:32pm,GB,
+Transportation-200,Dhannu,2017-11-17,-200,NavGurukul Cash,Transportation,interview of dhannu travelling expence from NG to karol bagh ,11/17/2017 2:51pm,GB,
+Milk & Bread-126,Diwakar,2017-11-18,-126,NavGurukul Cash,Milk & Bread,3 lt milk : 126 Rs,11/18/2017 5:27am,GB,
+Vegetables-55,Diwakar,2017-11-18,-55,NavGurukul Cash,Vegetables,"1/2 kg onion : 20 Rs
+1/2 Kg tomato : 30 RS",11/18/2017 5:29am,GB,
+Transportation-150,Shakrudin Pathan,2017-11-18,-150,NavGurukul Cash,Transportation,"ghar se huda metro aana jana  = 40
+huda metro se sikanderpur metro aana jana = 40
+sikanderpur metro se office aana jana = 40
+or kuch khana ke liye = 30",11/18/2017 5:56am,GB,
+Transportation-130,Deepanshu Panchal,2017-11-18,-130,NavGurukul Cash,Transportation,going to abhay bhaiya's home from NG,11/18/2017 4:38pm,GB,
+Milk & Bread-126,"Deepanshu Panchal,Shakrudin Pathan",2017-11-19,-126,NavGurukul Cash,Milk & Bread,3 Lt milk : 126 Rs,11/19/2017 6:42am,GB,
+Groceries-60,Diwakar,2017-11-19,-60,NavGurukul Cash,Groceries,"1 Kg chini : 60 RS
+",11/19/2017 6:43am,GB,
+Vegetables-110,Ajay,2017-11-19,-110,NavGurukul Cash,Vegetables,"1 kg onion : 50 Rs
+1 Kg Tomato : 60 Rs",11/19/2017 7:29am,GB,
+Transportation-150,Shakrudin Pathan,2017-11-20,-150,NavGurukul Cash,Transportation,"ghar se huda metro aana jana  = 40
+huda metro se sikanderpur metro aana jana = 40
+sikanderpur metro se office aana jana = 40
+or kuch khana ke liye = 30",11/21/2017 5:33am,GB,
+Transportation-150,Shakrudin Pathan,2017-11-21,-150,NavGurukul Cash,Transportation,"ghar se huda metro aana jana  = 40
+huda metro se sikanderpur metro aana jana = 40
+sikanderpur metro se office aana jana = 40
+or kuch khana ke liye = 30",11/21/2017 5:34am,GB,
+Money Given by NG--5000,Pratyush,2017-11-21,5000,NavGurukul Account / Card,Money Given by NG,5000 Rs transfered to pratyush account,11/21/2017 12:58pm,GB,
+Milk & Bread-164,"Monu,Diwakar",2017-11-21,-164,NavGurukul Cash,Milk & Bread,"3 lt milk : 126
+bread : 38 nRs",11/21/2017 1:01pm,GB,
+Groceries-340,Diwakar,2017-11-21,-340,NavGurukul Cash,Groceries,10 kg atta : 340,11/21/2017 1:04pm,GB,
+Vegetables-80,Pratyush,2017-11-21,-80,NavGurukul Cash,Vegetables,"1 Kg onion : 60 Rs
+1 Kg salt : 20 Rs",11/21/2017 4:06pm,GB,
+Milk & Bread-164,Monu,2017-11-22,-164,NavGurukul Cash,Milk & Bread,"3 Lt milk : 126 Rs
+bread : 38",11/22/2017 5:18am,GB,
+Vegetables-190,Diwakar,2017-11-22,-190,NavGurukul Cash,Vegetables,"1 Kg tomato : 60 Rs
+nimboo,adrak : 20 Rs
+2 Kg onion : 110 Rs",11/22/2017 5:25am,GB,
+Groceries-100,Monu,2017-11-22,-100,NavGurukul Cash,Groceries,"2 Kg sugar : 90 Rs
+cumin seeds : 10 Rs",11/22/2017 5:28am,GB,
+Transportation-150,Shakrudin Pathan,2017-11-22,-150,NavGurukul Cash,Transportation,"ghar se huda metro aana jana  = 40
+huda metro se sikanderpur metro aana jana = 40
+sikanderpur metro se office aana jana = 40
+or kuch khana ke liye = 30",11/22/2017 5:40am,GB,
+Eggs-63,Diwakar,2017-11-22,-63,NavGurukul Cash,Eggs,9 eggs : 63 Rs,11/22/2017 5:34pm,GB,
+Tech Expenses (Laptop/Phone etc.)-1410,Manoj Kumar,2017-11-22,-1410,NavGurukul Cash,Tech Expenses (Laptop/Phone etc.),"(50)copy of A3 size sheet  :  1150
+corrier of rishabh bhaiya's video graph-er friend : 260 Rs ",11/22/2017 5:40pm,GB,
+Transportation-80,Manoj Kumar,2017-11-22,-80,NavGurukul Cash,Transportation,"going to market for print out of a3 size sheets  :  40 Rs
+going to transport for mobilization : 40 rs",11/22/2017 5:45pm,GB,
+Transportation-150,Shakrudin Pathan,2017-11-23,-150,NavGurukul Cash,Transportation,"ghar se huda metro aana jana  = 40
+huda metro se sikanderpur metro aana jana = 40
+sikanderpur metro se office aana jana = 40
+or kuch khana ke liye = 30",11/23/2017 5:29am,GB,
+Milk & Bread-126,"Monu,Diwakar",2017-11-23,-126,NavGurukul Cash,Milk & Bread,3 Lt milk : 126 Rs,11/23/2017 10:54am,GB,
+Vegetables-60,Diwakar,2017-11-23,-60,NavGurukul Cash,Vegetables,1 Kg tomato : 60 Rs,11/23/2017 10:56am,GB,
+Groceries-370,Shivam Monga,2017-11-23,-370,NavGurukul Cash,Groceries,"paneer : 278 Rs
+butter : 46 Rs
+cream  : 46 Rs",11/23/2017 1:09pm,GB,
+Groceries-130,Dhannu,2017-11-23,-130,NavGurukul Cash,Groceries,"mix masala : 120 Rs
+paneer masala  : 10 Rs",11/23/2017 1:11pm,GB,
+Vegetables-216,Diwakar,2017-11-23,-216,NavGurukul Cash,Vegetables,"garlic : 27 Rs
+peas : 43  Rs
+Ginger : 18 Rs
+Tomato : 70 Rs
+Onion : 60 rs ",11/23/2017 1:14pm,GB,
+Milk & Bread-176,Diwakar,2017-11-24,-176,NavGurukul Cash,Milk & Bread,"3 Lt milk  : 126 Rs
+cream : 30 Rs
+curd : 30 Rs",11/24/2017 4:05pm,GB,
+Transportation-200,Shivam Monga,2017-11-24,-200,NavGurukul Cash,Transportation,"From NG to hauz khas 
+and from hauz khas to Ng",11/24/2017 4:09pm,GB,
+Transportation-150,Shakrudin Pathan,2017-11-24,-150,NavGurukul Cash,Transportation,"ghar se huda metro aana jana  = 40
+huda metro se sikanderpur metro aana jana = 40
+sikanderpur metro se office aana jana = 40
+or kuch khana ke liye = 30",11/24/2017 4:13pm,GB,
+Vegetables-200,Monu,2017-11-24,-200,NavGurukul Cash,Vegetables,"1 Kg tomato : 60 Rs
+1 Kg Onion : 60 Rs
+Brinjal : 80 Rs",11/24/2017 4:13pm,GB,
+Transportation-150,Shakrudin Pathan,2017-11-25,-150,NavGurukul Cash,Transportation,"ghar se huda metro aana jana  = 40
+huda metro se sikanderpur metro aana jana = 40
+sikanderpur metro se office aana jana = 40
+or kuch khana ke liye = 30",11/25/2017 5:18am,GB,
+Milk & Bread-131,Diwakar,2017-11-25,-131,NavGurukul Cash,Milk & Bread,3 Lt milk : 131 Rs,11/25/2017 11:05am,GB,
+Vegetables-140,Diwakar,2017-11-25,-140,NavGurukul Cash,Vegetables,"1 Kg Onion : 65 Rs
+1 Kg Tomato : 70 Rs",11/25/2017 11:08am,GB,
+Money Given by NG--5000,Aslam DSouza,2017-11-25,5000,NavGurukul Account / Card,Money Given by NG,Money Given by Rishabh to Aslam Account,11/26/2017 6:21am,GB,
+Tech Expenses (Laptop/Phone etc.)-550,"Aslam DSouza,Diwakar",2017-11-25,-550,NavGurukul Cash,Tech Expenses (Laptop/Phone etc.),Diwakar buy a laptop charger of 550INR,11/26/2017 6:24am,GB,
+Vegetables-135,Monu,2017-11-26,-135,NavGurukul Cash,Vegetables,"1 kg tamato = 70 Rs,1 kg onion = 65 Rs. ",11/26/2017 6:26am,GB,
+NG Fixes/Maintenance-220,"Aslam DSouza,Diwakar",2017-11-25,-220,NavGurukul Cash,NG Fixes/Maintenance,Buy 2 CFL light = 220,11/26/2017 6:26am,GB,
+Transportation-60,"Aslam DSouza,Diwakar",2017-11-25,-60,NavGurukul Cash,Transportation,Diwakar and Aslam went to market for Laptop charger and other things like CFL Light ,11/26/2017 6:29am,GB,
+Milk & Bread-143,Ajay,2017-11-26,-143,NavGurukul Cash,Milk & Bread,2.5 ltr milk and bread,11/26/2017 6:30am,GB,
+Groceries-60,Monu,2017-11-26,-60,NavGurukul Cash,Groceries,1 kg sugar ,11/26/2017 6:34am,GB,
+Milk & Bread-143,"Dhannu,Ranjan",2017-11-27,-143,NavGurukul Cash,Milk & Bread,bought 2.5 lt milk and 1packed bread ,11/28/2017 8:08am,GB,
+Vegetables-140,"Dhannu,Ranjan",2017-11-27,-140,NavGurukul Cash,Vegetables,buy 1kg tomato and 1kg onion.,11/28/2017 8:11am,GB,
+Cooking Gas (Cylinder)-900,Sanjay,2017-11-28,-900,NavGurukul Cash,Cooking Gas (Cylinder),bought 1 cylinder 900rs. ,11/28/2017 8:12am,GB,
+Milk & Bread-185,Shakrudin Pathan,2017-11-28,-185,NavGurukul Cash,Milk & Bread,bought 3.5 lt milk and 1 packed bread.,11/28/2017 8:17am,GB,
+Vegetables-130,Pratyush,2017-11-28,-130,NavGurukul Cash,Vegetables,bought 1kg tomato and 1kg onion,11/28/2017 8:20am,GB,
+Groceries-270,Pratyush,2017-11-28,-270,NavGurukul Cash,Groceries,bought 5kg 175 rice and and bought 95 rs masale.,11/28/2017 8:22am,GB,
+Transportation-190,"Shakrudin Pathan,Manoj Kumar",2017-11-28,-190,NavGurukul Cash,Transportation,150 rs give sakru and 40rs give manoj,11/28/2017 8:25am,GB,
+Groceries-100,Pratyush,2017-11-28,-100,NavGurukul Cash,Groceries,bought 1 lt cooking oil ,11/28/2017 9:12am,GB,
+Household Items-125,"Dhannu,Ranjan",2017-11-28,-125,NavGurukul Cash,Household Items,bought 1 harpick and finail ,11/28/2017 12:27pm,GB,
+Transportation-200,Aslam DSouza,2017-11-28,-200,NavGurukul Cash,Transportation,travel to navgurukul to rishabh's house ,11/28/2017 2:21pm,GB,
+Transportation-500,Aslam DSouza,2017-11-28,-500,NavGurukul Cash,Transportation,Recharge Metro card 500,11/28/2017 2:22pm,GB,
+Groceries-170,Pratyush,2017-11-28,-170,NavGurukul Cash,Groceries,bought 5kg aata 170rs.,11/29/2017 3:14am,GB,
+Vegetables-10,Pratyush,2017-11-28,-10,NavGurukul Cash,Vegetables,bought 10 rs garlic ,11/29/2017 3:16am,GB,
+Money Given by NG--5000,Pratyush,2017-11-29,5000,NavGurukul Account / Card,Money Given by NG,money transferred by rishabh bhaia to pratyush(5000rs),11/29/2017 5:27pm,GB,
+Transportation-240,Shivam Monga,2017-11-29,-240,NavGurukul Cash,Transportation,shivam use 200 rs for transportation and manoj use 40rs for transportation.  ,11/29/2017 5:29pm,GB,
+Milk & Bread-164,Manoj Kumar,2017-11-29,-164,NavGurukul Cash,Milk & Bread,bought 3lt milk and 1 packed bread.,11/29/2017 5:30pm,GB,
+Groceries-200,"Ranjan,Pratyush",2017-11-29,-200,NavGurukul Cash,Groceries,bought 2 lt cooking oil 200rs.,11/29/2017 5:32pm,GB,
+Eggs-70,"Pratyush,Ranjan",2017-11-29,-70,NavGurukul Cash,Eggs,bought 10 eggs 70rs.,11/29/2017 5:34pm,GB,
+Vegetables-130,"Pratyush,Ranjan",2017-11-29,-130,NavGurukul Cash,Vegetables,bought 130 rs 1kg onion and 1kg tomato,11/29/2017 5:36pm,GB,
+Transportation-390,"Shivam Monga,Manoj Kumar,Shakrudin Pathan",2017-11-30,-390,NavGurukul Cash,Transportation,ana jane ka kiraya 200rs shivam ko and 150rs sakru and 40rs manoj ko.,11/30/2017 5:09am,GB,
+Transportation-150,Shakrudin Pathan,2017-11-30,-150,NavGurukul Cash,Transportation,"ghar se huda metro aana jana  = 40
+huda metro se sikanderpur metro aana jana = 40
+sikanderpur metro se office aana jana = 40
+or kuch khana ke liye = 30",11/30/2017 5:11am,GB,
+Milk & Bread-126,Shivam Monga,2017-11-30,-126,NavGurukul Cash,Milk & Bread,bought 3 lt milk 126 rs.,11/30/2017 5:13am,GB,
+Groceries-150,Ranjan,2017-11-30,-150,NavGurukul Cash,Groceries,bought 120 2kg sugar and 30rs dhaniya powder,11/30/2017 8:24am,GB,
+Vegetables-230,Ranjan,2017-11-30,-230,NavGurukul Cash,Vegetables,bought vegetables,11/30/2017 8:29am,GB,
+Transportation-130,Dhannu,2017-11-30,-130,NavGurukul Cash,Transportation,"transport, metro and auto kiraya",11/30/2017 8:34am,GB,
+Vegetables-120,Diwakar,2017-11-30,-120,NavGurukul Cash,Vegetables,"bought aalu, matar, lemon and simla mirchi and gajar.",11/30/2017 3:46pm,GB,
+Groceries-570,"Sanjay,Diwakar",2017-11-30,-570,NavGurukul Cash,Groceries,bought 1/2 kg panner and pao and pao masala and garlic pest and 250g makhan,11/30/2017 3:57pm,GB,
+Medical Expenses-110,Pratyush,2017-11-30,-110,NavGurukul Cash,Medical Expenses,spent 110rs for medical.,11/30/2017 4:00pm,GB,
+Transportation-230,Dhannu,2017-12-01,-230,NavGurukul Cash,Transportation,aane jane ka kiraya 230rs.,12/1/2017 12:24pm,GB,
+Transportation-190,Ranjan,2017-12-01,-190,NavGurukul Cash,Transportation,aana jane ka kiraya ranjan and amar for mobile pickup  ,12/1/2017 12:29pm,GB,
+Milk & Bread-164,Diwakar,2017-12-01,-164,NavGurukul Cash,Milk & Bread,"3 lt milk : 126 rs
+bread  : 38 Rs",12/1/2017 12:42pm,GB,
+Transportation-40,Manoj Kumar,2017-12-01,-40,NavGurukul Cash,Transportation,ane jane ka kiraya 40rs,12/1/2017 12:42pm,GB,
+Vegetables-140,Diwakar,2017-12-01,-140,NavGurukul Cash,Vegetables,"1 Kg onion : 65 Rs
+1 Kg tomato : 65 Rs
+carrot : 10 Rs",12/1/2017 12:44pm,GB,
+Eggs-84,Diwakar,2017-12-01,-84,NavGurukul Cash,Eggs,12 eggs : 84 Rs,12/1/2017 1:05pm,GB,
+Transportation-0,Shakrudin Pathan,2017-12-01,0,NavGurukul Cash,Transportation,aj ka kal daal diya tha,12/1/2017 1:44pm,GB,
+Utility Bills-100,Sanjay,2017-12-02,-100,NavGurukul Cash,Utility Bills,paid for garbage 100rs ,12/2/2017 5:58am,GB,
+Transportation-200,Shivam Monga,2017-12-02,-200,NavGurukul Cash,Transportation,aane jane ka kiraya 200rs,12/2/2017 6:00am,GB,
+Milk & Bread-105,Ranjan,2017-12-02,-105,NavGurukul Cash,Milk & Bread,bought 2.5 lt milk 105 rs.,12/2/2017 6:02am,GB,
+Transportation-150,Shakrudin Pathan,2017-12-02,-150,NavGurukul Cash,Transportation,"ghar se huda metro aana jana  = 40
+huda metro se sikanderpur metro aana jana = 40
+sikanderpur metro se office aana jana = 40
+or kuch khana ke liye = 30",12/2/2017 1:15pm,GB,
+Groceries-160,"Ranjan,Dhannu",2017-12-02,-160,NavGurukul Cash,Groceries,buy 4 kg rice 160rs.,12/2/2017 1:29pm,GB,
+Vegetables-140,Ranjan,2017-12-02,-140,NavGurukul Cash,Vegetables,bought vegetables 2kg allu and 1/2 kg tomato and 1/2 kg onion and gajar and lemon ,12/2/2017 1:47pm,GB,
+Vegetables-150,Ranjan,2017-12-02,-150,NavGurukul Cash,Vegetables,1.5 kg onion and kg tomato   ,12/2/2017 6:58pm,GB,
+Transportation-150,Shakrudin Pathan,2017-12-03,-150,NavGurukul Cash,Transportation,"NG se metro aana jana = 40
+metro se office aana jana = 80
+kuch khana = 30",12/3/2017 10:22am,GB,
+Milk & Bread-164,Pratyush,2017-12-03,-164,NavGurukul Cash,Milk & Bread,bought 3lt milk and 1 packed bread 164.,12/3/2017 1:38pm,GB,
+Groceries-290,"Dhannu,Aslam DSouza",2017-12-03,-290,NavGurukul Cash,Groceries,bought 2lt oil and masale and 2packed salt.,12/4/2017 5:29am,GB,
+Vegetables-350,"Dhannu,Aslam DSouza",2017-12-03,-350,NavGurukul Cash,Vegetables,bought 1kg tomato and 2kg potato and 1.5 gobhi and garlic and 1.5 onion and dhaniya and mirch.,12/4/2017 5:34am,GB,
+Money Given by NG--5000,Aslam DSouza,2017-12-03,5000,NavGurukul Account / Card,Money Given by NG,transfer to aslam account 5000 rs.,12/4/2017 5:36am,GB,
+Milk & Bread-120,Shakrudin Pathan,2017-12-04,-120,NavGurukul Cash,Milk & Bread,bought 2 lt milk and 1 packed bread.,12/4/2017 5:39am,GB,
+Other (Kuch Aur)-480,Aslam DSouza,2017-12-04,-480,NavGurukul Cash,Other (Kuch Aur),60 pen and 4 exam bord ,12/4/2017 3:58pm,GB,
+Transportation-200,Shivam Monga,2017-12-04,-200,NavGurukul Cash,Transportation,travel expense by shivam,12/4/2017 4:00pm,GB,
+Transportation-50,Shakrudin Pathan,2017-12-04,-50,NavGurukul Cash,Transportation,Travel expanse by deepanshu because he was go to market for his laptop,12/4/2017 4:01pm,GB,
+Vegetables-160,Aslam DSouza,2017-12-04,-160,NavGurukul Cash,Vegetables,"gobhi = 50
+tomato = 70
+mirch and dhaniya = 40
+",12/4/2017 4:14pm,GB,
+Groceries-80,Dhannu,2017-12-04,-80,NavGurukul Cash,Groceries,"mirch masala = 25
+zira  = 25
+dhaniya poweder = 30",12/4/2017 4:15pm,GB,
+Transportation-2500,Aslam DSouza,2017-12-03,-2500,NavGurukul Cash,Transportation,given money to ranjan for travel dharamshala ,12/4/2017 4:24pm,GB,
+Transportation-150,Aslam DSouza,2017-12-04,-150,NavGurukul Cash,Transportation,"
+NG se metro aana jana = 40
+metro se office aana jana = 80
+kuch khana = 30",12/4/2017 4:43pm,GB,
+Other (Kuch Aur)-30,Aslam DSouza,2017-12-05,-30,NavGurukul Cash,Other (Kuch Aur),Marker 1,12/4/2017 8:14pm,GB,
+Milk & Bread-94,Aslam DSouza,2017-12-05,-94,NavGurukul Cash,Milk & Bread,2 liter ,12/5/2017 4:04am,GB,
+Transportation-200,Aslam DSouza,2017-12-05,-200,NavGurukul Cash,Transportation,for my office travel expense ,12/5/2017 4:47am,GB,
+Transportation-120,Manoj Kumar,2017-12-04,-120,NavGurukul Cash,Transportation,office travel expanse ,12/5/2017 7:30am,GB,
+Vegetables-200,Dhannu,2017-12-05,-200,NavGurukul Cash,Vegetables,"70 = tomato
+100 = brinjel 2kg
+30 = potato",12/5/2017 7:35am,GB,
+Milk & Bread-128,Dhannu,2017-12-06,-128,NavGurukul Cash,Milk & Bread,milk,12/7/2017 3:29am,GB,
+Transportation-650,"Dhannu,Shivam Monga,Shakrudin Pathan",2017-12-06,-650,NavGurukul Cash,Transportation,anne jane ka kiraya 200 shivam and 150 rs sakru and 300 rs dhannu going for interview 2 jagah.,12/7/2017 3:30am,GB,
+Groceries-200,Dhannu,2017-12-06,-200,NavGurukul Cash,Groceries,oil and rice pisha hua dhaniya,12/7/2017 3:35am,GB,
+Transportation-70,Aslam DSouza,2017-12-06,-70,NavGurukul Cash,Transportation,"30 travel
+40 food",12/7/2017 3:37am,GB,
+Medical Expenses-80,Deepanshu Panchal,2017-12-07,-80,NavGurukul Cash,Medical Expenses,medical expense for apporv ,12/7/2017 3:42am,GB,
+Transportation-40,Aslam DSouza,2017-12-06,-40,NavGurukul Cash,Transportation,travel to Rishabh house to nav gurukul,12/7/2017 3:44am,GB,
+Milk & Bread-150,Shakrudin Pathan,2017-12-07,-150,NavGurukul Cash,Milk & Bread,bought 1.5 lt milk and 1 packed bread and 7 eggs.,12/7/2017 3:45am,GB,
+Vegetables-70,Deepanshu Panchal,2017-12-06,-70,NavGurukul Cash,Vegetables,bought 1 kg onion.,12/7/2017 3:46am,GB,
+Transportation-300,Aslam DSouza,2017-12-06,-300,NavGurukul Cash,Transportation,Recharge metro card ,12/7/2017 3:47am,GB,
+Groceries-225,Deepanshu Panchal,2017-12-07,-225,NavGurukul Cash,Groceries,"bought 1lt oil and 5kg rice and masale,haldi and mirch powder",12/7/2017 2:54pm,GB,
+Groceries-285,Deepanshu Panchal,2017-12-07,-285,NavGurukul Cash,Groceries,bought oil and masale and haldi and mirch powder,12/7/2017 2:56pm,GB,
+Transportation-200,Shivam Monga,2017-12-07,-200,NavGurukul Cash,Transportation,aane jane ka kiraya,12/7/2017 2:57pm,GB,
+Vegetables-130,Deepanshu Panchal,2017-12-07,-130,NavGurukul Cash,Vegetables,bought vegetables...,12/7/2017 3:00pm,GB,
+Household Items-119,Dhannu,2017-12-07,-119,NavGurukul Cash,Household Items,bought black garbage panni and dishwash.,12/7/2017 3:03pm,GB,
+Transportation-150,Shakrudin Pathan,2017-12-07,-150,NavGurukul Cash,Transportation,aane jane ka kiraya,12/7/2017 3:04pm,GB,
+Vegetables-50,Shakrudin Pathan,2017-12-08,-50,NavGurukul Cash,Vegetables,bought 2kg aalu50rs.,12/8/2017 8:52am,GB,
+Groceries-170,Shakrudin Pathan,2017-12-08,-170,NavGurukul Cash,Groceries,bought 5kg aata.,12/8/2017 8:53am,GB,
+Milk & Bread-120,Deepanshu Panchal,2017-12-08,-120,NavGurukul Cash,Milk & Bread,bought 2lt milk and 1 packed bread.,12/8/2017 8:55am,GB,
+Transportation-350,"Shivam Monga,Shakrudin Pathan",2017-12-08,-350,NavGurukul Cash,Transportation,aane jane ka kiraya 200 shivam and 150 sakru.,12/8/2017 9:03am,GB,
+Money Given by NG--5000,Aslam DSouza,2017-12-08,5000,NavGurukul Account / Card,Money Given by NG,Money Given by NG Transfer to Aslam Account ,12/8/2017 4:58pm,GB,
+NG Fixes/Maintenance-4090,Aslam DSouza,2017-12-08,-4090,NavGurukul Cash,NG Fixes/Maintenance,"Fitting karne ke liye pay kiya = 300
+Flush tank  = 1143
+Fitting ka saman = 1518
+Faucet = 550.80
+CGST = 289.06
+SGST = 289.06
+
+ROUND OFF = 0.08",12/8/2017 5:07pm,GB
+Other (Kuch Aur)-340,Aslam DSouza,8 December 2017,-340,NavGurukul Cash,Other (Kuch Aur),"Lyzol = 80
+harpic 500ml = 190
+cloth saf karne ke liye = 30
+Surf Excel Easy Wash Detergent Powder ghar ki safai ke liye =  40
+
+
+Total 340",12/8/2017 5:13pm,GB,
+Transportation-140,Aslam DSouza,2017-12-08,-140,NavGurukul Cash,Transportation,Market ane jane ka kiraya,12/8/2017 5:14pm,GB,
+Other (Kuch Aur)--4500,Shakrudin Pathan,2017-12-08,4500,Other,Other (Kuch Aur),"Money is given by Shakruddin to Navgurukul 
+and we will pay back to shakruddin ",12/8/2017 5:19pm,GB,
+Milk & Bread-120,Dhannu,2017-12-09,-120,NavGurukul Cash,Milk & Bread,bought 2 lt milk and bread,12/9/2017 9:11am,GB,
+Household Items-480,Dhannu,2017-12-09,-480,NavGurukul Cash,Household Items,bought 2 wiper and 1 big harpick and colin 480rs.,12/9/2017 9:14am,GB,
+Transportation-150,Shakrudin Pathan,2017-12-09,-150,NavGurukul Cash,Transportation,aane jane ka kiraya 150rs.,12/9/2017 9:15am,GB,
+Other (Kuch Aur)-150,Aslam DSouza,2017-12-09,-150,NavGurukul Cash,Other (Kuch Aur),bahar se khana aaya 150rs ka. kyuki hum ghar ki safai kar rahe hai jis vajah se hum khana nahi bana sakte hai isliye bahaar se khana laya hai ,12/9/2017 9:17am,GB,
+Vegetables-190,Dhannu,2017-12-09,-190,NavGurukul Cash,Vegetables,buy 1kg onion 1kg tomato and 1kg gobhi and hari mirch and dhaniya and lemon.,12/9/2017 4:12pm,GB,
+Milk & Bread-42,Aslam DSouza,2017-12-10,-42,NavGurukul Cash,Milk & Bread,bought milk 1l,12/10/2017 9:31am,GB,
+Eggs-42,Aslam DSouza,2017-12-10,-42,NavGurukul Cash,Eggs,bought 6 eggs,12/10/2017 9:34am,GB,
+Other (Kuch Aur)-210,Dhannu,2017-12-09,-210,NavGurukul Cash,Other (Kuch Aur),Lysol+2scrab paid fars ko saaf karne ke liye +vim liquid ,12/10/2017 9:37am,GB,
+Other (Kuch Aur)-500,Shakrudin Pathan,2017-12-09,-500,NavGurukul Cash,Other (Kuch Aur),Shakruddin Take 500INR from 4500INR That he gave in NG and we will pay him only 4000 INR,12/10/2017 9:40am,GB,
+Money Given by NG--5000,Aslam DSouza,2017-12-10,5000,NavGurukul Account / Card,Money Given by NG,Money transfer to Aslam Account ,12/10/2017 9:41am,GB,
+Transportation-140,Aslam DSouza,2017-12-10,-140,NavGurukul Cash,Transportation,flush tank ke liye ane jane ke ka kiraya ,12/10/2017 11:14am,GB,
+NG Fixes/Maintenance-1820,Aslam DSouza,2017-12-10,-1820,NavGurukul Cash,NG Fixes/Maintenance,"Flush tank = 1430
+
+angle baar = 300
+c.p cape  = 10
+extra topel 1/2 = 50
+taflon tap 2 = 30
+
+
+Total = 1820",12/10/2017 11:22am,GB
+Groceries-140,Aslam DSouza,10 December 2017,-140,NavGurukul Cash,Groceries,"Suger = 2kg  = 120
+ginger = 20",12/10/2017 11:35am,GB
+NG Fixes/Maintenance-300,Aslam DSouza,10 December 2017,-300,NavGurukul Cash,NG Fixes/Maintenance,300 INR paid for Fitting Flush Tank ,12/12/2017 6:56am,GB
+Vegetables-200,Aslam DSouza,10 December 2017,-200,NavGurukul Cash,Vegetables,"
+buy 1kg onion 
+1kg tomato 
+1kg gobhi
+hari mirch 
+lemon.
+kali mirch
+
+red Cilli pisi hui ",12/12/2017 7:01am,GB,
+Milk & Bread-63,Aslam DSouza,2017-12-10,-63,NavGurukul Cash,Milk & Bread,bhought 3l milk,12/12/2017 7:02am,GB,
+Milk & Bread-98,Aslam DSouza,2017-12-11,-98,NavGurukul Cash,Milk & Bread,bought milk and bread,12/12/2017 7:06am,GB,
+Eggs-56,Aslam DSouza,2017-12-11,-56,NavGurukul Cash,Eggs,bought 8 eggs,12/12/2017 7:08am,GB,
+Groceries-485,Aslam DSouza,2017-12-11,-485,NavGurukul Cash,Groceries,"Solt = 40
+
+Oil = 105
+ginger = 20 
+Haldi = 25
+Ata 5kg = 170
+masoor ki daal 1 packet = 125
+
+Total = 485",12/12/2017 7:15am,GB
+NG Fixes/Maintenance-200,Aslam DSouza,10 December 2017,-200,NavGurukul Cash,NG Fixes/Maintenance,paid for fitting jet spray ,12/12/2017 7:20am,GB
+Groceries-90,Dhannu,12 December 2017,-90,NavGurukul Cash,Groceries,bought 2kg rice 90rs,12/12/2017 7:21am,GB
+Eggs-56,Dhannu,12 December 2017,-56,NavGurukul Cash,Eggs,bought 8 eggs,12/12/2017 9:04am,GB
+NG Fixes/Maintenance-600,Aslam DSouza,12 December 2017,-600,NavGurukul Cash,NG Fixes/Maintenance,"Holder 
+Light
+wire
+scroos
+electrical tape",12/12/2017 5:36pm,GB
+NG Fixes/Maintenance-500,Aslam DSouza,12 December 2017,-500,NavGurukul Cash,NG Fixes/Maintenance,paid to electrician for fixed all Navgurukul light,12/12/2017 5:38pm,GB
+Milk & Bread-77,Aslam DSouza,12 December 2017,-77,NavGurukul Cash,Milk & Bread,bought 1l milk and bread,12/12/2017 5:41pm,GB
+Vegetables-105,Aslam DSouza,12 December 2017,-105,NavGurukul Cash,Vegetables,"Cauliflower = 1kg = 50INR
+mirch = 20INR
+Ginger = 20INR
+lemon = 15INR",12/12/2017 5:46pm,GB
+Money Given by NG--5000,Aslam DSouza,12 December 2017,5000,NavGurukul Account / Card,Money Given by NG,Money Transfer To Aslam Account,12/12/2017 5:47pm,GB
+Money Given by NG-4000,Aslam DSouza,12 December 2017,-4000,NavGurukul Cash,Money Given by NG,Paid 4000 to Shakruddin Because he Gave to NavGurukul,12/12/2017 5:49pm,GB
+Household Items--1000,Dhannu,12 December 2017,1000,Other,Household Items,Dhannu paid 1000 INR to NavGurukul Because He bought 5 mattress from NavGurukul  ,12/12/2017 5:53pm,GB
+Vegetables-200,Aslam DSouza,14 December 2017,-200,NavGurukul Cash,Vegetables,"potato 
+cauliflower
+ginger
+oil ",12/15/2017 6:13am,GB
+Milk & Bread-77,Aslam DSouza,12 December 2017,-77,NavGurukul Cash,Milk & Bread,milk and bread,12/15/2017 6:14am,GB
+Eggs-28,Aslam DSouza,13 December 2017,-28,NavGurukul Cash,Eggs,bought 4 eggs,12/15/2017 6:17am,GB
+Transportation-250,Aslam DSouza,13 December 2017,-250,NavGurukul Cash,Transportation,paid for pickup laptop by apoorv ,12/15/2017 6:22am,GB
+Transportation-500,Aslam DSouza,13 December 2017,-500,NavGurukul Cash,Transportation,paid for pickup laptop or raste me khana khaya tha ,12/15/2017 6:27am,GB
+Milk & Bread-77,Aslam DSouza,14 December 2017,-77,NavGurukul Cash,Milk & Bread,milk and bread ,12/15/2017 6:30am,GB
+Transportation-350,Aslam DSouza,14 December 2017,-350,NavGurukul Cash,Transportation,find mattress shop and paid for food ,12/15/2017 6:35am,GB
+Groceries-205,Aslam DSouza,14 December 2017,-205,NavGurukul Cash,Groceries,rice and daal and ginger and dhaniya mirch paid by apoorv ,12/15/2017 6:40am,GB
+Milk & Bread-77,Aslam DSouza,15 December 2017,-77,NavGurukul Cash,Milk & Bread,bought milk and bread,12/15/2017 6:44am,GB
+Other (Kuch Aur)-45,Aslam DSouza,15 December 2017,-45,Other,Other (Kuch Aur),Curd 1/2 kg ,12/15/2017 6:45am,GB
+Household Items-400,Aslam DSouza,15 December 2017,-400,NavGurukul Cash,Household Items,Dustbin and dust pen ,12/16/2017 7:35pm,GB
+Eggs-28,Aslam DSouza,15 December 2017,-28,NavGurukul Cash,Eggs,4 Eggs,12/16/2017 7:36pm,GB
+Vegetables-150,Aslam DSouza,16 December 2017,-150,NavGurukul Cash,Vegetables,cauliflower and chilli dhaniya lemon,12/16/2017 7:39pm,GB
+Milk & Bread-77,Aslam DSouza,16 December 2017,-77,NavGurukul Cash,Milk & Bread,Bought milk and bread ,12/16/2017 7:40pm,GB
+Other (Kuch Aur)-80,Aslam DSouza,16 December 2017,-80,NavGurukul Cash,Other (Kuch Aur),2 packet Surf Excel for clean all kitchen cupboard ,12/16/2017 7:42pm,GB
+Money Given by NG--5000,Aslam DSouza,17 December 2017,5000,NavGurukul Account / Card,Money Given by NG,Money transfered to Aslam account ,12/16/2017 7:47pm,GB
+Transportation-1842,Aslam DSouza,17 December 2017,-1842,NavGurukul Cash,Transportation,"paid for transportation because ajay, apoorv and sandeep was going to dharamshala ",12/16/2017 7:51pm,GB
+Transportation-500,Aslam DSouza,17 December 2017,-500,NavGurukul Cash,Transportation,gave to apoorv for transportation to dharamshala ,12/17/2017 3:55pm,GB
+Transportation-400,Aslam DSouza,17 December 2017,-400,NavGurukul Cash,Transportation,gave to apoorv because he paid for transportation for pickuping to laptop,12/17/2017 4:00pm,GB
+Household Items-400,Aslam DSouza,17 December 2017,-400,NavGurukul Cash,Household Items,bought dustbin ,12/17/2017 4:01pm,GB
+Transportation-160,Sandeep,17 December 2017,-160,NavGurukul Cash,Transportation,picked up the laptop from rishabh,12/17/2017 4:06pm,GB
+Milk & Bread-119,Aslam DSouza,17 December 2017,-119,NavGurukul Cash,Milk & Bread,bought 2l milk and bread,12/17/2017 4:09pm,GB
+Groceries-125,Aslam DSouza,17 December 2017,-125,NavGurukul Cash,Groceries,1 packet OIl and ginger ,12/17/2017 4:14pm,GB
+Vegetables-160,Aslam DSouza,17 December 2017,-160,NavGurukul Cash,Vegetables,cauliflower potato and tomato ,12/17/2017 4:16pm,GB
+NG Fixes/Maintenance-650,Aslam DSouza,18 December 2017,-650,NavGurukul Cash,NG Fixes/Maintenance,fixed all Kitchen cupboard and bought one hinge ,12/19/2017 6:36am,GB
+NG Fixes/Maintenance-100,Aslam DSouza,18 December 2017,-100,NavGurukul Cash,NG Fixes/Maintenance,bought 2 handle of the almirah ,12/19/2017 6:39am,GB
+Milk & Bread-77,Monu,18 December 2017,-77,NavGurukul Cash,Milk & Bread,Milk and bread,12/20/2017 6:05pm,GB
+Groceries-220,Monu,18 December 2017,-220,NavGurukul Cash,Groceries,bought Rice daal and ginger dhandiya powder ,12/20/2017 6:10pm,GB
+Other (Kuch Aur)-140,"Monu,Aslam DSouza",18 December 2017,-140,NavGurukul Cash,Other (Kuch Aur),Curd and rayte ke bundi and jira ,12/20/2017 6:12pm,GB
+Milk & Bread-77,Monu,19 December 2017,-77,NavGurukul Cash,Milk & Bread,milk and bread,12/20/2017 6:14pm,GB
+Eggs-35,Monu,18 December 2017,-35,NavGurukul Cash,Eggs,bought 5 eggs,12/20/2017 6:16pm,GB
+Vegetables-150,Monu,18 December 2017,-150,NavGurukul Cash,Vegetables,Onion tomato and dhaniya and chili ,12/20/2017 6:17pm,GB
+Household Items--1000,Aslam DSouza,18 December 2017,1000,NavGurukul Account / Card,Household Items,Advance payment For mattress ,12/20/2017 6:19pm,GB
+Household Items-1000,Aslam DSouza,18 December 2017,-1000,NavGurukul Cash,Household Items,1000 paid for mattress in advance ,12/20/2017 6:20pm,GB
+Money Given by NG--9500,Aslam DSouza,19 December 2017,9500,NavGurukul Account / Card,Money Given by NG,Transfred to aslam account,12/20/2017 6:22pm,GB
+Household Items-9200,Aslam DSouza,19 December 2017,-9200,NavGurukul Cash,Household Items,"9200 paid to mattress wala for 17 mattress 
+",12/20/2017 6:23pm,GB
+Transportation-720,Aslam DSouza,19 December 2017,-720,NavGurukul Cash,Transportation,"To udyog vihar 120
+
+Total = 485",12/12/2017 7:15am,GB,
+NG Fixes/Maintenance-200,Aslam DSouza,2017-12-10,-200,NavGurukul Cash,NG Fixes/Maintenance,paid for fitting jet spray ,12/12/2017 7:20am,GB,
+Groceries-90,Dhannu,2017-12-12,-90,NavGurukul Cash,Groceries,bought 2kg rice 90rs,12/12/2017 7:21am,GB,
+Eggs-56,Dhannu,2017-12-12,-56,NavGurukul Cash,Eggs,bought 8 eggs,12/12/2017 9:04am,GB,
+NG Fixes/Maintenance-600,Aslam DSouza,2017-12-12,-600,NavGurukul Cash,NG Fixes/Maintenance,"Holder 
+Light
+wire
+scroos
+electrical tape",12/12/2017 5:36pm,GB,
+NG Fixes/Maintenance-500,Aslam DSouza,2017-12-12,-500,NavGurukul Cash,NG Fixes/Maintenance,paid to electrician for fixed all Navgurukul light,12/12/2017 5:38pm,GB,
+Milk & Bread-77,Aslam DSouza,2017-12-12,-77,NavGurukul Cash,Milk & Bread,bought 1l milk and bread,12/12/2017 5:41pm,GB,
+Vegetables-105,Aslam DSouza,2017-12-12,-105,NavGurukul Cash,Vegetables,"Cauliflower = 1kg = 50INR
+mirch = 20INR
+Ginger = 20INR
+lemon = 15INR",12/12/2017 5:46pm,GB,
+Money Given by NG--5000,Aslam DSouza,2017-12-12,5000,NavGurukul Account / Card,Money Given by NG,Money Transfer To Aslam Account,12/12/2017 5:47pm,GB,
+Money Given by NG-4000,Aslam DSouza,2017-12-12,-4000,NavGurukul Cash,Money Given by NG,Paid 4000 to Shakruddin Because he Gave to NavGurukul,12/12/2017 5:49pm,GB,
+Household Items--1000,Dhannu,2017-12-12,1000,Other,Household Items,Dhannu paid 1000 INR to NavGurukul Because He bought 5 mattress from NavGurukul  ,12/12/2017 5:53pm,GB,
+Vegetables-200,Aslam DSouza,2017-12-14,-200,NavGurukul Cash,Vegetables,"potato 
+cauliflower
+ginger
+oil ",12/15/2017 6:13am,GB,
+Milk & Bread-77,Aslam DSouza,2017-12-12,-77,NavGurukul Cash,Milk & Bread,milk and bread,12/15/2017 6:14am,GB,
+Eggs-28,Aslam DSouza,2017-12-13,-28,NavGurukul Cash,Eggs,bought 4 eggs,12/15/2017 6:17am,GB,
+Transportation-250,Aslam DSouza,2017-12-13,-250,NavGurukul Cash,Transportation,paid for pickup laptop by apoorv ,12/15/2017 6:22am,GB,
+Transportation-500,Aslam DSouza,2017-12-13,-500,NavGurukul Cash,Transportation,paid for pickup laptop or raste me khana khaya tha ,12/15/2017 6:27am,GB,
+Milk & Bread-77,Aslam DSouza,2017-12-14,-77,NavGurukul Cash,Milk & Bread,milk and bread ,12/15/2017 6:30am,GB,
+Transportation-350,Aslam DSouza,2017-12-14,-350,NavGurukul Cash,Transportation,find mattress shop and paid for food ,12/15/2017 6:35am,GB,
+Groceries-205,Aslam DSouza,2017-12-14,-205,NavGurukul Cash,Groceries,rice and daal and ginger and dhaniya mirch paid by apoorv ,12/15/2017 6:40am,GB,
+Milk & Bread-77,Aslam DSouza,2017-12-15,-77,NavGurukul Cash,Milk & Bread,bought milk and bread,12/15/2017 6:44am,GB,
+Other (Kuch Aur)-45,Aslam DSouza,2017-12-15,-45,Other,Other (Kuch Aur),Curd 1/2 kg ,12/15/2017 6:45am,GB,
+Household Items-400,Aslam DSouza,2017-12-15,-400,NavGurukul Cash,Household Items,Dustbin and dust pen ,12/16/2017 7:35pm,GB,
+Eggs-28,Aslam DSouza,2017-12-15,-28,NavGurukul Cash,Eggs,4 Eggs,12/16/2017 7:36pm,GB,
+Vegetables-150,Aslam DSouza,2017-12-16,-150,NavGurukul Cash,Vegetables,cauliflower and chilli dhaniya lemon,12/16/2017 7:39pm,GB,
+Milk & Bread-77,Aslam DSouza,2017-12-16,-77,NavGurukul Cash,Milk & Bread,Bought milk and bread ,12/16/2017 7:40pm,GB,
+Other (Kuch Aur)-80,Aslam DSouza,2017-12-16,-80,NavGurukul Cash,Other (Kuch Aur),2 packet Surf Excel for clean all kitchen cupboard ,12/16/2017 7:42pm,GB,
+Money Given by NG--5000,Aslam DSouza,2017-12-17,5000,NavGurukul Account / Card,Money Given by NG,Money transfered to Aslam account ,12/16/2017 7:47pm,GB,
+Transportation-1842,Aslam DSouza,2017-12-17,-1842,NavGurukul Cash,Transportation,"paid for transportation because ajay, apoorv and sandeep was going to dharamshala ",12/16/2017 7:51pm,GB,
+Transportation-500,Aslam DSouza,2017-12-17,-500,NavGurukul Cash,Transportation,gave to apoorv for transportation to dharamshala ,12/17/2017 3:55pm,GB,
+Transportation-400,Aslam DSouza,2017-12-17,-400,NavGurukul Cash,Transportation,gave to apoorv because he paid for transportation for pickuping to laptop,12/17/2017 4:00pm,GB,
+Household Items-400,Aslam DSouza,2017-12-17,-400,NavGurukul Cash,Household Items,bought dustbin ,12/17/2017 4:01pm,GB,
+Transportation-160,Sandeep,2017-12-17,-160,NavGurukul Cash,Transportation,picked up the laptop from rishabh,12/17/2017 4:06pm,GB,
+Milk & Bread-119,Aslam DSouza,2017-12-17,-119,NavGurukul Cash,Milk & Bread,bought 2l milk and bread,12/17/2017 4:09pm,GB,
+Groceries-125,Aslam DSouza,2017-12-17,-125,NavGurukul Cash,Groceries,1 packet OIl and ginger ,12/17/2017 4:14pm,GB,
+Vegetables-160,Aslam DSouza,2017-12-17,-160,NavGurukul Cash,Vegetables,cauliflower potato and tomato ,12/17/2017 4:16pm,GB,
+NG Fixes/Maintenance-650,Aslam DSouza,2017-12-18,-650,NavGurukul Cash,NG Fixes/Maintenance,fixed all Kitchen cupboard and bought one hinge ,12/19/2017 6:36am,GB,
+NG Fixes/Maintenance-100,Aslam DSouza,2017-12-18,-100,NavGurukul Cash,NG Fixes/Maintenance,bought 2 handle of the almirah ,12/19/2017 6:39am,GB,
+Milk & Bread-77,Monu,2017-12-18,-77,NavGurukul Cash,Milk & Bread,Milk and bread,12/20/2017 6:05pm,GB,
+Groceries-220,Monu,2017-12-18,-220,NavGurukul Cash,Groceries,bought Rice daal and ginger dhandiya powder ,12/20/2017 6:10pm,GB,
+Other (Kuch Aur)-140,"Monu,Aslam DSouza",2017-12-18,-140,NavGurukul Cash,Other (Kuch Aur),Curd and rayte ke bundi and jira ,12/20/2017 6:12pm,GB,
+Milk & Bread-77,Monu,2017-12-19,-77,NavGurukul Cash,Milk & Bread,milk and bread,12/20/2017 6:14pm,GB,
+Eggs-35,Monu,2017-12-18,-35,NavGurukul Cash,Eggs,bought 5 eggs,12/20/2017 6:16pm,GB,
+Vegetables-150,Monu,2017-12-18,-150,NavGurukul Cash,Vegetables,Onion tomato and dhaniya and chili ,12/20/2017 6:17pm,GB,
+Household Items--1000,Aslam DSouza,2017-12-18,1000,NavGurukul Account / Card,Household Items,Advance payment For mattress ,12/20/2017 6:19pm,GB,
+Household Items-1000,Aslam DSouza,2017-12-18,-1000,NavGurukul Cash,Household Items,1000 paid for mattress in advance ,12/20/2017 6:20pm,GB,
+Money Given by NG--9500,Aslam DSouza,2017-12-19,9500,NavGurukul Account / Card,Money Given by NG,Transfred to aslam account,12/20/2017 6:22pm,GB,
+Household Items-9200,Aslam DSouza,2017-12-19,-9200,NavGurukul Cash,Household Items,"9200 paid to mattress wala for 17 mattress 
+",12/20/2017 6:23pm,GB,
+Transportation-720,Aslam DSouza,2017-12-19,-720,NavGurukul Cash,Transportation,"To udyog vihar 120
+
+auto riksha sikanderpur 50
+Metro fire 120
+auto kiraya 280
+For food 150
+
+Total 720",12/20/2017 6:32pm,GB
+Money Given by NG--2000,Aslam DSouza,19 December 2017,2000,NavGurukul Account / Card,Money Given by NG,Transfarred to aslam account,12/20/2017 6:35pm,GB
+Milk & Bread-77,Aslam DSouza,19 December 2017,-77,NavGurukul Cash,Milk & Bread,bought milk and bread ,12/20/2017 6:40pm,GB
+Vegetables-170,Monu,20 December 2017,-170,NavGurukul Cash,Vegetables,Cauliflower and chili and dhaniya potato ,12/20/2017 6:45pm,GB
+Money Given by NG--8000,Aslam DSouza,20 December 2017,8000,NavGurukul Account / Card,Money Given by NG,Transferred to aslam account,12/20/2017 6:49pm,GB
+NG Fixes/Maintenance-7648,Monu,20 December 2017,-7648,NavGurukul Cash,NG Fixes/Maintenance,Power pump and fixing ka saman ,12/20/2017 6:52pm,GB
+Other (Kuch Aur)-75,Monu,20 December 2017,-75,NavGurukul Cash,Other (Kuch Aur),curd and rayte ki bundi ,12/20/2017 6:54pm,GB
+Transportation-140,Monu,20 December 2017,-140,NavGurukul Cash,Transportation,Paid transportation for Power pump,12/20/2017 6:55pm,GB
+Milk & Bread-67,Monu,20 December 2017,-67,NavGurukul Cash,Milk & Bread,Bought one liter milk and bread in the evening ,12/20/2017 6:59pm,GB
+Money Given by NG--9000,Monu,20 December 2017,9000,NavGurukul Account / Card,Money Given by NG,Money transferred to aslam account ,12/20/2017 7:09pm,GB
+Tech Expenses (Laptop/Phone etc.)-8930,Aslam DSouza,20 December 2017,-8930,NavGurukul Cash,Tech Expenses (Laptop/Phone etc.),"Lenavo ka fan 800
+
+
+
+Total 8930",12/20/2017 7:15pm,GB
+Transportation-430,Aslam DSouza,20 December 2017,-430,NavGurukul Cash,Transportation,Transportation and food and metro card recharge also ,12/20/2017 7:19pm,GB
+Groceries-85,Monu,20 December 2017,-85,NavGurukul Cash,Groceries,Sugger and ginger Tea,12/21/2017 6:10am,GB
+Milk & Bread-77,Aslam DSouza,21 December 2017,-77,NavGurukul Cash,Milk & Bread,bought milk and bread,12/24/2017 2:29am,GB
+Transportation-400,Monu,21 December 2017,-400,NavGurukul Cash,Transportation,picked up a laptop from saket and khidki gao,12/24/2017 2:31am,GB
+Other (Kuch Aur)-160,"Aslam DSouza,Monu",21 December 2017,-160,NavGurukul Cash,Other (Kuch Aur),paid for food ,12/24/2017 2:32am,GB
+Other (Kuch Aur)-81,Aslam DSouza,22 December 2017,-81,NavGurukul Cash,Other (Kuch Aur),bought milk and bread and monu paid 50 rupees for food and also paid for eggs 20INR,12/24/2017 2:35am,GB
+Money Given by NG--3700,Aslam DSouza,22 December 2017,3700,NavGurukul Account / Card,Money Given by NG,Transferred to aslam account ,12/24/2017 2:36am,GB
+NG Fixes/Maintenance-4300,Aslam DSouza,22 December 2017,-4300,NavGurukul Cash,NG Fixes/Maintenance,paid for power pump to plumber and electrician tank cleaner and also bought fase for kitchan nal  ,12/24/2017 2:40am,GB
+Transportation-200,"Aslam DSouza,Monu",22 December 2017,-200,NavGurukul Cash,Transportation,paid for transportation because we are sifted to vasant kunj bhaiya's house ,12/24/2017 2:42am,GB
+Transportation-200,Aslam DSouza,23 December 2017,-200,NavGurukul Cash,Transportation,paid 200 because I was gone to pick up annu and annu's fatherannu ,12/24/2017 2:45am,GB
+Transportation-600,Monu,23 December 2017,-600,NavGurukul Cash,Transportation,"60auto ,40metro , 80auto ,80auto, 50rs metro malviey nagar  to kailash,50rs auto, 50rs auto, 50rs lunch, 60 metro,60rs auto.",12/24/2017 2:47am,GB
+Tech Expenses (Laptop/Phone etc.)--10000,Aslam DSouza,23 December 2017,10000,NavGurukul Account / Card,Tech Expenses (Laptop/Phone etc.),transport and laptop repair and keyboard,1/5/2018 3:34pm,GB
+Tech Expenses (Laptop/Phone etc.)-10000,Aslam DSouza,23 December 2017,-10000,NavGurukul Cash,Tech Expenses (Laptop/Phone etc.),transport and laptop repair and keyboard,1/5/2018 3:36pm,GB
+Money Given by NG--2000,Aslam DSouza,25 December 2017,2000,NavGurukul Account / Card,Money Given by NG,transfered to aslam account ,1/5/2018 3:38pm,GB
+Transportation-400,Aslam DSouza,25 December 2017,-400,NavGurukul Cash,Transportation,transport and food pickup laptop ,1/5/2018 3:40pm,GB
+Transportation-360,"Aslam DSouza,Monu",26 December 2017,-360,NavGurukul Cash,Transportation,transport to navgurukul ,1/5/2018 3:43pm,GB
+Milk & Bread-42,Monu,26 December 2017,-42,NavGurukul Cash,Milk & Bread,milk 1l,1/5/2018 3:44pm,GB
+Vegetables-330,Monu,26 December 2017,-330,NavGurukul Cash,Vegetables,vegetables tomato potato cauliflower green chili and garam powder ,1/5/2018 3:46pm,GB
+Transportation-300,"Monu,Aslam DSouza",27 December 2017,-300,NavGurukul Cash,Transportation,metro kiraya and food also,1/5/2018 3:47pm,GB
+Transportation-150,Aslam DSouza,28 December 2017,-150,NavGurukul Cash,Transportation,metro kiraya and food,1/5/2018 3:49pm,GB
+Milk & Bread-42,Aslam DSouza,28 December 2017,-42,NavGurukul Cash,Milk & Bread,milk 1l,1/5/2018 3:50pm,GB
+Transportation-330,Aslam DSouza,29 December 2017,-330,NavGurukul Cash,Transportation,metro kiraya and food for 2 people ,1/5/2018 3:52pm,GB
+Money Given by NG--2000,Aslam DSouza,30 December 2017,2000,NavGurukul Account / Card,Money Given by NG,transfer to aslam account ,1/5/2018 3:53pm,GB
+Transportation-150,Aslam DSouza,30 December 2017,-150,NavGurukul Cash,Transportation,metro kiraya ,1/5/2018 3:54pm,GB
+Transportation-330,Aslam DSouza,31 December 2017,-330,NavGurukul Cash,Transportation,metro kiraya and food and return metro kiraya ,1/5/2018 3:56pm,GB
+Transportation-150,Aslam DSouza,1 January 2018,-150,NavGurukul Cash,Transportation,metro kiraya or food ,1/5/2018 4:02pm,GB
+Transportation-170,Aslam DSouza,1 January 2018,-170,NavGurukul Cash,Transportation,metro kiaya or food ,1/5/2018 4:04pm,GB
+Transportation-390,Aslam DSouza,2 January 2018,-390,NavGurukul Cash,Transportation,metro kiraya and food also ,1/5/2018 4:06pm,GB
+Transportation-590,Aslam DSouza,3 January 2018,-590,NavGurukul Cash,Transportation,transport we had take a cab that day because we were let ,1/5/2018 4:12pm,GB
+Money Given by NG--2000,Aslam DSouza,3 January 2018,2000,NavGurukul Account / Card,Money Given by NG,transfer to aslam account ,1/5/2018 4:14pm,GB
+Transportation-400,Monu,4 January 2018,-400,NavGurukul Cash,Transportation,metro kiraya and auto and food for pickup laptop ,1/5/2018 4:20pm,GB
+Transportation-150,Aslam DSouza,4 January 2018,-150,NavGurukul Cash,Transportation,metro travel and food ,1/5/2018 4:22pm,GB
+Other (Kuch Aur)-200,Aslam DSouza,4 January 2018,-200,NavGurukul Cash,Other (Kuch Aur),paid to garbage men ,1/5/2018 4:24pm,GB
+Transportation-190,Aslam DSouza,4 January 2018,-190,NavGurukul Cash,Transportation,metro kiraya and food also ,1/5/2018 4:26pm,GB
+Transportation-180,Monu,4 January 2018,-180,NavGurukul Cash,Transportation,evening travel metro kiraya and food also,1/5/2018 4:27pm,GB
+Transportation-140,Aslam DSouza,5 January 2018,-140,NavGurukul Cash,Transportation,morning metro travel to navgurukul,1/5/2018 4:31pm,GB
+Transportation-120,Aslam DSouza,5 January 2018,-120,NavGurukul Cash,Transportation,travel to Rishabh's house for taken camera ,1/5/2018 4:33pm,GB
+Groceries-60,Monu,29 December 2017,-60,NavGurukul Cash,Groceries,dal 60 rs ki,1/5/2018 7:05pm,GB
+Vegetables-60,Monu,31 December 2017,-60,NavGurukul Cash,Vegetables,ghobhi and shimla mirch ,1/5/2018 7:08pm,GB
+Transportation-400,Monu,4 January 2018,-400,NavGurukul Cash,Transportation,"pick up the laptop from sahara grace and lunch or navgurukul se chhatarpur return aaya
+",1/5/2018 7:11pm,GB
+Money Given by NG-1000,Monu,5 January 2018,-1000,NavGurukul Account / Card,Money Given by NG,monu purchase the veg and grociries of 600 from his money ,1/5/2018 7:25pm,GB
+Transportation-370,Monu,5 January 2018,-370,NavGurukul Cash,Transportation,pick up the laptop from kailash colony +200rs card recharge +lunch,1/5/2018 7:28pm,GB
+Transportation-110,Monu,6 January 2018,-110,Other,Transportation,"give the fair auto of all( aslam , shivam , shakru, me) of us .70rs and return from huda to rishabh bhaiya's home ajay's fair 40 rs
+",1/6/2018 4:43pm,GB
+Transportation-150,Monu,7 January 2018,-150,Other,Transportation,come to navgurukul from rishabh bhaiya's home (ajay and monu),1/7/2018 9:01am,GB
