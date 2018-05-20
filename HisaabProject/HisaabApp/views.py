@@ -344,7 +344,6 @@ def viewpendingrequest(request, pk):
 
         # request handling if the the request is rejected
         elif 'reject' in request.POST:
-            print 'hogya'
             money_request.is_queued = False
             money_request.approve_or_rejected_by = request.user.nguser
             reason_for_reject = request.POST.get('reason_for_reject', None)
