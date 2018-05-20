@@ -1,3 +1,28 @@
+<<<<<<< HEAD
+Name,Expense Made By,Expense Date,Actual Amount,Source,Category,Description,Date Recorded
+Milk & Bread-21,Shivam Monga,1 April 2017,-21,NavGurukul PayTM,Milk & Bread,tamater lahesun,4/1/2017 7:08am
+Groceries-180,Shivam Monga,1 April 2017,-180,NavGurukul PayTM,Groceries,buy  makhan 88 rs and lal mirch 34and vime 58,4/1/2017 7:13am
+Other (Kuch Aur)-60,Shivam Monga,1 April 2017,-60,NavGurukul PayTM,Other (Kuch Aur),,4/1/2017 7:52am
+Vegetables-140,Shivam Monga,1 April 2017,-140,NavGurukul PayTM,Vegetables,vegitables bought by shivam of 140 rupess,4/3/2017 5:19pm
+Milk & Bread-42,Shivam Monga,1 April 2017,-42,NavGurukul PayTM,Milk & Bread,1 liter milk for sunday,4/3/2017 5:20pm
+Milk & Bread-134,Shivam Monga,3 April 2017,-134,NavGurukul PayTM,Milk & Bread,84 rs 2 ltr milk and 2 packed bread 50rs,4/3/2017 5:11pm
+Groceries-44,Shivam Monga,3 April 2017,-44,NavGurukul PayTM,Groceries,44rs buy makhan,4/3/2017 5:12pm
+Milk & Bread-84,,3 April 2017,-84,NavGurukul PayTM,Milk & Bread,milk,4/3/2017 5:20pm
+Vegetables-30,,3 April 2017,-30,NavGurukul PayTM,Vegetables,,4/3/2017 5:21pm
+Groceries-147,Deepanshu Panchal,5 April 2017,-147,NavGurukul PayTM,Groceries,both oil  147 rupees,4/5/2017 12:42pm
+Vegetables-150,Deepanshu Panchal,5 April 2017,-150,NavGurukul PayTM,Vegetables,both vegetables 150 rupees,4/5/2017 12:44pm
+Milk & Bread-84,Deepanshu Panchal,5 April 2017,-84,NavGurukul PayTM,Milk & Bread,both milk,4/5/2017 3:52pm
+Groceries-4230,Dhannu,5 April 2017,-4230,NavGurukul PayTM,Groceries,"chawal,daale,chini,masale,handwash,etc ",4/5/2017 6:13pm
+Vegetables-135,Dhannu,5 April 2017,-135,NavGurukul PayTM,Vegetables,spent by vegetable,4/5/2017 6:15pm
+Other (Kuch Aur)-30,,5 April 2017,-30,NavGurukul Cash,Other (Kuch Aur),"riksha ka kiraya  Rs. 30 
+",4/5/2017 6:26pm
+Milk & Bread-119,,6 April 2017,-119,NavGurukul PayTM,Milk & Bread,buy milk and dahi,4/6/2017 6:26pm
+Added to PayTM--15,,6 April 2017,15,NavGurukul PayTM,Added to PayTM,money added to paytm of rupees15,4/8/2017 9:23am
+Money Given by NG--2000,Dhannu,6 April 2017,2000,NavGurukul Cash,Money Given by NG,2000 give me by rishabh my bank a/c.,4/10/2017 1:08pm
+Milk & Bread-42,Shivam Monga,10 April 2017,-42,NavGurukul PayTM,Milk & Bread,1 litre milk of 42 rupees,4/10/2017 3:46am
+Vegetables-135,Dhannu,10 April 2017,-135,NavGurukul PayTM,Vegetables,135 rs buy vegetables.,4/10/2017 1:18pm
+Vegetables-212,,10 April 2017,-212,NavGurukul PayTM,Vegetables,"potato =53 rupees
+=======
 Name,Expense Made By,Expense Date,Actual Amount,Source,Category,Description,Date Recorded,Facility,Type_Of_Expense
 Milk & Bread-21,Shivam Monga,2017-04-01,-21,NavGurukul PayTM,Milk & Bread,bought by milk 21,4/1/2017 7:08am,SV,Navgurukul
 Groceries-180,Shivam Monga,2017-04-01,-180,NavGurukul PayTM,Groceries,buy  makhan 88 rs and lal mirch 34and vime 58,4/1/2017 7:13am,SV,Navgurukul
@@ -21,10 +46,177 @@ Money Given by NG--2000,Dhannu,2017-04-06,2000,NavGurukul Cash,Money Given by NG
 Milk & Bread-42,Shivam Monga,2017-04-10,-42,NavGurukul PayTM,Milk & Bread,1 litre milk of 42 rupees,4/10/2017 3:46am,SV,Navgurukul
 Vegetables-135,Dhannu,2017-04-10,-135,NavGurukul PayTM,Vegetables,135 rs buy vegetables.,4/10/2017 1:18pm,SV,Navgurukul
 Vegetables-212,,2017-04-10,-212,NavGurukul PayTM,Vegetables,"potato =53 rupees
+>>>>>>> 8c0e7281a73a33386a8fb74c9a248526790cf20c
 onion =32 rupees
 Shimla Mirchi =52 rupees
 lauki =20 rupees
 tomato =55 rupees
+<<<<<<< HEAD
+",4/10/2017 3:37pm
+Groceries-90,Manoj Kumar,10 April 2017,-90,NavGurukul PayTM,Groceries,Bought chirwa for rs.90,4/12/2017 4:47pm
+Added to PayTM--3000,,11 April 2017,3000,NavGurukul PayTM,Added to PayTM,money added to paytm of rupees3000,4/8/2017 9:19am
+Milk & Bread-126,Manoj Kumar,11 April 2017,-126,NavGurukul Cash,Milk & Bread,2 pockets bread and milk 2 letters,4/11/2017 5:21am
+Milk & Bread-84,Shivam Monga,12 April 2017,-84,NavGurukul Cash,Milk & Bread,"2 liter milk of 84 rupees
+",4/12/2017 4:47pm
+Milk & Bread-84,,12 April 2017,-84,NavGurukul Cash,Milk & Bread,milk rs 84 by tara singh,4/12/2017 9:26pm
+Milk & Bread-123,Shakrudin Pathan,13 April 2017,-123,NavGurukul Cash,Milk & Bread,"doodh and bread rs 123 by shakruddin
+",4/12/2017 9:24pm
+Groceries-200,Dhannu,13 April 2017,-200,NavGurukul Cash,Groceries,buy groceries item chap and cream. ,4/13/2017 9:11am
+Vegetables-85,Dhannu,13 April 2017,-85,NavGurukul Cash,Vegetables,"buy onion, tomato,khira,lemon ",4/13/2017 9:13am
+Groceries-30,Nitin Gupta,13 April 2017,-30,NavGurukul Cash,Groceries,Mortein for rs.30,4/13/2017 7:28pm
+Groceries-100,Shakrudin Pathan,14 April 2017,-100,NavGurukul Cash,Groceries,cheeni rs 100 by shakruddin,4/13/2017 7:28pm
+Vegetables-90,Shivam Monga,14 April 2017,-90,NavGurukul Cash,Vegetables,"1 kg onine of 30 rupees
+2 kg patato of 30 rupees
+1 kg tamato of 30 rupees",4/14/2017 6:39am
+Groceries-90,Shakrudin Pathan,14 April 2017,-90,NavGurukul Cash,Groceries,bread & sauce rs 90 by shakruddin,4/14/2017 12:03pm
+Milk & Bread-84,Dhannu,14 April 2017,-84,NavGurukul Cash,Milk & Bread,2kg milk buy 84 rs.,4/14/2017 4:08pm
+Other (Kuch Aur)-150,Dhannu,15 April 2017,-150,NavGurukul Cash,Other (Kuch Aur),i pay 150rs for garbage ,4/15/2017 7:39am
+Vegetables-10,Shivam Monga,15 April 2017,-10,NavGurukul Cash,Vegetables,lemon of 10 rupees,4/15/2017 9:30am
+Vegetables-20,Dhannu,15 April 2017,-20,NavGurukul Cash,Vegetables,buy 20rs lemon,4/15/2017 1:13pm
+Milk & Bread-63,Deepanshu Panchal,16 April 2017,-63,NavGurukul Cash,Milk & Bread,both milk and bread,4/16/2017 6:27am
+Milk & Bread-63,Nitin Gupta,17 April 2017,-63,NavGurukul Cash,Milk & Bread,Bought milk for rs.63,4/17/2017 5:41am
+Vegetables-290,Dhannu,17 April 2017,-290,NavGurukul PayTM,Vegetables,Bought vegetables for rs.290,4/17/2017 8:13am
+Groceries-120,Shakrudin Pathan,17 April 2017,-120,NavGurukul PayTM,Groceries,Bought groceries items for rs.120,4/17/2017 8:14am
+Vegetables-25,Deepanshu Panchal,17 April 2017,-25,NavGurukul Cash,Vegetables,Bought vegetables for rs.25,4/17/2017 12:57pm
+Milk & Bread-83,Nitin Gupta,17 April 2017,-83,NavGurukul PayTM,Milk & Bread,Bought milk,4/17/2017 7:58pm
+Milk & Bread-84,Nitin Gupta,18 April 2017,-84,NavGurukul PayTM,Milk & Bread,Bought milk for rs.84,4/19/2017 11:51am
+Groceries-60,,18 April 2017,-60,NavGurukul PayTM,Groceries,"both bessan
+",4/19/2017 12:40pm
+Cooking Gas (Cylinder)-723,Deepanshu Panchal,19 April 2017,-723,NavGurukul Cash,Cooking Gas (Cylinder),both cylinder,4/19/2017 12:39pm
+Milk & Bread-83,,19 April 2017,-83,NavGurukul PayTM,Milk & Bread,Bought milk for rs.83,4/19/2017 4:13pm
+Milk & Bread-84,,20 April 2017,-84,NavGurukul PayTM,Milk & Bread,Bought milk for rs.84,4/20/2017 5:39pm
+Vegetables-290,,20 April 2017,-290,NavGurukul PayTM,Vegetables,,4/20/2017 7:18pm
+Milk & Bread-110,Nitin Gupta,21 April 2017,-110,NavGurukul PayTM,Milk & Bread,Bought milk for rs.110,4/21/2017 7:21pm
+Groceries-90,Deepanshu Panchal,22 April 2017,-90,NavGurukul PayTM,Groceries,Bought sugar for rs.90,4/21/2017 7:22pm
+Groceries-30,Deepanshu Panchal,22 April 2017,-30,NavGurukul PayTM,Groceries,Paid outstanding rs.30 for sugar,4/21/2017 7:23pm
+Milk & Bread-50,Shivam Monga,23 April 2017,-50,NavGurukul Cash,Milk & Bread,Bought milk for rs.50,4/25/2017 6:54am
+Milk & Bread-84,,24 April 2017,-84,NavGurukul PayTM,Milk & Bread,milk,4/24/2017 5:15pm
+Milk & Bread-126,Dhannu,24 April 2017,-126,NavGurukul PayTM,Milk & Bread,milk,4/24/2017 5:17pm
+Groceries-560,Dhannu,24 April 2017,-560,NavGurukul PayTM,Groceries,5kg oil,4/24/2017 5:19pm
+Vegetables-165,Shivam Monga,24 April 2017,-165,NavGurukul PayTM,Vegetables,buy 165 rs vegetable,4/24/2017 5:19pm
+Other (Kuch Aur)-10,Deepanshu Panchal,24 April 2017,-10,NavGurukul Cash,Other (Kuch Aur),buy 1 bulb,4/24/2017 5:21pm
+Groceries-120,Manoj Kumar,25 April 2017,-120,NavGurukul PayTM,Groceries,Bought groceries items for rs.120,4/26/2017 7:46am
+Other (Kuch Aur)-580,Manoj Kumar,25 April 2017,-580,NavGurukul Cash,Other (Kuch Aur),paid for purifier bulb rs.580,4/26/2017 7:49am
+Vegetables-120,Deepanshu Panchal,26 April 2017,-120,NavGurukul PayTM,Vegetables,bought vegetables for rs.120,4/26/2017 7:47am
+Milk & Bread-126,Dhannu,26 April 2017,-126,NavGurukul Cash,Milk & Bread,buy milk,4/26/2017 4:47pm
+Other (Kuch Aur)-50,,26 April 2017,-50,NavGurukul Cash,Other (Kuch Aur),transposition  ,4/28/2017 3:34pm
+Transportation-50,,26 April 2017,-50,NavGurukul Cash,Transportation,spend by rahul,5/6/2017 7:47am
+Milk & Bread-126,,27 April 2017,-126,NavGurukul PayTM,Milk & Bread,buy milk,4/28/2017 3:46am
+Vegetables-180,Shivam Monga,28 April 2017,-180,NavGurukul Cash,Vegetables,vegetables bought by shivam of 180 rupees ,4/28/2017 7:11am
+Groceries-170,Dhannu,28 April 2017,-170,NavGurukul Cash,Groceries,buy rice,4/28/2017 2:54pm
+Milk & Bread-126,Nitin Gupta,28 April 2017,-126,NavGurukul PayTM,Milk & Bread,buy milk,4/28/2017 3:29pm
+Vegetables-25,Nitin Gupta,28 April 2017,-25,NavGurukul PayTM,Vegetables,buy vegetables,4/28/2017 3:31pm
+Milk & Bread-126,Nitin Gupta,28 April 2017,-126,NavGurukul PayTM,Milk & Bread,Bought milk ,4/28/2017 8:46pm
+Vegetables-25,Deepanshu Panchal,28 April 2017,-25,NavGurukul PayTM,Vegetables,Bought vegetables,4/28/2017 8:48pm
+Tech Expenses (Laptop/Phone etc.)-900,,28 April 2017,-900,NavGurukul Cash,Tech Expenses (Laptop/Phone etc.),Bought laptop chargers for rs.900,5/1/2017 4:48am
+Vegetables-120,Shivam Monga,30 April 2017,-120,NavGurukul Cash,Vegetables,"vegetables of 120 rupees
+bought by Shivam",4/30/2017 3:26pm
+Tech Expenses (Laptop/Phone etc.)-150,Deepanshu Panchal,1 May 2017,-150,NavGurukul Cash,Tech Expenses (Laptop/Phone etc.),charger,5/1/2017 12:24pm
+Transportation-50,Deepanshu Panchal,1 May 2017,-50,NavGurukul Cash,Transportation,,5/1/2017 12:26pm
+Vegetables-170,Shivam Monga,2 May 2017,-170,NavGurukul Cash,Vegetables,vegetables of 170 rupees bought by shivam,5/2/2017 10:38am
+Milk & Bread-126,,2 May 2017,-126,NavGurukul PayTM,Milk & Bread,3 liter milk bought by Krishna of 126 rupees,5/2/2017 10:39am
+Groceries-120,,2 May 2017,-120,NavGurukul Cash,Groceries,2 kg sugar bought by krishna of 120 rupees,5/2/2017 10:40am
+Groceries-530,,2 May 2017,-530,NavGurukul Cash,Groceries,"paneer,butter,,cream bought by Krishna of 530 rupees",5/2/2017 10:42am
+Groceries-210,Manoj Kumar,3 May 2017,-210,NavGurukul Cash,Groceries,3kg chawal and 3 kg atta .,5/3/2017 5:27am
+Milk & Bread-126,Dhannu,3 May 2017,-126,NavGurukul Cash,Milk & Bread,buy milk,5/3/2017 2:29pm
+Vegetables-80,Shakrudin Pathan,4 May 2017,-80,NavGurukul Cash,Vegetables,tamater or lehsun 80rs,5/4/2017 6:25am
+Milk & Bread-126,,4 May 2017,-126,NavGurukul Cash,Milk & Bread,milk 3L,5/4/2017 4:34pm
+Groceries-1516,Manoj Kumar,5 May 2017,-1516,NavGurukul PayTM,Groceries,brought by manoj and aslam,5/5/2017 9:40am
+Vegetables-50,,5 May 2017,-50,NavGurukul Cash,Vegetables,2kg onion,5/5/2017 9:41am
+Vegetables-205,Shivam Monga,6 May 2017,-205,NavGurukul PayTM,Vegetables,vegitable of 205 rupees bought by shivam,5/6/2017 9:39am
+Groceries-55,Shivam Monga,8 May 2017,-55,Abhishek PayTM,Groceries,dahi bought by shivam of 55 rupees,5/8/2017 3:15am
+Milk & Bread-42,Shivam Monga,8 May 2017,-42,Abhishek PayTM,Milk & Bread,1 liter milk bought by shivam,5/8/2017 3:15am
+Groceries-30,Shivam Monga,8 May 2017,-30,Other,Groceries,Dahi of 30 rupees bought by Shivam given by Rahul cash,5/8/2017 3:17am
+Vegetables-170,Shakrudin Pathan,8 May 2017,-170,NavGurukul PayTM,Vegetables,,5/8/2017 9:49am
+Groceries-150,Shakrudin Pathan,8 May 2017,-150,NavGurukul PayTM,Groceries,both dahi or oil,5/8/2017 9:50am
+Milk & Bread-104,Aslam DSouza,8 May 2017,-104,NavGurukul PayTM,Milk & Bread,,5/12/2017 10:13pm
+Milk & Bread-126,Aslam DSouza,8 May 2017,-126,NavGurukul PayTM,Milk & Bread,MILK,5/12/2017 10:23pm
+Milk & Bread-21,Aslam DSouza,9 May 2017,-21,NavGurukul PayTM,Milk & Bread,,5/12/2017 1:05pm
+Milk & Bread-42,Aslam DSouza,10 May 2017,-42,NavGurukul PayTM,Milk & Bread,MILK,5/12/2017 10:07pm
+Groceries-43,Dhannu,11 May 2017,-43,NavGurukul PayTM,Groceries,buy 1 kg rice,5/12/2017 3:51am
+Other (Kuch Aur)-100,Manoj Kumar,12 May 2017,-100,NavGurukul PayTM,Other (Kuch Aur),bulb,5/12/2017 9:54pm
+Milk & Bread-84,Manoj Kumar,12 May 2017,-84,NavGurukul PayTM,Milk & Bread,2litter milk,5/12/2017 9:55pm
+Milk & Bread-25,Manoj Kumar,12 May 2017,-25,NavGurukul PayTM,Milk & Bread,one packet bread,5/12/2017 9:57pm
+Vegetables-50,Manoj Kumar,12 May 2017,-50,NavGurukul PayTM,Vegetables,"paid for vegetables
+",5/12/2017 9:58pm
+Groceries-720,Aslam DSouza,12 May 2017,-720,NavGurukul PayTM,Groceries,flour and rice,5/12/2017 10:01pm
+Vegetables-100,Aslam DSouza,12 May 2017,-100,NavGurukul PayTM,Vegetables,vegetables,5/12/2017 10:03pm
+Milk & Bread-126,Aslam DSouza,12 May 2017,-126,NavGurukul PayTM,Milk & Bread,only milk,5/12/2017 10:04pm
+Groceries-400,Shivam Monga,13 May 2017,-400,NavGurukul PayTM,Groceries,10 kg rice of 400 rupees bought by shivam ,5/12/2017 7:42pm
+Milk & Bread-42,Aslam DSouza,14 May 2017,-42,NavGurukul PayTM,Milk & Bread,1L milk,5/14/2017 3:34am
+Milk & Bread-84,Shakrudin Pathan,14 May 2017,-84,NavGurukul PayTM,Milk & Bread,2L milk,5/14/2017 4:01am
+Groceries-226,Dhannu,15 May 2017,-226,NavGurukul PayTM,Groceries,"buy  groceries items harpick,, vim liquid,,  lizol",5/16/2017 6:15am
+Milk & Bread-168,Aslam DSouza,16 May 2017,-168,NavGurukul PayTM,Milk & Bread,4L milk,5/17/2017 11:38am
+Tech Expenses (Laptop/Phone etc.)-325,Aslam DSouza,16 May 2017,-325,NavGurukul PayTM,Tech Expenses (Laptop/Phone etc.),300 rupees for adapter and 25 rupees cables,5/17/2017 11:43am
+Groceries-160,Aslam DSouza,17 May 2017,-160,NavGurukul PayTM,Groceries,chhole 1kg ,5/17/2017 11:41am
+Other (Kuch Aur)-50,,18 May 2017,-50,NavGurukul Cash,Other (Kuch Aur),marker,5/25/2017 8:47am
+Tech Expenses (Laptop/Phone etc.)-3450,Deepanshu Panchal,19 May 2017,-3450,NavGurukul PayTM,Tech Expenses (Laptop/Phone etc.),loptop display ,5/19/2017 2:36pm
+Milk & Bread-168,Aslam DSouza,19 May 2017,-168,NavGurukul PayTM,Milk & Bread,milk 4L,5/19/2017 4:56pm
+Other (Kuch Aur)-55,Aslam DSouza,19 May 2017,-55,NavGurukul PayTM,Other (Kuch Aur),stationary 60 pages and sketch pen 1 pecket,5/19/2017 4:59pm
+Groceries-500,Aslam DSouza,19 May 2017,-500,NavGurukul PayTM,Groceries,oil 5L,5/19/2017 5:00pm
+Groceries-100,Aslam DSouza,19 May 2017,-100,Other,Groceries,oil ,5/19/2017 5:01pm
+Vegetables-110,Aslam DSouza,19 May 2017,-110,NavGurukul PayTM,Vegetables,vegetables ,5/19/2017 5:02pm
+Other (Kuch Aur)-100,"Manoj Kumar,Deepanshu Panchal",19 May 2017,-100,NavGurukul PayTM,Other (Kuch Aur),Reacherge navgurukul's metro Card.,5/20/2017 7:32am
+Vegetables-55,Aslam DSouza,19 May 2017,-55,NavGurukul PayTM,Vegetables,veg,5/21/2017 6:57am
+Groceries-533,Manoj Kumar,20 May 2017,-533,NavGurukul PayTM,Groceries,"5kg Rice
+5Kg atta
+2kg suger
+1 packet masala,",5/20/2017 7:30am
+Milk & Bread-205,Aslam DSouza,20 May 2017,-205,NavGurukul Cash,Milk & Bread,"milk and bread 
+",5/21/2017 6:54am
+Groceries-120,Aslam DSouza,20 May 2017,-120,NavGurukul Cash,Groceries,egges 1 tray,5/21/2017 6:55am
+Milk & Bread-126,,21 May 2017,-126,NavGurukul Cash,Milk & Bread,Bought milk for rs.126,5/21/2017 3:32pm
+Vegetables-327,,21 May 2017,-327,NavGurukul Cash,Vegetables,Bought vegetables for rs.327,5/21/2017 3:33pm
+Other (Kuch Aur)-50,,21 May 2017,-50,NavGurukul Cash,Other (Kuch Aur),banana for making shake ,5/22/2017 7:39am
+Groceries-430,Shivam Monga,22 May 2017,-430,NavGurukul Cash,Groceries,"panner, cream , masle ",5/22/2017 7:31am
+Milk & Bread-203,Dhannu,22 May 2017,-203,NavGurukul Cash,Milk & Bread,4lt milk and one packed bread,5/23/2017 3:38am
+Groceries-823,Aslam DSouza,23 May 2017,-823,NavGurukul PayTM,Groceries,"160+160 == Aata,    rice ==215,   daal ==100,   namak == 36,   dhaniya == 33,   laal mirch == 33, Garam masala == 41,   Aamchoor == 20 ,    25 == zeera,  
+
+160+160+215+100+36+33+33+41+20+25",5/23/2017 10:39am
+Milk & Bread-60,,23 May 2017,-60,NavGurukul Cash,Milk & Bread,bread fir 60 rs,5/24/2017 7:40am
+Milk & Bread-168,Nitin Gupta,23 May 2017,-168,NavGurukul PayTM,Milk & Bread,Bought milk for rs.168,5/24/2017 2:50pm
+Milk & Bread-168,Shivam Monga,24 May 2017,-168,NavGurukul PayTM,Milk & Bread,4 liter milk boght by shivam of 168 rupees,5/24/2017 2:41pm
+Groceries-44,Aslam DSouza,24 May 2017,-44,NavGurukul PayTM,Groceries,"butter 
+",5/24/2017 3:47pm
+Groceries-720,Dhannu,25 May 2017,-720,NavGurukul PayTM,Groceries,buy some groceries  items,5/25/2017 8:35am
+Vegetables-30,Manoj Kumar,25 May 2017,-30,NavGurukul Cash,Vegetables,1kg tamtar,5/25/2017 8:44am
+Other (Kuch Aur)-70,,25 May 2017,-70,NavGurukul Cash,Other (Kuch Aur),ink for marker 70 rs,5/25/2017 8:44am
+Groceries-720,Manoj Kumar,25 May 2017,-720,NavGurukul PayTM,Groceries,by manoj and dhaanu.,5/25/2017 8:45am
+Groceries-117,Aslam DSouza,26 May 2017,-117,NavGurukul PayTM,Groceries,dahi 1  kg ,5/26/2017 7:20am
+Eggs-140,,26 May 2017,-140,NavGurukul Cash,Eggs,140 eggs,5/27/2017 3:14am
+Milk & Bread-168,Aslam DSouza,26 May 2017,-168,NavGurukul PayTM,Milk & Bread,milk 4l,5/27/2017 7:05am
+Milk & Bread-70,Aslam DSouza,27 May 2017,-70,NavGurukul PayTM,Milk & Bread,Bread 2 packet,5/27/2017 7:06am
+Vegetables-200,Aslam DSouza,27 May 2017,-200,NavGurukul PayTM,Vegetables,vegetables ,5/27/2017 7:42am
+Milk & Bread-105,Aslam DSouza,27 May 2017,-105,NavGurukul PayTM,Milk & Bread,"milk 2.5L
+",5/27/2017 3:36pm
+Milk & Bread-126,Shakrudin Pathan,29 May 2017,-126,NavGurukul Cash,Milk & Bread,milk,5/29/2017 5:21am
+Vegetables-180,Deepanshu Panchal,29 May 2017,-180,NavGurukul PayTM,Vegetables,"Rs.60 Tomato, Rs.40 onion,  Rs.40 gourd, Rs.40 potatoes, 
+totale. Rs. 180,",5/29/2017 10:28am
+Milk & Bread-218,Aslam DSouza,30 May 2017,-218,NavGurukul PayTM,Milk & Bread,"Rs. 168.0 milk
+Rs. 50.0 bread
+",5/30/2017 7:50am
+Milk & Bread-218,Aslam DSouza,31 May 2017,-218,NavGurukul PayTM,Milk & Bread,milk and bread,6/5/2017 6:48am
+Milk & Bread-203,Aslam DSouza,1 June 2017,-203,NavGurukul PayTM,Milk & Bread,"milk and bread
+",6/5/2017 7:00am
+Milk & Bread-103,Aslam DSouza,2 June 2017,-103,NavGurukul PayTM,Milk & Bread,one bread and 4 L milk ,6/2/2017 2:51pm
+Milk & Bread-100,Aslam DSouza,2 June 2017,-100,NavGurukul PayTM,Milk & Bread,"100 rupees by mistake do not in air table 
+
+date = 2 june",6/5/2017 7:02am
+Vegetables-200,Dhannu,3 June 2017,-200,NavGurukul Cash,Vegetables,buy vegetables,6/5/2017 6:52am
+Groceries-70,Dhannu,3 June 2017,-70,NavGurukul Cash,Groceries,buy groceries items,6/5/2017 6:53am
+Milk & Bread-161,Aslam DSouza,3 June 2017,-161,NavGurukul PayTM,Milk & Bread,milk and bread,6/5/2017 7:06am
+Milk & Bread-203,Aslam DSouza,4 June 2017,-203,NavGurukul PayTM,Milk & Bread,milk and bread,6/5/2017 7:09am
+Vegetables-10,Aslam DSouza,4 June 2017,-10,NavGurukul PayTM,Vegetables,lemon,6/5/2017 7:14am
+Other (Kuch Aur)-70,Shakrudin Pathan,4 June 2017,-70,NavGurukul PayTM,Other (Kuch Aur),dahi  adarak  and lahesun 70rs,6/5/2017 8:25am
+Vegetables-50,Aslam DSouza,5 June 2017,-50,NavGurukul PayTM,Vegetables,vag,6/6/2017 6:46am
+Groceries-52,Aslam DSouza,5 June 2017,-52,NavGurukul PayTM,Groceries,"aamchoor 
+dhaniya ",6/6/2017 6:49am
+Milk & Bread-203,Aslam DSouza,5 June 2017,-203,NavGurukul PayTM,Milk & Bread,milk  4l - 168   and one packet of bread-35,6/6/2017 6:51am
+Groceries-60,Aslam DSouza,6 June 2017,-60,NavGurukul PayTM,Groceries,veg,6/7/2017 8:41am
+Milk & Bread-203,Aslam DSouza,6 June 2017,-203,NavGurukul PayTM,Milk & Bread,"milk 4 L==== 168
+ and bread 1 ==35",6/7/2017 8:43am
+Vegetables-230,Aslam DSouza,7 June 2017,-230,NavGurukul PayTM,Vegetables,"aloo 2kg == 40 rupees
+=======
 ",4/10/2017 3:37pm,SV,Navgurukul
 Groceries-90,Manoj Kumar,2017-04-10,-90,NavGurukul PayTM,Groceries,Bought chirwa for rs.90,4/12/2017 4:47pm,SV,Navgurukul
 Added to PayTM--3000,,2017-04-11,3000,NavGurukul PayTM,Added to PayTM,money added to paytm of rupees3000,4/8/2017 9:19am,SV,Navgurukul
@@ -189,12 +381,18 @@ Groceries-60,Aslam DSouza,2017-06-06,-60,NavGurukul PayTM,Groceries,veg,6/7/2017
 Milk & Bread-203,Aslam DSouza,2017-06-06,-203,NavGurukul PayTM,Milk & Bread,"milk 4 L==== 168
  and bread 1 ==35",6/7/2017 8:43am,SV,Navgurukul
 Vegetables-230,Aslam DSouza,2017-06-07,-230,NavGurukul PayTM,Vegetables,"aloo 2kg == 40 rupees
+>>>>>>> 8c0e7281a73a33386a8fb74c9a248526790cf20c
 onion 2kg == 50 rupees
 tomato 1kg == 40 rupees
 ghiya 1kg == 40 rupees
 lemon == 30 rupees
+<<<<<<< HEAD
+adrak 30 rupees",6/7/2017 8:49am
+Groceries-1324,Aslam DSouza,7 June 2017,-1324,NavGurukul PayTM,Groceries,"Rice == 10 kg = 500 rupees
+=======
 adrak 30 rupees",6/7/2017 8:49am,SV,Navgurukul
 Groceries-1324,Aslam DSouza,2017-06-07,-1324,NavGurukul PayTM,Groceries,"Rice == 10 kg = 500 rupees
+>>>>>>> 8c0e7281a73a33386a8fb74c9a248526790cf20c
 ashirvad ata 10kg =  320 rupees
 daal arhar 1kg = 100 rupees
 expence = 20 rupees
@@ -205,6 +403,20 @@ mung 1kg = 100rupees
 mashoor 1kg = 100rupees
 sarsho ka oil = 50 rupees
 
+<<<<<<< HEAD
+total == 1324",6/7/2017 8:55am
+Milk & Bread-35,Aslam DSouza,7 June 2017,-35,NavGurukul PayTM,Milk & Bread,brad 1 packet,6/7/2017 7:26pm
+Milk & Bread-168,Aslam DSouza,8 June 2017,-168,NavGurukul PayTM,Milk & Bread,milk 4 L = 168,6/8/2017 3:37am
+Groceries-1010,Aslam DSouza,8 June 2017,-1010,NavGurukul PayTM,Groceries,"rajma 2kg == 240
+chole 2kg == 240
+sarsho ka oil 5L ==  500
+total === 1010",6/8/2017 8:53am
+Milk & Bread-168,Dhannu,8 June 2017,-168,NavGurukul PayTM,Milk & Bread,buy 4 kg milk,6/8/2017 3:32pm
+Vegetables-110,Dhannu,8 June 2017,-110,NavGurukul PayTM,Vegetables,"buy tomato, onion,and cucumber",6/8/2017 3:34pm
+Groceries-30,Aslam DSouza,8 June 2017,-30,NavGurukul PayTM,Groceries,"saboon == 30 rupees 
+1010 rupees me saboon ka expence nahi dala tha ",6/8/2017 3:38pm
+Other (Kuch Aur)-720,,10 June 2017,-720,NavGurukul Cash,Other (Kuch Aur),"2 jaddu = 160 
+=======
 total == 1324",6/7/2017 8:55am,SV,Navgurukul
 Milk & Bread-35,Aslam DSouza,2017-06-07,-35,NavGurukul PayTM,Milk & Bread,brad 1 packet,6/7/2017 7:26pm,SV,Navgurukul
 Milk & Bread-168,Aslam DSouza,2017-06-08,-168,NavGurukul PayTM,Milk & Bread,milk 4 L = 168,6/8/2017 3:37am,SV,Navgurukul
@@ -217,6 +429,7 @@ Vegetables-110,Dhannu,2017-06-08,-110,NavGurukul PayTM,Vegetables,"buy tomato, o
 Groceries-30,Aslam DSouza,2017-06-08,-30,NavGurukul PayTM,Groceries,"saboon == 30 rupees 
 1010 rupees me saboon ka expence nahi dala tha ",6/8/2017 3:38pm,SV,Navgurukul
 Other (Kuch Aur)-720,,2017-06-10,-720,NavGurukul Cash,Other (Kuch Aur),"2 jaddu = 160 
+>>>>>>> 8c0e7281a73a33386a8fb74c9a248526790cf20c
 dettol = 185
 2 flash handal = 100
 fevi quick = 20
@@ -225,6 +438,16 @@ mortin = 75
 plumber = 120
 chart = 10
 marker = 20 
+<<<<<<< HEAD
+m seal = 20",6/10/2017 7:37am
+Other (Kuch Aur)-550,Manoj Kumar,10 June 2017,-550,NavGurukul PayTM,Other (Kuch Aur),"dinner for navgurukul on hackathon
+",6/12/2017 7:40am
+Milk & Bread-280,Manoj Kumar,10 June 2017,-280,NavGurukul PayTM,Milk & Bread,5litters milk and 2 big packets bread,6/12/2017 7:41am
+Vegetables-130,Aslam DSouza,10 June 2017,-130,NavGurukul PayTM,Vegetables,tamater lahesun,6/12/2017 7:50am
+Other (Kuch Aur)-975,Aslam DSouza,12 June 2017,-975,NavGurukul PayTM,Other (Kuch Aur),dinner for navgurukul on hackathon,6/12/2017 7:37am
+Other (Kuch Aur)-260,Aslam DSouza,12 June 2017,-260,NavGurukul Cash,Other (Kuch Aur),lunch for hackathon,6/16/2017 4:35pm
+Vegetables-270,Aslam DSouza,13 June 2017,-270,NavGurukul PayTM,Vegetables,"Tomato = 80
+=======
 m seal = 20",6/10/2017 7:37am,SV,Navgurukul
 Other (Kuch Aur)-550,Manoj Kumar,2017-06-10,-550,NavGurukul PayTM,Other (Kuch Aur),"dinner for navgurukul on hackathon
 ",6/12/2017 7:40am,SV,Navgurukul
@@ -233,11 +456,23 @@ Vegetables-130,Aslam DSouza,2017-06-10,-130,NavGurukul PayTM,Vegetables,tamater 
 Other (Kuch Aur)-975,Aslam DSouza,2017-06-12,-975,NavGurukul PayTM,Other (Kuch Aur),dinner for navgurukul on hackathon,6/12/2017 7:37am,SV,Navgurukul
 Other (Kuch Aur)-260,Aslam DSouza,2017-06-12,-260,NavGurukul Cash,Other (Kuch Aur),lunch for hackathon,6/16/2017 4:35pm,SV,Navgurukul
 Vegetables-270,Aslam DSouza,2017-06-13,-270,NavGurukul PayTM,Vegetables,"Tomato = 80
+>>>>>>> 8c0e7281a73a33386a8fb74c9a248526790cf20c
 onion = 50
 lemon = 30
 Cucumber = 40
 cabbage = 70
 totoal = 270
+<<<<<<< HEAD
+",6/13/2017 10:21am
+Groceries-40,Aslam DSouza,13 June 2017,-40,NavGurukul PayTM,Groceries,zira ,6/13/2017 3:04pm
+Other (Kuch Aur)-150,,13 June 2017,-150,NavGurukul Cash,Other (Kuch Aur),Paid for garbage pick up.,6/16/2017 5:02pm
+Milk & Bread-141,Nitin Gupta,14 June 2017,-141,NavGurukul PayTM,Milk & Bread,Bought milk for Rs.101 and bread for Rs. 35,6/16/2017 4:31pm
+Transportation-370,Manoj Kumar,14 June 2017,-370,NavGurukul PayTM,Transportation,Expense on transportation when we go to Lekh Bhaiya's office.,6/16/2017 4:38pm
+Milk & Bread-168,Manoj Kumar,15 June 2017,-168,NavGurukul PayTM,Milk & Bread,Bought milk for Rs. 168,6/16/2017 4:33pm
+Groceries-378,Manoj Kumar,15 June 2017,-378,NavGurukul PayTM,Groceries,Bought groceries for Rs. 378,6/16/2017 4:34pm
+Transportation-390,,15 June 2017,-390,NavGurukul PayTM,Transportation,Expenses on transportation when we go for the interview.,6/16/2017 4:36pm
+Vegetables-255,Aslam DSouza,16 June 2017,-255,NavGurukul PayTM,Vegetables,"tomato = 60
+=======
 ",6/13/2017 10:21am,SV,Navgurukul
 Groceries-40,Aslam DSouza,2017-06-13,-40,NavGurukul PayTM,Groceries,zira ,6/13/2017 3:04pm,SV,Navgurukul
 Other (Kuch Aur)-150,,2017-06-13,-150,NavGurukul Cash,Other (Kuch Aur),Paid for garbage pick up.,6/16/2017 5:02pm,SV,Navgurukul
@@ -247,12 +482,31 @@ Milk & Bread-168,Manoj Kumar,2017-06-15,-168,NavGurukul PayTM,Milk & Bread,Bough
 Groceries-378,Manoj Kumar,2017-06-15,-378,NavGurukul PayTM,Groceries,Bought groceries for Rs. 378,6/16/2017 4:34pm,SV,Navgurukul
 Transportation-390,,2017-06-15,-390,NavGurukul PayTM,Transportation,Expenses on transportation when we go for the interview.,6/16/2017 4:36pm,SV,Navgurukul
 Vegetables-255,Aslam DSouza,2017-06-16,-255,NavGurukul PayTM,Vegetables,"tomato = 60
+>>>>>>> 8c0e7281a73a33386a8fb74c9a248526790cf20c
 potato = 20
 bringel = 65
 lasan = 20
 lemon = 30
 onion = 25
 chili green = 35
+<<<<<<< HEAD
+TOTOAL = 255",6/16/2017 4:43pm
+Milk & Bread-35,Shivam Monga,16 June 2017,-35,NavGurukul PayTM,Milk & Bread,Bought bread for Rs. 35,6/16/2017 4:44pm
+Vegetables-200,Shakrudin Pathan,17 June 2017,-200,NavGurukul PayTM,Vegetables,,6/19/2017 4:46am
+Eggs-50,Shakrudin Pathan,17 June 2017,-50,NavGurukul PayTM,Eggs,,6/19/2017 4:48am
+Milk & Bread-105,Shakrudin Pathan,18 June 2017,-105,NavGurukul PayTM,Milk & Bread,bring milk,6/19/2017 4:49am
+Milk & Bread-35,Shakrudin Pathan,18 June 2017,-35,NavGurukul PayTM,Milk & Bread,buy bread,6/19/2017 4:51am
+Other (Kuch Aur)-40,Shakrudin Pathan,18 June 2017,-40,NavGurukul PayTM,Other (Kuch Aur),samose,6/19/2017 7:06am
+Other (Kuch Aur)-50,Shakrudin Pathan,18 June 2017,-50,NavGurukul PayTM,Other (Kuch Aur),egg,6/19/2017 7:11am
+Milk & Bread-161,Aslam DSouza,19 June 2017,-161,NavGurukul PayTM,Milk & Bread,milk and bread,6/21/2017 7:32am
+Vegetables-80,,20 June 2017,-80,NavGurukul PayTM,Vegetables,"tamato
+giya",6/21/2017 6:55am
+Groceries-55,,20 June 2017,-55,NavGurukul PayTM,Groceries,dhahi,6/21/2017 6:56am
+Milk & Bread-147,Shakrudin Pathan,20 June 2017,-147,NavGurukul PayTM,Milk & Bread,milk,6/21/2017 7:02am
+Vegetables-37,Shakrudin Pathan,20 June 2017,-37,NavGurukul PayTM,Vegetables,pyaz,6/21/2017 7:04am
+Milk & Bread-90,Shakrudin Pathan,20 June 2017,-90,NavGurukul PayTM,Milk & Bread,bread and besan,6/21/2017 7:05am
+Groceries-809,Aslam DSouza,20 June 2017,-809,NavGurukul PayTM,Groceries,"rice = 500
+=======
 TOTOAL = 255",6/16/2017 4:43pm,SV,Navgurukul
 Milk & Bread-35,Shivam Monga,2017-06-16,-35,NavGurukul PayTM,Milk & Bread,Bought bread for Rs. 35,6/16/2017 4:44pm,SV,Navgurukul
 Vegetables-200,Shakrudin Pathan,2017-06-17,-200,NavGurukul PayTM,Vegetables,,6/19/2017 4:46am,SV,Navgurukul
@@ -269,6 +523,7 @@ Milk & Bread-147,Shakrudin Pathan,2017-06-20,-147,NavGurukul PayTM,Milk & Bread,
 Vegetables-37,Shakrudin Pathan,2017-06-20,-37,NavGurukul PayTM,Vegetables,pyaz,6/21/2017 7:04am,SV,Navgurukul
 Milk & Bread-90,Shakrudin Pathan,2017-06-20,-90,NavGurukul PayTM,Milk & Bread,bread and besan,6/21/2017 7:05am,SV,Navgurukul
 Groceries-809,Aslam DSouza,2017-06-20,-809,NavGurukul PayTM,Groceries,"rice = 500
+>>>>>>> 8c0e7281a73a33386a8fb74c9a248526790cf20c
 kali mirch = 100
 dhaniya = 32
 mirch = 32
@@ -279,6 +534,401 @@ amchoor = 15
 sabut mirch = 40
 jira = 40
 
+<<<<<<< HEAD
+totoal = 809",6/21/2017 7:12am
+Milk & Bread-161,Aslam DSouza,20 June 2017,-161,NavGurukul PayTM,Milk & Bread,milk and bread by aslam,6/21/2017 7:14am
+Vegetables-140,Aslam DSouza,20 June 2017,-140,NavGurukul PayTM,Vegetables,veg,6/21/2017 7:34am
+Milk & Bread-176,Aslam DSouza,21 June 2017,-176,NavGurukul PayTM,Milk & Bread,milk and bread,6/21/2017 4:47pm
+Vegetables-230,Shakrudin Pathan,22 June 2017,-230,NavGurukul PayTM,Vegetables,pyaaz 50 aalu 40 tamater 80 kunmru 30 mirch 30,6/22/2017 11:38am
+Milk & Bread-203,Dhannu,22 June 2017,-203,NavGurukul PayTM,Milk & Bread,buy milk and bread,6/22/2017 4:52pm
+Other (Kuch Aur)-50,Manoj Kumar,22 June 2017,-50,Other,Other (Kuch Aur),Gave 50 rupees to swipper,7/2/2017 7:39pm
+Milk & Bread-161,Dhannu,23 June 2017,-161,NavGurukul PayTM,Milk & Bread,Paid for milk and bread rs. 161,6/24/2017 12:22pm
+Transportation-200,Shivam Monga,23 June 2017,-200,NavGurukul PayTM,Transportation,Recharge in metro card,6/27/2017 6:06pm
+Vegetables-210,Deepanshu Panchal,25 June 2017,-210,NavGurukul PayTM,Vegetables,"vegetables 2kg potato 2kg tomato 2kg onion 
+120 tomato 
+potato 40
+onion 50",6/26/2017 4:36am
+Eggs-50,Deepanshu Panchal,25 June 2017,-50,NavGurukul PayTM,Eggs,50 egg,6/26/2017 4:37am
+Milk & Bread-159,Dhannu,26 June 2017,-159,NavGurukul PayTM,Milk & Bread,"milk, bread, & phooha",6/26/2017 5:12am
+Groceries-100,Deepanshu Panchal,26 June 2017,-100,NavGurukul PayTM,Groceries,bring oil ,6/26/2017 11:42am
+Milk & Bread-187,Dhannu,26 June 2017,-187,NavGurukul PayTM,Milk & Bread,buy milk and bread,6/27/2017 2:51pm
+Groceries-220,Dhannu,27 June 2017,-220,NavGurukul PayTM,Groceries,"buy vegitables 1kg tomoto 70, 1kg began 60, 2kg potato 40, 2kg onion 50",6/27/2017 2:49pm
+Transportation-240,Shivam Monga,27 June 2017,-240,NavGurukul PayTM,Transportation,Rechage in metro card,6/27/2017 6:05pm
+Groceries-383,"Manoj Kumar,Dhannu",27 June 2017,-383,NavGurukul PayTM,Groceries,"5kg aata, one CFL, 2kg suger",6/28/2017 4:11am
+Milk & Bread-203,"Dhannu,Manoj Kumar",27 June 2017,-203,NavGurukul PayTM,Milk & Bread,"4 letter milk and 1packet bread.
+",6/28/2017 4:12am
+Milk & Bread-168,Aslam DSouza,28 June 2017,-168,NavGurukul PayTM,Milk & Bread,milk 4l,6/29/2017 11:47am
+Milk & Bread-50,Aslam DSouza,29 June 2017,-50,NavGurukul PayTM,Milk & Bread,bread,6/29/2017 11:48am
+Vegetables-326,Manoj Kumar,29 June 2017,-326,Other,Vegetables,2 kg chap240 +masala40+46mother dairycream,7/2/2017 7:27pm
+Groceries-330,Manoj Kumar,29 June 2017,-330,Other,Groceries,rice 220+110oil,7/2/2017 7:29pm
+Vegetables-160,Manoj Kumar,29 June 2017,-160,Other,Vegetables,tomtar+pyaz+nimboo+adark+lassn,7/2/2017 7:30pm
+Milk & Bread-218,Manoj Kumar,29 June 2017,-218,Other,Milk & Bread,milk168+50bread,7/2/2017 7:34pm
+Transportation-100,"Manoj Kumar,Shivam Monga",30 June 2017,-100,Other,Transportation,Reacharged NG's Metro card,7/2/2017 7:35pm
+Milk & Bread-238,Manoj Kumar,30 June 2017,-238,Other,Milk & Bread,4litter milk (168)+2packet bread (70),7/2/2017 7:41pm
+Groceries-1061,Manoj Kumar,30 June 2017,-1061,Other,Groceries,Expense by manoj and deepanshu,7/2/2017 7:43pm
+Vegetables-260,"Manoj Kumar,Deepanshu Panchal",30 June 2017,-260,Other,Vegetables,by deepanshu,7/2/2017 7:45pm
+Milk & Bread-238,Manoj Kumar,1 July 2017,-238,Other,Milk & Bread,4milk and 2bread,7/2/2017 7:46pm
+Groceries-226,"Manoj Kumar,Deepanshu Panchal",2 July 2017,-226,Other,Groceries,,7/2/2017 7:47pm
+Milk & Bread-238,Manoj Kumar,2 July 2017,-238,Other,Milk & Bread,4milk pckt 2bread,7/2/2017 7:48pm
+Transportation-200,"Shivam Monga,Nitin Gupta",3 July 2017,-200,Other,Transportation,recharge in metro card,7/4/2017 4:56am
+Money Given by NG-2000,,3 July 2017,-2000,NavGurukul Cash,Money Given by NG,"Rishabh Bhaiya returned security amount, which was given by Krishna to Navgurukul as him Security. ",7/31/2017 9:06am
+Milk & Bread-203,Manoj Kumar,4 July 2017,-203,Other,Milk & Bread,"4littter milk 1packet bread
+",7/3/2017 7:27pm
+Groceries-90,Manoj Kumar,4 July 2017,-90,Other,Groceries,,7/3/2017 7:29pm
+Transportation-300,Manoj Kumar,4 July 2017,-300,Other,Transportation,Recharged all 3 card with rupees 100 each.,7/4/2017 3:37am
+Cooking Gas (Cylinder)-564,Manoj Kumar,4 July 2017,-564,Other,Cooking Gas (Cylinder),Gas cylinder.,7/4/2017 8:18am
+Vegetables-130,Dhannu,4 July 2017,-130,Other,Vegetables,"buy vegitabbles potato, tomato, onion, beans and chili",7/4/2017 9:42am
+Groceries-200,Dhannu,4 July 2017,-200,Other,Groceries,buy 5 kg rice 200rs.,7/4/2017 9:46am
+Transportation-100,Shivam Monga,5 July 2017,-100,Other,Transportation,"rechraged of 100 rupees on navgurukul's metro card
+",7/5/2017 11:58am
+Groceries-1291,"Manoj Kumar,Deepanshu Panchal",6 July 2017,-1291,NavGurukul PayTM,Groceries,Groceries by manoj and deepanshu.,7/6/2017 4:11am
+Transportation-140,Nitin Gupta,6 July 2017,-140,NavGurukul PayTM,Transportation,"Recharge in metro card
+",7/6/2017 4:30am
+Vegetables-225,Shakrudin Pathan,6 July 2017,-225,NavGurukul Cash,Vegetables,145rs = vegetable 80rs = egg,7/6/2017 6:11am
+Groceries-37,Shakrudin Pathan,6 July 2017,-37,NavGurukul Cash,Groceries,Solt,7/6/2017 9:22am
+Milk & Bread-126,Manoj Kumar,6 July 2017,-126,NavGurukul PayTM,Milk & Bread,,7/7/2017 4:00am
+Transportation-200,"Nitin Gupta,Shivam Monga",7 July 2017,-200,NavGurukul PayTM,Transportation,"both metro cards recharged.
+",7/8/2017 6:28am
+Groceries-283,Manoj Kumar,7 July 2017,-283,NavGurukul PayTM,Groceries,groceries+milk togther,7/8/2017 6:30am
+Vegetables-230,"Dhannu,Deepanshu Panchal",7 July 2017,-230,NavGurukul PayTM,Vegetables,"vegitable
+",7/8/2017 6:31am
+Groceries-45,Manoj Kumar,7 July 2017,-45,NavGurukul Cash,Groceries,masala,7/8/2017 6:34am
+Milk & Bread-35,Nitin Gupta,8 July 2017,-35,NavGurukul PayTM,Milk & Bread,"one packet bread
+",7/8/2017 6:32am
+Other (Kuch Aur)-200,Manoj Kumar,8 July 2017,-200,NavGurukul Cash,Other (Kuch Aur),200 paid to cleaner( safaiye wale bhaiya ko).,7/8/2017 6:36am
+Other (Kuch Aur)-70,Manoj Kumar,8 July 2017,-70,NavGurukul PayTM,Other (Kuch Aur),"Electronic  switch and  holder.
+",7/9/2017 6:09am
+Milk & Bread-228,Shakrudin Pathan,9 July 2017,-228,NavGurukul Cash,Milk & Bread,Milk-Rs.168 and bread-Rs.60,7/9/2017 6:13am
+Eggs-90,Shakrudin Pathan,9 July 2017,-90,NavGurukul Cash,Eggs,Eggs-Rs.90,7/9/2017 6:14am
+Groceries-226,"Manoj Kumar,Dhannu",9 July 2017,-226,NavGurukul Cash,Groceries,chane+suger+ sarso oil,7/9/2017 1:30pm
+Vegetables-20,Deepanshu Panchal,9 July 2017,-20,NavGurukul Cash,Vegetables,"nimboo
+",7/9/2017 1:31pm
+Milk & Bread-203,"Manoj Kumar,Deepanshu Panchal",10 July 2017,-203,NavGurukul Cash,Milk & Bread,4 litter milk and 1 bread.,7/9/2017 7:29pm
+Groceries-402,"Manoj Kumar,Deepanshu Panchal",10 July 2017,-402,NavGurukul Cash,Groceries,5KG rice+sarso oil+bundi for rayata+ masla,7/10/2017 6:11pm
+Milk & Bread-248,Shakrudin Pathan,11 July 2017,-248,NavGurukul Cash,Milk & Bread,dudh bread egg,7/11/2017 3:03am
+Vegetables-210,Shakrudin Pathan,11 July 2017,-210,NavGurukul Cash,Vegetables,tamato and pyaz,7/11/2017 2:26pm
+Vegetables-50,,11 July 2017,-50,NavGurukul PayTM,Vegetables,patato,7/11/2017 4:20pm
+Groceries-820,Deepanshu Panchal,12 July 2017,-820,NavGurukul PayTM,Groceries,Dall and oil ,7/12/2017 5:16pm
+Vegetables-40,Deepanshu Panchal,12 July 2017,-40,NavGurukul PayTM,Vegetables,potato ,7/12/2017 5:17pm
+Milk & Bread-203,Aslam DSouza,12 July 2017,-203,NavGurukul PayTM,Milk & Bread,Milk and bread ,7/12/2017 5:18pm
+Transportation-100,,12 July 2017,-100,NavGurukul PayTM,Transportation,Metro card recharge of 100 ,7/14/2017 4:08am
+Transportation-200,"Nitin Gupta,Shivam Monga",12 July 2017,-200,NavGurukul PayTM,Transportation,Metro card recharge,7/15/2017 2:41am
+Vegetables-160,Manoj Kumar,13 July 2017,-160,NavGurukul Cash,Vegetables,vegetables by manoj.,7/13/2017 7:48am
+Vegetables-150,Dhannu,13 July 2017,-150,NavGurukul PayTM,Vegetables,"buy vegetable onion, tomato, lemon and potato",7/14/2017 4:03am
+Transportation-100,,13 July 2017,-100,NavGurukul PayTM,Transportation,Metro card recharge of 100 rs,7/14/2017 4:10am
+Milk & Bread-336,Dhannu,13 July 2017,-336,NavGurukul PayTM,Milk & Bread,"buy milk and bread, soya bean, ",7/14/2017 4:11am
+Transportation-200,"Nitin Gupta,Shivam Monga",13 July 2017,-200,NavGurukul PayTM,Transportation,"Metro card recharge
+",7/15/2017 2:42am
+Transportation-100,,14 July 2017,-100,NavGurukul PayTM,Transportation,Metro card recharge 100 rs,7/14/2017 4:13am
+Transportation-100,Nitin Gupta,14 July 2017,-100,NavGurukul PayTM,Transportation,"Metro card recharge
+",7/15/2017 2:43am
+Groceries-28,Manoj Kumar,15 July 2017,-28,NavGurukul PayTM,Groceries,Grocery item for rs.28,7/15/2017 2:44am
+Vegetables-40,Dhannu,15 July 2017,-40,NavGurukul Cash,Vegetables,buy tomato 40rs.,7/15/2017 1:08pm
+Groceries-280,Dhannu,15 July 2017,-280,NavGurukul PayTM,Groceries,buy chawal  and  masale and pay 280rs and remains balance pay cash ,7/15/2017 1:12pm
+Groceries-460,"Dhannu,Deepanshu Panchal",15 July 2017,-460,NavGurukul Cash,Groceries,buy panner and masale and detole and makhan,7/15/2017 1:15pm
+Milk & Bread-238,"Dhannu,Manoj Kumar",16 July 2017,-238,NavGurukul Cash,Milk & Bread,buy 4 lt milk and 2 packed bread,7/16/2017 12:36pm
+Groceries-100,"Dhannu,Manoj Kumar",16 July 2017,-100,NavGurukul Cash,Groceries,buy 2kg sugar 100rs.,7/16/2017 12:41pm
+Eggs-100,"Dhannu,Manoj Kumar",16 July 2017,-100,NavGurukul Cash,Eggs,buy egg 100rs,7/16/2017 12:47pm
+Other (Kuch Aur)-80,,16 July 2017,-80,NavGurukul Cash,Other (Kuch Aur),bananas for shivam.,7/17/2017 6:15am
+Vegetables-210,"Dhannu,Manoj Kumar",16 July 2017,-210,NavGurukul Cash,Vegetables,tomater+aloo+pyaz+soyabin,7/17/2017 6:22am
+Groceries-80,"Manoj Kumar,Dhannu",16 July 2017,-80,NavGurukul Cash,Groceries,chane.,7/17/2017 6:22am
+Milk & Bread-238,"Manoj Kumar,Dhannu",17 July 2017,-238,NavGurukul Cash,Milk & Bread,4litter milk and 2bread,7/17/2017 6:19am
+Transportation-120,,17 July 2017,-120,NavGurukul PayTM,Transportation,Metro card recharge for 100 rs and 20 rs for auto 17/07/2017 ,7/19/2017 3:15am
+Milk & Bread-238,Manoj Kumar,18 July 2017,-238,NavGurukul Cash,Milk & Bread,4liter milk+2 packet bread.,7/18/2017 3:32am
+Vegetables-130,Manoj Kumar,18 July 2017,-130,NavGurukul Cash,Vegetables,,7/18/2017 7:09am
+Groceries-330,Manoj Kumar,18 July 2017,-330,NavGurukul Cash,Groceries,beson+daal+aata,7/18/2017 8:52pm
+Transportation-120,,18 July 2017,-120,NavGurukul PayTM,Transportation,Metro card recharge for 100 rs and 20 rs for auto 18/07/2017,7/19/2017 3:16am
+Transportation-200,"Nitin Gupta,Shivam Monga",18 July 2017,-200,NavGurukul PayTM,Transportation,Paid for metro card recharge.,7/20/2017 4:46pm
+Transportation-120,,19 July 2017,-120,NavGurukul PayTM,Transportation,Metro card recharge for 100 rs and 20 rs for auto 19/07/2017,7/19/2017 3:17am
+Milk & Bread-203,Dhannu,19 July 2017,-203,NavGurukul Cash,Milk & Bread,4 litter milk+1packet bread,7/19/2017 8:14am
+Vegetables-120,Dhannu,19 July 2017,-120,NavGurukul Cash,Vegetables,tamatar+adrak+nimboo,7/19/2017 8:16am
+Groceries-140,Dhannu,19 July 2017,-140,NavGurukul Cash,Groceries,Dustbin's polythene bags+masala,7/19/2017 8:20am
+Eggs-90,Manoj Kumar,19 July 2017,-90,NavGurukul Cash,Eggs,18 eggs ,7/20/2017 8:00am
+Transportation-200,"Nitin Gupta,Shivam Monga",19 July 2017,-200,NavGurukul PayTM,Transportation,Paid for metro card recharge,7/20/2017 4:48pm
+Milk & Bread-203,"Manoj Kumar,Dhannu",20 July 2017,-203,NavGurukul Cash,Milk & Bread,milk+bread,7/20/2017 7:58am
+Groceries-264,Manoj Kumar,20 July 2017,-264,NavGurukul Cash,Groceries,kitch stuff,7/20/2017 9:19am
+Vegetables-90,Manoj Kumar,20 July 2017,-90,NavGurukul Cash,Vegetables,tamater+pyaz+adark,7/20/2017 10:19am
+Groceries-300,Nitin Gupta,20 July 2017,-300,NavGurukul PayTM,Groceries,buy 5kg rice 300rs ,7/20/2017 4:37pm
+Vegetables-100,Nitin Gupta,20 July 2017,-100,NavGurukul PayTM,Vegetables,buy 100rs vegetables,7/20/2017 4:43pm
+Transportation-200,"Nitin Gupta,Shivam Monga",20 July 2017,-200,NavGurukul PayTM,Transportation,"Paid for metro card recharge
+",7/20/2017 4:49pm
+Other (Kuch Aur)-100,Manoj Kumar,20 July 2017,-100,NavGurukul Cash,Other (Kuch Aur),paid to electriceon ,7/20/2017 7:03pm
+Transportation-120,,20 July 2017,-120,NavGurukul PayTM,Transportation,100  rs metro and 20 rs auto ,7/25/2017 5:11pm
+Milk & Bread-203,Manoj Kumar,21 July 2017,-203,NavGurukul Cash,Milk & Bread,4litter milk and 1 packet bread.,7/21/2017 12:11pm
+Transportation-200,"Nitin Gupta,Shivam Monga",21 July 2017,-200,NavGurukul PayTM,Transportation,Paid for metro card recharge,7/22/2017 6:57am
+Milk & Bread-168,Manoj Kumar,22 July 2017,-168,NavGurukul PayTM,Milk & Bread,Milk for rs.168,7/15/2017 2:43am
+Milk & Bread-203,Manoj Kumar,22 July 2017,-203,NavGurukul Cash,Milk & Bread,"4milk and 1pecket bread.
+",7/22/2017 11:03am
+Eggs-80,Manoj Kumar,22 July 2017,-80,NavGurukul Cash,Eggs,Ranjan brought eggs ,7/22/2017 11:04am
+Vegetables-67,Shivam Monga,22 July 2017,-67,NavGurukul PayTM,Vegetables,buy onion and adrak,7/22/2017 2:11pm
+Milk & Bread-203,Shivam Monga,22 July 2017,-203,NavGurukul Cash,Milk & Bread,buy milk and bread,7/22/2017 2:11pm
+Eggs-60,Dhannu,23 July 2017,-60,NavGurukul PayTM,Eggs,buy egg,7/23/2017 2:28pm
+Groceries-48,Dhannu,23 July 2017,-48,NavGurukul PayTM,Groceries,buy makhan 48rs,7/23/2017 2:28pm
+Groceries-100,Manoj Kumar,23 July 2017,-100,NavGurukul Cash,Groceries,groceries brought by nitin and manoj,7/23/2017 2:42pm
+Groceries-200,"Manoj Kumar,Deepanshu Panchal",24 July 2017,-200,NavGurukul Cash,Groceries,1kg dhahi+ masale+vim bar lequid+tamter,7/25/2017 10:37am
+Transportation-120,,24 July 2017,-120,NavGurukul PayTM,Transportation,100  rs metro and 20 rs auto ,7/25/2017 5:11pm
+Vegetables-140,"Dhannu,Deepanshu Panchal",25 July 2017,-140,NavGurukul Cash,Vegetables,,7/25/2017 10:39am
+Milk & Bread-126,"Dhannu,Manoj Kumar",25 July 2017,-126,NavGurukul Cash,Milk & Bread,3liter milk,7/25/2017 10:41am
+Groceries-150,"Manoj Kumar,Dhannu",25 July 2017,-150,NavGurukul Cash,Groceries,1kg chaane+1kg rice,7/25/2017 10:48am
+Transportation-200,"Nitin Gupta,Shivam Monga",25 July 2017,-200,NavGurukul PayTM,Transportation,Metro card recharge,7/25/2017 4:54pm
+Transportation-120,,25 July 2017,-120,NavGurukul PayTM,Transportation,100  rs metro and 20 rs auto ,7/25/2017 5:12pm
+Milk & Bread-203,"Dhannu,Nitin Gupta",26 July 2017,-203,NavGurukul Cash,Milk & Bread,4letter milk and 1 packet bread,7/26/2017 4:44am
+Transportation-200,"Nitin Gupta,Shivam Monga",26 July 2017,-200,NavGurukul PayTM,Transportation,"paid for metro recharge
+",7/26/2017 8:47am
+Groceries-403,"Manoj Kumar,Deepanshu Panchal",26 July 2017,-403,NavGurukul PayTM,Groceries,,7/26/2017 4:45pm
+Milk & Bread-203,Manoj Kumar,26 July 2017,-203,NavGurukul Cash,Milk & Bread,"4 litter milk and 1packet bread.
+",7/26/2017 4:46pm
+Vegetables-200,Deepanshu Panchal,26 July 2017,-200,NavGurukul PayTM,Vegetables,,7/26/2017 4:47pm
+Transportation-120,,26 July 2017,-120,NavGurukul PayTM,Transportation,fair of metro 100 rs and auto 20 rs,8/1/2017 4:54pm
+Milk & Bread-213,"Nitin Gupta,Dhannu",27 July 2017,-213,NavGurukul Cash,Milk & Bread,4litter milk and 1 butter,7/28/2017 8:58am
+Groceries-300,"Nitin Gupta,Dhannu",27 July 2017,-300,NavGurukul Cash,Groceries,rice 5kg,7/28/2017 9:00am
+Transportation-320,"Nitin Gupta,Shivam Monga",27 July 2017,-320,NavGurukul Cash,Transportation,Paid for metro recharge,7/31/2017 6:26pm
+Milk & Bread-203,"Dhannu,Nitin Gupta",28 July 2017,-203,NavGurukul Cash,Milk & Bread,4litter milk and 1 packet bread,7/28/2017 9:24pm
+Groceries-100,"Manoj Kumar,Dhannu",28 July 2017,-100,NavGurukul Cash,Groceries,2kg sugar.,7/28/2017 9:26pm
+Groceries-140,Nitin Gupta,28 July 2017,-140,NavGurukul Cash,Groceries,Paid for groceries,7/31/2017 6:27pm
+Groceries-60,Dhannu,28 July 2017,-60,NavGurukul PayTM,Groceries,,8/1/2017 5:04pm
+Vegetables-250,Manoj Kumar,29 July 2017,-250,NavGurukul Cash,Vegetables,2kgalloo+1 kg tmamater+2kg pyaz+ 1 kgbhindi,7/29/2017 12:08pm
+Other (Kuch Aur)-190,Manoj Kumar,29 July 2017,-190,NavGurukul Cash,Other (Kuch Aur),rasshi+firer+khuda uthane wala+ dish washer,7/29/2017 2:36pm
+Milk & Bread-126,Manoj Kumar,29 July 2017,-126,NavGurukul Cash,Milk & Bread,3 milk litter ,7/29/2017 2:38pm
+Groceries-71,Dhannu,29 July 2017,-71,NavGurukul PayTM,Groceries,Paid for some groceries ,7/29/2017 5:31pm
+Groceries-210,,30 July 2017,-210,NavGurukul PayTM,Groceries,,7/31/2017 8:55am
+Vegetables-100,,30 July 2017,-100,NavGurukul PayTM,Vegetables,,7/31/2017 8:55am
+Groceries-35,Dhannu,30 July 2017,-35,NavGurukul PayTM,Groceries,,7/31/2017 8:56am
+Groceries-95,Shivam Monga,30 July 2017,-95,NavGurukul PayTM,Groceries,,7/31/2017 8:57am
+Milk & Bread-126,Manoj Kumar,30 July 2017,-126,NavGurukul PayTM,Milk & Bread,3litter milk,7/31/2017 8:58am
+Transportation-120,,31 July 2017,-120,NavGurukul PayTM,Transportation,Recharaged metro card ,7/31/2017 8:59am
+Other (Kuch Aur)-190,Manoj Kumar,31 July 2017,-190,NavGurukul PayTM,Other (Kuch Aur),print out of navgrukul's test papers,7/31/2017 9:00am
+Groceries-130,"Manoj Kumar,Shivam Monga",31 July 2017,-130,NavGurukul Cash,Groceries,all kind of masale,7/31/2017 9:01am
+Eggs-40,Nitin Gupta,31 July 2017,-40,NavGurukul Cash,Eggs,Paid for eggs,7/31/2017 6:28pm
+Groceries-502,Manoj Kumar,31 July 2017,-502,NavGurukul Cash,Groceries,"Cooking oil
+2 Mortein 
+1 Dishwasher ",7/31/2017 6:31pm
+Transportation-120,,31 July 2017,-120,NavGurukul PayTM,Transportation,fair of metro 100 rs and auto 20 rs,8/1/2017 4:55pm
+Milk & Bread-168,"Nitin Gupta,Manoj Kumar",1 August 2017,-168,NavGurukul Cash,Milk & Bread,4 litter milk,7/31/2017 6:40pm
+Transportation-120,,1 August 2017,-120,NavGurukul PayTM,Transportation,fair of metro 100 rs and auto 20 rs,8/1/2017 4:56pm
+Transportation-200,"Nitin Gupta,Shivam Monga",1 August 2017,-200,NavGurukul Cash,Transportation,paid for metro,8/1/2017 5:05pm
+Other (Kuch Aur)-100,Manoj Kumar,1 August 2017,-100,NavGurukul Cash,Other (Kuch Aur),100 paid to electrician for fixing the meter conction. ,8/1/2017 6:29pm
+Milk & Bread-126,Manoj Kumar,2 August 2017,-126,NavGurukul Cash,Milk & Bread,3 litter milk.,8/2/2017 5:32am
+Transportation-200,"Nitin Gupta,Shivam Monga",2 August 2017,-200,NavGurukul Cash,Transportation,"Paid for metro recharge
+",8/2/2017 7:23am
+Groceries-120,"Manoj Kumar,Deepanshu Panchal",2 August 2017,-120,NavGurukul Cash,Groceries,channe ki daal,8/3/2017 8:05am
+Transportation-120,,2 August 2017,-120,NavGurukul PayTM,Transportation,100 rs metro and 20 rs auto,8/4/2017 5:26pm
+Vegetables-450,Manoj Kumar,3 August 2017,-450,NavGurukul Cash,Vegetables,aaloo+tatater+pyaz+dhiya+sita fal+bangan+masala,8/3/2017 8:03am
+Transportation-200,"Nitin Gupta,Shivam Monga",3 August 2017,-200,NavGurukul PayTM,Transportation,Paid for metro recharge,8/3/2017 11:01am
+Milk & Bread-168,Dhannu,3 August 2017,-168,NavGurukul PayTM,Milk & Bread,buy milk ,8/4/2017 3:53am
+Groceries-408,Dhannu,3 August 2017,-408,NavGurukul PayTM,Groceries,buy groceries item 5kg chawal and 5 kg aata.,8/4/2017 3:55am
+Transportation-120,,3 August 2017,-120,NavGurukul PayTM,Transportation,100 rs metro and 20 rs auto,8/4/2017 5:27pm
+Transportation-120,,4 August 2017,-120,NavGurukul PayTM,Transportation,100 rs metro and 20 rs auto,8/4/2017 5:29pm
+Milk & Bread-168,Dhannu,4 August 2017,-168,NavGurukul Cash,Milk & Bread,"4litter milk
+",8/5/2017 5:15am
+Vegetables-130,"Dhannu,Manoj Kumar",4 August 2017,-130,NavGurukul Cash,Vegetables,1kgtamater+2kgghiya,8/5/2017 5:17am
+Groceries-110,Manoj Kumar,4 August 2017,-110,NavGurukul Cash,Groceries,1 packet jira + 1 packet dish washer+bread,8/5/2017 5:20am
+Groceries-417,Dhannu,5 August 2017,-417,NavGurukul Cash,Groceries,"buy salt, 2packed dhaniya powder,  2packed mirchi powder,  2packed paneer powder,  2packed haldi powder,  and buy makhan 46, and 46 cream for paneer",8/6/2017 6:08am
+Vegetables-200,Dhannu,5 August 2017,-200,NavGurukul Cash,Vegetables,buy 1kg tomato and 2 kg onion and green chili and lemon etc.,8/6/2017 6:13am
+Groceries-260,Dhannu,5 August 2017,-260,NavGurukul Cash,Groceries,buy 1 kg paneer 260 rs.,8/6/2017 6:16am
+Milk & Bread-35,Dhannu,5 August 2017,-35,NavGurukul Cash,Milk & Bread,bread 35,8/6/2017 6:17am
+Milk & Bread-25,Aslam DSouza,6 August 2017,-25,NavGurukul Cash,Milk & Bread,25Rs bread,8/7/2017 12:41pm
+Groceries-90,Dhannu,6 August 2017,-90,NavGurukul Cash,Groceries,Besan and dhaniya,8/7/2017 2:44pm
+Eggs-60,Shakrudin Pathan,7 August 2017,-60,NavGurukul Cash,Eggs,12 Eggs 60Rs,8/7/2017 12:35pm
+Milk & Bread-46,Shakrudin Pathan,7 August 2017,-46,NavGurukul Cash,Milk & Bread,42Rs milk and 25Rs bread,8/7/2017 12:38pm
+Milk & Bread-21,Shakrudin Pathan,7 August 2017,-21,NavGurukul Cash,Milk & Bread,other,8/7/2017 12:39pm
+Milk & Bread-203,"Manoj Kumar,Dhannu",7 August 2017,-203,NavGurukul Cash,Milk & Bread,milk and bread.,8/8/2017 7:52am
+Transportation-120,,8 August 2017,-120,NavGurukul Cash,Transportation,100 rs metro and 20 rs auto,8/8/2017 3:21am
+Transportation-120,,8 August 2017,-120,NavGurukul Cash,Transportation,"given to Rahul.
+",8/8/2017 7:22am
+Transportation-100,Shivam Monga,8 August 2017,-100,NavGurukul Cash,Transportation,Given to shivam monga,8/8/2017 7:24am
+Milk & Bread-203,Shakrudin Pathan,8 August 2017,-203,NavGurukul Cash,Milk & Bread,4 litter + 1 1 bread,8/8/2017 2:49pm
+Eggs-70,Shakrudin Pathan,8 August 2017,-70,NavGurukul Cash,Eggs,14 eggs ,8/8/2017 2:50pm
+Vegetables-180,Manoj Kumar,8 August 2017,-180,NavGurukul Cash,Vegetables,1kgtamter+2kg aatoo+1kg payaz,8/8/2017 2:51pm
+Eggs-70,Aslam DSouza,8 August 2017,-70,NavGurukul Cash,Eggs,Eggs = 14,8/8/2017 2:53pm
+Milk & Bread-126,Aslam DSouza,8 August 2017,-126,NavGurukul Cash,Milk & Bread,milk 3 l,8/8/2017 2:53pm
+Vegetables-90,Shakrudin Pathan,9 August 2017,-90,NavGurukul Cash,Vegetables,adrk+lahun+dhniya,8/9/2017 8:30am
+Transportation-120,,9 August 2017,-120,NavGurukul Cash,Transportation,100 rs metro 20 rs auto,8/9/2017 2:52pm
+Transportation-100,Shivam Monga,9 August 2017,-100,NavGurukul Cash,Transportation,given cash to shivm,8/10/2017 5:51am
+Groceries-310,Manoj Kumar,9 August 2017,-310,NavGurukul Cash,Groceries,1kg suger+2kgchanne+1kgsolt,8/10/2017 5:57am
+Transportation-100,Shivam Monga,10 August 2017,-100,NavGurukul Cash,Transportation,Given cash,8/10/2017 5:53am
+Milk & Bread-203,"Dhannu,Manoj Kumar",10 August 2017,-203,NavGurukul Cash,Milk & Bread,4litter milk + 1 packet bread,8/10/2017 5:55am
+Transportation-120,,10 August 2017,-120,NavGurukul Cash,Transportation,100 rs metro and 20 rs auto,8/10/2017 6:06am
+Vegetables-80,Shakrudin Pathan,10 August 2017,-80,NavGurukul Cash,Vegetables,onion 2kg,8/10/2017 7:59am
+Eggs-50,Aslam DSouza,10 August 2017,-50,NavGurukul Cash,Eggs,10 eges,8/10/2017 8:00am
+Transportation-120,,11 August 2017,-120,NavGurukul Cash,Transportation,100 rs for metro and 20 rs for auto,8/11/2017 3:27am
+Milk & Bread-203,Manoj Kumar,11 August 2017,-203,NavGurukul Cash,Milk & Bread,4litter milk nd one packet bread.,8/11/2017 4:36am
+Groceries-300,Shakrudin Pathan,11 August 2017,-300,NavGurukul Cash,Groceries,rice and dahi,8/11/2017 5:12pm
+Milk & Bread-238,Dhannu,11 August 2017,-238,NavGurukul Cash,Milk & Bread,buy 4 ltr milk and 2 packed bread,8/11/2017 5:13pm
+Vegetables-230,Shakrudin Pathan,11 August 2017,-230,NavGurukul Cash,Vegetables,pyaz or tamater  aalu mirch and beens,8/11/2017 5:15pm
+Transportation-100,Shivam Monga,11 August 2017,-100,NavGurukul Cash,Transportation,Given to shivam.,8/12/2017 4:22pm
+Groceries-100,Manoj Kumar,12 August 2017,-100,NavGurukul Cash,Groceries,cooking oil 1littr,8/12/2017 4:25pm
+Milk & Bread-203,Manoj Kumar,13 August 2017,-203,NavGurukul Cash,Milk & Bread,"4 litter milk and 1 pa
+cketbread.",8/13/2017 7:43am
+Vegetables-100,Aslam DSouza,13 August 2017,-100,NavGurukul Cash,Vegetables,"Patato 20,Rs Tomato 40Rs, kundru 30Rs,  chilli 10Rs ",8/13/2017 8:24am
+Groceries-160,Aslam DSouza,13 August 2017,-160,NavGurukul Cash,Groceries,"1 kg sugar, 1  kg daal",8/14/2017 5:11am
+Milk & Bread-203,Manoj Kumar,14 August 2017,-203,Manoj's Account,Milk & Bread,4 litters milk and  bread ,8/14/2017 3:40am
+Transportation-100,Manoj Kumar,14 August 2017,-100,Manoj's Account,Transportation,I went to railway station to see off Ajay and Monu..,8/14/2017 5:17am
+Eggs-100,Aslam DSouza,14 August 2017,-100,Manoj's Account,Eggs,Aggs = 20,8/14/2017 3:52pm
+Groceries-150,Aslam DSouza,14 August 2017,-150,Manoj's Account,Groceries,Atta 2kg and Oil 1l,8/14/2017 3:54pm
+Milk & Bread-291,Manoj Kumar,14 August 2017,-291,NavGurukul PayTM,Milk & Bread,4 litter milk+bread+catchup,8/14/2017 8:02pm
+Vegetables-100,Aslam DSouza,15 August 2017,-100,Manoj's Account,Vegetables,"tometo 1/2 kg = 40
+potato 1 kg = 20
+onion 1 kg = 40",8/15/2017 7:27am
+Groceries-100,Aslam DSouza,15 August 2017,-100,Manoj's Account,Groceries,daal = 2 pacet ,8/15/2017 7:28am
+Milk & Bread-203,Shakrudin Pathan,16 August 2017,-203,Manoj's Account,Milk & Bread,4 litter milk and one pecket bread,8/16/2017 11:35am
+Groceries-740,"Manoj Kumar,Dhannu",16 August 2017,-740,Manoj's Account,Groceries,"5kg rice, 5kg ata, 2kg sugar, 2 bottles of dettol, 1kg channe",8/16/2017 11:39am
+Vegetables-300,"Dhannu,Manoj Kumar",16 August 2017,-300,Manoj's Account,Vegetables,"1/2 tatater, aaloo 2kg, 1kg gobhi. 1kg bhindi ,250gmadrak ,250gm lassan ",8/16/2017 1:58pm
+Transportation-120,,16 August 2017,-120,Manoj's Account,Transportation,100 rs metro and 20 rs auto,8/17/2017 6:55pm
+Transportation-200,"Shivam Monga,Nitin Gupta",16 August 2017,-200,Manoj's Account,Transportation,Metro card recharge,8/18/2017 5:54am
+Tech Expenses (Laptop/Phone etc.)-200,Manoj Kumar,16 August 2017,-200,Manoj's Account,Tech Expenses (Laptop/Phone etc.),150 rupys mouse and 50 rupy convince. ,8/18/2017 4:42pm
+Milk & Bread-203,"Manoj Kumar,Dhannu",17 August 2017,-203,Manoj's Account,Milk & Bread,4 litter milk 1 packet bread,8/17/2017 6:51pm
+Eggs-110,Shakrudin Pathan,17 August 2017,-110,Manoj's Account,Eggs,egg and bread,8/17/2017 6:54pm
+Transportation-120,,17 August 2017,-120,Manoj's Account,Transportation,100 rs metro and 20 rs auto,8/17/2017 6:56pm
+Transportation-200,"Nitin Gupta,Shivam Monga",17 August 2017,-200,Manoj's Account,Transportation,"Metro card recharge
+",8/18/2017 5:53am
+Groceries-250,Shakrudin Pathan,18 August 2017,-250,Manoj's Account,Groceries,oil and zira,8/17/2017 6:43pm
+Milk & Bread-203,Nitin Gupta,18 August 2017,-203,Manoj's Account,Milk & Bread,Milk and bread for rs.203,8/18/2017 5:51am
+Transportation-200,"Nitin Gupta,Shivam Monga",18 August 2017,-200,Manoj's Account,Transportation,metro card recharge for rs.200,8/18/2017 5:52am
+Vegetables-80,Aslam DSouza,18 August 2017,-80,Manoj's Account,Vegetables,1kg Tomato,8/18/2017 6:06am
+Tech Expenses (Laptop/Phone etc.)-500,,18 August 2017,-500,Manoj's Account,Tech Expenses (Laptop/Phone etc.),Ajay and Monu went to nehru place for buy laptop's charger.,8/18/2017 4:41pm
+Groceries-320,Manoj Kumar,18 August 2017,-320,Manoj's Account,Groceries,Dishwasher 2 packets and mustard oil.,8/18/2017 5:14pm
+Groceries-320,"Dhannu,Shakrudin Pathan",18 August 2017,-320,Manoj's Account,Groceries,"buy paneer, cream and makhan",8/19/2017 5:02am
+Vegetables-176,Dhannu,18 August 2017,-176,Manoj's Account,Vegetables,"buy onion, dahi, khira, bundi and aalu.",8/19/2017 5:06am
+Transportation-120,,18 August 2017,-120,Manoj's Account,Transportation,100 rs metro and 20 rs auto,8/20/2017 5:22am
+Milk & Bread-203,"Dhannu,Manoj Kumar",19 August 2017,-203,Manoj's Account,Milk & Bread,4 litter milk nad 1 pachet bread,8/19/2017 7:56am
+Utility Bills-150,Manoj Kumar,19 August 2017,-150,Manoj's Account,Utility Bills,150 Given to cleaner .,8/19/2017 11:00am
+Vegetables-65,Aslam DSouza,19 August 2017,-65,Manoj's Account,Vegetables,"tomato half kg = 40 
+onion half kg = 20
+lemon = 5",8/19/2017 11:58am
+Groceries-47,Aslam DSouza,19 August 2017,-47,Manoj's Account,Groceries,"meda = half kg 25rs
+red food color = 7rs
+soda powder  = 15rs",8/19/2017 12:01pm
+Milk & Bread-203,Manoj Kumar,19 August 2017,-203,Manoj's Account,Milk & Bread,4 litter milk and bread,8/19/2017 2:53pm
+Cooking Gas (Cylinder)-300,Manoj Kumar,19 August 2017,-300,Manoj's Account,Cooking Gas (Cylinder),3kg gas in black,8/19/2017 2:54pm
+Vegetables-130,Aslam DSouza,19 August 2017,-130,Manoj's Account,Vegetables,tomato +onion + maida,8/19/2017 2:55pm
+Groceries-105,Shakrudin Pathan,19 August 2017,-105,Manoj's Account,Groceries,dahi bundi and khira ,8/19/2017 3:14pm
+Milk & Bread-203,Manoj Kumar,20 August 2017,-203,Manoj's Account,Milk & Bread,4 litter milk and bread,8/20/2017 11:15pm
+Vegetables-150,Manoj Kumar,20 August 2017,-150,Manoj's Account,Vegetables,1 kg tomato +1 kg onion,8/20/2017 11:16pm
+Other (Kuch Aur)-250,Manoj Kumar,20 August 2017,-250,Manoj's Account,Other (Kuch Aur),fixed water purifier.,8/20/2017 11:18pm
+Milk & Bread-290,Shakrudin Pathan,20 August 2017,-290,Manoj's Account,Milk & Bread,Egg and milk,8/20/2017 11:50pm
+Vegetables-350,Shakrudin Pathan,21 August 2017,-350,Manoj's Account,Vegetables,sabji and rice milk daal,8/21/2017 10:21am
+Tech Expenses (Laptop/Phone etc.)-3700,Manoj Kumar,21 August 2017,-3700,Manoj's Account,Tech Expenses (Laptop/Phone etc.),for three laptop's repair 3000 and for one charger  600 +100 for transport.,8/21/2017 12:53pm
+Groceries-200,"Aslam DSouza,Shakrudin Pathan",21 August 2017,-200,Manoj's Account,Groceries,bread or makkhan,8/21/2017 3:40pm
+Vegetables-300,"Aslam DSouza,Shakrudin Pathan",21 August 2017,-300,Manoj's Account,Vegetables,veg,8/21/2017 3:41pm
+Milk & Bread-168,"Shakrudin Pathan,Aslam DSouza",22 August 2017,-168,Manoj's Account,Milk & Bread,4 liter milk,8/22/2017 10:26am
+Transportation-200,"Nitin Gupta,Shivam Monga",22 August 2017,-200,Manoj's Account,Transportation,Recharge in metro card.,8/22/2017 10:31am
+Groceries-1974,"Manoj Kumar,Dhannu",22 August 2017,-1974,Manoj's Account,Groceries,"5kg rice,5kg aata, 4 types of daal, gajma 2kg, chhole, 2 packet all out+ 2kg sugar+ 4 type of masale. etc.",8/22/2017 11:58am
+Milk & Bread-80,Shakrudin Pathan,22 August 2017,-80,Manoj's Account,Milk & Bread,bread+butter,8/22/2017 12:00pm
+Vegetables-370,Dhannu,22 August 2017,-370,Manoj's Account,Vegetables,"pannier+ milkcream,tomato+pyaza+adrak+lasson.",8/22/2017 12:02pm
+Transportation-120,,22 August 2017,-120,Manoj's Account,Transportation,100 rs metro and 20 rs auto,8/22/2017 2:09pm
+Milk & Bread-170,Shakrudin Pathan,22 August 2017,-170,Manoj's Account,Milk & Bread,milk,8/22/2017 9:53pm
+Transportation-120,,23 August 2017,-120,Manoj's Account,Transportation,100 rs metro and 20 rs auto,8/23/2017 2:42pm
+Transportation-100,Shivam Monga,23 August 2017,-100,Manoj's Account,Transportation,100 rs metro,8/23/2017 2:44pm
+Milk & Bread-168,Aslam DSouza,23 August 2017,-168,Manoj's Account,Milk & Bread,4L milk,8/23/2017 4:42pm
+Vegetables-40,Aslam DSouza,23 August 2017,-40,Manoj's Account,Vegetables,1kg onion,8/23/2017 4:43pm
+Cooking Gas (Cylinder)-800,"Manoj Kumar,Dhannu",24 August 2017,-800,Manoj's Account,Cooking Gas (Cylinder),bought cylinder in black.,8/24/2017 5:54am
+Milk & Bread-210,Shakrudin Pathan,24 August 2017,-210,Manoj's Account,Milk & Bread,5 litter milk.,8/24/2017 5:02pm
+Cooking Gas (Cylinder)-524,Manoj Kumar,24 August 2017,-524,Manoj's Account,Cooking Gas (Cylinder),Gas cylinder from agency.,8/24/2017 5:03pm
+Vegetables-240,Dhannu,24 August 2017,-240,Manoj's Account,Vegetables,1kg tomar+aloo 3kg +pyaz 1kg+bhindi 1 kg+khira 1/5 kg,8/24/2017 5:05pm
+Transportation-100,Shivam Monga,24 August 2017,-100,Manoj's Account,Transportation,"100 to shivam for his interview.
+",8/24/2017 5:06pm
+Other (Kuch Aur)-100,Aslam DSouza,24 August 2017,-100,Manoj's Account,Other (Kuch Aur),for creatilty. ,8/24/2017 5:07pm
+Other (Kuch Aur)-110,Aslam DSouza,24 August 2017,-110,Manoj's Account,Other (Kuch Aur),"chart, marker and scissor",8/24/2017 5:29pm
+Transportation-100,Shivam Monga,25 August 2017,-100,Manoj's Account,Transportation,Given to shivam for his interview.,8/25/2017 6:57am
+Household Items-680,"Dhannu,Manoj Kumar",25 August 2017,-680,Manoj's Account,Household Items,2 chairs and 1 wiper of worth ,8/25/2017 4:18pm
+Milk & Bread-203,Aslam DSouza,25 August 2017,-203,Manoj's Account,Milk & Bread,"4 litter milk, 1 pecket bread.
+",8/25/2017 4:36pm
+Vegetables-110,Aslam DSouza,25 August 2017,-110,Manoj's Account,Vegetables,tamater+pyaz+adrak,8/25/2017 5:13pm
+Transportation-120,,25 August 2017,-120,Manoj's Account,Transportation,100 rs metro and 20 rs metro,8/26/2017 7:53am
+Groceries-380,Dhannu,26 August 2017,-380,Manoj's Account,Groceries,"1kg bhesaon, shoya bin, 1kg dahi . 2kg chawal ,mirch",8/26/2017 4:31pm
+Vegetables-120,Dhannu,26 August 2017,-120,Manoj's Account,Vegetables,aloo. pyaz.tamater,8/26/2017 4:33pm
+Groceries-90,Deepanshu Panchal,26 August 2017,-90,Manoj's Account,Groceries,"Lighter, utensilz ",8/26/2017 4:37pm
+Milk & Bread-238,Aslam DSouza,26 August 2017,-238,Manoj's Account,Milk & Bread,"4 litter milk, 2 bread.",8/26/2017 4:55pm
+Vegetables-70,Aslam DSouza,27 August 2017,-70,Manoj's Account,Vegetables,tomato and onion and mirch,8/27/2017 4:11pm
+Groceries-200,Aslam DSouza,27 August 2017,-200,Manoj's Account,Groceries,rise = 5kg,8/27/2017 4:12pm
+Milk & Bread-203,Manoj Kumar,28 August 2017,-203,Manoj's Account,Milk & Bread,4 litter milk and 1 packet bread.,8/27/2017 7:36pm
+Vegetables-200,Shakrudin Pathan,28 August 2017,-200,Manoj's Account,Vegetables,"Aloo, payz, tamator",8/28/2017 5:54am
+Groceries-168,Manoj Kumar,28 August 2017,-168,Manoj's Account,Groceries,dish washer+suger+ masale,8/28/2017 5:44pm
+Milk & Bread-203,"Dhannu,Manoj Kumar",28 August 2017,-203,Manoj's Account,Milk & Bread,4milk and 1packet bread,8/28/2017 5:46pm
+Eggs-110,Shakrudin Pathan,28 August 2017,-110,Manoj's Account,Eggs,22egggs ,8/28/2017 6:12pm
+Milk & Bread-203,Dhannu,29 August 2017,-203,Manoj's Account,Milk & Bread,4 litter milk and bread.,8/29/2017 6:17pm
+Groceries-1490,"Manoj Kumar,Dhannu",29 August 2017,-1490,Manoj's Account,Groceries,3 all out+5kg rice+daal 4kg+oil one litter+2hand wash with refill. etc,8/29/2017 6:19pm
+Vegetables-290,"Dhannu,Manoj Kumar",29 August 2017,-290,Manoj's Account,Vegetables,,8/29/2017 6:21pm
+Medical Expenses-80,"Manoj Kumar,Dhannu",29 August 2017,-80,Manoj's Account,Medical Expenses,We took Monu to the Doctor for check up.,8/29/2017 6:23pm
+Vegetables-70,Manoj Kumar,30 August 2017,-70,Manoj's Account,Vegetables,pyaaza and tomator,8/30/2017 7:07pm
+Groceries-160,Dhannu,31 August 2017,-160,Manoj's Account,Groceries,5 KG Atta,8/30/2017 6:37pm
+Milk & Bread-203,"Manoj Kumar,Dhannu",31 August 2017,-203,Manoj's Account,Milk & Bread,4-litter milk and 1 packet bread.,8/30/2017 6:39pm
+Groceries-388,"Ajay,Monu",31 August 2017,-388,Manoj's Account,Groceries,ajay and monu brought kitch stuff.,9/1/2017 7:38am
+Milk & Bread-203,Ajay,1 September 2017,-203,Manoj's Account,Milk & Bread,monu and ajaya brought milk and bread,9/1/2017 7:37am
+Groceries-970,Manoj Kumar,1 September 2017,-970,Manoj's Account,Groceries,6 kg daal + suger+ cooking oil+ 5kg atta,9/1/2017 7:41am
+Vegetables-280,Manoj Kumar,1 September 2017,-280,Manoj's Account,Vegetables,2kg pyaz+1tomtor+1kg bhindi+ ghiya 2kg+ khira 1/2 kg+ mirch,9/1/2017 10:42am
+Vegetables-360,"Manoj Kumar,Deepanshu Panchal",2 September 2017,-360,Manoj's Account,Vegetables,soya bina chaap.,9/2/2017 8:20pm
+Groceries-90,"Manoj Kumar,Deepanshu Panchal",2 September 2017,-90,Manoj's Account,Groceries,masale+mix paste,9/2/2017 8:22pm
+Milk & Bread-203,"Manoj Kumar,Shivam Monga",2 September 2017,-203,Manoj's Account,Milk & Bread,4litter milk = brea,9/2/2017 8:24pm
+Vegetables-120,Aslam DSouza,3 September 2017,-120,Manoj's Account,Vegetables,"Onion = 80 2kg
+potato = 40 2kg",9/3/2017 11:16am
+Milk & Bread-168,Ajay,3 September 2017,-168,Manoj's Account,Milk & Bread,4 litter milk,9/4/2017 2:11pm
+Groceries-720,"Manoj Kumar,Dhannu",4 September 2017,-720,Manoj's Account,Groceries,5kg rice+5 kgatta 3ltter cooking oil+dish washer+2 kg solt,9/4/2017 2:14pm
+Vegetables-260,Dhannu,4 September 2017,-260,Manoj's Account,Vegetables,tomar+pyaz+bhindi+began,9/4/2017 2:15pm
+Milk & Bread-208,Manoj Kumar,4 September 2017,-208,Manoj's Account,Milk & Bread,4 liter milk and  one bread,9/5/2017 7:40pm
+Groceries-274,Manoj Kumar,4 September 2017,-274,Manoj's Account,Groceries,2 all out+poha packet+2kg  suger,9/5/2017 7:42pm
+Milk & Bread-203,Manoj Kumar,5 September 2017,-203,Manoj's Account,Milk & Bread,4 liter milk and one packet bread.,9/5/2017 7:44pm
+Groceries-70,Manoj Kumar,5 September 2017,-70,Manoj's Account,Groceries,masale+payaz,9/5/2017 7:47pm
+Milk & Bread-168,Manoj Kumar,6 September 2017,-168,Manoj's Account,Milk & Bread,4 litter milk,9/5/2017 8:18pm
+Groceries-230,"Manoj Kumar,Shakrudin Pathan",6 September 2017,-230,Manoj's Account,Groceries,3 kg poha+all out+daal,9/6/2017 11:46am
+Vegetables-200,Manoj Kumar,6 September 2017,-200,Manoj's Account,Vegetables,tamar+bhindi+pyaz+eggs,9/6/2017 11:48am
+Tech Expenses (Laptop/Phone etc.)-1200,Manoj Kumar,6 September 2017,-1200,Manoj's Account,Tech Expenses (Laptop/Phone etc.),laptop repair of Monu,9/12/2017 2:18pm
+Vegetables-190,Aslam DSouza,7 September 2017,-190,Manoj's Account,Vegetables,"Onion = 1kg - 90rs
+Potato = 2kg - 70rs
+Tomato = 1kg-100g - 70rs
+Total 230",9/7/2017 6:59am
+Groceries-427,Aslam DSouza,7 September 2017,-427,Manoj's Account,Groceries,"Rice = 5kg - 200rs
+suger = 2kg - 100rs
+laal mirch powder = 100g - 31rs
+Fortune oil = 1 packet - 96rs
+Total 427",9/7/2017 7:04am
+Milk & Bread-168,Aslam DSouza,7 September 2017,-168,Manoj's Account,Milk & Bread,"4 litter milk
+",9/8/2017 8:13pm
+Groceries-430,"Manoj Kumar,Dhannu",8 September 2017,-430,Manoj's Account,Groceries,brought panier+panire masala+mother dairy cream,9/8/2017 8:12pm
+Milk & Bread-203,Manoj Kumar,8 September 2017,-203,Manoj's Account,Milk & Bread,4litter milk and bread,9/8/2017 8:14pm
+Vegetables-230,"Shivam Monga,Aslam DSouza",8 September 2017,-230,Manoj's Account,Vegetables,2pyaz+1kgtamor+3kgallo+adrak+mirch,9/8/2017 8:15pm
+Groceries-345,"Manoj Kumar,Dhannu",8 September 2017,-345,Manoj's Account,Groceries,bim dish washer+2 kg daal+oil 1litter,9/8/2017 8:18pm
+Milk & Bread-168,Manoj Kumar,9 September 2017,-168,Manoj's Account,Milk & Bread,4 litter milk,9/10/2017 4:40am
+Vegetables-160,Shivam Monga,9 September 2017,-160,Manoj's Account,Vegetables,,9/10/2017 4:41am
+Groceries-350,Dhannu,9 September 2017,-350,Manoj's Account,Groceries,5Rice + oil +masle,9/10/2017 4:49am
+Milk & Bread-203,Deepanshu Panchal,10 September 2017,-203,Manoj's Account,Milk & Bread,4 litter milk and bread,9/10/2017 4:42am
+Medical Expenses-300,"Manoj Kumar,Dhannu",10 September 2017,-300,Manoj's Account,Medical Expenses,Take shakrruddin to the doctor+medition,9/12/2017 2:17pm
+Groceries-1437,"Dhannu,Manoj Kumar",11 September 2017,-1437,Manoj's Account,Groceries,"4littr cooking oil+5kg aatta+all masle+2 all out..etc
+",9/10/2017 6:41pm
+Milk & Bread-168,Shakrudin Pathan,11 September 2017,-168,Manoj's Account,Milk & Bread,4 litter milk,9/10/2017 6:41pm
+Vegetables-140,Dhannu,11 September 2017,-140,Manoj's Account,Vegetables,1pyaz+1kg bhidi+ 2 kg ghiya,9/10/2017 6:42pm
+Milk & Bread-106,Manoj Kumar,11 September 2017,-106,Manoj's Account,Milk & Bread,2.5 litter ,9/12/2017 2:08pm
+Cooking Gas (Cylinder)-600,Manoj Kumar,12 September 2017,-600,Manoj's Account,Cooking Gas (Cylinder),one cylinder,9/12/2017 2:09pm
+Groceries-200,Deepanshu Panchal,12 September 2017,-200,Manoj's Account,Groceries,5 kg Rice,9/12/2017 2:14pm
+Vegetables-50,Deepanshu Panchal,12 September 2017,-50,Manoj's Account,Vegetables,1kg payaz,9/12/2017 2:15pm
+Transportation-400,Manoj Kumar,12 September 2017,-400,Manoj's Account,Transportation,[ Transpot+lunch] Manoj and monu went for find flat for new Navgurukul in saket,9/12/2017 2:20pm
+Vegetables-50,Shivam Monga,13 September 2017,-50,Manoj's Account,Vegetables,"Tamato 10Rs, Onion 1Kg 40Rs.",9/13/2017 4:32pm
+Milk & Bread-127,Manoj Kumar,13 September 2017,-127,Manoj's Account,Milk & Bread,3 litter milk,9/14/2017 10:10am
+NG Fixes/Maintenance-700,Manoj Kumar,13 September 2017,-700,Manoj's Account,NG Fixes/Maintenance,500 to property dealer + 100 lunch + 100 transport,9/14/2017 10:52am
+Milk & Bread-127,Manoj Kumar,14 September 2017,-127,Manoj's Account,Milk & Bread,3 liter milk,9/14/2017 10:12am
+Vegetables-320,Dhannu,14 September 2017,-320,Manoj's Account,Vegetables,2kg tomatr+2kg allo+2kg pyaz+1 kg karele+1/2 kg gobhi+ adra+lahsan,9/14/2017 6:15pm
+Groceries-760,"Manoj Kumar,Dhannu",14 September 2017,-760,Manoj's Account,Groceries,25 kg rice+ 1pecket jira and other masalle,9/14/2017 6:17pm
+Milk & Bread-126,Manoj Kumar,15 September 2017,-126,Manoj's Account,Milk & Bread,3 litter milk,9/16/2017 7:24pm
+Vegetables-340,"Manoj Kumar,Dhannu",15 September 2017,-340,Manoj's Account,Vegetables,"4kg pyaz+1kg tomotr+1kg(karela,tinda+dhiya+began)+aloo 3kg+mirch ",9/16/2017 7:31pm
+Groceries-658,"Manoj Kumar,Dhannu",16 September 2017,-658,Manoj's Account,Groceries,5kg daal+5kg+2dish wash scrubber. ,9/16/2017 9:10am
+Milk & Bread-126,Manoj Kumar,16 September 2017,-126,Manoj's Account,Milk & Bread,3 litter milk ,9/16/2017 7:32pm
+Internet Bill-1186,Manoj Kumar,16 September 2017,-1186,Manoj's Account,Internet Bill,Paid internet bill,9/16/2017 7:33pm
+Milk & Bread-168,Manoj Kumar,17 September 2017,-168,Manoj's Account,Milk & Bread,4 litter milk,9/17/2017 2:39pm
+Groceries-260,Deepanshu Panchal,17 September 2017,-260,Manoj's Account,Groceries,maida+eggs+moniease+vegitable,9/17/2017 2:41pm
+Transportation-350,Aslam DSouza,17 September 2017,-350,Manoj's Account,Transportation,Transport expense for 7 student whose who went for RAAHGIRI,9/17/2017 2:43pm
+Milk & Bread-168,Manoj Kumar,18 September 2017,-168,Manoj's Account,Milk & Bread,4 liter milk.,9/19/2017 4:28am
+Groceries-540,Manoj Kumar,18 September 2017,-540,Manoj's Account,Groceries,Oil+suger+vimbar and other small random things,9/19/2017 4:32am
+Vegetables-40,Shivam Monga,18 September 2017,-40,Manoj's Account,Vegetables,1kg tomotor,9/19/2017 4:33am
+Milk & Bread-168,Deepanshu Panchal,19 September 2017,-168,Manoj's Account,Milk & Bread,4 liter milk,9/19/2017 4:34am
+Transportation-200,Shakrudin Pathan,19 September 2017,-200,Manoj's Account,Transportation,Given to shakruddin for transport and lunch,9/19/2017 6:53am
+Vegetables-50,Dhannu,19 September 2017,-50,Manoj's Account,Vegetables,buy 1kg onion 40rs and 10 rs green chili.,9/19/2017 5:18pm
+Milk & Bread-168,Manoj Kumar,20 September 2017,-168,Manoj's Account,Milk & Bread,4 litter milk,9/20/2017 6:06am
+Vegetables-180,Manoj Kumar,20 September 2017,-180,Manoj's Account,Vegetables,2kg tomatr+2kg pyaz+mirch,9/20/2017 9:49pm
+Groceries-258,Manoj Kumar,20 September 2017,-258,Manoj's Account,Groceries,2litter coooking oil+ dish washer,9/20/2017 9:51pm
+Transportation-600,Manoj Kumar,20 September 2017,-600,Manoj's Account,Transportation,transpotation give for 10 stuends on refreashday activity,9/20/2017 9:53pm
+Transportation-590,Manoj Kumar,21 September 2017,-590,Manoj's Account,Transportation,"NG to noida 100
+=======
 totoal = 809",6/21/2017 7:12am,SV,Navgurukul
 Milk & Bread-161,Aslam DSouza,2017-06-20,-161,NavGurukul PayTM,Milk & Bread,milk and bread by aslam,6/21/2017 7:14am,SV,Navgurukul
 Vegetables-140,Aslam DSouza,2017-06-20,-140,NavGurukul PayTM,Vegetables,veg,6/21/2017 7:34am,SV,Navgurukul
@@ -672,17 +1322,43 @@ Vegetables-180,Manoj Kumar,2017-09-20,-180,Manoj's Account,Vegetables,2kg tomatr
 Groceries-258,Manoj Kumar,2017-09-20,-258,Manoj's Account,Groceries,2litter coooking oil+ dish washer,9/20/2017 9:51pm,SV,Navgurukul
 Transportation-600,Manoj Kumar,2017-09-20,-600,Manoj's Account,Transportation,transpotation give for 10 stuends on refreashday activity,9/20/2017 9:53pm,SV,Navgurukul
 Transportation-590,Manoj Kumar,2017-09-21,-590,Manoj's Account,Transportation,"NG to noida 100
+>>>>>>> 8c0e7281a73a33386a8fb74c9a248526790cf20c
 Noida to sector-137=150
 lunch=160
  sector137 to sector105 =80
 noida to sarita vihar 100 
+<<<<<<< HEAD
+total=590 ",9/21/2017 5:00pm
+Milk & Bread-126,Manoj Kumar,21 September 2017,-126,Manoj's Account,Milk & Bread,3 litter milk,9/21/2017 7:10pm
+Transportation-510,Manoj Kumar,22 September 2017,-510,Manoj's Account,Transportation,"NG to Sarita Vihar metro= 50
+=======
 total=590 ",9/21/2017 5:00pm,SV,Navgurukul
 Milk & Bread-126,Manoj Kumar,2017-09-21,-126,Manoj's Account,Milk & Bread,3 litter milk,9/21/2017 7:10pm,SV,Navgurukul
 Transportation-510,Manoj Kumar,2017-09-22,-510,Manoj's Account,Transportation,"NG to Sarita Vihar metro= 50
+>>>>>>> 8c0e7281a73a33386a8fb74c9a248526790cf20c
 NG metro card reached= 200
 lunch=120
 Huda to Bhaktawer chowk=40
 Returning back towards metro= 60
+<<<<<<< HEAD
+sarita vihar to NG= 40",9/22/2017 2:09pm
+Milk & Bread-126,Manoj Kumar,22 September 2017,-126,Manoj's Account,Milk & Bread,3 litter milk,9/22/2017 2:11pm
+Groceries-100,Aslam DSouza,22 September 2017,-100,Manoj's Account,Groceries,1kg daal,9/22/2017 9:28pm
+Groceries-115,Aslam DSouza,22 September 2017,-115,Manoj's Account,Groceries,"tometo =  20
+daal = 55
+jira = 40",9/23/2017 5:38am
+Vegetables-100,"Shivam Monga,Aslam DSouza",23 September 2017,-100,Manoj's Account,Vegetables,"potato = 40 2kg
+tomato = 30 1kg
+onion = 30 1kg",9/23/2017 6:42am
+Groceries-170,Aslam DSouza,23 September 2017,-170,Manoj's Account,Groceries,atta = 170 5kg,9/23/2017 6:44am
+Milk & Bread-126,Manoj Kumar,23 September 2017,-126,Manoj's Account,Milk & Bread,3 litter,9/23/2017 1:26pm
+Groceries-556,"Shivam Monga,Manoj Kumar",23 September 2017,-556,Manoj's Account,Groceries,3 litter oil+ garam masala 100gm+ 2 all out machin,9/23/2017 1:27pm
+Milk & Bread-126,Aslam DSouza,24 September 2017,-126,Manoj's Account,Milk & Bread,3 littter,9/24/2017 5:31pm
+Groceries-460,Dhannu,24 September 2017,-460,Manoj's Account,Groceries,3kg baad +maida+ solt,9/24/2017 5:34pm
+Vegetables-210,Dhannu,24 September 2017,-210,Manoj's Account,Vegetables,2kg pyaz+1 kg tamator+ 2kg allo+ ginger,9/24/2017 5:36pm
+Milk & Bread-126,Manoj Kumar,25 September 2017,-126,Manoj's Account,Milk & Bread,3l milk,9/26/2017 5:13am
+NG Fixes/Maintenance-1040,Aslam DSouza,25 September 2017,-1040,Manoj's Account,NG Fixes/Maintenance,"For Repairing :3
+=======
 sarita vihar to NG= 40",9/22/2017 2:09pm,SV,Navgurukul
 Milk & Bread-126,Manoj Kumar,2017-09-22,-126,Manoj's Account,Milk & Bread,3 litter milk,9/22/2017 2:11pm,SV,Navgurukul
 Groceries-100,Aslam DSouza,2017-09-22,-100,Manoj's Account,Groceries,1kg daal,9/22/2017 9:28pm,SV,Navgurukul
@@ -700,11 +1376,25 @@ Groceries-460,Dhannu,2017-09-24,-460,Manoj's Account,Groceries,3kg baad +maida+ 
 Vegetables-210,Dhannu,2017-09-24,-210,Manoj's Account,Vegetables,2kg pyaz+1 kg tamator+ 2kg allo+ ginger,9/24/2017 5:36pm,SV,Navgurukul
 Milk & Bread-126,Manoj Kumar,2017-09-25,-126,Manoj's Account,Milk & Bread,3l milk,9/26/2017 5:13am,SV,Navgurukul
 NG Fixes/Maintenance-1040,Aslam DSouza,2017-09-25,-1040,Manoj's Account,NG Fixes/Maintenance,"For Repairing :3
+>>>>>>> 8c0e7281a73a33386a8fb74c9a248526790cf20c
 Tube Light = 195
 3 LED Bulb = 300
 3 Normal Bulb = 45
 Tube Ki Holder (patti) = 250
 Plash (tool) = 200
+<<<<<<< HEAD
+Tester = 50",9/26/2017 5:21am
+NG Fixes/Maintenance-310,Aslam DSouza,25 September 2017,-310,Manoj's Account,NG Fixes/Maintenance,"Window glass + Chikni mitti=200
+Plaster of perish+tools for fix wall = 90
+Wall color = 40",9/26/2017 7:32am
+NG Fixes/Maintenance-200,Aslam DSouza,25 September 2017,-200,Manoj's Account,NG Fixes/Maintenance,Given to electrician for fix all the electricity. ,9/26/2017 7:34am
+Eggs-194,"Ajay,Monu",25 September 2017,-194,Manoj's Account,Eggs,Monu and ajay brought 20 eggs+ massale+vegitabl,9/26/2017 8:03am
+Vegetables-160,"Dhannu,Manoj Kumar",26 September 2017,-160,Manoj's Account,Vegetables,"2kg tomator+payaz+aloo+lehsuoon
+ ",9/26/2017 7:56am
+Milk & Bread-126,Monu,26 September 2017,-126,Manoj's Account,Milk & Bread,Monu brought 3l milk,9/26/2017 7:58am
+Eggs-80,Aslam DSouza,26 September 2017,-80,Manoj's Account,Eggs,aggs,9/26/2017 5:19pm
+Transportation-1440,Aslam DSouza,26 September 2017,-1440,Manoj's Account,Transportation,"200rs  = Sarita vihar se chattar pur metro tak bhaiya ke ghair
+=======
 Tester = 50",9/26/2017 5:21am,SV,Navgurukul
 NG Fixes/Maintenance-310,Aslam DSouza,2017-09-25,-310,Manoj's Account,NG Fixes/Maintenance,"Window glass + Chikni mitti=200
 Plaster of perish+tools for fix wall = 90
@@ -716,11 +1406,23 @@ Vegetables-160,"Dhannu,Manoj Kumar",2017-09-26,-160,Manoj's Account,Vegetables,"
 Milk & Bread-126,Monu,2017-09-26,-126,Manoj's Account,Milk & Bread,Monu brought 3l milk,9/26/2017 7:58am,SV,Navgurukul
 Eggs-80,Aslam DSouza,2017-09-26,-80,Manoj's Account,Eggs,aggs,9/26/2017 5:19pm,SV,Navgurukul
 Transportation-1440,Aslam DSouza,2017-09-26,-1440,Manoj's Account,Transportation,"200rs  = Sarita vihar se chattar pur metro tak bhaiya ke ghair
+>>>>>>> 8c0e7281a73a33386a8fb74c9a248526790cf20c
 120rs = Fir bhaiya ke ghair se huda city center tak
 150rs = Fir metro se unterne ke baad auto kiya naye navgurukul ke liye
 320 = Safai ke liye 1 viper, 1 jhadu, or 2 pocha
 350rs = Khana liya
 100rs = Auto wale ko diye metro tak ke 
+<<<<<<< HEAD
+200rs = Huda city center se sarita vihar tak metro ka kiraya ",9/26/2017 5:21pm
+NG Fixes/Maintenance-445,Aslam DSouza,26 September 2017,-445,Manoj's Account,NG Fixes/Maintenance,"350rs = Tubelight ka set kichan ke liye
+50rs = stairs ke liye new socet board
+45rs = 3 bulb",9/26/2017 5:27pm
+Milk & Bread-126,Shakrudin Pathan,27 September 2017,-126,Manoj's Account,Milk & Bread,3l milk,9/27/2017 11:27am
+NG Fixes/Maintenance-110,Manoj Kumar,27 September 2017,-110,Manoj's Account,NG Fixes/Maintenance,packing box+ tapes ,9/27/2017 11:29am
+Transportation-200,Manoj Kumar,27 September 2017,-200,Manoj's Account,Transportation,for petrol !!,9/27/2017 11:30am
+Groceries-410,Shivam Monga,27 September 2017,-410,Manoj's Account,Groceries,,9/27/2017 5:17pm
+NG Fixes/Maintenance-2892,Aslam DSouza,27 September 2017,-2892,Manoj's Account,NG Fixes/Maintenance,"1100 chabi wale ko (edited)
+=======
 200rs = Huda city center se sarita vihar tak metro ka kiraya ",9/26/2017 5:21pm,SV,Navgurukul
 NG Fixes/Maintenance-445,Aslam DSouza,2017-09-26,-445,Manoj's Account,NG Fixes/Maintenance,"350rs = Tubelight ka set kichan ke liye
 50rs = stairs ke liye new socet board
@@ -730,6 +1432,7 @@ NG Fixes/Maintenance-110,Manoj Kumar,2017-09-27,-110,Manoj's Account,NG Fixes/Ma
 Transportation-200,Manoj Kumar,2017-09-27,-200,Manoj's Account,Transportation,for petrol !!,9/27/2017 11:30am,SV,Navgurukul
 Groceries-410,Shivam Monga,2017-09-27,-410,Manoj's Account,Groceries,,9/27/2017 5:17pm,SV,Navgurukul
 NG Fixes/Maintenance-2892,Aslam DSouza,2017-09-27,-2892,Manoj's Account,NG Fixes/Maintenance,"1100 chabi wale ko (edited)
+>>>>>>> 8c0e7281a73a33386a8fb74c9a248526790cf20c
 650 jali or lakdi ka fraim or keel (edited)
 250 jali lagane ke liye diye
 350 electriction ko diye kuch light or bord or chat ke uper ka connection nahi tha or cooler ke liye or 2 bulb (edited)
@@ -737,6 +1440,23 @@ NG Fixes/Maintenance-2892,Aslam DSouza,2017-09-27,-2892,Manoj's Account,NG Fixes
 300 rupees to ranjan because he was going tu gurgaon
 80 rupees bus kiraya
 
+<<<<<<< HEAD
+Total = 2842",9/27/2017 5:24pm
+NG Fixes/Maintenance-100,Aslam DSouza,27 September 2017,-100,Manoj's Account,NG Fixes/Maintenance,100 rupees for keys ,9/29/2017 4:45am
+Milk & Bread-126,Deepanshu Panchal,28 September 2017,-126,Manoj's Account,Milk & Bread,buy 3 ltr milk,9/29/2017 3:57am
+Vegetables-80,Deepanshu Panchal,28 September 2017,-80,Manoj's Account,Vegetables,buy 80rs 1kg tomato and 1kg patato,9/29/2017 3:58am
+Groceries-160,Deepanshu Panchal,28 September 2017,-160,Manoj's Account,Groceries,buy 5 kg aata 160rs.,9/29/2017 3:59am
+Vegetables-85,Deepanshu Panchal,28 September 2017,-85,Manoj's Account,Vegetables,20rs ka hari mirch and lal mirch 65rs.,9/29/2017 4:01am
+Transportation-50,Aslam DSouza,28 September 2017,-50,Manoj's Account,Transportation,50  rupees = bhaiya ne chabi le lene ke liye chattarpur bulaya tha,9/29/2017 4:41am
+NG Fixes/Maintenance-3000,Manoj Kumar,28 September 2017,-3000,Manoj's Account,NG Fixes/Maintenance,Gave to mover n packer (truck wale ko),9/29/2017 8:53pm
+NG Fixes/Maintenance-2000,Manoj Kumar,28 September 2017,-2000,Manoj's Account,NG Fixes/Maintenance,Pending Maintenace of Society welfare(full and final) ,9/29/2017 8:55pm
+Tech Expenses (Laptop/Phone etc.)-6400,Aslam DSouza,29 September 2017,-6400,Manoj's Account,Tech Expenses (Laptop/Phone etc.),6000 for 4 laptops and 400 travel expenses,9/29/2017 6:14pm
+Milk & Bread-126,,29 September 2017,-126,Manoj's Account,Milk & Bread,3l milk,9/29/2017 8:47pm
+Groceries-58,Sandeep,29 September 2017,-58,Manoj's Account,Groceries,vim dishwasher,9/29/2017 8:50pm
+Milk & Bread-126,Deepanshu Panchal,29 September 2017,-126,Manoj's Account,Milk & Bread,buy 3 ltr milk.,9/30/2017 6:55am
+Vegetables-90,Deepanshu Panchal,29 September 2017,-90,Manoj's Account,Vegetables,buy tomato and onion,9/30/2017 6:56am
+Student Field Expenses-80,Ranjan,29 September 2017,-80,Manoj's Account,Student Field Expenses,"Paid to Ranjan for mobile balance, he went to gourgaon for fix internal in new compus.",10/3/2017 7:43am
+=======
 Total = 2842",9/27/2017 5:24pm,SV,Navgurukul
 NG Fixes/Maintenance-100,Aslam DSouza,2017-09-27,-100,Manoj's Account,NG Fixes/Maintenance,100 rupees for keys ,9/29/2017 4:45am,SV,Navgurukul
 Milk & Bread-126,Deepanshu Panchal,2017-09-28,-126,Manoj's Account,Milk & Bread,buy 3 ltr milk,9/29/2017 3:57am,SV,Navgurukul
@@ -752,3 +1472,4 @@ Groceries-58,Sandeep,2017-09-29,-58,Manoj's Account,Groceries,vim dishwasher,9/2
 Milk & Bread-126,Deepanshu Panchal,2017-09-29,-126,Manoj's Account,Milk & Bread,buy 3 ltr milk.,9/30/2017 6:55am,SV,Navgurukul
 Vegetables-90,Deepanshu Panchal,2017-09-29,-90,Manoj's Account,Vegetables,buy tomato and onion,9/30/2017 6:56am,SV,Navgurukul
 Student Field Expenses-80,Ranjan,2017-09-29,-80,Manoj's Account,Student Field Expenses,"Paid to Ranjan for mobile balance, he went to gourgaon for fix internal in new compus.",10/3/2017 7:43am,SV,Navgurukul
+>>>>>>> 8c0e7281a73a33386a8fb74c9a248526790cf20c
