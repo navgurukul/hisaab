@@ -40,13 +40,6 @@ class RegisterForm(forms.Form):
 
 #Form to Handle the data whenever someone make a request to the user from TransferRequestPage
 class MoneyTransferForm(forms.ModelForm):
-    # upi_id = forms.CharField(max_length=40,required=False)
-    # money_requested_by = forms.ModelChoiceField(queryset= NgUser.objects.all())
-    # amount = forms.IntegerField()
-    # description = forms.CharField()
-    # nguser_with_upi = forms.ModelChoiceField(queryset = NgUser.objects.all(), required=False)
-    # nguser_without_upi = forms.ModelChoiceField(queryset = NgUser.objects.all(),required=False)
-
 
     money_requested_by = forms.ModelChoiceField(queryset= NgUser.objects.all())
     amount = forms.IntegerField()
@@ -57,29 +50,16 @@ class MoneyTransferForm(forms.ModelForm):
     class Meta:
         model = MoneyRequest
         fields = ('amount', 'description','money_requested_by',)
-    #Initializing the instance with default customization in the ModelChoiceFields
-    def __init__(self, *args, **kwargs):
-        self.request = kwargs.pop('request', None)
-
-        #calling the parent class __init__() method
-        super(MoneyTransferForm, self).__init__(*args, **kwargs)
-
-            # # including all the user if authenticated user is admin or super_admin
-            # self.fields['money_requested_by'].queryset = NgUser.objects.all().filter(facility__id=self.request.user.nguser.facility.id)
-
-
+   
 
 class AccountDetailForm(forms.ModelForm):
-    # user = forms.ModelChoiceField(queryset= NgUser.objects.all())
-    account_number = forms.CharField(max_length=50)
-    confirm_account_number = forms.CharField(max_length=50)
-
-    IFSC_code = forms.CharField(max_length=50)
-    account_holder_name = forms.CharField(max_length=50)
+    account_number = forms.CharField()
+    IFSC_code = forms.CharField(max_length=40)
+    account_holder_name = forms.CharField(max_length=40)
 
     class Meta:
         model = AccountDetail
-        fields = ('confirm_account_number', 'account_number', 'IFSC_code', 'account_holder_name')
+        fields = ['account_number','account_holder_name','IFSC_code']
 
 #Form to handle the data from the RecordPaymentPage
 class RecordPaymentForm(forms.ModelForm):
