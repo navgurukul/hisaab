@@ -250,14 +250,14 @@ def facilityreport(request, pk):
 
         # payment fitering part handling for facility
         if 'payment' in request.POST:
-            data = CashEntry.objects.all().filter(created_date__range=(start_date,end_date),is_payment_to_ng=True,facility__id=pk)
+            data = CashEntry.objects.all().filter(created_date__range=(start_date,end_date),is_payment_to_ng=True,facility__id=pk).order_by('created_date')
             payment = True
 
         # expence filtering part handling for facility
         elif 'expense' in request.POST:
-            data = CashEntry.objects.all().filter(created_date__range=(start_date, end_date),category__in=categories,is_facility_expense=True,facility__id=pk)
+            data = CashEntry.objects.all().filter(created_date__range=(start_date, end_date),category__in=categories,is_facility_expense=True,facility__id=pk).order_by('created_date')
             payment = False
-        return render(request, 'facilityreport.html', {'entries': data, 'facility':facility, 'payment': payment, 'categories': category  })
+        return render(request, 'facilityreport.html', {'entries': data, 'facility':facility, 'payment': payment, 'categories': category})
     payment = False
     data = CashEntry.objects.all().filter(facility__id=pk,is_facility_expense=True)
     return render(request, 'facilityreport.html',{'facility':facility,'entries': data,'payment':payment, 'categories':category})
