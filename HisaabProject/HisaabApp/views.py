@@ -10,7 +10,7 @@ from django import forms
 from django.urls import reverse
 from django.utils import timezone
 import json
-from django.utils import timezone 
+from django.utils import timezone
 
 
 #For checking the usertype
@@ -95,7 +95,7 @@ def add_facility(request):
             form.save()
             return redirect('home')
 
-    #new empty form instance for add_facility is created        
+    #new empty form instance for add_facility is created
     else:
         form = AddFacilityForm()
     return render(request,'addfacility.html',{'form':form})
@@ -114,14 +114,23 @@ def moneytransferrequest(request):
         print(request.POST)
         transfer_request_form = MoneyTransferForm(request.POST)
         account_detail_form = AccountDetailForm(request.POST)
-        #validating the forms
-        if transfer_request_form.is_valid():
-            if account_detail_form.is_valid(): 
-                print("yahan tak toh aya")
-                instance = transfer_request_form.save(commit = False)
-                instance.account_detail = account_detail_form.save()
-                instance.save()
-                return redirect('home')
+#         #validating the forms
+# <<<<<<< HEAD
+#         if transfer_request_form.is_valid():
+#             if account_detail_form.is_valid(): 
+#                 print("yahan tak toh aya")
+#                 instance = transfer_request_form.save(commit = False)
+#                 instance.account_detail = account_detail_form.save()
+#                 instance.save()
+#                 return redirect('home')
+# =======
+        if account_detail_form.is_valid() and transfer_requests_form.is_valid():
+            instance = transfer_requests_form.save(commit = False)
+            instance.account_detail = account_detail_form.save()
+            print(instance.account_detail)
+            instance.save()
+            return redirect('home')
+
 
     # new empty form instance for moneytransferrequest is created
     else:
@@ -206,7 +215,7 @@ def addexpense(request):
             # handling the data when expence type is personal
             if form.cleaned_data.get('expense_type').encode('utf8') == 'PERSONAL':
                 instance.is_personal_expense = True
-            # handling the data when the expence type is not personal and save it    
+            # handling the data when the expence type is not personal and save it
             else:
                 instance.is_facility_expense = True
                 facility= form.cleaned_data.get('facility')
@@ -312,7 +321,7 @@ def viewpendingrequest(request, pk):
             money_request.is_approve = True
             money_request.approve_or_rejected_by = request.user.nguser
             money_request.save()
-        # request handling if the the request is rejected   
+        # request handling if the the request is rejected
             form = PaymentRecordForm(request.POST, request.FILES)
             if form.is_valid():
                 # Updating the MoneyRequest data
@@ -345,7 +354,6 @@ def viewpendingrequest(request, pk):
 
         # request handling if the the request is rejected
         elif 'reject' in request.POST:
-            print 'hogya'
             money_request.is_queued = False
             money_request.approve_or_rejected_by = request.user.nguser
             reason_for_reject = request.POST.get('reason_for_reject', None)
@@ -455,4 +463,3 @@ def update_facility(request):
     else:
         form = UpdateFacilityForm()
     return render(request,'updatefacility.html',{'form':form})
-

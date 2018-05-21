@@ -85,7 +85,7 @@
 		{% if user.nguser.in_weekly_limit %}
 			<div class="col-md-12 green">
 				<h3>₹ {{ user.nguser.last_week_facility_expenses }} spent in the last week</h3>
-				<p>you are within the ₹{{ user.nguser.facility.student_expenses_limit }}/month limit of your facility. wohoo!</p>
+				<p>you are within the ₹{{ user.nguser.facility.student_expenses_limit }}/week limit of your facility. wohoo!</p>
 			</div>
 		{% else %}
 			<div class="col-md-12 green">

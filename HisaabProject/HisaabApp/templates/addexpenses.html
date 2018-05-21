@@ -41,7 +41,7 @@
 						<div class="bootstrap-iso">
 							<div style="margin-top: 10px; margin-bottom: -20px !important;" class="container-fluid">
 								<div class="row">
-									    <div class="form-group"> 
+									    <div class="form-group">
 									    	<!-- Date input by NG users -->
 									        <input class="form-control" id="date" name="created_date"  placeholder="MM/DD/YYY" type="text" required/>
 
@@ -73,7 +73,7 @@
 							    <span  id="fileselector">
 							        <label style="width: 100%;" class="btn btn-default" for="upload-file-selector">
 							        	<!-- image field(upload of the bill images by ng user) -->
-							            <input class="invisible" name="bill_image" id="upload-file-selector" type="file" required>
+							            <input class="invisible" name="bill_image" id="upload-file-selector" type="file"  accept="image/*" required>
 							           <h4>Upload Bill Photo</h4>
 							        </label>
 							    </span>
@@ -89,7 +89,7 @@
 			<!-- Form code ends -->
 			</form>
 		</div>
-	</div>	
+	</div>
 {% block javascript %}
 <script type="text/javascript">
     // function to customize date field input
@@ -116,7 +116,7 @@
                 data: {facility:value},
                 success: function(data) {
                     console.log(data)
-                  
+
                  	if (data){
 	                    for (var i = data.users.length - 1; i >= 0; i--) {
 	                      console.log(data.users[i])

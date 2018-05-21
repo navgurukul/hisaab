@@ -40,12 +40,9 @@ class RegisterForm(forms.Form):
 
 #Form to Handle the data whenever someone make a request to the user from TransferRequestPage
 class MoneyTransferForm(forms.ModelForm):
-
     money_requested_by = forms.ModelChoiceField(queryset= NgUser.objects.all())
     amount = forms.IntegerField()
     description = forms.Textarea()
-
-
     #fields to be displayed and the model to be used
     class Meta:
         model = MoneyRequest

@@ -9,7 +9,7 @@
           <b>Facility Expenses Report </b>
         </h2>
         <h4 style="margin-left: 12%; margin-top:0px;">of
-          <b>{{ facility.name }} Facility</b>
+          <b>{{ facility.name }} </b>
         </h4>
       </center>
   </div>
@@ -52,38 +52,20 @@
                 </div>
                 <div style="display: flex;" class="col-md-4" id="p">
                 <!-- Categories of expenses -->
-                    <!-- col 1 -->
-                    <div class="col-md-6 Checkbox1">
-                      {% for category in categories %}
-                        <div class="Checkbox">
-                            <input type="checkbox" name="categories" value="{{ category.id }}"> {{ category.name }}
-                        </div>
-                      {% endfor %}
-                        <!-- <div class="Checkbox">
-                            <input type="checkbox" name="categories" value="MILK"> Milk
-                        </div>
-                        <div class="Checkbox">
-                            <input type="checkbox" name="categories" value="TECH EXPENCE"> Tech Expence
-                        </div>
-                        <div class="Checkbox">
-                            <input type="checkbox" name="categories" value="OTHER"> Other
-                        </div> -->
-                    </div>
-                    <!-- col-2 -->
-                 <!--    <div class="col-md-6 Checkbox1">
-                        <div class="Checkbox">
-                            <input type="checkbox" name="categories" value="VEGETABLES"> Vegetables
-                        </div>
-                        <div class="Checkbox">
-                            <input type="checkbox" name="categories" value="GROCERIES"> Groceries
-                        </div>
-                        <div class="Checkbox">
-                            <input type="checkbox" name="categories" value="HOUSEHOLD">Household Items
-                        </div>
-                        <div class="Checkbox">
-                            <input type="checkbox" name="categories" value="TRAVEL"> Travel
-                        </div>
-                    </div> -->
+                    <div class="col-md-8 Checkbox1">
+
+                          <div class="button-group">
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"> Select Category <span class="caret"></span></button>
+                            <ul class="dropdown-menu">
+                              {% for category in categories %}
+                              <li>
+                                &nbsp; <input type="checkbox" name="categories" value="{{ category.id }}"> {{ category.name }}
+                              </li>
+                              {% endfor %}
+                            </ul>
+                          </div>
+
+                  </div>
                 </div>
             </div>
 
@@ -93,7 +75,7 @@
           <div class="col-xs-12 col-md-12">
             <div class="table-responsive">
               <table class="table table-condensed table-bordered table-striped" id="example" style="width:100%">
-                  {% if entries %}  
+                  {% if entries %}
                         <thead>
                             <!-- Column Heading -->
                             <tr>
@@ -124,10 +106,10 @@
                                        <td>{{ entry.description }}</td>
                                        <td>{{ entry.cash_in_hand_currently }}</td>
                                    </tr>
-                             
+
                               <!-- Data to be Displayed for Payment Entries -->
                               {% else %}
-                            
+
                                 <!-- Columns data to be shown here -->
                                    <tr>
                                       <td>{{ entry.fellow }}</td>
@@ -158,16 +140,16 @@
   <script type="text/javascript" language="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
   <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.html5.min.js"></script>
   <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.print.min.js"></script>
-  
+
   <script type="text/javascript">
   $(document).ready(function() {
     $('#example').DataTable( {
         dom: 'Bfrtip',
         buttons: [
              {
-               extend:'csv', 
+               extend:'csv',
                className:'btn btn-success btn-lg',
-               text:'Download Csv!',    
+               text:'Download Csv!',
                exportOptions: {
                   modifier: {
                       search: 'none'
@@ -180,7 +162,29 @@
         },
     } );
     // $.fn.dataTable.ext.classes.sPageButton = 'btn btn-default'; // Change Pagination Button Class
-    $('#example_filter input').addClass('form-control input-lg'); 
+    $('#example_filter input').addClass('form-control input-lg');
+    var options = [];
+
+$( '.dropdown-menu a' ).on( 'click', function( event ) {
+
+   var $target = $( event.currentTarget ),
+       val = $target.attr( 'data-value' ),
+       $inp = $target.find( 'input' ),
+       idx;
+
+   if ( ( idx = options.indexOf( val ) ) > -1 ) {
+      options.splice( idx, 1 );
+      setTimeout( function() { $inp.prop( 'checked', false ) }, 0);
+   } else {
+      options.push( val );
+      setTimeout( function() { $inp.prop( 'checked', true ) }, 0);
+   }
+
+   $( event.target ).blur();
+
+   console.log( options );
+   return false;
+});
     // $('#example_previous').addClass('btn');
 
 } );

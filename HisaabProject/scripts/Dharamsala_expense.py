@@ -1,6 +1,8 @@
 import csv
 from datetime import datetime
 from HisaabApp.models import *
+from django.shortcuts import render
+
 
 with open('data/Dharamsala_expense.csv' ) as f:
         reader = csv.reader(f)
@@ -9,6 +11,8 @@ with open('data/Dharamsala_expense.csv' ) as f:
         last_added_name = ""
 
         for row in reader:
+            
+
             user = row[4].split(",")[0]
             if user == '':continue
             date=row[1]
@@ -57,5 +61,5 @@ with open('data/Dharamsala_expense.csv' ) as f:
         		category=category,
         		description=row[0],
         		facility=facility,
-        		is_facility_expense=1
+        		is_facility_expense=1,
             )
