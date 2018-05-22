@@ -176,9 +176,11 @@ def recordpayment(request):
             instance = form.save(commit = False)
             instance.fellow = request.user.nguser
             instance.is_payment_to_ng = True
-            facility= Facility.objects.get(id = form.cleaned_data.get('facility'))
+            facility= form.cleaned_data.get('facility')
+
+            # facility= Facility.objects.get(id =form.cleaned_data.get('facility'))
             facility.cash_in_hand += int(form.cleaned_data.get('payment_amount'))
-            facility.save()()
+            facility.save()
             instance.save()
             return redirect('home')
 
@@ -240,12 +242,12 @@ def facilityreport(request, pk):
 
         # payment fitering part handling for facility
         if 'payment' in request.POST:
-            data = CashEntry.objects.all().filter(created_date__range=(start_date,end_date),is_payment_to_ng=True,facility__id=pk)
+            data = CashEntry.objects.all().filter(created_date__range=(start_date,end_date),is_payment_to_ng=True,facility__id=pk).order_by('created_date')
             payment = True
 
         # expence filtering part handling for facility
         elif 'expense' in request.POST:
-            data = CashEntry.objects.all().filter(created_date__range=(start_date, end_date),category__in=categories,is_facility_expense=True,facility__id=pk)
+            data = CashEntry.objects.all().filter(created_date__range=(start_date, end_date),category__in=categories,is_facility_expense=True,facility__id=pk).order_by('created_date')
             payment = False
         return render(request, 'facilityreport.html', {'entries': data, 'facility':facility, 'payment': payment, 'categories': category  })
     payment = False

@@ -154,7 +154,7 @@ class MoneyRequest(models.Model):
     is_money_request= models.BooleanField(default=False)
     account_detail = models.OneToOneField(AccountDetail, blank=True, null =True)
 
-    #Fields that are included in both TranserRequest and BillPaymentRequest
+    #Fields that are included in both TransferRequest and BillPaymentRequest
     facility = models.ForeignKey(Facility,null=True,blank=True)
     money_requested_by = models.ForeignKey(NgUser,null=True, related_name = "money_requested_by", blank=True)
     amount = models.IntegerField()
