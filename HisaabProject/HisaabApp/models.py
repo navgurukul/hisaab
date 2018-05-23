@@ -135,12 +135,15 @@ class NgUser(models.Model):
         last_month_startdate = last_month_enddate.replace(day=1)
         total_limit = (total_fellow * self.facility.student_expenses_limit)/7 *((last_month_enddate - last_month_startdate).days+1)
         return abs((self.last_month_facility_expense() - int(total_limit))/total_fellow)
+
+
 # Model to handle all account details when request is made
 class AccountDetail(models.Model):
     #Fields specifically for BillPaymentRequest
-    account_number = models.IntegerField()
+    account_number = models.CharField(max_length=20, default=0)
     IFSC_code = models.CharField(max_length=40)
     account_holder_name = models.CharField(max_length=40)
+
 
 #Model to handle all kind of Money and Bill requests data
 class MoneyRequest(models.Model):

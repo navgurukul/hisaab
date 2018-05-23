@@ -103,7 +103,6 @@ def add_facility(request):
 
 #give a check for login
 @login_required
-
 #checking is user is fellow by giving this test
 @user_passes_test(is_fellow, login_url='/access_denied/')
 
@@ -112,9 +111,10 @@ def moneytransferrequest(request):
 
     # Handling the post request data and handling two forms
     if request.method =='POST':
-        transfer_request_form = MoneyTransferForm(request.POST, request=request)
+        print(request.POST)
+        transfer_request_form = MoneyTransferForm(request.POST)
         account_detail_form = AccountDetailForm(request.POST)
-        #validating the forms
+         #validating the forms
         if account_detail_form.is_valid() and transfer_requests_form.is_valid():
             instance = transfer_requests_form.save(commit = False)
             instance.account_detail = account_detail_form.save()
@@ -122,10 +122,11 @@ def moneytransferrequest(request):
             instance.save()
             return redirect('home')
 
+
     # new empty form instance for moneytransferrequest is created
     else:
         account_detail_form = AccountDetailForm()
-        transfer_request_form = MoneyTransferForm(request=request)
+        transfer_request_form = MoneyTransferForm()
     return render(request,'moneytransfer.html',locals())
 
 
@@ -249,7 +250,7 @@ def facilityreport(request, pk):
         elif 'expense' in request.POST:
             data = CashEntry.objects.all().filter(created_date__range=(start_date, end_date),category__in=categories,is_facility_expense=True,facility__id=pk).order_by('created_date')
             payment = False
-        return render(request, 'facilityreport.html', {'entries': data, 'facility':facility, 'payment': payment, 'categories': category  })
+        return render(request, 'facilityreport.html', {'entries': data, 'facility':facility, 'payment': payment, 'categories': category})
     payment = False
     data = CashEntry.objects.all().filter(facility__id=pk,is_facility_expense=True)
     return render(request, 'facilityreport.html',{'facility':facility,'entries': data,'payment':payment, 'categories':category})

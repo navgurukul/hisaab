@@ -15,8 +15,8 @@
 							<div class="form-component input--medium">
 								<div class="input--with-icon">
 									<!-- enter the amount  -->
-									<input type="number" placeholder="How much money do you need?" name = "amount" class="form-control" id=" ">
-								</div>
+									<input type="number" placeholder="How much money do you need?" name ="amount" class="form-control" >
+								</div>	
 							</div>
 						</div>
 					<div class="baby_cont1">
@@ -35,19 +35,23 @@
 					</div>
 				</div>
 				<p id="tag-p">Account Details</p>
+
+				<p id="error" style="color:red;"></p>
+				
 				<div id="clonebaby" class="baby_container">
 					<div class="baby_cont1">
-						<input type="text" placeholder="Account Number" name="account_number" class="form-control id="usr>
+						<input type="text" placeholder="Account Number" name="account_number" class="form-control" id="account_number">
 					</div>
 				</div>
 				<div id="clonebaby" class="baby_container">
 					<div class="baby_cont1">
-						<input type="text" placeholder="Confirm Account Number..." name="confirm_account_number)" class="form-control id="usr>
+						<input type="text" placeholder="Confirm Account Number..."  class="form-control" id="confirm_account_number">
 					</div>
 				</div>
 				<div id="clonebaby" class="baby_container">
 					<div class="baby_cont1">
-						<input type="text" placeholder="IFSC Code" name="IFSC_code" class="form-control id="usr>
+						<input type="text" placeholder="IFSC Code" name="IFSC_code" class="form-control"
+						>
 					</div>
 				</div>
 				<div id="clonebaby" class="baby_container">
@@ -57,10 +61,23 @@
 	         </div>
 
 
-			<button id="btnbottom" type="submit" class="btn btn-success pull-right">Submit Transfer Request ></button>
+			<button id="btnbottom" type="button" onclick='datasubmition();' class="btn btn-success pull-right">Submit Transfer Request ></button>
 			</form>
 		</div>
 	</div>
+
+<script type="text/javascript">
+	function datasubmition(){
+		account_number = $('#account_number').val();
+		confirm_account_number = $('#confirm_account_number').val();
+		if (account_number != confirm_account_number){
+			$('#error').text("Account Number Didn't match");
+			return false;
+
+		}
+		$('form').submit();
+	}
+</script>
 
 {% block style %}
 <style type="text/css">
