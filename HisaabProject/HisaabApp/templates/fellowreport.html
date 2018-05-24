@@ -52,8 +52,25 @@
                 </div>
                 <div style="display: flex;" class="col-md-4" id="p">
                 <!-- Categories of expenses -->
+                    <div class="col-md-8 Checkbox1">
+
+                          <div class="button-group">
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"> Select Category <span class="caret"></span></button>
+                            <ul class="dropdown-menu">
+                              {% for category in categories %}
+                              <li>
+                                &nbsp; <input type="checkbox" name="categories" value="{{ category.id }}"> {{ category.name }}
+                              </li>
+                              {% endfor %}
+                            </ul>
+                          </div>
+
+                  </div>
+                </div>
+                <!-- <div style="display: flex;" class="col-md-4" id="p"> -->
+                <!-- Categories of expenses -->
                     <!-- col 1 -->
-                    <div class="col-md-6 Checkbox1">
+                    <!-- <div class="col-md-6 Checkbox1">
                         <div class="Checkbox">
                             <input type="checkbox" name="categories" value="EGGS"> Eggs
                         </div>
@@ -66,9 +83,9 @@
                         <div class="Checkbox">
                             <input type="checkbox" name="categories" value="OTHER"> Other
                         </div>
-                    </div>
+                    </div> -->
                     <!-- col-2 -->
-                    <div class="col-md-6 Checkbox1">
+                    <!-- <div class="col-md-6 Checkbox1">
                         <div class="Checkbox">
                             <input type="checkbox" name="categories" value="VEGETABLES"> Vegetables
                         </div>
@@ -82,7 +99,7 @@
                             <input type="checkbox" name="categories" value="TRAVEL"> Travel
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
 
         </form>
