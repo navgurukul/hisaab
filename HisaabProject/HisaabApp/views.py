@@ -128,6 +128,15 @@ def moneytransferrequest(request):
         #     print(instance.account_detail)
         #     instance.save()
         #     return redirect('home')
+# =======
+#          #validating the forms
+#         if account_detail_form.is_valid() and transfer_requests_form.is_valid():
+#             instance = transfer_requests_form.save(commit = False)
+#             instance.account_detail = account_detail_form.save()
+#             print(instance.account_detail)
+#             instance.save()
+#             return redirect('home')
+# >>>>>>> fb3e54109224dad5038672f9166aea9645a10278
 
 
     # new empty form instance for moneytransferrequest is created
@@ -186,6 +195,7 @@ def recordpayment(request):
             instance.is_payment_to_ng = True
             facility= form.cleaned_data.get('facility')
             # facility= Facility.objects.get(id = form.cleaned_data.get('facility'))
+            # facility= Facility.objects.get(id =form.cleaned_data.get('facility'))
             facility.cash_in_hand += int(form.cleaned_data.get('payment_amount'))
             facility.save()
             instance.save()
