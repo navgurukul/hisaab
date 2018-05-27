@@ -1,4 +1,3 @@
-
 from django.shortcuts import render, redirect, get_object_or_404
 from django.http import JsonResponse
 from django.contrib.auth.decorators import login_required, user_passes_test
@@ -6,7 +5,6 @@ from .models import *
 from .forms import *
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django import forms
-
 from django.urls import reverse
 from django.utils import timezone
 import json

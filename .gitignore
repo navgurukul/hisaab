@@ -5,6 +5,7 @@ __pycache__/
 
 HisaabProject/media/
 virtualenviroment/
+venv/
 
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
