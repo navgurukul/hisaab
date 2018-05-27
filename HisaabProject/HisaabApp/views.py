@@ -112,13 +112,29 @@ def moneytransferrequest(request):
         print(request.POST)
         transfer_request_form = MoneyTransferForm(request.POST)
         account_detail_form = AccountDetailForm(request.POST)
-         #validating the forms
-        if account_detail_form.is_valid() and transfer_requests_form.is_valid():
-            instance = transfer_requests_form.save(commit = False)
-            instance.account_detail = account_detail_form.save()
-            print(instance.account_detail)
-            instance.save()
-            return redirect('home')
+#         #validating the forms
+        if transfer_request_form.is_valid():
+            if account_detail_form.is_valid(): 
+                print("yahan tak toh aya")
+                instance = transfer_request_form.save(commit = False)
+                instance.account_detail = account_detail_form.save()
+                instance.save()
+                return redirect('home')
+        # if account_detail_form.is_valid() and transfer_requests_form.is_valid():
+        #     instance = transfer_requests_form.save(commit = False)
+        #     instance.account_detail = account_detail_form.save()
+        #     print(instance.account_detail)
+        #     instance.save()
+        #     return redirect('home')
+# =======
+#          #validating the forms
+#         if account_detail_form.is_valid() and transfer_requests_form.is_valid():
+#             instance = transfer_requests_form.save(commit = False)
+#             instance.account_detail = account_detail_form.save()
+#             print(instance.account_detail)
+#             instance.save()
+#             return redirect('home')
+# >>>>>>> fb3e54109224dad5038672f9166aea9645a10278
 
 
     # new empty form instance for moneytransferrequest is created
@@ -176,7 +192,7 @@ def recordpayment(request):
             instance.fellow = request.user.nguser
             instance.is_payment_to_ng = True
             facility= form.cleaned_data.get('facility')
-
+            # facility= Facility.objects.get(id = form.cleaned_data.get('facility'))
             # facility= Facility.objects.get(id =form.cleaned_data.get('facility'))
             facility.cash_in_hand += int(form.cleaned_data.get('payment_amount'))
             facility.save()
@@ -244,6 +260,7 @@ def facilityreport(request, pk):
             data = CashEntry.objects.all().filter(created_date__range=(start_date,end_date),is_payment_to_ng=True,facility__id=pk).order_by('created_date')
             payment = True
 
+
         # expence filtering part handling for facility
         elif 'expense' in request.POST:
             data = CashEntry.objects.all().filter(created_date__range=(start_date, end_date),category__in=categories,is_facility_expense=True,facility__id=pk).order_by('created_date')
@@ -258,6 +275,7 @@ def facilityreport(request, pk):
 @user_passes_test(is_from_navgurukul, login_url='/access_denied')
 def fellowreport(request, pk):
     fellow = get_object_or_404(NgUser,pk=pk)
+    category = Category.objects.all()
     #Handling the post request data
     if request.method == 'POST':
         start_date = request.POST.get('start_date')
@@ -272,10 +290,10 @@ def fellowreport(request, pk):
         elif 'expense' in request.POST:
             data = CashEntry.objects.all().filter(created_date__range=(start_date, end_date),category__in=categories,is_personal_expense=True,fellow__id=pk)
             payment = False
-        return render(request, 'fellowreport.html', {'entries': data, 'fellow':fellow, 'payment': payment })
+        return render(request, 'fellowreport.html', {'entries': data, 'fellow':fellow, 'payment': payment, 'categories': category})
     payment = False
     data = CashEntry.objects.all().filter(fellow__id=pk,is_personal_expense=True)
-    return render(request, 'fellowreport.html',{'fellow':fellow, 'payment':payment, 'entries': data,})
+    return render(request, 'fellowreport.html',{'fellow':fellow, 'payment':payment, 'entries': data, 'categories': category})
 
 #Rending all the request that are pending
 @login_required
