@@ -1,6 +1,8 @@
 <!-- Facility Report Page -->
 {% extends 'base.html' %}
 {% block content %}
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
+
 <div class="container">
   <!-- Facility Report Heading -->
   <div class="col-md-12 col-sm-12">
@@ -102,7 +104,7 @@
                                        {% endif %}
                                        <td>{{ entry.expense_amount }}</td>
                                        <td>{{ entry.category }}</td>
-                                       <td>{{ entry.created_date }}</td>
+                                       <td>{{ entry.created_date|date:"d/m/Y" }}</td>
                                        <td>{{ entry.description }}</td>
                                        <td>{{ entry.cash_in_hand_currently }}</td>
                                    </tr>
@@ -116,7 +118,7 @@
                                       <td>Credit</td>
                                       <td>{{ entry.payment_amount }}</td>
                                       <td>None</td>
-                                      <td>{{ entry.created_date }}</td>
+                                      <td>{{ entry.created_date|date:"d/m/Y" }}</td>
                                       <td>{{ entry.description }}</td>
                                       <td>{{ entry.cash_in_hand_currently }}</td>
                                    </tr>
@@ -156,12 +158,18 @@
                   }
             }}
         ],
-        language: {
+        language: 
+          {
             search: "_INPUT_",
             searchPlaceholder: "Filter the mesh from here!"
-        },
+              }
+        
+        // language: {
+        //     search: "_INPUT_",
+        //     searchPlaceholder: "Filter by Name!"
+        // },
     } );
-    // $.fn.dataTable.ext.classes.sPageButton = 'btn btn-default'; // Change Pagination Button Class
+    $.fn.dataTable.ext.classes.sPageButton = 'btn btn-default'; // Change Pagination Button Class
     $('#example_filter input').addClass('form-control input-lg');
     var options = [];
 
