@@ -21,14 +21,14 @@
             <!-- Account Detail to where to transfer money -->
             <h4><b>Account Details</b></h4>
             <p><b>Account Holder Name:</b><span>{{ money_request.money_received_by }}</span></p>
-            <p><b>UPI Id:</b> <span>{{ money_request.money_received_by.upi_id }}</span></p>
+            <!-- <p><b>UPI Id:</b> <span>{{ money_request.money_received_by.upi_id }}</span></p> -->
 
             <!-- Rejection Details of the request -->
             <h4><b>Rejection Details :</b></h4>
             <p><b>Rejected By:</b><span>{{ money_request.money_received_by }}</span></p>
             <p><b>Reason:</b><span>{{ money_request.reason_for_reject }}</span></p>
         </div>
-        
+
     <!-- Block will execute only if the request type is Money Request and are approved -->
     {% elif money_request.is_money_request and money_request.is_approve %}
         <div class="col-md-6 center">
@@ -45,7 +45,7 @@
             <h4><b>Account Details</b></h4>
             <p><b>Account Holder Name:</b><span>{{ money_request.money_received_by }}</span></p>
             <p><b>UPI Id:</b> <span>{{ money_request.money_received_by.upi_id }}</span></p>
-            
+
             <!-- Approving Details of the request -->
             <h4><b>Approving Details :</b></h4>
             <p><b>Approved By:</b><span>{{ money_request.money_received_by }}</span></p>
@@ -64,7 +64,7 @@
             <p><b>Date:</b><span>{{ money_request.created_date }}</span></p>
             <p><b>Description:</b> <span>{{ money_request.description }}</span></p>
             <p><b>Bill Image:</b> <img src="{{ money_request.bill_image.url }}" height='100px' ></p>
-           
+
 
             <!-- Rejection Details of the request -->
             <h4><b>Rejection Details :</b></h4>
@@ -86,7 +86,7 @@
             <p><b>Date:</b><span>{{ money_request.created_date }}</span></p>
             <p><b>Description:</b> <span>{{ money_request.description }}</span></p>
             <p><b>Bill Image:</b> <img src="{{ money_request.bill_image.url }}" height='100px' ></p>
-            
+
 
             <!-- Rejection Details of the request -->
             <h4><b>Approving Details :</b></h4>

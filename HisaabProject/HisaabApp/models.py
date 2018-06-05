@@ -140,7 +140,7 @@ class NgUser(models.Model):
 # Model to handle all account details when request is made
 class AccountDetail(models.Model):
     #Fields specifically for BillPaymentRequest
-    account_number = models.CharField(max_length=20, default=0)
+    account_number = models.CharField(max_length=40, default="")
     IFSC_code = models.CharField(max_length=40)
     account_holder_name = models.CharField(max_length=40)
 

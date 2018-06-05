@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'HisaabApp',
     'social_django',
+    # 'storages',
 
 ]
 
@@ -124,7 +125,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME':'hisaab',
         'USER':'root',
-        'PASSWORD':'diwakar',
+        'PASSWORD':'navgurukul',
         'HOST':'localhost',
         # 'PORT':'',
 

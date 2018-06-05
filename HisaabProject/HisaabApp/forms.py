@@ -46,8 +46,8 @@ class MoneyTransferForm(forms.ModelForm):
     #fields to be displayed and the model to be used
     class Meta:
         model = MoneyRequest
-        fields = ('amount', 'description','money_requested_by',)
-   
+        fields = ('amount', 'description','money_requested_by')
+
 
 class AccountDetailForm(forms.ModelForm):
     account_number = forms.CharField()
@@ -56,7 +56,7 @@ class AccountDetailForm(forms.ModelForm):
 
     class Meta:
         model = AccountDetail
-        fields = ['account_number','account_holder_name','IFSC_code']
+        fields = ('account_number','account_holder_name','IFSC_code')
 
 #Form to handle the data from the RecordPaymentPage
 class RecordPaymentForm(forms.ModelForm):
@@ -67,7 +67,7 @@ class RecordPaymentForm(forms.ModelForm):
     #fields to be displayed and the model to be used
     class Meta:
         model = CashEntry
-        fields = ['facility', 'bank_screenshot', 'payment_amount', 'description']
+        fields = ('facility', 'bank_screenshot', 'payment_amount', 'description')
 
 
 #Form to handle the BillPaymentPage

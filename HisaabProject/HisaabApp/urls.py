@@ -21,19 +21,19 @@ urlpatterns = [
     #routes for the Ng Fellow
     url(r'^moneyrequest/$', views.moneytransferrequest, name='moneyrequest'),
     url(r'^utilityrequest/$', views.utilitybillrequest, name='utilityrequest'),
-   
+
     #Routes for the both Admin and Super Admin
     url(r'^recordpayment/$', views.recordpayment,  name='recordpayment'),
     url(r'^viewpendingrequests/$', views.viewpendingrequests,  name='viewpendingrequests'),
     url(r'^searchfellow/$', views.searchfellow,  name='searchfellow'),
     url(r'^viewpendingrequest/(?P<pk>\d+)$', views.viewpendingrequest,  name='viewpendingrequest'),
     url(r'^detailrequest/(?P<pk>\d+)$', views.detailrequest,  name='detailrequest'),
-    
+
     #Routes for the Super Admin
     url(r'^addfacility/$', views.add_facility, name='addfacility',),
     url(r'^addcategory/$', views.add_category, name='addcategory',),
     url(r'^updatefacility/$', views.update_facility, name='updatefacility',),
-    url(r'^makeadmin/$', views.make_admin,  name='makeadmin'),	
+    url(r'^makeadmin/$', views.make_admin,  name='makeadmin'),
 ]
 # To save the static files in the media folder
 if settings.DEBUG:

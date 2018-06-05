@@ -109,32 +109,17 @@ def moneytransferrequest(request):
 
     # Handling the post request data and handling two forms
     if request.method =='POST':
-        print(request.POST)
+        # print(request.POST)
         transfer_request_form = MoneyTransferForm(request.POST)
         account_detail_form = AccountDetailForm(request.POST)
 #         #validating the forms
         if transfer_request_form.is_valid():
-            if account_detail_form.is_valid(): 
-                print("yahan tak toh aya")
+            if account_detail_form.is_valid():
                 instance = transfer_request_form.save(commit = False)
                 instance.account_detail = account_detail_form.save()
+                instance.is_money_request = True
                 instance.save()
                 return redirect('home')
-        # if account_detail_form.is_valid() and transfer_requests_form.is_valid():
-        #     instance = transfer_requests_form.save(commit = False)
-        #     instance.account_detail = account_detail_form.save()
-        #     print(instance.account_detail)
-        #     instance.save()
-        #     return redirect('home')
-# =======
-#          #validating the forms
-#         if account_detail_form.is_valid() and transfer_requests_form.is_valid():
-#             instance = transfer_requests_form.save(commit = False)
-#             instance.account_detail = account_detail_form.save()
-#             print(instance.account_detail)
-#             instance.save()
-#             return redirect('home')
-# >>>>>>> fb3e54109224dad5038672f9166aea9645a10278
 
 
     # new empty form instance for moneytransferrequest is created
@@ -301,6 +286,7 @@ def fellowreport(request, pk):
 def viewpendingrequests(request):
     # showing all pending requests for admin and added paginator to it
     transfer_requests = MoneyRequest.objects.all().filter(is_queued=True)
+
     paginator = Paginator(transfer_requests, 3)
     page = request.GET.get('page', 1)
     try:
@@ -382,6 +368,7 @@ def viewpendingrequest(request, pk):
 @user_passes_test(is_fellow, login_url='/access_denied/')
 def detailrequest(request, pk):
     money_request = get_object_or_404(MoneyRequest, pk=pk)
+    print(money_request.is_money_request)
     return render(request,'detailrequest.html',{'money_request':money_request})
 
 
