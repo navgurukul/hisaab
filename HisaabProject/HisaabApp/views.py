@@ -269,15 +269,15 @@ def fellowreport(request, pk):
         #payment fitering part handling for fellow
         if 'payment' in request.POST:
             data = CashEntry.objects.all().filter(created_date__range=(start_date,end_date),\
-            is_pay_forward=True,fellow__id=pk)
+            is_pay_forward=True,fellow__id=pk).order_by('created_date')
             payment = True
         #expence fitering part handling for fellow
         elif 'expense' in request.POST:
-            data = CashEntry.objects.all().filter(created_date__range=(start_date, end_date),category__in=categories,is_personal_expense=True,fellow__id=pk)
+            data = CashEntry.objects.all().filter(created_date__range=(start_date, end_date),category__in=categories,is_personal_expense=True,fellow__id=pk).order_by('created_date')
             payment = False
         return render(request, 'fellowreport.html', {'entries': data, 'fellow':fellow, 'payment': payment, 'categories': category})
     payment = False
-    data = CashEntry.objects.all().filter(fellow__id=pk,is_personal_expense=True)
+    data = CashEntry.objects.all().filter(fellow__id=pk,is_personal_expense=True).order_by('created_date')
     return render(request, 'fellowreport.html',{'fellow':fellow, 'payment':payment, 'entries': data, 'categories': category})
 
 #Rending all the request that are pending
