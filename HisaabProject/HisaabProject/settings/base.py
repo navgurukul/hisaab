@@ -168,10 +168,10 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
-SOCIAL_AUTH_GOOGLE_OAUTH2_KEY ='649957323382-j7g021vk6v8eg9orf8nggdkp82r8mt8g.apps.googleusercontent.com'  #Paste CLient Key
-SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'BZK1RVtbDUIlRh8p7vooN3J4' #Paste Secret Key
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY ='xxxxxxxxxxxxxxxxxxxxxxx'  #Paste CLient Key
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'xxxxxxxxxxxxxxxxxxxxxx' #Paste Secret Key
 
-STATIC_URL = '/static/'
+
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
@@ -199,3 +199,22 @@ DATE_INPUT_FORMATS = ('%d-%m-%Y','%Y-%m-%d')
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+
+
+AWS_STORAGE_BUCKET_NAME = 'hisaab.navgurukul.org'
+AWS_ACCESS_KEY_ID = 'XXXXXXXXXXXXXXX'
+AWS_SECRET_ACCESS_KEY = 'XXXXXXXXXXXXXXXXXXXXX'
+AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+
+AWS_S3_OBJECT_PARAMETERS = {
+'CacheControl':'max-age=86400',
+}
+
+AWS_LOCATION= 'static'
+STATIC_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN,AWS_LOCATION)
+
+STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
+
+MEDIAFILES_LOCATION = 'media'
+DEFAULT_FILE_STORAGE = 'HisaabProject.custom_storages.MediaStorage'

@@ -3,7 +3,9 @@ from django.contrib.auth.models import User
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 from django.utils import timezone
+from HisaabProject.custom_storages import MediaStorage
 import datetime
+
 
 #********* path to save the images in media folder **************
 def fellowScreenshot(instance , filename):

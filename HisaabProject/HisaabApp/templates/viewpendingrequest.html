@@ -65,7 +65,7 @@
         <p><b>For Whom?:</b> <span>{{ money_request.facility }} Batch</span></p>
         <p><b>Date:</b><span>{{ money_request.created_date }}</span></p>
         <p><b>Description:</b> <span>{{ money_request.description }}</span></p>
-        <p><b>Bill Image:</b><a href="{{ money_request.bill_image.url }}"> <img src="{{ money_request.bill_image.url }}" height='100px'></a></p>
+        <p><b>Bill Image:</b><a href="{{ money_request.bill_image.url }}" target="_blank"> <u><i> Click to open the file >></i></u></a></p>
       </div>
       {% endif %}
       <div class="col-md-3">
